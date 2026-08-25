@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 860" role="img" aria-labelledby="title desc">
+  <title id="title">Margo, the Ready Margin brand mascot</title>
+  <desc id="desc">A composed yellow financial ticket character built from the geometry of the Ready Margin logo.</desc>
+
+  <!-- Backing report creates depth without effects. -->
+  <path fill="#111418" d="M218 92h300l76 76v470l-58 58H218z"/>
+  <path fill="#4C6FFF" d="M518 92v76h76z"/>
+
+  <!-- Main ticket body. -->
+  <path fill="#CFF36A" stroke="#111418" stroke-width="16" stroke-linejoin="round"
+        d="M164 126h298l64 64v452l-62 62H164z"/>
+  <path fill="#E9FFA8" d="M462 126v64h64z"/>
+
+  <!-- Header and tiny operational label. -->
+  <rect x="210" y="194" width="190" height="18" rx="9" fill="#111418"/>
+  <rect x="210" y="226" width="108" height="12" rx="6" fill="#111418" opacity=".5"/>
+  <rect x="416" y="206" width="44" height="44" rx="5" fill="#4C6FFF"/>
+  <path fill="#F7F8F4" d="M427 219h22v5h-22zm0 10h16v5h-16z"/>
+
+  <!-- Face: restrained and alert. -->
+  <rect x="244" y="306" width="42" height="22" rx="7" fill="#111418"/>
+  <rect x="388" y="306" width="42" height="22" rx="7" fill="#111418"/>
+  <path d="M294 378c42 28 86 28 128 0" fill="none" stroke="#111418" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Chest mark ties the mascot directly to the identity. -->
+  <g transform="translate(270 430) scale(.52)">
+    <path fill="#111418" d="M28 28h116v40H68v76H28V28Z"/>
+    <path fill="#111418" d="M232 232H116v-40h76v-76h40v116Z"/>
+    <rect x="111" y="111" width="38" height="38" rx="3" fill="#F7F8F4"/>
+  </g>
+
+  <!-- Left arm: calm ready gesture. -->
+  <path d="M162 382c-66 8-92 55-112 102" fill="none" stroke="#111418" stroke-width="18" stroke-linecap="round"/>
+  <path d="M49 482l-12-34m12 34 34-11" fill="none" stroke="#111418" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Right arm holds a compact report. -->
+  <path d="M526 406c54 12 78 42 88 86" fill="none" stroke="#111418" stroke-width="18" stroke-linecap="round"/>
+  <g transform="rotate(7 620 538)">
+    <rect x="566" y="478" width="122" height="154" rx="8" fill="#F7F8F4" stroke="#111418" stroke-width="12"/>
+    <rect x="590" y="508" width="72" height="10" rx="5" fill="#111418"/>
+    <rect x="590" y="540" width="44" height="10" rx="5" fill="#A5ADB7"/>
+    <rect x="590" y="569" width="62" height="10" rx="5" fill="#A5ADB7"/>
+    <rect x="590" y="598" width="72" height="12" rx="6" fill="#71D8C1"/>
+  </g>
+
+  <!-- Feet keep the silhouette stable at small sizes. -->
+  <path d="M248 704v64m0 0h-62" fill="none" stroke="#111418" stroke-width="20" stroke-linecap="round"/>
+  <path d="M430 704v64m0 0h62" fill="none" stroke="#111418" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Readiness tab. -->
+  <path fill="#71D8C1" stroke="#111418" stroke-width="10" stroke-linejoin="round" d="M128 548h72v72h-72z"/>
+  <path d="m146 584 14 14 24-30" fill="none" stroke="#111418" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-labelledby="title desc">
+  <title id="title">Ready Margin logo mark for dark backgrounds</title>
+  <desc id="desc">Two light opposing measured corners define a margin around a signal-lime readiness marker.</desc>
+  <path fill="#F7F8F4" d="M28 28h116v40H68v76H28V28Z"/>
+  <path fill="#F7F8F4" d="M232 232H116v-40h76v-76h40v116Z"/>
+  <rect x="111" y="111" width="38" height="38" rx="3" fill="#CFF36A"/>
+</svg>

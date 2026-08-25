@@ -1,0 +1,17 @@
+{
+  "name": "Ready Margin — Restaurant Accounting, Payroll & Finance",
+  "short_name": "Ready Margin",
+  "description": "Done-for-you restaurant accounting, payroll and tip reporting, cash visibility, and CFO guidance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2FF72",
+  "theme_color": "#F2FF72",
+  "icons": [
+    {
+      "src": "/ready-margin-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

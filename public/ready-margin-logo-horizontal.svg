@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" role="img" aria-labelledby="title desc">
+  <title id="title">Ready Margin refined logo</title>
+  <desc id="desc">Ready Margin wordmark with two measured corners and a signal-lime readiness marker.</desc>
+  <g transform="translate(48 48) scale(.86)"><path fill="#111418" d="M28 28h116v40H68v76H28V28Z"/><path fill="#111418" d="M232 232H116v-40h76v-76h40v116Z"/><rect x="111" y="111" width="38" height="38" rx="3" fill="#D7FA74"/></g>
+  <text x="304" y="198" fill="#111418" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="104" font-weight="600" letter-spacing="1">READY</text>
+  <rect x="645" y="119" width="16" height="16" rx="2" fill="#D7FA74"/>
+  <text x="696" y="198" fill="#111418" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="104" font-weight="600" letter-spacing="1">MARGIN</text>
+</svg>
