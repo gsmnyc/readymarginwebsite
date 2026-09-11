@@ -8,20 +8,18 @@ import {
   ReviewCard,
   JsonLd,
 } from "@/components/site/static";
-import {
-  IntroReveal,
-  ModelScene,
-  Workstreams,
-  Timeline,
-} from "@/components/site/motion";
+import { IntroReveal } from "@/components/site/intro-reveal";
+import { ModelScene } from "@/components/site/model-scene";
+import { Timeline } from "@/components/site/timeline";
+import { Workstreams } from "@/components/site/workstreams";
 import { CaseCarousel } from "@/components/site/case-carousel";
 import { Faq } from "@/components/site/faq";
 import { OperatingDesk } from "@/components/site/operating-desk";
 export const generateMetadata = () =>
   metadataFor({
-    title: "Restaurant Finance & Operations Support",
+    title: "Restaurant Bookkeeping, Payroll & Operations Support",
     description:
-      "Ready Margin handles the financial and operating work behind restaurants—accounting, payroll, tips, reporting, food cost and guidance—so owners can act with clarity.",
+      "Ready Margin provides agreed restaurant bookkeeping, payroll preparation, tips, food-cost, reporting and operations support with clear handoffs and owner review.",
     path: "",
     indexable: true,
     kind: "home",

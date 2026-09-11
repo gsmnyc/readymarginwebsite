@@ -46,6 +46,7 @@ export const pageSchema = z.object({
   sections: z.array(sectionSchema),
   published: z.boolean(),
   indexable: z.boolean(),
+  publishedAt: z.string().default(""),
   updated: z.string(),
   related: z.array(z.string()).default([]),
   status: z.string().default(""),

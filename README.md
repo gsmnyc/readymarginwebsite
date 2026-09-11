@@ -4,7 +4,7 @@ Next.js, React and TypeScript. The complete website uses local Plus Jakarta Sans
 
 ## Development
 
-Use Node 22.13 or later. Run npm ci, then npm run dev. Run npm run build for production. Validation commands: npm run typecheck, npm run lint, npm run test:content and npm run test:forms.
+Use Node 22.13 or later. Run npm ci, then npm run dev. Run npm run build for production. Validation commands: npm run typecheck, npm run lint, npm run test:content, npm run test:seo and npm run test:forms.
 
 ## Vercel
 
@@ -14,7 +14,7 @@ Set SITE_URL to https://readymargin.com. Production deployments are indexable; p
 
 ## Forms and content
 
-The existing GOOGLE_APPS_SCRIPT_URL setting remains supported. This form requests a follow-up; it does not book a calendar slot or subscribe visitors to marketing. A confirmed receiver receipt is required before success appears. The legacy receiver retains its existing delivery behavior and may duplicate unchanged retries. For the token-protected, retry-safe receiver, follow docs/FORM_DELIVERY.md.
+This form requests a follow-up; it does not book a calendar slot or subscribe visitors to marketing. A confirmed receiver receipt is required before success appears. Use the token-protected, retry-safe Google Workspace receiver described in docs/FORM_DELIVERY.md. Do not configure the legacy adapter once the current receiver is live.
 
 Edit content/site.json and commit to publish content through Vercel. Sanity is optional; leave its variables unset for launch. docs/CONTENT_EDITING.md explains the later CMS connection.
 

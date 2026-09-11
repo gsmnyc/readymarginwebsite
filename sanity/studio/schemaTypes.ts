@@ -9,11 +9,16 @@ export const schemaTypes = [
         name: "path",
         title: "Full path, e.g. /insights/your-guide",
         type: "string",
+        validation: (Rule) =>
+          Rule.required().regex(/^\/[a-z0-9]+(?:[a-z0-9/-]*[a-z0-9])?$/, {
+            name: "lowercase site path",
+          }),
       },
       {
         name: "title",
         title: "Short navigation title",
         type: "string",
+        validation: (Rule) => Rule.required().min(5).max(100),
       },
       {
         name: "seoTitle",
@@ -24,10 +29,12 @@ export const schemaTypes = [
         name: "heading",
         title: "Page heading (H1)",
         type: "string",
+        validation: (Rule) => Rule.required().min(5).max(150),
       },
       {
         name: "description",
         type: "text",
+        validation: (Rule) => Rule.required().min(20).max(320),
       },
       {
         name: "kind",
@@ -65,20 +72,35 @@ export const schemaTypes = [
             "workstreams",
           ],
         },
+        validation: (Rule) => Rule.required(),
       },
       {
         name: "published",
         type: "boolean",
         initialValue: true,
+        validation: (Rule) => Rule.required(),
       },
       {
         name: "indexable",
         type: "boolean",
         initialValue: true,
+        validation: (Rule) => Rule.required(),
+      },
+      {
+        name: "publishedAt",
+        title: "Original publication date",
+        type: "date",
+        validation: (Rule) =>
+          Rule.custom((value, context) =>
+            context.document?.kind === "article" && !value
+              ? "Articles need an original publication date."
+              : true,
+          ),
       },
       {
         name: "updated",
         type: "date",
+        validation: (Rule) => Rule.required(),
       },
       {
         name: "status",
@@ -94,16 +116,29 @@ export const schemaTypes = [
         name: "icon",
         title: "Supplied icon name only",
         type: "string",
+        options: { list: ["book", "calendar", "chat", "clock", "cost", "tips"] },
       },
       {
         name: "takeaway",
         title: "takeaway",
         type: "string",
+        validation: (Rule) =>
+          Rule.custom((value, context) =>
+            context.document?.kind === "article" && !value
+              ? "Articles need a concise takeaway."
+              : true,
+          ),
       },
       {
         name: "author",
         title: "author",
         type: "string",
+        validation: (Rule) =>
+          Rule.custom((value, context) =>
+            context.document?.kind === "article" && !value
+              ? "Articles need an approved byline."
+              : true,
+          ),
       },
       {
         name: "keyword",
@@ -113,6 +148,7 @@ export const schemaTypes = [
       {
         name: "related",
         type: "array",
+        validation: (Rule) => Rule.unique(),
         of: [
           {
             type: "string",
