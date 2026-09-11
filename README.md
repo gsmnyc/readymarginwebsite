@@ -1,107 +1,27 @@
 # Ready Margin website
 
-Production-ready marketing site for Ready Margin, a managed financial-control service for restaurants and growing groups.
+Next.js, React and TypeScript. The complete website uses local Plus Jakarta Sans, supplied identity assets, editable content and enquiry-only service pricing.
 
-## Stack
+## Development
 
-- Next.js App Router
-- React and TypeScript
-- CSS-only motion and responsive layout
-- Node.js 22+
-- pnpm
+Use Node 22.13 or later. Run npm ci, then npm run dev. Run npm run build for production. Validation commands: npm run typecheck, npm run lint, npm run test:content and npm run test:forms.
 
-No client-side database or third-party UI runtime is required.
+## Vercel
 
-## Project structure
+Use the existing readymarginwebsite project connected to gsmnyc/readymarginwebsite. The repository root is the application root. vercel.json configures installation, build and output. Keep private environment values in Vercel Settings, never in Git.
 
-- `app/page.tsx` — page content, navigation, theme switcher, Margo guide, roadmap, pricing, FAQs, and intake form.
-- `app/globals.css` — design tokens, responsive layouts, accessibility states, themes, and motion.
-- `app/api/review/route.ts` — server-only proxy to the intake endpoint.
-- `integrations/google-apps-script/Code.gs` — Google Docs/Sheets logging, optional Calendar scheduling, and email notifications.
-- `public/` — logos, Margo states, metadata files, sitemap, and robots rules.
-- `.env.example` — environment variable template.
+Set SITE_URL to https://readymargin.com. Production deployments are indexable; preview deployments remain noindex. Enable Web Analytics and Speed Insights in the project dashboard. Both integrations wait for visitor consent. URLs sent for measurement exclude query strings and fragments.
 
-## Run locally
+## Forms and content
 
-```bash
-corepack enable
-pnpm install --frozen-lockfile
-pnpm dev
-```
+The existing GOOGLE_APPS_SCRIPT_URL setting remains supported. This form requests a follow-up; it does not book a calendar slot or subscribe visitors to marketing. A confirmed receiver receipt is required before success appears. The legacy receiver retains its existing delivery behavior and may duplicate unchanged retries. For the token-protected, retry-safe receiver, follow docs/FORM_DELIVERY.md.
 
-Open `http://localhost:3000`.
+Edit content/site.json and commit to publish content through Vercel. Sanity is optional; leave its variables unset for launch. docs/CONTENT_EDITING.md explains the later CMS connection.
 
-## Build and run production
+## Motion and search
 
-```bash
-pnpm install --frozen-lockfile
-pnpm build
-pnpm start
-```
+One desktop introduction, scroll-linked operating stories, interactive working-day chapters, and keyboard/reduced-motion fallbacks. No video or WebGL download is required. Each content page has distinct metadata, a canonical URL and relevant structured data. The sitemap and llms.txt derive from published content. Neither metadata nor llms.txt guarantees search placement.
 
-The application listens on the `PORT` supplied by the hosting platform.
+## Release checks
 
-## Form submission workflow
-
-The browser submits to `/api/review`. The server forwards the request to the Google Apps Script Web App configured through `GOOGLE_APPS_SCRIPT_URL`.
-
-The Apps Script then:
-
-1. Validates required fields and follow-up consent.
-2. Appends the submission to the Ready Margin Google Doc and Google Sheet.
-3. Checks an optional requested meeting time against the default calendar.
-4. Creates a 30-minute event when available and invites the visitor plus `info@gsmnyc.com`.
-5. Emails the visitor a confirmation and calendar link.
-6. Sends an internal notification to `info@gsmnyc.com`.
-7. Records scheduling, calendar, and email delivery status.
-
-If the endpoint is not configured, the form uses a prepared email fallback so a lead is not silently discarded.
-
-## Google Apps Script setup
-
-1. Open [Google Apps Script](https://script.google.com) and create or open the Ready Margin project.
-2. Replace its source with `integrations/google-apps-script/Code.gs`.
-3. Deploy as a Web App, executing as the owner, with access set to **Anyone**.
-4. Authorize Google Docs, Sheets, Calendar, and Gmail access.
-5. Copy the deployment `/exec` URL.
-6. Add it to the hosting environment as `GOOGLE_APPS_SCRIPT_URL`.
-
-Destinations:
-
-- [Lead intake Sheet](https://docs.google.com/spreadsheets/d/1lMGoc8nMekm_1q7t8W0rcemY6xl30Z7zjuSBRqbnRWk/edit?usp=drivesdk)
-- [Submission Doc](https://docs.google.com/document/d/1FOV2vy07VUL4F78UuVYnqYAih3ytgo3GhwYioP3RIaY/edit)
-
-Keep the endpoint server-only. Never prefix it with `NEXT_PUBLIC_`, and never commit credentials or environment files.
-
-## Deploy to Vercel
-
-1. Import the repository into Vercel.
-2. Select the project root.
-3. Use the default Next.js framework preset.
-4. Set Node.js version to 22.
-5. Set `GOOGLE_APPS_SCRIPT_URL` for Preview and Production.
-6. Deploy with these defaults:
-
-```text
-Install command: pnpm install --frozen-lockfile
-Build command: pnpm build
-Output: Next.js default
-Start command: managed by Vercel
-```
-
-7. Add `readymargin.com` in Vercel Domains.
-8. Update Squarespace DNS with the exact records Vercel provides.
-9. Verify HTTPS, then submit `https://readymargin.com/sitemap.xml` to Google Search Console and Bing Webmaster Tools.
-
-## Email and deliverability
-
-Create `contact@readymargin.com` through Google Workspace connected to Squarespace. Configure SPF, DKIM, and DMARC for `readymargin.com`. Verify that the sending alias is authorized before using it in production.
-
-## QA before launch
-
-- Test light and dark themes at phone, tablet, laptop, and wide-monitor widths.
-- Confirm the form blocks submission without required consent.
-- Submit a test with a controlled email address.
-- Verify the Google Doc entry, Sheet row, calendar invite, visitor email, and internal email.
-- Confirm meeting conflicts are saved for follow-up instead of being silently rejected.
-- Confirm no `.env` file, token, or private credential is committed.
+Verify mobile and keyboard interactions, consent choices, real enquiry delivery, domain redirects and PageSpeed on the deployed version. A successful build is not a measured performance score. Business/legal notices still require the owner's approval of entity details, retention and provider arrangements. Asset licenses and provenance are retained with the supplied files.

@@ -1,0 +1,2528 @@
+{
+  "settings": {
+    "brand": "Ready Margin",
+    "email": "contact@readymargin.com",
+    "cta": "Book a Restaurant Operations Review",
+    "hero": "You focus on the restaurant. We handle the work behind it.",
+    "heroSupport": "Payroll is due. The supplier bill needs checking. You have a restaurant to run. We handle the agreed finance and operations work, then help you make sense of the numbers.",
+    "reviewOffer": "Tell us which part of the week keeps landing back on your desk. We’ll work out where support would help.",
+    "workingDay": [
+      {
+        "phase": "Before service",
+        "heading": "Catch the question before it becomes tonight’s problem.",
+        "record": "A delivery invoice",
+        "question": "Did the unit price change?",
+        "action": "Check the invoice against the agreed price. Flag the difference for the person who can resolve it.",
+        "handoff": "A specific question for the supplier.",
+        "href": "/what-we-handle/food-cost-vendors",
+        "link": "Explore food cost support"
+      },
+      {
+        "phase": "During service",
+        "heading": "The shift changes. The record needs to keep up.",
+        "record": "A changed shift",
+        "question": "Who needs to confirm the hours?",
+        "action": "Keep the correction with the time record and send it to the manager for approval before payroll is prepared.",
+        "handoff": "One correction. One named approver.",
+        "href": "/what-we-handle/payroll-tips",
+        "link": "Explore payroll and tips support"
+      },
+      {
+        "phase": "After service",
+        "heading": "Close the restaurant. Know what still needs closing.",
+        "record": "The day’s sales records",
+        "question": "Does the deposit match the settlement?",
+        "action": "Reconcile the records, separate timing differences from unexplained amounts, and keep unresolved items on the follow-up list.",
+        "handoff": "A clear next step for the morning.",
+        "href": "/what-we-handle/accounting-close",
+        "link": "Explore restaurant accounting"
+      }
+    ],
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/Readymargin"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/readymargin"
+      }
+    ],
+    "credit": {
+      "label": "Made by Sim",
+      "url": "https://www.linkedin.com/in/gursimarsandhu"
+    },
+    "navigation": [
+      {
+        "label": "What we handle",
+        "href": "/what-we-handle"
+      },
+      {
+        "label": "How it works",
+        "href": "/how-it-works"
+      },
+      {
+        "label": "Who we help",
+        "href": "/who-we-help"
+      },
+      {
+        "label": "Insights",
+        "href": "/insights"
+      }
+    ],
+    "proofOrder": [
+      "experience",
+      "workflow"
+    ],
+    "experiments": [],
+    "formFields": [
+      {
+        "name": "name",
+        "label": "Your name",
+        "required": true
+      },
+      {
+        "name": "business",
+        "label": "Restaurant / business name",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone (optional)",
+        "required": false
+      },
+      {
+        "name": "locations",
+        "label": "Number of locations (optional)",
+        "required": false
+      },
+      {
+        "name": "restaurantType",
+        "label": "Restaurant type (optional)",
+        "required": false
+      },
+      {
+        "name": "systems",
+        "label": "Current systems (optional)",
+        "required": false
+      },
+      {
+        "name": "concern",
+        "label": "Biggest concern (optional)",
+        "required": false
+      },
+      {
+        "name": "timing",
+        "label": "Preferred timing (optional)",
+        "required": false
+      }
+    ]
+  },
+  "pages": [
+    {
+      "path": "/insights/restaurant-prime-cost",
+      "title": "Restaurant prime cost: what to count and compare",
+      "heading": "Prime cost is a starting point. Find the reason it moved.",
+      "description": "How to calculate restaurant prime cost, align food and labor records, and investigate a change before adjusting staffing or purchasing.",
+      "kind": "article",
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Food cost",
+      "author": "Ready Margin editorial",
+      "keyword": "restaurant prime cost calculation",
+      "takeaway": "Use the same reporting period for cost of goods sold, labor and sales. Then investigate the change in each component.",
+      "related": ["/what-we-handle/food-cost-vendors", "/what-we-handle/scheduling-attendance", "/insights/weekly-pnl-review", "/book-a-review"],
+      "sections": [
+        {"title": "The calculation", "body": "Restaurant prime cost combines cost of goods sold with total labor cost for a defined period. Divide that total by sales for the same period and multiply by 100 to express it as a percentage. It brings two major operating costs into one view; it does not tell you the restaurant’s final profit.", "items": ["Prime cost = cost of goods sold + total labor cost", "Prime cost percentage = prime cost ÷ sales × 100", "Rent, financing and other expenses still matter when assessing profitability."]},
+        {"title": "Agree what belongs in the numbers", "body": "Confirm the accounts included with the person preparing your reports. Labor should reflect the agreed full employment-cost basis, rather than wages alone. Food and beverage cost needs a consistent inventory and purchasing basis. Document the treatment of transfers, credits and missing invoices so next week’s comparison means the same thing.", "items": []},
+        {"title": "Check the dates before the percentage", "body": "A delivery recorded in one week and counted in another can change the picture. So can payroll covering a different number of days from the sales report. Write the period on the review, note any estimates and mark incomplete records. Resolve a cutoff difference before presenting it as an operating problem.", "items": []},
+        {"title": "Separate the two questions", "body": "If the percentage rises, look at food and labor separately. Did sales fall while staffing stayed steady? Did a supplier’s unit price change? Was stock counted differently? Use the underlying records and the manager’s account of the week to choose the next check. A single combined percentage cannot answer those questions.", "items": ["Food: quantities, unit prices, counts, waste and sales mix.", "Labor: recorded hours, approved rates, trading hours and service context.", "Sales: comparable days and a consistent reporting basis."]},
+        {"title": "Choose a target for your restaurant", "body": "Service style, menu, hours and staffing needs affect the operating model. Agree a working target from your own records and plans, then review the reasons for a difference. Ready Margin can help connect food-cost review, labor records and reporting within the scope agreed for your restaurant.", "items": []}
+      ]
+    },
+    {
+      "path": "/insights/restaurant-month-end-close-checklist",
+      "title": "Restaurant month-end close checklist",
+      "heading": "Close the month without reopening every question.",
+      "description": "A restaurant month-end close checklist covering sales settlements, bank reconciliation, supplier bills, payroll records and unresolved items.",
+      "kind": "article", "published": true, "indexable": true, "updated": "2026-09-10",
+      "category": "Reporting", "author": "Ready Margin editorial", "keyword": "restaurant month end close checklist",
+      "takeaway": "A close checklist needs source records, responsible people and an explicit list of what remains unresolved.",
+      "related": ["/what-we-handle/accounting-close", "/insights/delivery-platform-reconciliation", "/how-it-works/ready-rhythm", "/book-a-review"],
+      "sections": [
+        {"title": "Put a date and a person against each job", "body": "Start with the reporting period, the intended close date and the person responsible for each input. A checklist that says only ‘payroll’ or ‘bank’ leaves too much open. State which record is needed, where it comes from and who can answer a difference. Confirm the review date with the person who will use the reports.", "items": []},
+        {"title": "Match sales to the way money arrives", "body": "Gather POS summaries, settlement statements, delivery-platform statements and bank activity. Reconcile receipts to their source, keeping fees, refunds and timing differences visible. A deposit landing after month-end is a question of timing to confirm, not automatically a missing sale.", "items": ["Identify the sales and settlement dates.", "Separate fees, refunds and other statement adjustments.", "Record unexplained differences for investigation."]},
+        {"title": "Check the costs that tend to arrive late", "body": "Review supplier bills against deliveries and known commitments. Ask about missing invoices and credits. Confirm payroll records and any outstanding corrections. Your accountant should agree the treatment of costs belonging to the month when the final document has not arrived. Keep that decision with the working papers.", "items": []},
+        {"title": "Reconcile and review", "body": "Compare bank and card accounts to their statements, investigate outstanding items and review unusual balances. Where inventory is included, confirm the count date and any transfers. Check that account and location mapping is consistent before comparing the results with a prior period or another restaurant.", "items": []},
+        {"title": "Send the explanation with the statements", "body": "The handoff should include the agreed financial statements, what changed, and the questions still open. Each open item needs an owner and next check. A report marked provisional is more useful than a report that quietly leaves out uncertainty. Ready Margin’s accounting and close service agrees these responsibilities during onboarding.", "items": ["Completed reconciliations and supporting records.", "Material changes with operating context.", "Outstanding items, assigned people and follow-up dates."]}
+      ]
+    },
+    {
+      "path": "/insights/restaurant-recipe-costing",
+      "title": "Restaurant recipe costing and portion review",
+      "heading": "Does the recipe cost match what leaves the kitchen?",
+      "description": "A practical restaurant recipe-costing review: current supplier prices, pack sizes, usable yield, portion size and the limits of dish-margin calculations.",
+      "kind": "article", "published": true, "indexable": true, "updated": "2026-09-10",
+      "category": "Food cost", "author": "Ready Margin editorial", "keyword": "restaurant recipe costing and dish margin",
+      "takeaway": "Keep the purchase unit, usable yield and serving size consistent before comparing a dish’s ingredient cost with its selling price.",
+      "related": ["/what-we-handle/food-cost-vendors", "/insights/food-cost-movement", "/insights/restaurant-prime-cost", "/book-a-review"],
+      "sections": [
+        {"title": "Start with the recipe you actually serve", "body": "Confirm ingredients, preparation method and portion size with the kitchen. Include sauces, garnishes and components prepared in batches. A recipe written for a previous menu or a different portion will produce a precise answer to the wrong question. Give the working recipe a date and record who checked it.", "items": []},
+        {"title": "Make the units comparable", "body": "A case price cannot go straight into a recipe that uses ounces or grams. Record the pack size, convert to a consistent unit and allow for usable yield where trimming or preparation changes the quantity available. Check supplier substitutions: a familiar item name does not guarantee an unchanged pack.", "items": ["Confirm the latest invoice price and pack quantity.", "Convert purchase units to recipe units.", "Record yield assumptions and the portion served."]},
+        {"title": "Build from ingredient to portion", "body": "Multiply each ingredient’s usable unit cost by the quantity used. Add the ingredients to establish batch cost, then divide by the usable portions the batch produces. Keep the calculation close to the source invoice and recipe so someone else can repeat it when a price or portion changes.", "items": []},
+        {"title": "Ingredient margin is not the whole profit", "body": "The selling price less ingredient cost can help compare menu items, but it still has to support labor and other operating costs. Sales mix matters too: the dish with an attractive ingredient margin may not be a popular order. Read costing alongside the menu’s actual sales and the work required to prepare it.", "items": []},
+        {"title": "Pick one change to investigate", "body": "When a cost looks wrong, check the inputs before changing the menu. The useful next step might be a pack-size check, a recipe update or an observed portion review. Ready Margin can support recipe and supplier-cost analysis; your team confirms what happens in the kitchen and decides which changes to make.", "items": []}
+      ]
+    },
+    {
+      "path": "/insights/restaurant-bookkeeper-cpa-fractional-cfo",
+      "title": "Restaurant bookkeeper, CPA or fractional CFO?",
+      "heading": "Choose support for the work you need done.",
+      "description": "Compare restaurant bookkeeping, CPA and fractional CFO responsibilities, then identify who owns the records, interpretation and follow-through.",
+      "kind": "article", "published": true, "indexable": true, "updated": "2026-09-10",
+      "category": "Implementation", "author": "Ready Margin editorial", "keyword": "restaurant bookkeeper vs CPA vs fractional CFO",
+      "takeaway": "Job titles are a starting point. Ask for the actual deliverables, cadence, approvals and boundaries in writing.",
+      "related": ["/what-we-handle/accounting-close", "/what-we-handle/reporting-cash-visibility", "/why-ready-margin", "/book-a-review"],
+      "sections": [
+        {"title": "First, name the gap", "body": "Are the books behind, the reports hard to use, or decisions piling up despite having both? Those are different problems. Write down one recent example and identify where the work stopped. The answer may call for a clearer handoff between existing providers, additional recurring support, or a more involved advisory relationship.", "items": []},
+        {"title": "Bookkeeping keeps the records moving", "body": "A bookkeeping engagement commonly covers recording transactions, maintaining accounts and reconciling activity. Restaurant work can also involve sales settlements, supplier bills and payroll records. Confirm whether close support, reporting and exception follow-up are included. Do not assume that recording a transaction includes investigating every operational question behind it.", "items": []},
+        {"title": "A CPA’s scope depends on the engagement", "body": "A CPA may provide tax, accounting or assurance services, depending on the firm and the agreed work. That title does not tell you whether someone is checking missing time entries during the week or following up on a supplier credit. Ask which responsibilities the engagement covers and which require your team or another provider.", "items": []},
+        {"title": "CFO-level guidance helps work through decisions", "body": "An advisory relationship can help interpret the numbers, examine cash commitments, compare options and review a plan. Its usefulness depends on the quality and timing of the underlying records. If the records need recurring work, agree who does it; otherwise the review can become another meeting spent establishing the facts.", "items": []},
+        {"title": "Ask how the relationship will work", "body": "Ready Margin combines agreed restaurant finance and operating work with explanation and practical guidance. The proposal should make the responsibilities explicit, including any specialist work handled separately. Bring the same questions to every provider so you can compare the service rather than the title.", "items": ["Which jobs will you own, and which remain with us?", "What arrives each week or month?", "Who investigates missing or conflicting records?", "Who approves payments, payroll and changes?", "What happens when a question falls outside the engagement?"]}
+      ]
+    },
+    {
+      "path": "/insights/delivery-platform-reconciliation",
+      "title": "Restaurant delivery-platform reconciliation",
+      "heading": "The delivery sales total isn’t the bank deposit.",
+      "description": "How to review restaurant delivery-platform settlements against sales, fees, refunds, adjustments and the deposit that reaches the bank.",
+      "kind": "article", "published": true, "indexable": true, "updated": "2026-09-10",
+      "category": "Cash and margin", "author": "Ready Margin editorial", "keyword": "restaurant delivery platform reconciliation",
+      "takeaway": "Reconcile each settlement to its source period and adjustments before comparing it with a bank deposit.",
+      "related": ["/what-we-handle/accounting-close", "/insights/sales-do-not-equal-cash", "/insights/restaurant-month-end-close-checklist", "/book-a-review"],
+      "sections": [
+        {"title": "Use the settlement as the bridge", "body": "A sales export describes activity. A platform statement explains how that activity becomes a payout. A bank statement shows when the payout arrived. Keep all three together. Comparing gross sales directly with a deposit skips the fees, refunds, adjustments and timing that may account for the difference.", "items": []},
+        {"title": "Match the location and period", "body": "Confirm which restaurant, account and order dates the payout covers. Check whether a settlement spans two reporting periods or whether one bank deposit combines several settlements. Keep identifiers with the record so the next person can trace the match without reconstructing your work.", "items": ["Restaurant or location identifier.", "Statement period and payout reference.", "Expected and actual settlement date."]},
+        {"title": "Read each adjustment", "body": "Separate the items shown on the platform statement instead of treating the net difference as one expense. Fees, refunds, promotions and other adjustments may need different treatment. Confirm that treatment with whoever maintains the accounts and document anything whose meaning is unclear.", "items": []},
+        {"title": "Keep a short exceptions list", "body": "Record missing statements, unmatched deposits and unexplained deductions. Include the amount from the source record, the question, the person investigating and the next check date. Preserve the original statement when requesting clarification so a correction can be followed back to the relevant payout.", "items": []},
+        {"title": "Bring it into the weekly review", "body": "Settlement questions belong beside the cash view and the close checklist. The aim is to understand what has arrived, what is pending and what needs an answer. Ready Margin can review the required records and access during onboarding; this does not imply a direct integration with any particular delivery platform.", "items": []}
+      ]
+    },
+    {
+      "path": "/insights/restaurant-compliance-handoffs",
+      "title": "Restaurant compliance records and handoffs",
+      "heading": "A due date needs someone responsible for it.",
+      "description": "Organize restaurant compliance handoffs with confirmed requirements, source documents, internal cutoffs, approvers and a record of completion.",
+      "kind": "article", "published": true, "indexable": true, "updated": "2026-09-10",
+      "category": "Implementation", "author": "Ready Margin editorial", "keyword": "restaurant compliance calendar and document handoff",
+      "takeaway": "A working calendar connects each confirmed obligation to its records, preparer, approver and completion evidence.",
+      "related": ["/what-we-handle/accounting-close", "/what-we-handle/payroll-tips", "/new-york-restaurant-bookkeeping", "/book-a-review"],
+      "sections": [
+        {"title": "Confirm the requirement before adding the reminder", "body": "Requirements depend on the business, location and activity. Start with the obligations confirmed for your restaurant by the appropriate authority or qualified adviser. A generic checklist cannot establish everything that applies. This guide describes how to organize the work after those requirements are confirmed; it does not set filing dates or interpret the law.", "items": []},
+        {"title": "Give each obligation a complete entry", "body": "The calendar should explain what must be prepared and who is responsible, not just when a reminder appears. Include an internal cutoff that leaves time to obtain missing records and review the work before the confirmed external deadline. Keep the source of the requirement with the entry so it can be checked when circumstances change.", "items": ["Requirement and the source used to confirm it.", "Responsible preparer and nominated approver.", "Required records and agreed secure sharing route.", "Internal cutoff, confirmed deadline and escalation contact."]},
+        {"title": "Keep documents with the handoff", "body": "A preparer should be able to see which version was approved, what remains missing and who can answer a question. Keep access limited to the people who need the records. Employee and financial documents belong in the agreed secure process, not in the public website enquiry form.", "items": []},
+        {"title": "Record completion, then the next check", "body": "A reminder marked done is not the same as evidence that the required action was completed. Keep the relevant confirmation or receipt and note who checked it. If the work is still outstanding, make that status explicit and use the escalation route agreed for the restaurant.", "items": []},
+        {"title": "Agree what Ready Margin handles", "body": "Compliance and tax-related workflows are agreed as part of the service scope, including the documents, responsible people and approvals involved. Confirm any filing or specialist work separately. The restaurant’s obligations do not disappear when a supporting workflow is outsourced; the relationship should make the responsibilities easier to follow.", "items": []}
+      ]
+    },
+    {
+      "path": "/what-we-handle/accounting-close",
+      "title": "Accounting & Close",
+      "seoTitle": "Restaurant Accounting & Bookkeeping Services",
+      "heading": "Books you can run a restaurant with.",
+      "description": "Restaurant bookkeeping, reconciliations, tax and compliance coordination, and monthly close—with an explanation of the numbers and the questions still outstanding.",
+      "kind": "capability",
+      "sections": [
+        {
+          "title": "The books, kept moving",
+          "body": "Sales arrive daily. Bills turn up late. The bank rarely tells the whole story. We bring those records together, investigate differences and prepare the close so you can read the month without rebuilding it yourself.",
+          "items": [
+            "Bookkeeping and account categorization",
+            "Bank reconciliation and unresolved-item follow-up",
+            "Vendor bills and payables approval workflows",
+            "Monthly close and financial statements"
+          ]
+        },
+        {
+          "title": "What we’ll need",
+          "body": "Access to your accounting records, bank activity, sales exports and supplier bills. We’ll agree how those arrive and who can answer questions about them.",
+          "items": [
+            "Bank and card statements",
+            "Sales exports and supplier documentation",
+            "Owner approval of unusual items and payments"
+          ]
+        },
+        {
+          "title": "What comes back to you",
+          "body": "Reconciled records, the agreed financial reports and a short list of anything still unresolved. You can see what’s complete and what needs a decision.",
+          "items": [
+            "Reconciled records with open-item notes",
+            "Close pack, financial statements and owner-ready explanation",
+            "Compliance checklist and tax-document handoff within confirmed scope"
+          ]
+        },
+        {
+          "title": "When the work happens",
+          "body": "Processing runs throughout the month, with an agreed weekly check and monthly close date. Missing records are flagged before they hold up the whole report.",
+          "items": []
+        },
+        {
+          "title": "What stays with you",
+          "body": "Your nominated approver authorizes payments and filings. We agree the responsible person and due date for each compliance handoff. Tax returns, assurance work, historic cleanup and jurisdiction-specific legal advice are included only when confirmed in the agreed scope.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "icon": "book",
+      "status": "Managed service · scope confirmed at review",
+      "related": [
+        "/how-it-works/implementation",
+        "/case-studies/payroll-handoff",
+        "/book-a-review"
+      ],
+      "keyword": "Restaurant accounting, tax and compliance support",
+      "category": "",
+      "takeaway": "",
+      "author": ""
+    },
+    {
+      "path": "/what-we-handle/payroll-tips",
+      "title": "Payroll & Tips",
+      "seoTitle": "Restaurant Payroll Services & Tip Management",
+      "heading": "Get the hours right. Get payroll ready.",
+      "description": "Restaurant payroll and tip preparation that brings recorded hours, manager corrections and approvals together before the cutoff.",
+      "kind": "capability",
+      "sections": [
+        {
+          "title": "Before payroll is due",
+          "body": "A missed clock-out can turn into several messages at the worst possible time. We check attendance and tip inputs, collect the corrections and prepare the records for your approver.",
+          "items": [
+            "Payroll processing within confirmed scope",
+            "Hours and attendance verification",
+            "Tip pooling and distribution workflows",
+            "Discrepancy resolution and payroll-tax workflows within confirmed scope"
+          ]
+        },
+        {
+          "title": "The records we work from",
+          "body": "We need the pay period, recorded hours, tip inputs and your approved policies. A manager who knows the shifts confirms any changes.",
+          "items": [
+            "Approved employee and pay details",
+            "Time records and documented tip policy",
+            "Manager confirmation of exceptions before cutoff"
+          ]
+        },
+        {
+          "title": "A handoff your approver can use",
+          "body": "You receive the prepared inputs and a clear list of unresolved questions. Corrections are kept with the record so the same issue does not have to be explained twice.",
+          "items": [
+            "Prepared payroll and documented approval handoff",
+            "Tip input checks and discrepancy record",
+            "Escalation list for unresolved items"
+          ]
+        },
+        {
+          "title": "Built around your cutoff",
+          "body": "Checks follow your agreed payroll cycle. We confirm when inputs are due, who approves them and how late changes will be handled.",
+          "items": []
+        },
+        {
+          "title": "Approval stays with the restaurant",
+          "body": "You set pay policies and approve payroll. Employment advice and requirements for a jurisdiction we have not agreed to support are outside this service.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "icon": "tips",
+      "status": "Managed service · scope confirmed at review",
+      "related": [
+        "/how-it-works/implementation",
+        "/case-studies/payroll-handoff",
+        "/book-a-review"
+      ],
+      "keyword": "Restaurant payroll and tip workflows with clear inputs, an approval handoff and a named route for discrepancies.",
+      "category": "",
+      "takeaway": "",
+      "author": ""
+    },
+    {
+      "path": "/what-we-handle/scheduling-attendance",
+      "title": "Scheduling & Attendance",
+      "seoTitle": "Restaurant Scheduling & Attendance Support",
+      "heading": "The schedule is only half the story.",
+      "description": "Restaurant scheduling and attendance support that checks planned shifts against recorded hours and gets exceptions back to the right manager.",
+      "kind": "capability",
+      "sections": [
+        {
+          "title": "From planned shifts to confirmed hours",
+          "body": "Someone stays late. A shift gets swapped. A clock-out is missed. We help keep those changes connected to the attendance record before they reach payroll.",
+          "items": [
+            "Schedule-input coordination",
+            "Hours and attendance visibility",
+            "Planned-versus-recorded labor review",
+            "Missing-punch and exception handoffs"
+          ]
+        },
+        {
+          "title": "Give us the shift context",
+          "body": "We work from schedules, time records and manager notes. Your operating contact confirms what actually happened when the records disagree.",
+          "items": [
+            "Schedules and time records",
+            "Shift changes and manager notes",
+            "A nominated manager to resolve exceptions"
+          ]
+        },
+        {
+          "title": "See what needs checking",
+          "body": "The working view shows attendance exceptions, the person who can resolve them and the next cutoff. Your payroll team receives the confirmed inputs.",
+          "items": [
+            "A clear attendance exception list",
+            "Labor signals for review",
+            "An accountable handoff into payroll"
+          ]
+        },
+        {
+          "title": "A regular check, not a last-minute chase",
+          "body": "We agree the frequency around service and payroll. Repeated issues are brought into the review so the team can improve the process.",
+          "items": []
+        },
+        {
+          "title": "Managed support today",
+          "body": "This service works with the systems and responsibilities agreed during onboarding. A standalone Ready Margin scheduling app is still in development.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "icon": "calendar",
+      "status": "Managed service · scope confirmed at review",
+      "related": [
+        "/how-it-works/implementation",
+        "/case-studies/payroll-handoff",
+        "/book-a-review"
+      ],
+      "keyword": "Managed schedule and attendance workflows",
+      "category": "",
+      "takeaway": "",
+      "author": ""
+    },
+    {
+      "path": "/what-we-handle/food-cost-vendors",
+      "title": "Food Cost & Vendors",
+      "seoTitle": "Restaurant Food Cost Management & Recipe Costing",
+      "heading": "Food cost went up. Let’s find out why.",
+      "description": "Restaurant food-cost and supplier review covering invoice prices, pack sizes, recipe inputs and the operating records behind a change.",
+      "kind": "capability",
+      "sections": [
+        {
+          "title": "Get past the percentage",
+          "body": "A higher food-cost figure could mean a price change, a different order, waste or a timing issue. We check the available records before recommending what to investigate or change.",
+          "items": [
+            "Vendor bill and price movement review",
+            "Recipe costing and dish-margin analysis",
+            "Ordering, inventory and par-level workflows where scoped",
+            "Waste and liquor tracking where scoped"
+          ]
+        },
+        {
+          "title": "Start with the actual records",
+          "body": "Supplier bills, delivery records, recipes and counts help explain the movement. We’ll identify which inputs are current and where the picture is incomplete.",
+          "items": [
+            "Supplier invoices and purchasing records",
+            "Current recipes, yields and portions",
+            "Inventory, waste and sales inputs where available"
+          ]
+        },
+        {
+          "title": "A specific question to act on",
+          "body": "You receive the findings, supporting records and next checks. That might mean querying an invoice, reviewing a recipe cost or checking the next stock count.",
+          "items": [
+            "Vendor-cost exceptions with context",
+            "Recipe and dish-margin review",
+            "Prioritized purchasing and operating questions"
+          ]
+        },
+        {
+          "title": "Review it while it is useful",
+          "body": "Vendor and food-cost checks follow the schedule agreed for your restaurant. Recurring differences stay on the review list until someone has answered them.",
+          "items": []
+        },
+        {
+          "title": "Restaurant knowledge matters",
+          "body": "Your team confirms counts, recipes and operational changes. Purchasing authority and supplier negotiations are agreed separately.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "icon": "cost",
+      "status": "Managed service · scope confirmed at review",
+      "related": [
+        "/how-it-works/implementation",
+        "/case-studies/vendor-price-review",
+        "/book-a-review"
+      ],
+      "keyword": "Restaurant food cost analysis",
+      "category": "",
+      "takeaway": "",
+      "author": ""
+    },
+    {
+      "path": "/what-we-handle/reporting-cash-visibility",
+      "title": "Reporting & Cash Visibility",
+      "seoTitle": "Restaurant Financial Reporting & Cash Flow Support",
+      "heading": "Know what’s due. Understand what’s left.",
+      "description": "Restaurant reporting and cash-flow review that puts sales, operating costs and upcoming commitments in the same conversation.",
+      "kind": "capability",
+      "sections": [
+        {
+          "title": "The answer is rarely in one report",
+          "body": "A busy week can look good in the POS while cash is tied up elsewhere. We compare the financial and operating records, explain timing differences and flag the decisions coming up.",
+          "items": [
+            "Weekly P&L reporting with input status",
+            "Cash-flow reporting and near-term commitments",
+            "Multi-location comparison and consolidation where scoped",
+            "CFO-level interpretation and practical guidance"
+          ]
+        },
+        {
+          "title": "What makes the view useful",
+          "body": "We need current sales, accounting and bank records, along with known commitments. We agree the reporting period and how missing inputs will be shown.",
+          "items": [
+            "Complete financial and sales records",
+            "Known payroll, vendor and other commitments",
+            "Location mapping and owner priorities"
+          ]
+        },
+        {
+          "title": "Numbers with an explanation",
+          "body": "The review sets out what changed, why it matters and what needs checking. Where forecasting is included, the assumptions sit beside the forecast.",
+          "items": [
+            "A dated reporting snapshot",
+            "Plain-English explanation of material changes",
+            "A decision list with an owner and next check"
+          ]
+        },
+        {
+          "title": "A review you can plan around",
+          "body": "Weekly reporting and discussion, with monthly statements where included. Delivery dates depend on the records agreed in your scope.",
+          "items": []
+        },
+        {
+          "title": "A dated view of the business",
+          "body": "Reports reflect the information available for that period. They are not a live bank feed, and forecasts cannot guarantee what will happen.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "icon": "book",
+      "status": "Managed service · scope confirmed at review",
+      "related": [
+        "/how-it-works/implementation",
+        "/case-studies/cash-review",
+        "/book-a-review"
+      ],
+      "keyword": "Weekly restaurant P&L, cash-flow reporting and multi-location interpretation with the caveats made clear.",
+      "category": "",
+      "takeaway": "",
+      "author": ""
+    },
+    {
+      "path": "/what-we-handle/turnaround-support",
+      "title": "Turnaround Support",
+      "seoTitle": "Restaurant Turnaround Consulting & CFO Guidance",
+      "heading": "When being busy isn’t enough.",
+      "description": "Restaurant turnaround support to review cash pressure, labor, food cost and the decisions that need attention first.",
+      "kind": "capability",
+      "sections": [
+        {
+          "title": "Start with the pressure you are under",
+          "body": "Before a long improvement list, we need to know what is due, what is uncertain and which decision cannot wait. Then we examine the costs and operating habits behind the pressure.",
+          "items": [
+            "Diagnostic review of cash and operating pressure",
+            "Labor, food and vendor review",
+            "A prioritized 30/60/90-day support plan where scoped",
+            "CFO-level decision support and follow-through"
+          ]
+        },
+        {
+          "title": "Bring the current picture",
+          "body": "Recent operating records, cash commitments and management context help establish the starting point. Unknowns stay visible until they can be checked.",
+          "items": [
+            "Current cash position and commitments",
+            "Recent operating and financial records",
+            "Owner availability and decision authority"
+          ]
+        },
+        {
+          "title": "A workable order of decisions",
+          "body": "You receive agreed priorities, responsible people and dates for the next review. The plan focuses attention on what the restaurant can actually do.",
+          "items": [
+            "A documented working diagnosis",
+            "A sequenced action plan with named owners",
+            "Regular progress and assumption reviews"
+          ]
+        },
+        {
+          "title": "Keep the plan under review",
+          "body": "An initial diagnostic can lead to a scoped 30/60/90-day plan. The sequence and review dates are confirmed after we understand the business.",
+          "items": []
+        },
+        {
+          "title": "Support, with honest limits",
+          "body": "Recovery and profit cannot be guaranteed. Legal, insolvency, lending and investment services are outside this engagement.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "icon": "chat",
+      "status": "Managed service · scope confirmed at review",
+      "related": [
+        "/how-it-works/implementation",
+        "/case-studies/cash-review",
+        "/book-a-review"
+      ],
+      "keyword": "Restaurant turnaround support",
+      "category": "",
+      "takeaway": "",
+      "author": ""
+    },
+    {
+      "path": "/what-we-handle",
+      "title": "Restaurant finance & operations services",
+      "heading": "What needs to come off your desk?",
+      "description": "Accounting, payroll, attendance, food cost and reporting: restaurant finance and operations support built around the work you need handled.",
+      "kind": "capability-index",
+      "sections": [
+        {
+          "title": "Agree the work before we start",
+          "body": "Your agreement sets out what is included, what costs extra and what is outside the service. Anything marked in development is future work, not something being sold today.",
+          "items": []
+        },
+        {
+          "title": "You keep the decisions",
+          "body": "We handle the agreed work and raise the questions. You nominate approvers, provide the source records and stay involved in decisions that affect the restaurant.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant finance & operations services"
+    },
+    {
+      "path": "/how-it-works",
+      "title": "How Ready Margin works",
+      "heading": "A better week starts with a better plan.",
+      "description": "How Ready Margin takes on recurring restaurant finance and operations work, from the first conversation to your regular review.",
+      "kind": "process",
+      "sections": [
+        {
+          "title": "Walk us through your week",
+          "body": "Tell us what you chase, what arrives late and which jobs keep coming back to you. We start with the way your restaurant actually runs.",
+          "items": []
+        },
+        {
+          "title": "Agree who handles what",
+          "body": "Together we map the systems, records, approvers and deadlines. Everyone should know which questions belong with them.",
+          "items": []
+        },
+        {
+          "title": "Put the first month on paper",
+          "body": "Your Ready Plan sets out access, first deliverables and the order of onboarding. We agree the starting point before adding more work.",
+          "items": []
+        },
+        {
+          "title": "Get into a regular rhythm",
+          "body": "We process the records, explain the findings and follow up on the decisions. The review changes as the restaurant’s needs change.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/how-it-works/implementation",
+        "/how-it-works/ready-rhythm",
+        "/how-it-works/owner-view"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "How Ready Margin works"
+    },
+    {
+      "path": "/how-it-works/ready-rhythm",
+      "title": "The Ready Rhythm",
+      "heading": "A weekly review that moves the work forward.",
+      "description": "The Ready Rhythm connects restaurant records, checks, recommendations and follow-up in one recurring review.",
+      "kind": "rhythm",
+      "sections": [
+        {
+          "title": "Capture",
+          "body": "Bring in the agreed sales, hours, bills and operating records. Flag what is missing while there is still time to get it.",
+          "items": []
+        },
+        {
+          "title": "Reconcile",
+          "body": "Check the records against each other. A difference stays open until there is an explanation, not just a matching total.",
+          "items": []
+        },
+        {
+          "title": "Review",
+          "body": "Look at the week with the restaurant in mind. What changed? Is it timing, a missing input or something the team needs to address?",
+          "items": []
+        },
+        {
+          "title": "Recommend",
+          "body": "Set out the action, the person responsible and the decision needed from you. Make the recommendation specific enough to use.",
+          "items": []
+        },
+        {
+          "title": "Follow through",
+          "body": "Check what happened. Carry unfinished work into the next review so a good conversation does not end as another forgotten note.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "The Ready Rhythm"
+    },
+    {
+      "path": "/how-it-works/implementation",
+      "title": "Ready Margin implementation plan",
+      "heading": "Your first month, planned together.",
+      "description": "A practical restaurant finance onboarding plan covering access, responsibilities, initial reports and the first owner review.",
+      "kind": "implementation",
+      "sections": [
+        {
+          "title": "Before the first week",
+          "body": "Agree the scope, contacts and secure way to share records. Your team knows what to provide and who can approve access.",
+          "items": [
+            "Current systems and responsible contacts",
+            "Agreed data-sharing and access route",
+            "Reporting priorities and approval cutoffs",
+            "Named service and restaurant contacts"
+          ]
+        },
+        {
+          "title": "Week 1 · Get to know the operation",
+          "body": "Review the records and the way work moves between people. Confirm access, responsibilities and the questions to resolve first.",
+          "items": []
+        },
+        {
+          "title": "Week 2 · Bring the records together",
+          "body": "Set up recurring inputs and check how they map into the accounts. Identify missing information and any cleanup that needs a separate scope.",
+          "items": []
+        },
+        {
+          "title": "Week 3 · Review the first picture",
+          "body": "Prepare the first available reports and walk through them with you. Anything incomplete is labelled so the figures can be read in context.",
+          "items": []
+        },
+        {
+          "title": "Week 4 · Settle into the routine",
+          "body": "Hold the first structured review, confirm the ongoing schedule and adjust anything that is not working for the team.",
+          "items": []
+        },
+        {
+          "title": "People before process",
+          "body": "Ready Margin handles the agreed processing and reporting. Managers confirm what happened in the restaurant. Your approver authorizes payroll, payments and major decisions.",
+          "items": []
+        },
+        {
+          "title": "When a deadline is at risk",
+          "body": "Use the contact route agreed at onboarding. We identify the missing input, what it affects and who can resolve it before the cutoff.",
+          "items": []
+        },
+        {
+          "title": "Confirm the dates together",
+          "body": "This is an indicative sequence. The condition of your records, available access and scope determine the final onboarding plan.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Ready Margin implementation plan"
+    },
+    {
+      "path": "/implementation",
+      "title": "Restaurant finance onboarding",
+      "heading": "Bring the team into the plan.",
+      "description": "Prepare your restaurant for outsourced finance and operations support, with the right records, contacts and approvals in place.",
+      "kind": "editorial",
+      "sections": [
+        {
+          "title": "Choose where to begin",
+          "body": "Start with a recurring job that causes trouble each week. A defined first scope gives the team a manageable place to begin.",
+          "items": []
+        },
+        {
+          "title": "Introduce the right people",
+          "body": "Nominate the manager who can answer operating questions and the person who approves decisions. Both should know what is changing and when.",
+          "items": []
+        },
+        {
+          "title": "Make the first month visible",
+          "body": "Use the detailed Ready Plan to agree access, first reports and review dates. Do not leave the team guessing which process starts next.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/how-it-works/implementation",
+        "/resources/review-preparation-checklist"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant finance onboarding"
+    },
+    {
+      "path": "/how-it-works/owner-view",
+      "title": "The Ready Margin owner view",
+      "heading": "What happened. What needs you.",
+      "description": "An example of a Ready Margin owner review: the finding, the reason it matters, the recommended action and who follows up.",
+      "kind": "owner-view",
+      "sections": [
+        {
+          "title": "Read it in context",
+          "body": "A useful review tells you which period it covers and what is still unknown. The example below shows a service deliverable, not a live software dashboard.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "The Ready Margin owner view"
+    },
+    {
+      "path": "/who-we-help/independent-restaurants",
+      "title": "Independent restaurants",
+      "heading": "You can’t be everyone’s follow-up email.",
+      "description": "Finance and operations support for independent restaurant owners who are still handling the books, payroll questions and supplier follow-ups after service.",
+      "kind": "audience",
+      "sections": [
+        {
+          "title": "The second job after service",
+          "body": "The kitchen is closed, but there are hours to confirm and invoices to find. If routine admin keeps taking the time you meant to spend on the restaurant, start there.",
+          "items": [
+            "You are the default contact for every missing input",
+            "Reports arrive without time to discuss them",
+            "Payroll or vendor questions interrupt service"
+          ]
+        },
+        {
+          "title": "Bring in recurring support",
+          "body": "This works best when you want someone to take on defined work each week. You keep an approver involved and make sure the records can reach us.",
+          "items": []
+        },
+        {
+          "title": "Talk about your restaurant",
+          "body": "Bring a recent example: a payroll correction, a late report or a bill no one could explain. We’ll use it to discuss the support you actually need.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle/accounting-close",
+        "/what-we-handle/payroll-tips",
+        "/what-we-handle/reporting-cash-visibility",
+        "/how-it-works/implementation",
+        "/book-a-review"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Independent restaurants"
+    },
+    {
+      "path": "/who-we-help/multi-location-groups",
+      "title": "Multi-location groups",
+      "heading": "See the group. Keep sight of each restaurant.",
+      "description": "Restaurant group reporting and operations support that brings locations onto a shared schedule without hiding local differences.",
+      "kind": "audience",
+      "sections": [
+        {
+          "title": "More locations. More places for a gap.",
+          "body": "Each restaurant has its own managers, deadlines and explanations. The group needs consistent reporting without losing the reason one location looks different.",
+          "items": [
+            "Each location uses a different reporting habit",
+            "Payroll inputs arrive through separate handoffs",
+            "You need comparisons that use consistent definitions"
+          ]
+        },
+        {
+          "title": "Give every location the same starting point",
+          "body": "Agree the input dates, account definitions and local contacts. Consolidation is useful only when everyone understands what goes into it.",
+          "items": []
+        },
+        {
+          "title": "Start with one group review",
+          "body": "Show us how you compare locations today. We’ll look at which differences matter and which come from inconsistent records or timing.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle/reporting-cash-visibility",
+        "/what-we-handle/scheduling-attendance",
+        "/what-we-handle/food-cost-vendors",
+        "/how-it-works/implementation",
+        "/book-a-review"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Multi-location groups"
+    },
+    {
+      "path": "/who-we-help/performance-pressure",
+      "title": "Restaurants under performance pressure",
+      "heading": "Find the decision that cannot wait.",
+      "description": "Practical restaurant finance and operating support when cash commitments, costs or performance need closer attention.",
+      "kind": "audience",
+      "sections": [
+        {
+          "title": "When the pressure is immediate",
+          "body": "It can be hard to choose a starting point when several costs are moving at once. Bring the deadlines and the known commitments into view first.",
+          "items": [
+            "The restaurant is busy but cash feels tight",
+            "Vendor commitments are difficult to prioritize",
+            "Food or labor changes need explanation"
+          ]
+        },
+        {
+          "title": "Work from the records",
+          "body": "This engagement needs candid information and an owner ready to make decisions. We separate what is known from what still needs investigation.",
+          "items": []
+        },
+        {
+          "title": "Agree what comes first",
+          "body": "Use the first review to discuss the immediate question and a realistic sequence of work. This is operating support, not emergency funding or insolvency advice.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle/turnaround-support",
+        "/what-we-handle/food-cost-vendors",
+        "/what-we-handle/reporting-cash-visibility",
+        "/how-it-works/implementation",
+        "/book-a-review"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurants under performance pressure"
+    },
+    {
+      "path": "/who-we-help",
+      "title": "Who Ready Margin helps",
+      "heading": "Built around the restaurant you run.",
+      "description": "Support for independent restaurants, multi-location groups and owners working through performance pressure.",
+      "kind": "audience-index",
+      "sections": [
+        {
+          "title": "The right fit is practical",
+          "body": "We are most useful when you want ongoing help with a defined part of the operation. You keep control of approvals; we agree the work, the records and the review schedule.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Who Ready Margin helps"
+    },
+    {
+      "path": "/pricing",
+      "title": "Ready Margin pricing enquiry",
+      "heading": "Let’s price the work you actually need.",
+      "description": "Ready Margin pricing is by enquiry. We review your locations, systems and service needs before recommending a scope.",
+      "kind": "pricing",
+      "sections": [
+        {
+          "title": "No two back offices are quite alike",
+          "body": "The number of locations is only the start. Payroll, systems, the condition of the books and how much guidance you need all affect the work involved.",
+          "items": []
+        },
+        {
+          "title": "Know what you are agreeing to",
+          "body": "Your proposal explains the recurring service and anything priced separately. Cleanup, specialist advice, third-party subscriptions and future software are not quietly bundled in.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Ready Margin pricing enquiry"
+    },
+    {
+      "path": "/why-ready-margin",
+      "title": "Why choose Ready Margin",
+      "heading": "Who does the work after the report arrives?",
+      "description": "Why restaurants choose a managed finance and operations relationship: someone to prepare the records, explain the numbers and follow up.",
+      "kind": "comparison",
+      "sections": [
+        {
+          "title": "A tool still needs someone to use it",
+          "body": "Software can collect information. Someone still has to check the inputs, resolve the exceptions and act on the findings. That is the work we discuss taking on.",
+          "items": []
+        },
+        {
+          "title": "The restaurant belongs in the accounts",
+          "body": "Hours, tips, supplier changes and payment timing all shape the financial picture. We bring those operating questions into the review.",
+          "items": []
+        },
+        {
+          "title": "Fewer gaps between responsibilities",
+          "body": "Accountants, payroll providers and managers each have a part to play. We agree where our work begins and ends so important jobs do not fall between them.",
+          "items": []
+        },
+        {
+          "title": "Ask us the practical questions",
+          "body": "What will you handle? What do we need to send? When will we see the work? Who follows up? Those answers should be clear before you commit.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle",
+        "/how-it-works/ready-rhythm",
+        "/book-a-review"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Why choose Ready Margin"
+    },
+    {
+      "path": "/about",
+      "title": "About Ready Margin",
+      "heading": "More time for the restaurant you built.",
+      "description": "Ready Margin grew from hands-on restaurant operations and finance experience. We take care of agreed back-office work and help owners understand the business.",
+      "kind": "about",
+      "sections": [
+        {
+          "title": "We know the other side of service",
+          "body": "The guest sees the restaurant. Behind it are schedules, hours, tip questions, supplier bills and books that still need closing. We know that work because we have done it.",
+          "items": []
+        },
+        {
+          "title": "Run. Explain. Improve.",
+          "body": "Handle the recurring jobs. Explain what the records say. Help the owner choose a practical action and check what happened. That is the basis of the relationship.",
+          "items": []
+        },
+        {
+          "title": "A new name for a familiar problem",
+          "body": "Ready Margin is a new identity, rooted in restaurant and finance work. We are building the service around the questions operators face every week.",
+          "items": []
+        },
+        {
+          "title": "Room for the work only you can do",
+          "body": "You still lead the team and make the decisions. Our aim is to give you more room for them by taking on the recurring work that otherwise fills the gaps in your day.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/why-ready-margin",
+        "/how-it-works",
+        "/book-a-review"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "About Ready Margin"
+    },
+    {
+      "path": "/platform",
+      "title": "The Ready Margin operating model",
+      "heading": "The service comes first.",
+      "description": "Ready Margin’s current managed services and future technology direction, explained separately so you know what is available today.",
+      "kind": "platform",
+      "sections": [
+        {
+          "title": "Available now · people handling the work",
+          "body": "Our current offer is managed restaurant finance, operations and advisory support within an agreed scope. You do not need to buy a Ready Margin app to work with us.",
+          "items": []
+        },
+        {
+          "title": "In development · tools built around the work",
+          "body": "Dashboards, workbenches, alerts and deeper system connections are future direction. We have not announced a public release date or software pricing.",
+          "items": []
+        },
+        {
+          "title": "Built to support the relationship",
+          "body": "Technology should make the work easier to do and easier to understand. New capabilities will be described here when they are ready to offer.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/platform/how-the-work-connects",
+        "/what-we-handle",
+        "/integrations"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "The Ready Margin operating model"
+    },
+    {
+      "path": "/platform/how-the-work-connects",
+      "title": "How restaurant workflows connect",
+      "heading": "One changed shift can reach the whole business.",
+      "description": "See how attendance, payroll, supplier records and accounting connect to the decisions a restaurant owner makes.",
+      "kind": "workstreams",
+      "sections": [
+        {
+          "title": "Start where the work happens",
+          "body": "A manager confirms hours. Those hours feed payroll. Payroll, sales and supplier records help explain the restaurant’s costs and cash commitments.",
+          "items": []
+        },
+        {
+          "title": "Check before you interpret",
+          "body": "When the records agree, the report becomes a better basis for decisions. When they do not, the difference needs an answer first.",
+          "items": []
+        },
+        {
+          "title": "Keep the missing piece visible",
+          "body": "A late count or unapproved change affects what you can conclude. We identify the gap and who can fill it; we do not assume every connection is automatic.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "How restaurant workflows connect"
+    },
+    {
+      "path": "/integrations",
+      "title": "Restaurant systems & compatibility",
+      "heading": "Tell us what you’re working with.",
+      "description": "Discuss your restaurant’s POS, payroll, accounting and scheduling systems. We confirm access and compatibility before agreeing the service.",
+      "kind": "editorial",
+      "sections": [
+        {
+          "title": "Start with your existing systems",
+          "body": "Send the names of the tools you use and explain which records are difficult to get. We’ll review the available access and export options.",
+          "items": []
+        },
+        {
+          "title": "Confirm the way records move",
+          "body": "The method may be an export, authorized access or a connection we have verified. We agree the frequency and responsibilities before starting.",
+          "items": []
+        },
+        {
+          "title": "No assumed compatibility",
+          "body": "A system appearing in your process does not mean we offer a direct integration with it. Any deeper connection must be tested and confirmed.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/how-it-works/implementation",
+        "/contact"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant systems & compatibility"
+    },
+    {
+      "path": "/partners",
+      "title": "Partner with Ready Margin",
+      "heading": "Know a restaurant that needs hands-on help?",
+      "description": "Talk to Ready Margin about a restaurant referral or a clearly defined service relationship.",
+      "kind": "editorial",
+      "sections": [
+        {
+          "title": "Where we may fit",
+          "body": "Your client may know what needs doing but need help getting the recurring work done. We can discuss whether our managed support suits that need.",
+          "items": []
+        },
+        {
+          "title": "Agree the responsibilities",
+          "body": "Before any referral becomes an engagement, we clarify the work, the client relationship and what information can be shared.",
+          "items": []
+        },
+        {
+          "title": "Start with the problem",
+          "body": "A broad description is enough for the first conversation. Ask the client’s permission before sharing personal or financial records.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/contact",
+        "/what-we-handle"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Partner with Ready Margin"
+    },
+    {
+      "path": "/careers",
+      "title": "Careers at Ready Margin",
+      "heading": "Good work deserves people who care about it.",
+      "description": "Careers at Ready Margin. Find published roles here when recruitment opens.",
+      "kind": "editorial",
+      "sections": [
+        {
+          "title": "No open roles listed",
+          "body": "There are no approved vacancies to share at the moment. Future listings will include the responsibilities and how to apply.",
+          "items": []
+        },
+        {
+          "title": "How we work",
+          "body": "Check the detail. Ask when something does not add up. Treat people with respect. Finish the follow-up you said you would.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": false,
+      "updated": "2026-09-10",
+      "related": [
+        "/about"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Careers at Ready Margin"
+    },
+    {
+      "path": "/security",
+      "title": "Ready Margin data handling",
+      "heading": "Know who can access what.",
+      "description": "Questions about restaurant data, permissions and handling to settle before starting a Ready Margin engagement.",
+      "kind": "security",
+      "sections": [
+        {
+          "title": "System access · to be confirmed",
+          "body": "Your agreement needs to name the systems, authorized people and permission levels, including how access ends. Confirm those details before sharing records.",
+          "items": []
+        },
+        {
+          "title": "Records and retention · to be confirmed",
+          "body": "Agree the transfer method, storage arrangements, retention period and deletion process. The website enquiry form is not a place for passwords, payroll files or bank statements.",
+          "items": []
+        },
+        {
+          "title": "Service providers · to be confirmed",
+          "body": "Request the approved provider list and responsibilities for your engagement. No independent certification is represented on this page.",
+          "items": []
+        },
+        {
+          "title": "Incident contacts · to be confirmed",
+          "body": "The onboarding agreement should specify who to contact, how issues are escalated and any notification commitments.",
+          "items": []
+        },
+        {
+          "title": "This website",
+          "body": "The form collects contact details and broad context. Optional analytics exclude form values. The privacy and cookie notices explain the website’s handling.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/legal/privacy",
+        "/contact"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Ready Margin data handling"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Ready Margin",
+      "heading": "What can we take off your list?",
+      "description": "Contact Ready Margin about restaurant accounting, payroll, operating support or a question about working together.",
+      "kind": "form",
+      "sections": [
+        {
+          "title": "Tell us where you need help",
+          "body": "A brief description is enough. Include the restaurant name and the best email to reach you; add anything else you think would help.",
+          "items": []
+        },
+        {
+          "title": "We’ll take it from there",
+          "body": "We’ll respond to discuss your question and, if useful, arrange a review. There is no need to send financial files through this form.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Contact Ready Margin"
+    },
+    {
+      "path": "/book-a-review",
+      "title": "Book a Restaurant Operations Review",
+      "heading": "Let’s talk about the part that keeps you late.",
+      "description": "Book a Restaurant Operations Review to discuss the admin, reporting or recurring finance work that is taking time from your restaurant.",
+      "kind": "form",
+      "sections": [
+        {
+          "title": "Start with one thing",
+          "body": "The hours you have to chase. The supplier bill you cannot explain. The report that arrives too late. A recent example helps us understand the wider problem.",
+          "items": []
+        },
+        {
+          "title": "Decide whether the support fits",
+          "body": "We’ll discuss what happens today, where help could make sense and the responsibilities involved. Timing is arranged when we reply; there is no commitment to a service package.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Book a Restaurant Operations Review"
+    },
+    {
+      "path": "/thank-you",
+      "title": "Review request received",
+      "heading": "Thanks for getting in touch.",
+      "description": "What to prepare after sending a Restaurant Operations Review enquiry.",
+      "kind": "thanks",
+      "sections": [
+        {
+          "title": "Bring your questions",
+          "body": "Make a note of your systems, who handles the recurring work and the problem you most want to discuss. Keep sensitive documents until a secure sharing route is agreed.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": false,
+      "updated": "2026-09-10",
+      "related": [
+        "/resources/review-preparation-checklist",
+        "/insights/weekly-pnl-review"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Review request received"
+    },
+    {
+      "path": "/margin-clarity-check",
+      "title": "Margin Clarity Check",
+      "heading": "Where is the admin getting stuck?",
+      "description": "Use this short restaurant workflow check to spot questions worth discussing about payroll, reporting, systems and supplier work.",
+      "kind": "diagnostic",
+      "sections": [
+        {
+          "title": "Use the result as a starting point",
+          "body": "Your answers describe how work is organized. They cannot tell us whether the numbers are correct or how the restaurant is performing. Bring the suggested questions to a review.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Margin Clarity Check"
+    },
+    {
+      "path": "/case-studies",
+      "title": "Ready Margin workflow examples",
+      "heading": "What handling the work looks like.",
+      "description": "Illustrative restaurant workflows showing how Ready Margin would approach a payroll query, a supplier price change and a cash review.",
+      "kind": "cases",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Ready Margin workflow examples"
+    },
+    {
+      "path": "/case-studies/payroll-handoff",
+      "title": "A missing punch before payroll",
+      "heading": "One missing clock-out. One payroll deadline.",
+      "description": "An illustrative payroll workflow: confirm a missing time entry, document the correction and prepare it for approval.",
+      "kind": "case",
+      "sections": [
+        {
+          "title": "The question",
+          "body": "Payroll is approaching, but one shift has no confirmed end time. The scheduled hours alone cannot tell the approver what to pay.",
+          "items": []
+        },
+        {
+          "title": "Check what happened",
+          "body": "Compare the attendance record with the schedule, then ask the manager who was on shift to confirm the finish time.",
+          "items": []
+        },
+        {
+          "title": "Record the correction",
+          "body": "Keep the manager’s confirmation with the corrected input. If it is still unresolved at cutoff, explain what is missing and who must decide.",
+          "items": []
+        },
+        {
+          "title": "Put it in front of the approver",
+          "body": "The approver receives the prepared record and any remaining exception. Payroll authorization stays with the restaurant.",
+          "items": []
+        },
+        {
+          "title": "What the work is aiming for",
+          "body": "A checked record ready for approval, with the reason for the change attached.",
+          "items": []
+        },
+        {
+          "title": "About this example",
+          "body": "This is an illustrative scenario, not a customer case study or an achieved result.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle/payroll-tips",
+        "/book-a-review"
+      ],
+      "status": "Illustrative workflow",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "A missing punch before payroll"
+    },
+    {
+      "path": "/case-studies/vendor-price-review",
+      "title": "A supplier price change worth checking",
+      "heading": "Same supplier. A different bill.",
+      "description": "An illustrative supplier review: compare quantities, pack sizes and unit prices before deciding whether to query an invoice.",
+      "kind": "case",
+      "sections": [
+        {
+          "title": "The question",
+          "body": "A regular delivery costs more than the previous one. Before calling it a price increase, the order needs a closer look.",
+          "items": []
+        },
+        {
+          "title": "Compare like with like",
+          "body": "Check the items, quantities and pack sizes. A larger pack and a higher unit price are different explanations.",
+          "items": []
+        },
+        {
+          "title": "Look for the supporting record",
+          "body": "Match the invoice to the delivery and agreed pricing. Check whether a credit or substitution changes the amount being compared.",
+          "items": []
+        },
+        {
+          "title": "Choose the next action",
+          "body": "The owner can query the invoice, confirm an order change or update the relevant recipe cost using the finding.",
+          "items": []
+        },
+        {
+          "title": "What the work is aiming for",
+          "body": "A purchasing decision based on a checked comparison, rather than a reaction to the invoice total.",
+          "items": []
+        },
+        {
+          "title": "About this example",
+          "body": "This scenario illustrates an approach to supplier review. It is not a customer result or a promise of lower costs.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle/food-cost-vendors",
+        "/book-a-review"
+      ],
+      "status": "Illustrative workflow",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "A supplier price change worth checking"
+    },
+    {
+      "path": "/case-studies/cash-review",
+      "title": "Sales are strong. Cash still needs a plan.",
+      "heading": "A full dining room. A cash question.",
+      "description": "An illustrative cash review: read sales, settlement dates and upcoming commitments together.",
+      "kind": "case",
+      "sections": [
+        {
+          "title": "The question",
+          "body": "Sales look strong, but payroll and supplier payments are coming due. The operator wants to understand what the bank balance can cover.",
+          "items": []
+        },
+        {
+          "title": "Check the timing",
+          "body": "Compare recorded sales with settled receipts. Identify transactions or records that have not yet reached the bank view.",
+          "items": []
+        },
+        {
+          "title": "Add the known commitments",
+          "body": "Put upcoming payments beside the available balance. Mark estimated amounts and missing information instead of treating them as certain.",
+          "items": []
+        },
+        {
+          "title": "Discuss the decision",
+          "body": "The review shows which questions are about timing and which payment decisions need the owner’s attention.",
+          "items": []
+        },
+        {
+          "title": "What the work is aiming for",
+          "body": "A dated view of commitments and a short list of actions to confirm before the next review.",
+          "items": []
+        },
+        {
+          "title": "About this example",
+          "body": "This is an illustrative workflow. It does not describe a customer outcome or guarantee cash availability.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle/reporting-cash-visibility",
+        "/book-a-review"
+      ],
+      "status": "Illustrative workflow",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Sales are strong. Cash still needs a plan."
+    },
+    {
+      "path": "/insights/sales-do-not-equal-cash",
+      "title": "Why restaurant sales do not equal available cash",
+      "heading": "A good sales week is not the same as cash in the bank.",
+      "description": "How to read restaurant sales alongside settlement timing, payroll and supplier commitments before making a cash decision.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "The dining room was full. Why does cash still feel tight?",
+          "body": "Sales tell you what the restaurant sold. Available cash depends on when receipts settle and what is already committed. A busy week and a tight payment schedule can happen at the same time.",
+          "items": []
+        },
+        {
+          "title": "Check when the money arrives",
+          "body": "Compare the sales period with the bank activity. Card settlements, refunds and other timing differences may explain part of the gap. Use the source records to confirm the dates before treating it as a loss.",
+          "items": []
+        },
+        {
+          "title": "Put the due dates beside the balance",
+          "body": "List known payroll, supplier and other operating commitments. Mark anything estimated or not yet confirmed. A bank balance read on its own can make money look available when it already has a job.",
+          "items": []
+        },
+        {
+          "title": "Decide what needs an answer",
+          "body": "Which receipt has not settled? Which bill is still missing? Who can confirm it? Give each unresolved question a person and a date, then refresh the view before making the decision.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Cash and margin",
+      "takeaway": "Read the balance with settlement dates and known commitments—not on its own.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/reporting-cash-visibility",
+        "/book-a-review"
+      ],
+      "keyword": "Why restaurant sales do not equal available cash",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/payroll-cutoff-checklist",
+      "title": "A calmer payroll handoff starts before cutoff",
+      "heading": "Payroll starts before the cutoff email.",
+      "description": "A restaurant payroll preparation checklist for confirming hours, tip inputs, corrections and the final approval.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "Agree the period first",
+          "body": "Schedules, attendance and tip inputs need to cover the same pay period. Confirm the dates before the team starts comparing records.",
+          "items": []
+        },
+        {
+          "title": "Collect the exceptions in one place",
+          "body": "Missing clock-outs, changed shifts and incomplete tip inputs need a manager’s answer. Keep a short working list in the approved secure process, with the person responsible for each correction.",
+          "items": []
+        },
+        {
+          "title": "Name the approver",
+          "body": "Preparing payroll and authorizing it are different jobs. Confirm who signs off and when. The person collecting corrections should know exactly where the prepared record goes.",
+          "items": []
+        },
+        {
+          "title": "Check the final version",
+          "body": "Make sure the agreed corrections reached the submission. A resolved message is not enough if the payroll input still holds the old value. Keep an agreed route for anything that changes after cutoff.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Payroll and tips",
+      "takeaway": "Check that each correction reached the final record before it goes for approval.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/payroll-tips",
+        "/book-a-review"
+      ],
+      "keyword": "A calmer payroll handoff starts before cutoff",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/food-cost-movement",
+      "title": "Food cost moved. Which question comes first?",
+      "heading": "Food cost changed. Don’t change the menu just yet.",
+      "description": "How restaurant operators can investigate a food-cost change by checking prices, quantities, portions and reporting periods.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "First, check the comparison",
+          "body": "Are you comparing the same period, product and unit? A different pack size or delivery date can change the number without changing the underlying price.",
+          "items": []
+        },
+        {
+          "title": "Look at what happened in the kitchen",
+          "body": "Current recipes, yields, portions, stock counts and waste records help explain the result. If one of those inputs is an estimate, say so. Do not give an uncertain calculation the weight of a confirmed fact.",
+          "items": []
+        },
+        {
+          "title": "Follow the most useful lead",
+          "body": "A supplier price change needs a different response from a count error. Pick the record most likely to explain the movement and ask the person closest to it to check.",
+          "items": []
+        },
+        {
+          "title": "Bring the finding back",
+          "body": "Record what was confirmed and what still needs work. Use that finding to discuss an order, recipe or operating change. A percentage alone is not enough reason to cut portions or replace a supplier.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Food cost",
+      "takeaway": "Check the records behind the change before deciding what to change in the restaurant.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/food-cost-vendors",
+        "/book-a-review"
+      ],
+      "keyword": "Food cost moved. Which question comes first?",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/attendance-before-payroll",
+      "title": "The attendance questions to settle before payroll",
+      "heading": "A changed shift needs a changed record.",
+      "description": "Restaurant attendance checks that connect schedule changes, recorded hours and manager confirmation before payroll.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "Start with the shift, not just the time entry",
+          "body": "Put the schedule, attendance record and manager notes together for the same period. A mismatch may be a genuine shift change rather than a timekeeping error.",
+          "items": []
+        },
+        {
+          "title": "Ask someone who was there",
+          "body": "The manager closest to the shift can confirm the operating facts. Keep the confirmation with the correction through the agreed process so the approver can understand the change.",
+          "items": []
+        },
+        {
+          "title": "Give the question a deadline",
+          "body": "If the answer is still missing near payroll cutoff, tell the approver what is unresolved. Name who is checking it and what happens if it remains open.",
+          "items": []
+        },
+        {
+          "title": "Notice the repeat problems",
+          "body": "If the same corrections arrive every cycle, look at the process that creates them. A clearer shift-change routine may help more than another reminder sent at the last minute.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Labor and attendance",
+      "takeaway": "Keep the manager’s confirmation connected to the corrected attendance record.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/scheduling-attendance",
+        "/book-a-review"
+      ],
+      "keyword": "The attendance questions to settle before payroll",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/supplier-bill-review",
+      "title": "A useful supplier bill review goes beyond the total",
+      "heading": "Before you approve the bill, check the delivery.",
+      "description": "A restaurant supplier invoice review covering delivery records, quantities, pack sizes, credits and price differences.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "Line up the paperwork",
+          "body": "Compare the invoice with the order and delivery record where available. If one is missing, treat it as a question to resolve before concluding that the supplier made an error.",
+          "items": []
+        },
+        {
+          "title": "Read the units",
+          "body": "Check quantities and pack sizes before comparing prices. Look for substitutions, credits and changes to the order that could explain a different total.",
+          "items": []
+        },
+        {
+          "title": "Get the right person involved",
+          "body": "The manager who received the delivery may be able to confirm a quantity or substitution. Someone with supplier responsibility can query a price. Your nominated approver still authorizes payment.",
+          "items": []
+        },
+        {
+          "title": "Keep the answer for next time",
+          "body": "If the issue repeats, save the explanation with the vendor review. The team should not have to investigate the same pack-size change from scratch each month.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Vendors and bills",
+      "takeaway": "Compare the order, delivery and invoice before treating a total as a price change.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/food-cost-vendors",
+        "/book-a-review"
+      ],
+      "keyword": "A useful supplier bill review goes beyond the total",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/weekly-pnl-review",
+      "title": "Five questions for a useful weekly P&L review",
+      "heading": "Five questions to ask of your restaurant P&L.",
+      "description": "A practical weekly restaurant P&L review: check the period, missing records, cost movements, operating context and next decision.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "1. Which period am I looking at?",
+          "body": "Confirm the reporting dates and comparison period. Different numbers of trading days or different reporting cutoffs can make an apparent change misleading.",
+          "items": []
+        },
+        {
+          "title": "2. What is still missing?",
+          "body": "Ask whether supplier bills, payroll inputs or other records are incomplete. A report can be useful before every detail is final, but you need to know its limits.",
+          "items": []
+        },
+        {
+          "title": "3. What moved?",
+          "body": "Identify the material change and the records supporting it. Separate a timing difference from a volume change or a cost that needs investigation.",
+          "items": []
+        },
+        {
+          "title": "4. What happened in the restaurant?",
+          "body": "Ask about changes in trading, staffing, purchasing or service. The operating explanation belongs beside the financial one.",
+          "items": []
+        },
+        {
+          "title": "5. What do we do with this?",
+          "body": "Choose the decision or the next check, name the person responsible and set the review date. If nothing is yet supported by the records, the next action may simply be to confirm a missing input.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Reporting",
+      "takeaway": "A useful P&L review connects the period, completeness and operating context to a decision.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/reporting-cash-visibility",
+        "/book-a-review"
+      ],
+      "keyword": "Five questions for a useful weekly P&L review",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/compare-restaurant-locations",
+      "title": "Compare locations without losing their context",
+      "heading": "The same report does not make two restaurants the same.",
+      "description": "How to compare restaurant locations using consistent reporting while keeping differences in format, hours and local conditions visible.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "Agree the accounting basis",
+          "body": "Use consistent account definitions and reporting periods across the group. Document any differences that make a direct comparison less useful.",
+          "items": []
+        },
+        {
+          "title": "Keep the restaurant in the picture",
+          "body": "A different format, trading schedule or recent operating change may explain the result. Put that context beside the numbers instead of erasing it in consolidation.",
+          "items": []
+        },
+        {
+          "title": "Check who is still waiting on records",
+          "body": "One location’s late bill or payroll input can distort the comparison. Show what is incomplete and when it will be updated.",
+          "items": []
+        },
+        {
+          "title": "Use the comparison to ask better questions",
+          "body": "Review an exception with the local manager. Shared reporting should support a useful discussion, not turn different operating conditions into an unexplained ranking.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Multi-location finance",
+      "takeaway": "Standardize the reporting basis, then explain the differences that still matter.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/reporting-cash-visibility",
+        "/book-a-review"
+      ],
+      "keyword": "Compare locations without losing their context",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/performance-pressure-first-review",
+      "title": "What to bring to a first performance-pressure review",
+      "heading": "Under pressure? Bring the deadlines first.",
+      "description": "What restaurant owners can prepare for an initial review of cash pressure, operating costs and urgent decisions.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "Name the immediate decision",
+          "body": "What needs attention now, and by when? Write down the question before assembling a large pack of reports. It gives the review a starting point.",
+          "items": []
+        },
+        {
+          "title": "Separate confirmed information from estimates",
+          "body": "Bring recent operating records and known commitments through the agreed sharing route. Label anything that is incomplete or based on an assumption.",
+          "items": []
+        },
+        {
+          "title": "Choose a sequence the team can carry out",
+          "body": "Each priority needs a responsible person, the information required and a next check. Trying to change every process at once can make it harder to know what worked.",
+          "items": []
+        },
+        {
+          "title": "Review the plan as the facts change",
+          "body": "New information may change the order of work. Operating support cannot guarantee a recovery or replace specialist advice where legal, financing or insolvency questions arise.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Turnaround",
+      "takeaway": "Start with the decision and deadline, then gather the records needed to address it.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/turnaround-support",
+        "/book-a-review"
+      ],
+      "keyword": "What to bring to a first performance-pressure review",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights/review-preparation-checklist",
+      "title": "Your Restaurant Operations Review preparation checklist",
+      "heading": "What to bring to a Restaurant Operations Review.",
+      "description": "Prepare for a Ready Margin review with a list of systems, responsible people and one recent example of work that is taking too much time.",
+      "kind": "article",
+      "sections": [
+        {
+          "title": "The tools you use",
+          "body": "List the POS, accounting, payroll, scheduling and inventory systems. The names are enough for the first conversation; do not send passwords.",
+          "items": []
+        },
+        {
+          "title": "The people involved",
+          "body": "Note who prepares the records, answers shift or supplier questions and approves payroll or payments. Include any job that keeps returning to you.",
+          "items": []
+        },
+        {
+          "title": "One recent example",
+          "body": "Bring a specific frustration from the week: a missing attendance correction, an unexplained invoice or a report that arrived after the decision. We can learn more from that than a long wish list.",
+          "items": []
+        },
+        {
+          "title": "The question you want answered",
+          "body": "Decide what you most want to understand about getting support. A few notes will do. Share financial or employee records only after an appropriate secure route is agreed.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "category": "Implementation",
+      "takeaway": "You do not need a presentation. Bring your systems, contacts and one real example.",
+      "author": "Ready Margin editorial",
+      "related": [
+        "/what-we-handle/accounting-close",
+        "/book-a-review"
+      ],
+      "keyword": "Your Restaurant Operations Review preparation checklist",
+      "status": "",
+      "icon": ""
+    },
+    {
+      "path": "/insights",
+      "title": "Restaurant operator insights",
+      "heading": "For the questions that come after service.",
+      "description": "Practical articles on restaurant cash flow, payroll, food cost and reporting. Read the problem you are dealing with this week.",
+      "kind": "articles",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant operator insights"
+    },
+    {
+      "path": "/insights/guides",
+      "title": "Restaurant finance guides",
+      "heading": "A closer look at the numbers.",
+      "description": "Restaurant finance guides that explain what to check before making a decision about cash, costs or reporting.",
+      "kind": "guides",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant finance guides"
+    },
+    {
+      "path": "/insights/checklists",
+      "title": "Restaurant operations checklists",
+      "heading": "Check it once. Hand it over properly.",
+      "description": "Restaurant payroll, attendance and review checklists for the details that are easy to miss when service gets busy.",
+      "kind": "checklists",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant operations checklists"
+    },
+    {
+      "path": "/resources",
+      "title": "Ready Margin resources",
+      "heading": "Useful when the week gets busy.",
+      "description": "Restaurant finance guides, operating checklists and illustrative workflows to keep with your working notes.",
+      "kind": "resources",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Ready Margin resources"
+    },
+    {
+      "path": "/resources/guides",
+      "title": "Restaurant operating guides",
+      "heading": "Read it before the next review.",
+      "description": "Guides to restaurant cash, cost changes and reporting, with questions you can use in your next management discussion.",
+      "kind": "guides",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant operating guides"
+    },
+    {
+      "path": "/resources/checklists",
+      "title": "Downloadable restaurant checklists",
+      "heading": "Bring the right details with you.",
+      "description": "Restaurant preparation and review checklists for managers and owners handling recurring finance work.",
+      "kind": "checklists",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Downloadable restaurant checklists"
+    },
+    {
+      "path": "/resources/case-studies",
+      "title": "Restaurant workflow library",
+      "heading": "Follow the question through.",
+      "description": "Illustrative restaurant workflows from the first discrepancy to the review and the person responsible for the next action.",
+      "kind": "cases",
+      "sections": [],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant workflow library"
+    },
+    {
+      "path": "/resources/podcast",
+      "title": "Ready Margin conversations",
+      "heading": "Conversations from behind service.",
+      "description": "Future Ready Margin conversations about the financial and operating work of running a restaurant.",
+      "kind": "editorial",
+      "sections": [
+        {
+          "title": "No episodes yet",
+          "body": "We have not published any conversations yet. In the meantime, the operator articles cover questions you can take into your next review.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": false,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Ready Margin conversations"
+    },
+    {
+      "path": "/resources/review-preparation-checklist",
+      "title": "Restaurant review preparation download",
+      "heading": "A few notes are enough to start.",
+      "description": "Download the Restaurant Operations Review preparation checklist: systems, contacts and the question you want to discuss.",
+      "kind": "download",
+      "sections": [
+        {
+          "title": "Your preparation list",
+          "body": "Keep this with your notes. Do not include passwords or sensitive records.",
+          "items": [
+            "List your current operating and finance systems",
+            "Name the people preparing and approving each handoff",
+            "Choose one recurring frustration to discuss",
+            "Write the question you most want answered"
+          ]
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/insights/review-preparation-checklist",
+        "/book-a-review"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Restaurant review preparation download"
+    },
+    {
+      "path": "/campaigns/restaurant-operations-review",
+      "title": "Find the gaps behind service",
+      "heading": "Still doing the admin after everyone’s gone?",
+      "description": "Talk to Ready Margin about the restaurant finance and operations work that keeps taking over the end of your day.",
+      "kind": "campaign",
+      "sections": [
+        {
+          "title": "Tell us what happened this week",
+          "body": "Pick one example: a late payroll correction, a supplier query or a report that raised more questions than it answered. We’ll start there.",
+          "items": []
+        },
+        {
+          "title": "Leave the sales presentation out of it",
+          "body": "The first conversation is about your operation and where help may fit. We discuss service scope and pricing once we understand the work.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/book-a-review",
+        "/what-we-handle"
+      ],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Find the gaps behind service"
+    },
+    {
+      "path": "/new-york-restaurant-bookkeeping",
+      "title": "Restaurant Bookkeeping & Payroll Support in New York",
+      "heading": "Restaurant finance support for New York operators.",
+      "description": "Hands-on restaurant bookkeeping, payroll preparation, compliance coordination and operations support for independent and growing restaurants in New York. Start with a clear review of the work behind service.",
+      "kind": "campaign",
+      "sections": [
+        {
+          "title": "The work behind a New York service week",
+          "body": "A busy service leaves more than a sales report behind. Hours need checking, supplier bills need context, payroll needs an approver and the books need to close. Ready Margin helps keep those handoffs visible and moving.",
+          "items": [
+            "Restaurant bookkeeping and account follow-through",
+            "Payroll preparation, attendance checks and tip inputs",
+            "Food-cost, vendor and purchasing review",
+            "Compliance and tax-document handoffs within confirmed scope",
+            "Reporting and cash-visibility support"
+          ]
+        },
+        {
+          "title": "A clear operating handoff",
+          "body": "We agree the records, responsibilities and review cadence with you. When something is missing or unclear, the question goes to a named person instead of disappearing into the end-of-week chase.",
+          "items": [
+            "One place for open questions",
+            "A documented approval route",
+            "Follow-up at the next agreed review"
+          ]
+        },
+        {
+          "title": "Scope before price",
+          "body": "Every restaurant has a different mix of locations, systems and responsibilities. We discuss the work first, then confirm the right service scope and pricing in writing. There are no public packages to force-fit.",
+          "items": []
+        },
+        {
+          "title": "Bring the question you keep carrying",
+          "body": "Tell us whether the pressure is in the books, payroll, food cost, vendor follow-up, cash visibility or the handoff between them. We will use that starting point for a practical review.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [
+        "/what-we-handle",
+        "/what-we-handle/accounting-close",
+        "/what-we-handle/payroll-tips",
+        "/book-a-review",
+        "/insights/weekly-pnl-review"
+      ],
+      "status": "New York restaurant support · scope confirmed at review",
+      "category": "Restaurant finance support",
+      "icon": "book",
+      "takeaway": "A practical starting point for restaurant bookkeeping, payroll, compliance coordination and operating support in New York.",
+      "author": "",
+      "keyword": "New York restaurant bookkeeping, restaurant payroll support New York, restaurant compliance support NYC, restaurant operations support NYC"
+    },
+    {
+      "path": "/search",
+      "title": "Search Ready Margin",
+      "heading": "What are you looking for?",
+      "description": "Search Ready Margin services, restaurant finance articles and operating resources.",
+      "kind": "search",
+      "sections": [],
+      "published": true,
+      "indexable": false,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Search Ready Margin"
+    },
+    {
+      "path": "/legal/privacy",
+      "title": "Website privacy notice",
+      "heading": "Your information on this website.",
+      "description": "Ready Margin website privacy notice. Contact contact@readymargin.com with questions.",
+      "kind": "legal",
+      "sections": [
+        {
+          "title": "Enquiry information",
+          "body": "The form asks for contact details and optional restaurant workflow context. Its purpose is to respond to your enquiry and arrange the next conversation. Please do not include payroll records, passwords or bank details.",
+          "items": []
+        },
+        {
+          "title": "Delivery and service providers",
+          "body": "We use an approved delivery provider when online enquiries are enabled. If a request cannot be sent, the form tells you and offers email instead. Provider names and retention periods still require business approval.",
+          "items": []
+        },
+        {
+          "title": "Optional analytics",
+          "body": "Analytics are off by default. On our Vercel-hosted website, choosing Allow enables Vercel Web Analytics and Speed Insights to measure page visits and loading performance. Query strings and fragments are removed from reported page URLs. Form values and diagnostic answers are excluded. You can change your choice from the footer.",
+          "items": []
+        },
+        {
+          "title": "Contact and outstanding details",
+          "body": "Contact contact@readymargin.com about this notice or your enquiry. The legal entity, business address, applicable rights process and retention periods require approval before the production business launch.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Website privacy notice"
+    },
+    {
+      "path": "/legal/terms",
+      "title": "Website terms",
+      "heading": "Before you use the site.",
+      "description": "Ready Margin website terms. Contact contact@readymargin.com with questions.",
+      "kind": "legal",
+      "sections": [
+        {
+          "title": "Information and scope",
+          "body": "This website describes managed services and offers general operating information. The work provided, responsibilities, timing and fees are confirmed in a separate service agreement.",
+          "items": []
+        },
+        {
+          "title": "Examples and future direction",
+          "body": "Illustrative workflows are not customer results. Future technology is not represented as generally available. Nothing on the site guarantees profit, savings or a particular outcome.",
+          "items": []
+        },
+        {
+          "title": "Using the materials",
+          "body": "The website text, Ready Margin artwork and other materials are protected by their applicable rights and licenses. Please ask before reproducing branded materials.",
+          "items": []
+        },
+        {
+          "title": "Terms awaiting approval",
+          "body": "The contracting entity, governing law, dispute provisions and full contractual terms need legal review before the production business launch. Contact contact@readymargin.com for questions.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Website terms"
+    },
+    {
+      "path": "/legal/cookies",
+      "title": "Cookie & analytics choices",
+      "heading": "Choose whether to allow analytics.",
+      "description": "Ready Margin cookie & analytics choices. Contact contact@readymargin.com with questions.",
+      "kind": "legal",
+      "sections": [
+        {
+          "title": "Essential local preferences",
+          "body": "The site can store your analytics choice and whether you skipped the introduction in this browser. These preferences support the experience and are not used to identify you across websites.",
+          "items": []
+        },
+        {
+          "title": "Optional measurement",
+          "body": "Optional analytics stay off until you choose Allow. They record permitted site interactions only when a measurement service is connected. You can reject them or change your choice at any time.",
+          "items": []
+        },
+        {
+          "title": "Change your choice",
+          "body": "Use Cookie choices in the footer to reopen the controls. Withdrawal stops subsequent optional events; it does not erase events already accepted by a configured provider.",
+          "items": []
+        },
+        {
+          "title": "Service review",
+          "body": "The final production provider and cookie inventory must be checked whenever integrations change.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Cookie & analytics choices"
+    },
+    {
+      "path": "/legal/accessibility",
+      "title": "Accessibility",
+      "heading": "A website you should be able to use.",
+      "description": "Ready Margin accessibility. Contact contact@readymargin.com with questions.",
+      "kind": "legal",
+      "sections": [
+        {
+          "title": "Designed for different ways of browsing",
+          "body": "The site uses semantic headings, labelled controls, visible focus, a skip link and keyboard-operable navigation. Motion has reduced-motion and static alternatives.",
+          "items": []
+        },
+        {
+          "title": "Control the experience",
+          "body": "Skip the introduction at any time. Use your device’s reduced-motion setting to disable scroll scenes. Text can be enlarged and layouts adapt to narrow screens.",
+          "items": []
+        },
+        {
+          "title": "Tell us what gets in the way",
+          "body": "Email contact@readymargin.com with the page and the barrier you encountered. Include your browser or assistive technology if you are comfortable sharing it.",
+          "items": []
+        },
+        {
+          "title": "Ongoing review",
+          "body": "We aim to resolve accessibility barriers as the website changes. This statement does not claim independent certification or universal compatibility.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": true,
+      "updated": "2026-09-10",
+      "related": [],
+      "status": "",
+      "category": "",
+      "icon": "",
+      "takeaway": "",
+      "author": "",
+      "keyword": "Accessibility"
+    }
+  ],
+  "tiers": [
+    {
+      "name": "Starter",
+      "description": "The accounting essentials",
+      "fit": "For a restaurant that needs recurring accounting and a dependable reporting starting point.",
+      "features": [
+        "Accounting & close: proposed inclusion",
+        "Reporting: essential review",
+        "Payroll & tips: available add-on",
+        "Operating workflows: available add-on",
+        "Strategic guidance: available add-on"
+      ],
+      "note": "Final scope and pricing are confirmed after a Restaurant Operations Review."
+    },
+    {
+      "name": "Core",
+      "description": "Finance support through the week",
+      "fit": "For independent restaurants that need the recurring jobs handled and time to review the numbers.",
+      "features": [
+        "Accounting & close: proposed inclusion",
+        "Reporting: recurring interpretation",
+        "Payroll & tips: scope at review",
+        "Operating workflows: scope at review",
+        "Strategic guidance: available add-on"
+      ],
+      "note": "Final scope and pricing are confirmed after a Restaurant Operations Review."
+    },
+    {
+      "name": "Growth",
+      "description": "Support across a growing operation",
+      "fit": "For restaurant groups or more involved operations that need consolidated reporting and planning.",
+      "features": [
+        "Accounting & close: proposed inclusion",
+        "Reporting: multi-location scope",
+        "Payroll & tips: scope at review",
+        "Operating workflows: scope at review",
+        "Strategic guidance: planning scope"
+      ],
+      "note": "Final scope and pricing are confirmed after a Restaurant Operations Review."
+    },
+    {
+      "name": "Partner",
+      "description": "A closer advisory relationship",
+      "fit": "For owners who need more involved financial review and coordination alongside the operating work.",
+      "features": [
+        "Accounting & close: scope at review",
+        "Reporting: custom review rhythm",
+        "Payroll & tips: scope at review",
+        "Operating workflows: scope at review",
+        "Strategic guidance: proposed inclusion"
+      ],
+      "note": "Final scope and pricing are confirmed after a Restaurant Operations Review."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What would you take off my plate?",
+      "answer": "That depends on where you need help. We can discuss accounting, payroll and tips, attendance, food cost, supplier work and reporting. Your proposal sets out the exact work and responsibilities."
+    },
+    {
+      "question": "Is this software or a service?",
+      "answer": "A managed service. People handle the agreed work and review it with you. Ready Margin software is a future direction, not a product you need to purchase today."
+    },
+    {
+      "question": "Will we have to replace our systems?",
+      "answer": "We start by reviewing what you already use. Access, exports and compatibility are confirmed before we agree the scope. We do not assume that a direct integration is available."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Pricing is by enquiry. Locations, payroll complexity, systems, the condition of the records and the support you need all affect the scope. We discuss those before preparing a proposal."
+    },
+    {
+      "question": "What should I bring to the first conversation?",
+      "answer": "The systems you use, who handles the recurring jobs and one recent example of work that took too much chasing. A few notes are enough. Please keep sensitive records out of the website form."
+    }
+  ]
+}

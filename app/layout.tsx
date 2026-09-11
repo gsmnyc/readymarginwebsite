@@ -1,59 +1,73 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { Analytics } from "@vercel/analytics/next"
-
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+import { getContent } from "@/lib/content";
+import {
+  SiteHeader,
+  CookieConsent,
+  AnalyticsListener,
+  MotionPreference,
+} from "@/components/site/shell";
+import { ChoreographyLoader } from "@/components/site/choreography-loader";
+import { Footer } from "@/components/site/static";
+import { Telemetry } from "@/components/site/telemetry";
+const jakarta = localFont({
+  src: "../public/fonts/PlusJakartaSans-variable.woff2",
+  weight: "400 800",
+  display: "swap",
+  variable: "--font-jakarta",
+  preload: true,
+});
 export const metadata: Metadata = {
-  metadataBase: new URL('https://readymargin.com'),
-  title: { default: 'Ready Margin | Restaurant Accounting, Payroll & Finance', template: '%s | Ready Margin' },
-  description:
-    'Done-for-you restaurant accounting, bookkeeping, payroll and tip reporting, cash visibility, and CFO guidance for independent owners and growing groups.',
-  keywords: ['managed restaurant financial operations', 'restaurant finance services', 'restaurant accounting services', 'restaurant accounting and bookkeeping', 'restaurant bookkeeping', 'restaurant payroll services', 'restaurant payroll and tips', 'restaurant tip reporting', 'restaurant financial reporting', 'restaurant financial management', 'restaurant cash flow management', 'restaurant CFO services', 'fractional CFO for restaurants', 'multi-location restaurant accounting', 'outsourced finance department for restaurants', 'financial control review'],
-  alternates: { canonical: '/' },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
-  },
+  title: { default: "Ready Margin", template: "%s | Ready Margin" },
+  description: "Managed restaurant finance and operations support.",
+  manifest: "/manifest.webmanifest",
   icons: {
-    icon: '/ready-margin-mark.svg',
-    shortcut: '/ready-margin-mark.svg',
-    apple: '/ready-margin-mark.svg',
-  },
-  manifest: '/site.webmanifest',
-  applicationName: 'Ready Margin',
-  creator: 'Ready Margin',
-  publisher: 'Ready Margin',
-  category: 'Business services',
-  openGraph: {
-    title: 'Ready Margin — Restaurant Accounting, Payroll & Finance',
-    description: 'Done-for-you restaurant accounting, bookkeeping, payroll and tip reporting, cash visibility, and CFO guidance for independent owners and growing groups.',
-    siteName: 'Ready Margin',
-    url: 'https://readymargin.com',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Ready Margin — Know where you stand.' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Ready Margin — Restaurant Finance, Run for You',
-    description: 'Clear numbers, accountable ownership, and fewer financial surprises for independent restaurants and growing groups.',
-    images: ['/og.png'],
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon_16.png", sizes: "16x16" },
+      { url: "/favicon_32.png", sizes: "32x32" },
+      { url: "/favicon_48.png", sizes: "48x48" },
+      { url: "/favicon_64.png", sizes: "64x64" },
+    ],
+    apple: "/favicon_180.png",
   },
 };
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const content = await getContent();
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={jakarta.variable} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var n=navigator,d=document.documentElement;var off=new URLSearchParams(location.search).get('motion')==='off'||matchMedia('(prefers-reduced-motion: reduce)').matches||(n.connection&&n.connection.saveData);if(off||sessionStorage.getItem('rm-motion')==='off')d.dataset.motion='off';else if(!(n.deviceMemory&&n.deviceMemory<4)&&matchMedia('(min-width:1024px) and (min-height:700px)').matches)d.dataset.intro='desktop'}catch(e){}`,
+          }}
+        />
       </head>
-      <body>{children}<Analytics /></body>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <SiteHeader settings={content.settings} />
+        {children}
+        <Footer content={content} />
+        <CookieConsent />
+        <MotionPreference />
+        <ChoreographyLoader />
+        <AnalyticsListener />
+        {process.env.VERCEL === "1" && <Telemetry />}
+        <noscript>
+          <style>
+            {
+              ".intro{display:none!important}.reveal,.motion-step{opacity:1!important;transform:none!important}.mobile-nav-fallback{display:block!important}.js-only,.desk-phases,.desk-pause{display:none!important}.operating-desk *{animation:none!important}.timeline-copy section,.faq [data-slot=accordion-content]{display:block!important}.carousel-track{display:grid!important;grid-template-columns:1fr!important;transform:none!important}.carousel-viewport{overflow:visible!important}"
+            }
+          </style>
+        </noscript>
+      </body>
     </html>
   );
 }
