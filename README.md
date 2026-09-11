@@ -12,6 +12,8 @@ Use the existing readymarginwebsite project connected to gsmnyc/readymarginwebsi
 
 Set SITE_URL to https://readymargin.com. Production deployments are indexable; preview deployments remain noindex. Enable Web Analytics and Speed Insights in the project dashboard. Both integrations wait for visitor consent. URLs sent for measurement exclude query strings and fragments.
 
+The existing root IndexNow key is retained. After confirming it is reachable at readymargin.com, set INDEXNOW_ENABLED=true in Vercel Production to notify IndexNow after a successful production build. It notifies participating engines of canonical published URLs; it does not guarantee crawling or ranking.
+
 ## Forms and content
 
 This form requests a follow-up; it does not book a calendar slot or subscribe visitors to marketing. A confirmed receiver receipt is required before success appears. Use the token-protected, retry-safe Google Workspace receiver described in docs/FORM_DELIVERY.md. Do not configure the legacy adapter once the current receiver is live.
