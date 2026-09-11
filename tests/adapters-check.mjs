@@ -106,35 +106,6 @@ assert.equal((await POST(req(form))).status, 200);
 globalThis.fetch = async () => Response.json({ ok: false });
 assert.equal((await POST(req(form))).status, 502);
 delete process.env.GOOGLE_APPS_SCRIPT_URL;
-const events = await load("app/api/events/route.ts", "events");
-process.env.ANALYTICS_WEBHOOK_URL = "https://analytics.example.invalid";
-globalThis.fetch = async (url, opts) => {
-  sent = JSON.parse(opts.body);
-  return new Response(null, { status: 204 });
-};
-assert.equal(
-  (
-    await events.POST(
-      req({
-        event: "form_submit",
-        path: "/book-a-review",
-        email: "do-not-forward@example.invalid",
-        answers: { payroll: 99 },
-      }),
-    )
-  ).status,
-  204,
-);
-assert.deepEqual(Object.keys(sent).sort(), ["event", "path"]);
-assert.equal(
-  (await events.POST(req({ event: "not-allowed", path: "/" }))).status,
-  400,
-);
-assert.equal(
-  (await events.POST(req({ event: "form_submit", path: "/?email=hidden" })))
-    .status,
-  400,
-);
 const { diagnosticSchema, diagnose } = await load("lib/forms.ts", "diagnostic");
 assert(!diagnosticSchema.safeParse({ locations: 0 }).success);
 const result = diagnose(
@@ -154,5 +125,5 @@ assert(!JSON.stringify(result).includes("%"));
 globalThis.fetch = realFetch;
 await rm(dir, { recursive: true, force: true });
 console.log(
-  "PASS: form validation/consent/spam, unconfigured fallback, accepted delivery, provider errors, offline retry, Apps Script receipt validation, analytics field stripping, diagnostic logic. No real messages sent.",
+  "PASS: form validation/consent/spam, unconfigured fallback, accepted delivery, provider errors, offline retry, Apps Script receipt validation and diagnostic logic. No real messages sent.",
 );

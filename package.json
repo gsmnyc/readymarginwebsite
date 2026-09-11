@@ -13,8 +13,11 @@
     "lint": "eslint app components lib scripts tests",
     "typecheck": "tsc --noEmit",
     "test:content": "node tests/content-check.mjs",
+    "test:seo": "node tests/seo-contract.mjs",
+    "test:indexnow": "node tests/indexnow-check.mjs",
     "test:forms": "node tests/adapters-check.mjs && node tests/workspace-receiver-check.mjs",
-    "cms:seed": "node scripts/cms-seed.mjs"
+    "cms:seed": "node scripts/cms-seed.mjs",
+    "postbuild": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

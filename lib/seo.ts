@@ -75,7 +75,7 @@ export function pageSchemaData(p: Page) {
       "@type": "Article",
       headline: p.heading,
       description: p.description,
-      datePublished: p.updated,
+      datePublished: p.publishedAt || p.updated,
       dateModified: p.updated,
       author: { "@type": "Organization", name: p.author },
       publisher: { "@type": "Organization", "@id": origin + "/#organization", name: "Ready Margin" },

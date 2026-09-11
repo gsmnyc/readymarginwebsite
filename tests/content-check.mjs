@@ -31,6 +31,8 @@ for (const p of pages) {
   if (p.kind === "case") assert(p.status === "Illustrative workflow");
   if (p.kind === "article") {
     assert(p.category && p.author && p.takeaway);
+    assert(p.publishedAt, `Article needs an original publication date: ${p.path}`);
+    assert(p.publishedAt <= p.updated, `Article publication date cannot follow update: ${p.path}`);
     assert(p.related.some((r) => r.startsWith("/what-we-handle/")));
   }
 }
@@ -43,7 +45,6 @@ for (const asset of [
   "favicon_180.png",
   "favicon_192.png",
   "favicon_512.png",
-  "fonts/PlusJakartaSans-variable.ttf",
   "fonts/PlusJakartaSans-variable.woff2",
   "fonts/OFL.txt",
   "brand/logo_horizontal_primary_transparent.svg",
@@ -51,5 +52,5 @@ for (const asset of [
 ])
   assert(existsSync("public/" + asset), `Missing ${asset}`);
 console.log(
-  `PASS: ${pages.length + 1} routes, six capability families, unique metadata, linked related routes, honest examples, enquiry-only pricing, exact assets.`,
+  `PASS: ${pages.length + 1} routes, six capability families, distinct article dates, unique metadata, linked related routes, honest examples, enquiry-only pricing, exact assets.`,
 );

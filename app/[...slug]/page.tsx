@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import dynamic from "next/dynamic";
 import Link from "@/components/site/link";
 import { getContent, summarizePage } from "@/lib/content";
 import { metadataFor, pageSchemaData } from "@/lib/seo";
@@ -12,15 +13,30 @@ import {
   OperatorImage,
   JsonLd,
 } from "@/components/site/static";
-import { Timeline, Workstreams } from "@/components/site/motion";
-import {
-  ArticleGrid,
-  ClarityCheck,
-  LeadForm,
-  Pricing,
-} from "@/components/site/interactive";
-import { CaseCarousel } from "@/components/site/case-carousel";
-import { Faq } from "@/components/site/faq";
+const Timeline = dynamic(() =>
+  import("@/components/site/timeline").then((module) => module.Timeline),
+);
+const Workstreams = dynamic(() =>
+  import("@/components/site/workstreams").then((module) => module.Workstreams),
+);
+const ArticleGrid = dynamic(() =>
+  import("@/components/site/article-grid").then((module) => module.ArticleGrid),
+);
+const ClarityCheck = dynamic(() =>
+  import("@/components/site/clarity-check").then((module) => module.ClarityCheck),
+);
+const LeadForm = dynamic(() =>
+  import("@/components/site/lead-form").then((module) => module.LeadForm),
+);
+const Pricing = dynamic(() =>
+  import("@/components/site/pricing").then((module) => module.Pricing),
+);
+const CaseCarousel = dynamic(() =>
+  import("@/components/site/case-carousel").then((module) => module.CaseCarousel),
+);
+const Faq = dynamic(() =>
+  import("@/components/site/faq").then((module) => module.Faq),
+);
 type Props = { params: Promise<{ slug: string[] }> };
 export async function generateStaticParams() {
   const c = await getContent();
@@ -70,7 +86,13 @@ export default async function ContentPage({ params }: Props) {
               <p className="caption">
                 {p.author}
                 <br />
-                Published {p.updated}
+                Published {p.publishedAt || p.updated}
+                {p.publishedAt && p.publishedAt !== p.updated && (
+                  <>
+                    <br />
+                    Updated {p.updated}
+                  </>
+                )}
                 <br />
                 General operating guidance
               </p>

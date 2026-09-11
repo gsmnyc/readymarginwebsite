@@ -1,8 +1,10 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
+import { track as trackEvent } from "@vercel/analytics";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { EventName } from "@/lib/analytics";
 
 function hasConsent() {
   try {
@@ -35,6 +37,19 @@ export function Telemetry() {
     <>
       <Analytics beforeSend={sanitize} debug={false} />
       <SpeedInsights beforeSend={sanitize} debug={false} />
+      <EventBridge />
     </>
   ) : null;
+}
+
+function EventBridge() {
+  useEffect(() => {
+    const send = (event: Event) => {
+      const name = (event as CustomEvent<EventName>).detail;
+      if (typeof name === "string") trackEvent(name);
+    };
+    window.addEventListener("rm-track", send);
+    return () => window.removeEventListener("rm-track", send);
+  }, []);
+  return null;
 }
