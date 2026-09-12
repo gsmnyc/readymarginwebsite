@@ -5,8 +5,9 @@ import searchContent from "../content/search-pages.json" with { type: "json" };
 import serviceContent from "../content/service-pages.json" with { type: "json" };
 import solutionContent from "../content/solution-pages.json" with { type: "json" };
 import answerContent from "../content/answer-pages.json" with { type: "json" };
+import nycIntentContent from "../content/nyc-intent-pages.json" with { type: "json" };
 
-const generated = [searchContent, serviceContent, solutionContent, answerContent];
+const generated = [searchContent, serviceContent, solutionContent, answerContent, nycIntentContent];
 const legacyRedirectPaths = new Set(["/new-york-restaurant-bookkeeping"]);
 const run = (env) => spawnSync(process.execPath, ["scripts/submit-indexnow.mjs"], { encoding: "utf8", env: { ...process.env, ...env } });
 
@@ -40,6 +41,9 @@ assert.equal(payload.urlList.length, expectedPaths.size + 1);
 for (const path of expectedPaths) {
   assert(payload.urlList.includes("https://www.readymargin.com" + path), `Missing IndexNow URL ${path}`);
 }
+for (const path of nycIntentContent.pages.map((page) => page.path)) {
+  assert(payload.urlList.includes("https://www.readymargin.com" + path), `Missing NYC IndexNow URL ${path}`);
+}
 assert(!payload.urlList.includes("https://www.readymargin.com/new-york-restaurant-bookkeeping"), "Redirected legacy URL must not be submitted to IndexNow");
 assert(payload.urlList.every((url) => url === "https://www.readymargin.com" || url.startsWith("https://www.readymargin.com/")));
-console.log(`PASS: IndexNow includes ${expectedPaths.size} canonical content URLs and excludes redirects.`);
+console.log(`PASS: IndexNow includes ${expectedPaths.size} canonical content URLs, including the NYC intent cluster, and excludes redirects.`);
