@@ -19,9 +19,4 @@ export const home = {
       { label: "Turnaround consulting", href: "/restaurant-turnaround-consulting" },
     ] },
   ],
-  relationship: [
-    { title: "Run", body: "Agree the recurring jobs, the records we need and the person who approves. Then we get on with the work." },
-    { title: "Explain", body: "What changed? Why does it matter? We make time to talk through the numbers, not just send them over." },
-    { title: "Improve", body: "Choose the next action, name who owns it and check what happened. The follow-up stays part of the job." },
-  ],
 } as const;
