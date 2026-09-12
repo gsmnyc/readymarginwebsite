@@ -5,11 +5,10 @@ import { usePathname } from "next/navigation";
 import { lightMotion, motionAllowed } from "./motion-utils";
 
 const headings =
-  ".hero-grid h1,.section-heading h2,.problem h2,.review-scene h2,.experience-section h2,.cta-inner h2,.section-copy section h2,.faq-section h2";
+  ".hero-grid h1,.page-hero h1,.section-heading h2,.problem h2,.review-scene h2,.experience-section h2,.cta-inner h2,.section-copy section h2,.faq-section h2,.fit-note h2";
 const details =
-  ".section-heading>.eyebrow,.section-heading>div>.eyebrow,.review-card dl>div,.cap-top,.audience-grid>a>.eyebrow,.section-copy section li";
+  ".section-heading>.eyebrow,.section-heading>div>.eyebrow,.review-card dl>div,.cap-top,.audience-grid>a>.eyebrow,.section-copy section li,.related a,.resource-links a";
 
-// Only offscreen headings are split; the first paint never waits for animation.
 function prepareHeading(element: HTMLElement) {
   const original = [...element.childNodes];
   const accessibleName = element.getAttribute("aria-label");
@@ -19,6 +18,7 @@ function prepareHeading(element: HTMLElement) {
   const nodes: Text[] = [];
   while (walker.nextNode()) nodes.push(walker.currentNode as Text);
   const words: HTMLElement[] = [];
+
   for (const node of nodes) {
     const fragment = document.createDocumentFragment();
     for (const part of (node.textContent || "").split(/(\s+)/)) {
@@ -37,11 +37,13 @@ function prepareHeading(element: HTMLElement) {
     }
     node.replaceWith(fragment);
   }
+
   const visual = document.createElement("span");
   visual.setAttribute("aria-hidden", "true");
   Array.from(copy.childNodes).forEach((node) => visual.appendChild(node));
   element.setAttribute("aria-label", label);
   element.replaceChildren(visual);
+
   return {
     words,
     restore: () => {
@@ -54,18 +56,17 @@ function prepareHeading(element: HTMLElement) {
 
 export function PageChoreography() {
   const path = usePathname();
+
   useEffect(() => {
     if (!motionAllowed() || lightMotion()) return;
+
     const animations = new Set<Animation>();
     const restores: (() => void)[] = [];
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const animate = (
-      element: HTMLElement,
-      keyframes: Keyframe[],
-      delay = 0,
-    ) => {
+
+    const animate = (element: HTMLElement, keyframes: Keyframe[], delay = 0) => {
       const animation = element.animate(keyframes, {
-        duration: 720,
+        duration: 620,
         delay,
         easing: "cubic-bezier(.16,1,.3,1)",
         fill: "backwards",
@@ -73,12 +74,14 @@ export function PageChoreography() {
       animations.add(animation);
       animation.onfinish = () => animations.delete(animation);
     };
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
           const element = entry.target as HTMLElement;
           observer.unobserve(element);
+
           if (element.matches(headings)) {
             const { words, restore } = prepareHeading(element);
             restores.push(restore);
@@ -88,28 +91,27 @@ export function PageChoreography() {
               animate(
                 word,
                 [
-                  { transform: "translateY(105%)" },
+                  { transform: "translateY(102%)" },
                   { transform: "translateY(0)" },
                 ],
-                lines.indexOf(positions[index]) * 85 + (index % 4) * 18,
+                lines.indexOf(positions[index]) * 70 + (index % 4) * 14,
               ),
             );
           } else {
             animate(element, [
-              { transform: "translateY(14px)" },
-              { transform: "translateY(0)" },
+              { transform: "translateY(10px)", opacity: 0.72 },
+              { transform: "translateY(0)", opacity: 1 },
             ]);
           }
         }
       },
-      { rootMargin: "0px 0px -8% 0px" },
+      { rootMargin: "0px 0px -7% 0px" },
     );
-    document
-      .querySelectorAll<HTMLElement>(headings + "," + details)
-      .forEach((element) => {
-        if (element.getBoundingClientRect().top >= window.innerHeight)
-          observer.observe(element);
-      });
+
+    document.querySelectorAll<HTMLElement>(headings + "," + details).forEach((element) => {
+      if (element.getBoundingClientRect().top >= window.innerHeight * 0.9) observer.observe(element);
+    });
+
     let stopped = false;
     const stop = () => {
       if (stopped) return;
@@ -121,6 +123,7 @@ export function PageChoreography() {
     const keyboard = (event: KeyboardEvent) => {
       if (event.key === "Tab") stop();
     };
+
     window.addEventListener("keydown", keyboard);
     preference.addEventListener("change", stop);
     return () => {
@@ -129,5 +132,6 @@ export function PageChoreography() {
       preference.removeEventListener("change", stop);
     };
   }, [path]);
+
   return <div className="reading-progress" aria-hidden="true" />;
 }
