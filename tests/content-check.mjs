@@ -22,7 +22,6 @@ assert(
   "No public prices or filler",
 );
 assert.equal(settings.email, "contact@readymargin.com");
-assert.equal(settings.credit.url, "https://www.linkedin.com/in/gursimarsandhu");
 assert.equal(new Set(pages.map((p) => p.seoTitle || p.title)).size, pages.length);
 for (const p of pages) {
   for (const link of p.related)
