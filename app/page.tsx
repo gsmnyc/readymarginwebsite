@@ -2,9 +2,10 @@ import Link from "@/components/site/link";
 import { getContent, siteOrigin } from "@/lib/content";
 import { metadataFor } from "@/lib/seo";
 import { JsonLd } from "@/components/site/static";
-import { Timeline } from "@/components/site/timeline";
 import { Faq } from "@/components/site/faq";
-import { OperatingDesk } from "@/components/site/operating-desk";
+import { RestaurantIllustration, CashPressureIllustration } from "@/components/home/restaurant-illustration";
+import { OperatingStory } from "@/components/home/operating-story";
+import { HomeMotion } from "@/components/home/home-motion";
 import { home } from "@/content/home";
 import "./homepage.css";
 
@@ -18,6 +19,7 @@ export default async function Home() {
   const c = await getContent();
   return (
     <main id="main" className="homepage">
+      <HomeMotion />
       <section id="home-hero" tabIndex={-1} className="home-opening">
         <div className="home-wrap hero-grid">
           <div className="home-opening-copy">
@@ -29,20 +31,11 @@ export default async function Home() {
               <Link className="home-quiet-link" href="#the-work">See what we handle <span aria-hidden="true">↓</span></Link>
             </div>
           </div>
-          <div className="home-week" aria-label="The work behind service">
-            <div className="home-week-heading"><span className="eyebrow">Behind the service</span><span aria-hidden="true">↙</span></div>
-            <p className="home-week-title">A restaurant runs<br />on more than service.</p>
-            <dl>
-              <div><dt>People & shifts</dt><dd>Hours. Tips.<br />Payroll cutoff.</dd></div>
-              <div><dt>Books & cash</dt><dd>Supplier bills.<br />The close. Cash.</dd></div>
-              <div><dt>Decisions & progress</dt><dd>Clear numbers.<br />A next step.</dd></div>
-            </dl>
-            <p className="home-week-bottom">The work behind it deserves a team.</p>
-          </div>
+          <RestaurantIllustration />
         </div>
       </section>
 
-      <div className="home-promise"><div className="home-wrap"><span>Clear numbers.</span><span>Accountable people.</span><span>Fewer financial surprises.</span></div></div>
+      <div className="home-bridge home-wrap"><p>You didn’t open a restaurant<br />to chase <span>supplier bills.</span></p><p>Or missed punches. Or a deposit that doesn’t match.<br />That’s where we come in.</p></div>
 
       <section id="the-work" className="home-wrap home-work">
         <div className="home-section-heading">
@@ -59,27 +52,10 @@ export default async function Home() {
         <div className="home-section-tail"><p>Start with the work you need handled. Agree the scope together.</p><Link className="text-link" href="/restaurant-finance-services">Explore all restaurant finance services ↗</Link></div>
       </section>
 
-      <section className="home-relationship">
-        <div className="home-wrap">
-          <div className="home-section-heading"><div><p className="eyebrow">How we earn our place</p><h2>The work gets handled.<br />The picture gets clear.</h2></div><p>Software gives you tools. We take responsibility for agreed work — with people to explain it and follow through.</p></div>
-          <ol>{home.relationship.map((step, index) => <li key={step.title}><span className="eyebrow">0{index + 1}</span><h3>{step.title}<span aria-hidden="true">↗</span></h3><p>{step.body}</p></li>)}</ol>
-          <Link className="text-link" href="/how-it-works">See how we work together ↗</Link>
-        </div>
-      </section>
-
-      <div className="home-day home-wrap">
-        <OperatingDesk chapters={c.settings.workingDay} />
-        <noscript>{c.settings.workingDay.slice(1).map(chapter => <section className="home-noscript-chapter" key={chapter.phase}><h2>{chapter.heading}</h2><p>{chapter.action}</p><Link className="text-link" href={chapter.href}>{chapter.link} ↗</Link></section>)}</noscript>
-      </div>
-
-      <section className="home-wrap home-cadence">
-        <div className="home-section-heading"><div><p className="eyebrow">The Ready Rhythm</p><h2>A better week.<br />Then the next one.</h2></div><p>The records come in. We check them, explain what changed and follow up on the decisions. Unfinished work stays on the list.</p></div>
-        <Timeline steps={c.pages.find(p => p.kind === "rhythm")!.sections} />
-        <Link className="text-link" href="/how-it-works/ready-rhythm">See the recurring service rhythm ↗</Link>
-      </section>
+      <OperatingStory />
 
       <section className="home-turnaround">
-        <div className="home-wrap"><p className="eyebrow">Turnaround & financial guidance</p><div className="home-turnaround-layout"><h2>Busy tables.<br /><span>Tight margins?</span></h2><div><p>When sales aren’t turning into cash, start with the facts. We help establish the obligations, costs and operating pressures that need attention — then agree practical actions and keep the follow-up moving.</p><Link className="button" href="/restaurant-turnaround-consulting">Explore turnaround support <span aria-hidden="true">↗</span></Link><Link className="home-quiet-link" href="/solutions/restaurant-not-profitable">Why a busy restaurant can still lose money ↗</Link></div></div></div>
+        <div className="home-wrap"><p className="eyebrow">When the question is bigger</p><div className="home-turnaround-layout"><div><h2>Busy tables.<br /><span>Tight margins?</span></h2><CashPressureIllustration /></div><div><h3>Start with the facts.<br />Then decide what needs to change.</h3><p>When sales aren’t turning into cash, we help establish the obligations, costs and operating pressures that need attention. Then we agree practical actions and keep the follow-up moving.</p><Link className="button" href="/restaurant-turnaround-consulting">Explore turnaround support <span aria-hidden="true">↗</span></Link><Link className="home-quiet-link" href="/solutions/restaurant-not-profitable">Why a busy restaurant can still lose money</Link></div></div></div>
       </section>
 
       <section className="home-wrap home-about">

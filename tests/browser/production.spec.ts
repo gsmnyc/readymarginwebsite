@@ -17,7 +17,10 @@ for (const path of ["/", "/book-a-review", "/restaurant-finance-services", "/how
       const grid = page.locator(path === "/" ? ".hero-grid" : path === "/book-a-review" ? ".form-grid" : ".page-hero-grid");
       expect(await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns.split(" ").length)).toBe(1);
     }
-    if (path === "/") await expect(page.locator(".rhythm-sequence li")).toHaveCount(5);
+    if (path === "/") {
+      await expect(page.locator("[data-story-chapter]")).toHaveCount(3);
+      await expect(page.locator(".restaurant-illustration svg")).toBeVisible();
+    }
   });
 }
 
@@ -41,7 +44,7 @@ test("failed delivery preserves the enquiry and a retry can succeed", async ({ p
   await expect(page.getByRole("heading", { name: "Thank you. We have your enquiry." })).toBeVisible();
 });
 
-test("touch menu restores focus and restaurant-day controls work", async ({ page }, testInfo) => {
+test("touch menu restores focus and operating story stays readable", async ({ page }, testInfo) => {
   await page.goto("/");
   if (testInfo.project.name.startsWith("phone")) {
     const menu = page.getByRole("button", { name: "Open navigation" });
@@ -50,10 +53,21 @@ test("touch menu restores focus and restaurant-day controls work", async ({ page
     await page.keyboard.press("Escape");
     await expect(menu).toBeFocused();
   }
-  await page.getByRole("button", { name: /During service/ }).click();
-  await expect(page.locator("#desk-chapter")).toContainText("A changed shift");
-  await page.getByRole("button", { name: /After service/ }).click();
-  await expect(page.locator("#desk-chapter")).toContainText("The day’s sales records");
+  for (const chapter of await page.locator("[data-story-chapter]").all()) {
+    await chapter.scrollIntoViewIfNeeded();
+    await expect(chapter.locator(".working-paper")).toBeVisible();
+    await expect(chapter.locator(".paper-action")).toContainText("The next check");
+  }
+});
+
+test("homepage story and service paths work without JavaScript", async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto("/");
+  await expect(page.locator("[data-story-chapter]")).toHaveCount(3);
+  await expect(page.locator(".paper-note").last()).toContainText("A clear owner");
+  await expect(page.locator('main a[href="/restaurant-turnaround-consulting"]').first()).toBeVisible();
+  await context.close();
 });
 
 test("narrow windows and zoom-equivalent viewports keep the form usable", async ({ page }, testInfo) => {
