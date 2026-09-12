@@ -27,16 +27,16 @@ export const metadata: Metadata = {
   title: { default: "Ready Margin", template: "%s | Ready Margin" },
   description:
     "Managed restaurant finance, accounting, payroll, tax workflow and operations support.",
-  manifest: "/manifest.webmanifest",
+  manifest: "/manifest.webmanifest?v=20260912",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon_16.png", sizes: "16x16" },
-      { url: "/favicon_32.png", sizes: "32x32" },
-      { url: "/favicon_48.png", sizes: "48x48" },
-      { url: "/favicon_64.png", sizes: "64x64" },
+      { url: "/favicon.ico?v=20260912", type: "image/x-icon" },
+      { url: "/favicon_16.png?v=20260912", sizes: "16x16", type: "image/png" },
+      { url: "/favicon_32.png?v=20260912", sizes: "32x32", type: "image/png" },
+      { url: "/favicon_48.png?v=20260912", sizes: "48x48", type: "image/png" },
+      { url: "/favicon_64.png?v=20260912", sizes: "64x64", type: "image/png" },
     ],
-    apple: "/favicon_180.png",
+    apple: [{ url: "/favicon_180.png?v=20260912", sizes: "180x180", type: "image/png" }],
   },
 };
 
