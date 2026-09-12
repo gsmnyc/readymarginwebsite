@@ -44,6 +44,9 @@ export function Footer({ content }: { content: Content }) {
         "/restaurant-turnaround-consulting",
         "/restaurant-back-office-services",
         "/multi-location-restaurant-finance",
+        "/new-york/restaurant-finance-solutions",
+        "/new-york/restaurant-accounting-payroll-services",
+        "/new-york/restaurant-financial-reporting-services",
       ]),
     ],
     [
@@ -119,7 +122,7 @@ export function Footer({ content }: { content: Content }) {
         </div>
 
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Ready Margin</span>
+          <span>© {new Date().getFullYear()} Ready Margin · Services provided by GSM Consultants Inc.</span>
           <CookieButton />
           {content.settings.credit.url ? (
             <a href={content.settings.credit.url}>{content.settings.credit.label}</a>
@@ -235,9 +238,15 @@ export function SectionCopy({ page }: { page: Page }) {
 }
 
 export function Related({ page, pages }: { page: Page; pages: Page[] }) {
+  const localHubLinks = page.path === "/new-york"
+    ? pages
+        .filter((candidate) => candidate.published && candidate.indexable && candidate.kind === "service" && candidate.path.startsWith("/new-york/"))
+        .map((candidate) => candidate.path)
+    : [];
   const links = [
     ...new Set([
       ...page.related,
+      ...localHubLinks,
       ...pages
         .filter((candidate) => candidate.published && candidate.kind === "article" && candidate.related.includes(page.path))
         .map((candidate) => candidate.path),
