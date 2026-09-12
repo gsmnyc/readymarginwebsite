@@ -5,6 +5,7 @@ import searchFallback from "@/content/search-pages.json";
 import serviceFallback from "@/content/service-pages.json";
 import solutionFallback from "@/content/solution-pages.json";
 import answerFallback from "@/content/answer-pages.json";
+import nycIntentFallback from "@/content/nyc-intent-pages.json";
 
 const sectionSchema = z.object({
   title: z.string(),
@@ -106,6 +107,7 @@ const searchPages = searchFallback.pages.map((page) => normalizeGenerated(
 const servicePages = serviceFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, serviceFallback.updated, "Restaurant finance services"));
 const solutionPages = solutionFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, solutionFallback.updated, "Restaurant finance solutions"));
 const answerPages = answerFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, answerFallback.updated, "Restaurant finance answers"));
+const nycIntentPages = nycIntentFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, nycIntentFallback.updated, "New York restaurant finance services"));
 
 const local: Content = {
   ...fallback,
@@ -115,6 +117,7 @@ const local: Content = {
     ...servicePages,
     ...solutionPages,
     ...answerPages,
+    ...nycIntentPages,
   ],
 };
 
