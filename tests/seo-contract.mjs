@@ -76,11 +76,13 @@ for (const page of indexable) {
   }
 
   if (page.kind === "answer") {
-    const qa = pageSchemaData(page).find((item) => item["@type"] === "QAPage");
-    assert(qa, `Missing QAPage schema: ${page.path}`);
-    assert.equal(qa.mainEntity["@type"], "Question");
-    assert.equal(qa.mainEntity.acceptedAnswer["@type"], "Answer");
-    assert.equal(qa.mainEntity.acceptedAnswer.text, page.answer);
+    const schemas = pageSchemaData(page);
+    assert(!schemas.some((item) => item["@type"] === "QAPage"), `Authored answer must not use QAPage: ${page.path}`);
+    const webpage = schemas.find((item) => item["@type"] === "WebPage");
+    assert(webpage, `Missing WebPage schema: ${page.path}`);
+    assert.equal(webpage.mainEntity["@type"], "Question");
+    assert.equal(webpage.mainEntity.acceptedAnswer["@type"], "Answer");
+    assert.equal(webpage.mainEntity.acceptedAnswer.text, page.answer);
   }
 }
 
@@ -105,4 +107,4 @@ for (const group of generatedGroups) {
 
 assert(content.pages.length < merged.pages.length);
 await rm(dir, { recursive: true, force: true });
-console.log(`PASS: ${map.length} canonical sitemap URLs, major crawler access, Service/QAPage/Article schema and full intent-family discovery.`);
+console.log(`PASS: ${map.length} canonical sitemap URLs, major crawler access, valid Service/WebPage/Article schema and full intent-family discovery.`);
