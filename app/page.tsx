@@ -1,4 +1,5 @@
 import Link from "@/components/site/link";
+import Image from "next/image";
 import { getContent, siteOrigin } from "@/lib/content";
 import { metadataFor } from "@/lib/seo";
 import { JsonLd } from "@/components/site/static";
@@ -31,11 +32,14 @@ export default async function Home() {
               <Link className="home-quiet-link" href="#the-work">See what we handle <span aria-hidden="true">↓</span></Link>
             </div>
           </div>
-          <RestaurantIllustration />
+          <figure className="home-restaurant-photo">
+            <Image src="/brand/restaurant-pass.webp" alt="Illustrative restaurant kitchen pass with plates ready for service and order tickets" width={1536} height={1024} sizes="(max-width: 1199px) 100vw, 55vw" priority />
+            <figcaption><strong>The restaurant is the reason.</strong><span>AI-generated restaurant illustration</span></figcaption>
+          </figure>
         </div>
       </section>
 
-      <div className="home-bridge home-wrap"><p>You didn’t open a restaurant<br />to chase <span>supplier bills.</span></p><p>Or missed punches. Or a deposit that doesn’t match.<br />That’s where we come in.</p></div>
+      <div className="home-bridge"><div className="home-wrap"><p>You didn’t open a restaurant<br />to chase <span>supplier bills.</span></p><p>Or missed punches. Or a deposit that doesn’t match.<br />That’s where we come in.</p></div></div>
 
       <section id="the-work" className="home-wrap home-work">
         <div className="home-section-heading">
@@ -59,9 +63,12 @@ export default async function Home() {
       </section>
 
       <section className="home-wrap home-about">
+        <RestaurantIllustration />
+        <div className="home-about-copy">
         <p className="eyebrow">Built from restaurant work</p>
         <div className="home-section-heading"><h2>We know what happens<br />after the last table.</h2><div><p>The changed shift. The tip question. The supplier bill that doesn’t look right. Ready Margin comes from hands-on restaurant operations and finance work.</p><p>From one location to a growing group, the starting point is your operation — and the work you need someone to own.</p><Link className="text-link" href="/about">Meet Ready Margin ↗</Link></div></div>
         <div className="home-context-links"><Link href="/who-we-help">Who we help ↗</Link><Link href="/multi-location-restaurant-finance">Multi-location restaurants ↗</Link><Link href="/new-york">New York restaurant support ↗</Link><Link href="/restaurant-finance-solutions">Find help by the problem ↗</Link></div>
+        </div>
       </section>
 
       <section className="home-wrap home-faq"><div><p className="eyebrow">Before we talk</p><h2>A few good<br />questions.</h2></div><Faq items={c.faqs.slice(0, 5)} /></section>
