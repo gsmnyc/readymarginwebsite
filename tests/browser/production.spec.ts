@@ -24,6 +24,12 @@ for (const path of ["/", "/book-a-review", "/restaurant-finance-services", "/how
       if (testInfo.project.name === "phone-desktop-site") {
         expect(await page.locator(".home-intro").evaluate(el => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(22);
         expect((await image.boundingBox())!.width).toBeGreaterThan(800);
+        const sectionsAreSeparated = await page.evaluate(() => {
+          const links = document.querySelector(".home-context-links")!.getBoundingClientRect();
+          const faq = document.querySelector(".home-faq")!.getBoundingClientRect();
+          return links.bottom <= faq.top;
+        });
+        expect(sectionsAreSeparated).toBe(true);
       }
       await expect(page.locator("[data-story-chapter]")).toHaveCount(3);
       await expect(page.locator(".restaurant-illustration svg")).toBeVisible();
