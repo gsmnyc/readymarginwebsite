@@ -26,6 +26,7 @@ if (!enabled || !production) {
         read("service-pages.json"),
         read("solution-pages.json"),
         read("answer-pages.json"),
+        read("nyc-intent-pages.json"),
       ];
       const canonicalPaths = new Set([
         ...site.pages.filter((page) => page.published && page.indexable && !legacyRedirectPaths.has(page.path)).map((page) => page.path),
