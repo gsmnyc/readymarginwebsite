@@ -1,22 +1,22 @@
 // Homepage copy. Detailed scope and search content remain in the JSON page collections.
 export const home = {
-  eyebrow: "Managed restaurant financial operations",
+  eyebrow: "Restaurant finance, run for you",
   headline: ["Back to the", "good part."],
-  introduction: "You focus on the restaurant you built. We handle the agreed finance and back-office work, explain the numbers and help you decide what comes next.",
+  introduction: "Ready Margin is a managed restaurant finance and back-office partner. We handle agreed accounting, bookkeeping, payroll, tips, reporting, tax and compliance workflows, cost control and financial follow-up — then help you understand what the numbers mean.",
   services: [
-    { title: "People & shifts", description: "The hours, corrections and approvals behind a dependable payroll cutoff.", links: [
-      { label: "Payroll & tips", href: "/restaurant-payroll-services" },
+    { title: "People & shifts", description: "The hours, corrections and approvals behind dependable restaurant payroll, tips and labor reporting.", links: [
+      { label: "Restaurant payroll & tips", href: "/restaurant-payroll-services" },
       { label: "Labor cost & scheduling workflows", href: "/restaurant-labor-cost-management" },
     ] },
-    { title: "Books & cash", description: "The records, supplier bills and reconciliations that make the financial picture useful.", links: [
-      { label: "Accounting & bookkeeping", href: "/restaurant-accounting-services" },
+    { title: "Books & cash", description: "Restaurant accounting, bookkeeping, supplier bills, reconciliations and close work that make the financial picture useful.", links: [
+      { label: "Restaurant accounting & bookkeeping", href: "/restaurant-accounting-services" },
       { label: "Payables & vendor bills", href: "/restaurant-accounts-payable-services" },
       { label: "Tax & compliance support", href: "/restaurant-tax-services" },
     ] },
-    { title: "Decisions & progress", description: "Food cost, cash flow and financial guidance connected to what happens on the floor.", links: [
+    { title: "Decisions & progress", description: "Financial reporting, food cost, cash flow and CFO-level guidance connected to what happens on the floor.", links: [
       { label: "Food cost & inventory", href: "/restaurant-food-cost-management" },
-      { label: "Cash flow & CFO guidance", href: "/restaurant-cfo-services" },
-      { label: "Turnaround consulting", href: "/restaurant-turnaround-consulting" },
+      { label: "Financial reporting, cash flow & CFO guidance", href: "/restaurant-cfo-services" },
+      { label: "Restaurant turnaround consulting", href: "/restaurant-turnaround-consulting" },
     ] },
   ],
 } as const;
