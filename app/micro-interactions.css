@@ -1,0 +1,46 @@
+/* Lightweight interaction polish: transform/opacity only, no animation library required. */
+:where(.button,.text-link,.quiet-link,.resource-links a,.related a,.capability,.audience-grid>a,.footer a) {
+  transition-property: transform, opacity, background-color, border-color, box-shadow;
+  transition-duration: 180ms;
+  transition-timing-function: cubic-bezier(.2,.8,.2,1);
+}
+
+@media (hover:hover) and (pointer:fine) {
+  :where(.button,.capability,.audience-grid>a,.related a):hover {
+    transform: translateY(-2px);
+  }
+
+  :where(.text-link,.quiet-link,.resource-links a,.footer a):hover {
+    opacity: .72;
+  }
+}
+
+:where(.button,.capability,.audience-grid>a,.related a):active {
+  transform: translateY(0);
+}
+
+:where(.button,.text-link,.quiet-link,.resource-links a,.related a,.capability,.audience-grid>a,.footer a):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* Let the browser skip paint/layout work for deep, offscreen editorial sections. */
+.section-copy > section,
+.article-layout > *,
+.audience-grid > a,
+.capability-grid > a {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.button,.text-link,.quiet-link,.resource-links a,.related a,.capability,.audience-grid>a,.footer a) {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+html[data-motion="off"] :where(.button,.text-link,.quiet-link,.resource-links a,.related a,.capability,.audience-grid>a,.footer a) {
+  transition: none !important;
+  transform: none !important;
+}
