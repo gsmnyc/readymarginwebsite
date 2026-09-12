@@ -37,6 +37,13 @@ export function pageSchemaData(p: Page) {
   const crumbs = p.path.split("/").filter(Boolean);
   const isNewYorkPage = p.path === "/new-york" || p.path.startsWith("/new-york/");
   const isServicePage = p.kind === "capability" || p.kind === "service" || p.kind === "service-hub" || isNewYorkPage;
+  const organization = {
+    "@type": "Organization",
+    "@id": origin + "/#organization",
+    name: "Ready Margin",
+    legalName: "GSM Consultants Inc.",
+    url: origin,
+  };
   const base: Record<string, unknown>[] = [{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -52,24 +59,39 @@ export function pageSchemaData(p: Page) {
   }];
 
   if (isServicePage) {
+    const serviceId = origin + p.path + "/#service";
     base.push({
       "@context": "https://schema.org",
       "@type": "Service",
-      "@id": origin + p.path + "/#service",
+      "@id": serviceId,
       name: p.title,
       serviceType: p.serviceType || p.title,
       description: p.description,
-      provider: {
-        "@type": "Organization",
-        "@id": origin + "/#organization",
-        name: "Ready Margin",
-        url: origin,
-      },
+      provider: organization,
       url: origin + p.path,
       areaServed: isNewYorkPage
-        ? [{ "@type": "State", name: "New York" }, { "@type": "City", name: "New York City" }]
+        ? [
+            { "@type": "State", name: "New York" },
+            { "@type": "City", name: "New York City" },
+          ]
         : { "@type": "Country", name: "United States" },
       audience: { "@type": "BusinessAudience", audienceType: "Restaurant owners and operators" },
+      category: "Managed restaurant financial operations",
+      termsOfService: origin + "/terms",
+    });
+    base.push({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": origin + p.path + "/#webpage",
+      name: p.title,
+      description: p.description,
+      url: origin + p.path,
+      about: [
+        { "@id": serviceId },
+        ...p.queries.map((name) => ({ "@type": "Thing", name })),
+      ],
+      mainEntity: { "@id": serviceId },
+      isPartOf: { "@id": origin + "/#website" },
     });
   }
 
@@ -82,8 +104,8 @@ export function pageSchemaData(p: Page) {
       description: p.description,
       datePublished: p.publishedAt || p.updated,
       dateModified: p.updated,
-      author: { "@type": "Organization", name: p.author || "Ready Margin editorial", url: origin },
-      publisher: { "@type": "Organization", "@id": origin + "/#organization", name: "Ready Margin" },
+      author: { ...organization, name: p.author || "Ready Margin editorial" },
+      publisher: organization,
       mainEntityOfPage: origin + p.path,
       about: p.keyword ? p.keyword.split(", ").map((name) => ({ "@type": "Thing", name })) : undefined,
     });
@@ -105,11 +127,7 @@ export function pageSchemaData(p: Page) {
           "@type": "Answer",
           text: p.answer,
           url: origin + p.path,
-          author: {
-            "@type": "Organization",
-            "@id": origin + "/#organization",
-            name: "Ready Margin",
-          },
+          author: organization,
         },
       },
     });
