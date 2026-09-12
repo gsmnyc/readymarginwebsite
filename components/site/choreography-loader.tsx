@@ -14,21 +14,20 @@ const motionExcluded = ["/book-a-review", "/contact", "/legal/", "/thank-you"];
 
 export function ChoreographyLoader() {
   const pathname = usePathname();
-  const [ready, setReady] = useState(false);
+  const [readyPath, setReadyPath] = useState("");
   const enabled = !motionExcluded.some((prefix) =>
     prefix.endsWith("/") ? pathname.startsWith(prefix) : pathname === prefix,
   );
 
   useEffect(() => {
-    setReady(false);
     if (!enabled || !motionAllowed() || lightMotion()) return;
-    const idle = window.requestIdleCallback?.(() => setReady(true), { timeout: 900 });
-    const timer = idle === undefined ? window.setTimeout(() => setReady(true), 160) : undefined;
+    const idle = window.requestIdleCallback?.(() => setReadyPath(pathname), { timeout: 900 });
+    const timer = idle === undefined ? window.setTimeout(() => setReadyPath(pathname), 160) : undefined;
     return () => {
       if (idle !== undefined) window.cancelIdleCallback(idle);
       if (timer !== undefined) window.clearTimeout(timer);
     };
   }, [enabled, pathname]);
 
-  return enabled && ready ? <PageChoreography /> : null;
+  return enabled && readyPath === pathname ? <PageChoreography /> : null;
 }

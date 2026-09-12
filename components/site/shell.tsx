@@ -28,7 +28,6 @@ const popularRoutes = [
 export function SiteHeader({ settings }: { settings: Settings }) {
   const path = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [settled, setSettled] = useState(false);
 
   useEffect(() => {
     let frame = 0;
@@ -37,8 +36,6 @@ export function SiteHeader({ settings }: { settings: Settings }) {
       frame = window.requestAnimationFrame(() => {
         frame = 0;
         setScrolled(window.scrollY > 40);
-        const hero = document.getElementById("home-hero");
-        setSettled(!hero || hero.getBoundingClientRect().top < 120);
       });
     };
     run();
@@ -61,16 +58,12 @@ export function SiteHeader({ settings }: { settings: Settings }) {
   return (
     <>
       <header
-        className={`site-header ${scrolled ? "scrolled" : ""} ${path === "/" ? "home-header" : ""} ${settled ? "settled" : ""}`}
+        className={`site-header ${scrolled ? "scrolled" : ""}`}
       >
         <div className="header-inner">
           <Link href="/" className="brand-link" aria-label="Ready Margin home">
             <Image
-              src={
-                path === "/" && !settled
-                  ? "/brand/logo_horizontal_primary_dark.svg"
-                  : "/brand/logo_horizontal_primary_transparent.svg"
-              }
+              src="/brand/logo_horizontal_primary_transparent.svg"
               width={220}
               height={52}
               sizes="(max-width: 1023px) 190px, 220px"
