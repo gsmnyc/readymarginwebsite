@@ -34,7 +34,7 @@ export default async function Home() {
           </div>
           <figure className="home-restaurant-photo">
             <Image src="/brand/restaurant-pass.webp" alt="Illustrative restaurant kitchen pass with plates ready for service and order tickets" width={1536} height={1024} sizes="(max-width: 1199px) 100vw, 55vw" priority />
-            <figcaption><strong>The restaurant is the reason.</strong><span>AI-generated restaurant illustration</span></figcaption>
+            <figcaption><strong>The restaurant is the reason.</strong></figcaption>
           </figure>
         </div>
       </section>
