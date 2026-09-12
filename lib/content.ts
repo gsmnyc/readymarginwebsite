@@ -114,6 +114,8 @@ export type Content = {
   faqs: FaqItem[];
 };
 
+const legacyRedirectPaths = new Set(["/new-york-restaurant-bookkeeping"]);
+
 const searchPages = searchFallback.pages.map((page) =>
   pageSchema.parse({
     path: page.path,
@@ -130,11 +132,18 @@ const searchPages = searchFallback.pages.map((page) =>
     related: page.related.map((item) => item.path),
     status: page.eyebrow,
     category:
-      page.kind === "article" ? "Payroll and provider selection" : "New York restaurant services",
+      page.kind === "article"
+        ? "Payroll and provider selection"
+        : "New York restaurant services",
     icon: page.path.includes("payroll") ? "tips" : "book",
     takeaway: page.answer,
     author: "author" in page ? page.author : "",
-    keyword: [page.title, page.serviceType, "New York restaurants", "NYC restaurants"]
+    keyword: [
+      page.title,
+      page.serviceType,
+      "New York restaurants",
+      "NYC restaurants",
+    ]
       .filter(Boolean)
       .join(", "),
     answer: page.answer,
@@ -147,7 +156,9 @@ const searchPages = searchFallback.pages.map((page) =>
 const local: Content = {
   ...fallback,
   pages: [
-    ...fallback.pages.map((page) => pageSchema.parse(page)),
+    ...fallback.pages
+      .filter((page) => !legacyRedirectPaths.has(page.path))
+      .map((page) => pageSchema.parse(page)),
     ...searchPages,
   ],
 };
@@ -181,7 +192,9 @@ export const getContent = cache(async (): Promise<Content> => {
     };
     const remote = z.array(pageSchema).parse(result.pages);
     const byPath = new Map(local.pages.map((page) => [page.path, page]));
-    remote.forEach((page) => byPath.set(page.path, page));
+    remote.forEach((page) => {
+      if (!legacyRedirectPaths.has(page.path)) byPath.set(page.path, page);
+    });
     return {
       settings: {
         ...local.settings,
@@ -190,8 +203,12 @@ export const getContent = cache(async (): Promise<Content> => {
           result.settings?.workingDay?.length === 3 &&
           result.settings.workingDay.every(
             (chapter) =>
-              Object.values(chapter).every((value) => typeof value === "string") &&
-              Object.keys(local.settings.workingDay[0]).every((key) => key in chapter) &&
+              Object.values(chapter).every(
+                (value) => typeof value === "string",
+              ) &&
+              Object.keys(local.settings.workingDay[0]).every(
+                (key) => key in chapter,
+              ) &&
               byPath.get(chapter.href)?.published,
           )
             ? result.settings.workingDay
