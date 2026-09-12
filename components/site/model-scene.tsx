@@ -33,25 +33,19 @@ const steps = [
 
 export function ModelScene() {
   return (
-    <div className="model">
-      <p className="model-example-label">
+    <div className="service-story">
+      <p className="service-story-caption">
         One payroll question, followed through. An illustrative workflow.
       </p>
       {steps.map((step, index) => (
-        <div className="model-step" key={step.word}>
-          <span className="step-num">0{index + 1}</span>
-          <h3 className="model-heading">
-            <span className="model-word">
-              {step.word}
-              <span>.</span>
-            </span>
-          </h3>
-          <div className="model-description">
+        <section className="service-chapter" key={step.word}>
+          <div className="service-chapter-title"><span className="eyebrow">0{index + 1}</span><h3>{step.word}<span>.</span></h3></div>
+          <div className="service-chapter-copy">
             <h4>{step.heading}</h4>
             <p>{step.body}</p>
           </div>
           <dl
-            className="model-evidence"
+            className="service-chapter-evidence"
             aria-label={step.word + ": illustrative payroll handoff"}
           >
             {step.evidence.map(([label, text]) => (
@@ -61,8 +55,7 @@ export function ModelScene() {
               </div>
             ))}
           </dl>
-          <span className="model-rule" aria-hidden="true" />
-        </div>
+        </section>
       ))}
     </div>
   );

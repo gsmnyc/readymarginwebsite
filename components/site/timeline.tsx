@@ -1,48 +1,22 @@
-"use client";
-
-import { useState } from "react";
-
 export function Timeline({
   steps,
-  pinned = false,
 }: {
   steps: { title: string; body: string }[];
   pinned?: boolean;
 }) {
-  const [active, setActive] = useState(0);
-
   return (
-    <div className="timeline" data-layout={pinned ? "focused" : "standard"}>
-      <div className="timeline-nav">
-        <div className="timeline-progress" />
+    <div className="rhythm">
+      <ol className="rhythm-sequence">
         {steps.map((step, index) => (
-          <button
-            key={step.title}
-            aria-pressed={active === index}
-            onClick={() => setActive(index)}
-            className={index === active ? "active" : ""}
-          >
-            <span>0{index + 1}</span>
-            {step.title}
-          </button>
+          <li key={step.title}>
+            <span className="rhythm-number" aria-hidden="true">0{index + 1}</span>
+            <div><h3>{step.title}</h3><p>{step.body}</p></div>
+            {index < steps.length - 1 && <span className="rhythm-handoff" aria-hidden="true">↘</span>}
+          </li>
         ))}
-      </div>
-      <div className="timeline-copy">
-        <p className="eyebrow">The Ready Rhythm</p>
-        {steps.map((step, index) => (
-          <section
-            key={step.title}
-            className={index === active ? "current" : ""}
-          >
-            <h3>{step.title}</h3>
-            <p>{step.body}</p>
-          </section>
-        ))}
-        <p className="caption">
-          A recurring managed service rhythm. Cadence is agreed for your
-          restaurant.
-        </p>
-      </div>
+      </ol>
+      <p className="rhythm-return">Back to the records, with last week’s decisions in view.</p>
+      <p className="caption">A recurring managed service. Cadence is agreed for your restaurant.</p>
     </div>
   );
 }

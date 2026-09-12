@@ -17,6 +17,7 @@ export function LeadForm({ settings }: { settings: Settings }) {
   const [consent, setConsent] = useState(false);
   const started = useRef(false);
   const submitted = useRef(false);
+  const sending = useRef(false);
   const form = useRef<HTMLFormElement>(null);
   const success = useRef<HTMLElement>(null);
 
@@ -33,6 +34,7 @@ export function LeadForm({ settings }: { settings: Settings }) {
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (sending.current) return;
     const values = Object.fromEntries(new FormData(event.currentTarget));
     const parsed = leadSchema.safeParse({ ...values, consent });
     if (!parsed.success) {
@@ -51,6 +53,7 @@ export function LeadForm({ settings }: { settings: Settings }) {
     setErrors({});
     setMessage("");
     setState("sending");
+    sending.current = true;
     track("form_submit");
     try {
       const response = await fetch("/api/review", {
@@ -77,6 +80,8 @@ export function LeadForm({ settings }: { settings: Settings }) {
           : "Your request could not be delivered.",
       );
       track("form_error");
+    } finally {
+      sending.current = false;
     }
   }
 

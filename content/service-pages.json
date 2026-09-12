@@ -18,6 +18,7 @@
         {"title": "Start with one recurring problem", "body": "A restaurant does not need to replace every provider or system at once. The best starting point is often the job that keeps returning to the owner: late books, payroll corrections, cash uncertainty, vendor bills, tax-document chasing, rising food cost or inconsistent reporting. The scope can then expand only where the handoffs genuinely connect.", "items": []}
       ],
       "related": [
+        {"path": "/answers/what-is-managed-restaurant-finance", "label": "What is managed restaurant finance?"},
         {"path": "/restaurant-accounting-services", "label": "Restaurant accounting services"},
         {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
         {"path": "/restaurant-tax-services", "label": "Restaurant tax and compliance support"},
@@ -44,6 +45,7 @@
         {"title": "Specialist tax, assurance and legal work stays explicit", "body": "Accounting support does not automatically mean every regulated filing or legal responsibility is included. Ready Margin confirms tax, compliance, assurance and adviser responsibilities in the engagement so the restaurant knows who owns each deadline and decision.", "items": []}
       ],
       "related": [
+        {"path": "/answers/who-can-handle-restaurant-payroll-and-bookkeeping", "label": "Who handles payroll and bookkeeping together?"},
         {"path": "/restaurant-bookkeeping-services", "label": "Restaurant bookkeeping services"},
         {"path": "/restaurant-accounts-payable-services", "label": "Restaurant accounts payable services"},
         {"path": "/restaurant-tax-services", "label": "Restaurant tax and compliance support"},
@@ -249,6 +251,7 @@
         {"title": "AP should connect to cash and food-cost review", "body": "Vendor bills affect more than the ledger. When payables connect to cash visibility and supplier-cost analysis, the owner can see both what is due and whether the underlying cost pattern changed.", "items": []}
       ],
       "related": [
+        {"path": "/answers/is-ready-margin-software-or-a-managed-service", "label": "Is Ready Margin software or a managed service?"},
         {"path": "/restaurant-cash-flow-management", "label": "Restaurant cash-flow management"},
         {"path": "/restaurant-food-cost-management", "label": "Restaurant food-cost management"},
         {"path": "/solutions/restaurant-vendor-bill-errors", "label": "Help with restaurant vendor bill errors"},

@@ -15,6 +15,7 @@
     "test:content": "node tests/content-check.mjs",
     "test:seo": "node tests/seo-contract.mjs",
     "test:indexnow": "node tests/indexnow-check.mjs",
+    "test:browser": "playwright test",
     "test:responsive": "node tests/responsive-contract.mjs",
     "test:forms": "node tests/adapters-check.mjs && node tests/workspace-receiver-check.mjs",
     "cms:seed": "node scripts/cms-seed.mjs",
@@ -35,6 +36,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
