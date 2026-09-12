@@ -14,12 +14,19 @@ export function metadataFor(
     alternates: { canonical: url },
     robots: { index: isProduction() && p.indexable, follow: true },
     openGraph: {
-      title, description: p.description, url, siteName: "Ready Margin",
+      title,
+      description: p.description,
+      url,
+      siteName: "Ready Margin",
       type: p.kind === "article" ? "article" : "website",
-      images: [{ url: `${siteOrigin()}/social/${p.kind === "article" ? "insights.jpg" : ["capability", "service", "service-hub"].includes(p.kind) ? "services.png" : "brand.png"}` }],
+      images: [{
+        url: `${siteOrigin()}/social/${p.kind === "article" ? "insights.jpg" : ["capability", "service", "service-hub"].includes(p.kind) ? "services.png" : "brand.png"}`,
+      }],
     },
     twitter: {
-      card: "summary_large_image", title, description: p.description,
+      card: "summary_large_image",
+      title,
+      description: p.description,
       images: [`${siteOrigin()}/social/${p.kind === "article" ? "insights.jpg" : ["capability", "service", "service-hub"].includes(p.kind) ? "services.png" : "brand.png"}`],
     },
   };
@@ -44,45 +51,65 @@ export function pageSchemaData(p: Page) {
     ],
   }];
 
-  if (isServicePage) base.push({
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": origin + p.path + "/#service",
-    name: p.title,
-    serviceType: p.serviceType || p.title,
-    description: p.description,
-    provider: { "@type": "Organization", "@id": origin + "/#organization", name: "Ready Margin", url: origin },
-    url: origin + p.path,
-    areaServed: isNewYorkPage
-      ? [{ "@type": "State", name: "New York" }, { "@type": "City", name: "New York City" }]
-      : { "@type": "Country", name: "United States" },
-    audience: { "@type": "BusinessAudience", audienceType: "Restaurant owners and operators" },
-  });
+  if (isServicePage) {
+    base.push({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": origin + p.path + "/#service",
+      name: p.title,
+      serviceType: p.serviceType || p.title,
+      description: p.description,
+      provider: {
+        "@type": "Organization",
+        "@id": origin + "/#organization",
+        name: "Ready Margin",
+        url: origin,
+      },
+      url: origin + p.path,
+      areaServed: isNewYorkPage
+        ? [{ "@type": "State", name: "New York" }, { "@type": "City", name: "New York City" }]
+        : { "@type": "Country", name: "United States" },
+      audience: { "@type": "BusinessAudience", audienceType: "Restaurant owners and operators" },
+    });
+  }
 
-  if (p.kind === "article") base.push({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": origin + p.path + "/#article",
-    headline: p.heading,
-    description: p.description,
-    datePublished: p.publishedAt || p.updated,
-    dateModified: p.updated,
-    author: { "@type": "Organization", name: p.author || "Ready Margin editorial", url: origin },
-    publisher: { "@type": "Organization", "@id": origin + "/#organization", name: "Ready Margin" },
-    mainEntityOfPage: origin + p.path,
-    about: p.keyword ? p.keyword.split(", ").map((name) => ({ "@type": "Thing", name })) : undefined,
-  });
+  if (p.kind === "article") {
+    base.push({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": origin + p.path + "/#article",
+      headline: p.heading,
+      description: p.description,
+      datePublished: p.publishedAt || p.updated,
+      dateModified: p.updated,
+      author: { "@type": "Organization", name: p.author || "Ready Margin editorial", url: origin },
+      publisher: { "@type": "Organization", "@id": origin + "/#organization", name: "Ready Margin" },
+      mainEntityOfPage: origin + p.path,
+      about: p.keyword ? p.keyword.split(", ").map((name) => ({ "@type": "Thing", name })) : undefined,
+    });
+  }
 
-  if (p.kind === "answer") base.push({
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": origin + p.path + "/#webpage",
-    name: p.title,
-    description: p.description,
-    url: origin + p.path,
-    about: p.queries.map((name) => ({ "@type": "Thing", name })),
-    mainEntity: { "@type": "Question", name: p.title, acceptedAnswer: { "@type": "Answer", text: p.answer } },
-  });
+  if (p.kind === "answer") {
+    base.push({
+      "@context": "https://schema.org",
+      "@type": "QAPage",
+      "@id": origin + p.path + "/#qa",
+      name: p.title,
+      description: p.description,
+      url: origin + p.path,
+      about: p.queries.map((name) => ({ "@type": "Thing", name })),
+      mainEntity: {
+        "@type": "Question",
+        name: p.title,
+        answerCount: 1,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: p.answer,
+          url: origin + p.path,
+        },
+      },
+    });
+  }
 
   return base;
 }
