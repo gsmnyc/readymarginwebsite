@@ -4,20 +4,20 @@
 .homepage h2 { font-size:clamp(2.1rem,3.8vw,4rem); line-height:1.08; letter-spacing:-.04em; }
 .homepage p { max-width:none; }
 .homepage .eyebrow { font-size:.75rem; line-height:1.6; letter-spacing:.08em; }
-.home-opening { background:var(--rm-cream); color:var(--rm-ink); }
+.home-opening { background:var(--rm-ink); color:var(--rm-cream); }
 .home-opening .hero-grid { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:5%; align-items:center; padding-block:40px 64px; }
 .home-opening h1 { font-size:clamp(3.7rem,7vw,7rem); line-height:1.02; letter-spacing:-.055em; margin-block:26px 32px; }
-.home-opening h1 span { color:var(--rm-ink); text-decoration:underline; text-decoration-color:var(--rm-ready-gold); text-decoration-thickness:.08em; text-underline-offset:.12em; }
-.home-opening .home-intro { max-width:42ch; font-size:clamp(1rem,1.4vw,1.1875rem); line-height:1.6; color:var(--rm-text-gray); }
+.home-opening h1 span { color:var(--rm-ready-gold); }
+.home-opening .home-intro { max-width:42ch; font-size:clamp(1rem,1.4vw,1.1875rem); line-height:1.6; color:var(--rm-line); }
 .home-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px 24px; margin-top:32px; }
 .home-quiet-link { display:inline-flex; align-items:center; gap:12px; min-height:44px; font-size:.875rem; text-decoration:underline; text-underline-offset:5px; }
 .restaurant-illustration { margin:0; min-width:0; width:100%; }
 .restaurant-illustration svg,.cash-pressure svg { display:block; width:100%; height:auto; }
 .restaurant-illustration figcaption { margin-top:12px; font-size:.8125rem; color:var(--rm-text-gray); text-align:right; }
-.home-bridge { display:grid; grid-template-columns:1.4fr 1fr; align-items:end; gap:8%; padding-block:64px; border-block:1px solid var(--rm-line); }
-.home-bridge > p:first-child { font-size:clamp(1.7rem,3vw,3rem); font-weight:500; line-height:1.25; letter-spacing:-.03em; }
-.home-bridge > p:first-child span { text-decoration:underline; text-decoration-color:var(--rm-ready-gold); text-underline-offset:.14em; }
-.home-bridge > p:last-child { color:var(--rm-text-gray); }
+.home-bridge { background:var(--rm-ready-gold); padding-block:48px; }
+.home-bridge > div { display:grid; grid-template-columns:1.4fr 1fr; align-items:center; gap:8%; }
+.home-bridge p:first-child { font-size:clamp(1.7rem,3vw,3rem); font-weight:500; line-height:1.25; letter-spacing:-.03em; }
+.home-bridge p:last-child { color:var(--rm-ink); }
 .home-work,.home-about { padding-block:var(--home-space); }
 .home-section-heading { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:8%; align-items:end; margin-bottom:48px; }
 .home-section-heading .eyebrow { margin-bottom:20px; }
@@ -118,3 +118,45 @@
   .home-turnaround h2 { font-size:2.75rem; } .home-finish h2 { font-size:clamp(2.4rem,10.5vw,3.25rem); }
 }
 @media(prefers-reduced-motion:reduce) { .home-service-index a span { transition:none; } .home-service-index a:hover span { transform:none; } }
+
+/* The restaurant image fills the available composition, including touch Desktop Site. */
+.home-opening .hero-grid { grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:5%; padding-block:56px; }
+.home-restaurant-photo { position:relative; margin:0; min-width:0; border-bottom:5px solid var(--rm-ready-gold); }
+.home-restaurant-photo img { display:block; width:100%; height:clamp(420px,43vw,700px); object-fit:cover; object-position:58% center; }
+.home-restaurant-photo figcaption { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:20px 0; }
+.home-restaurant-photo figcaption strong { font-size:1.125rem; font-weight:500; }
+.home-restaurant-photo figcaption span { font-size:.75rem; color:var(--rm-line); }
+.home-about { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); align-items:center; gap:8%; }
+.home-about .home-section-heading { display:block; }
+.home-about h2 { margin-block:24px; }
+.home-about .restaurant-illustration { max-width:460px; }
+.home-work { padding-bottom:64px; }
+.story-chapter { padding-block:24px 48px; }
+@media(max-width:900px),(max-width:1199px) and (hover:none) and (pointer:coarse) {
+  .home-opening .hero-grid,.home-bridge > div,.home-about { grid-template-columns:minmax(0,1fr); }
+  .home-opening .hero-grid { padding-block:40px 24px; gap:32px; }
+  .home-restaurant-photo img { height:auto; aspect-ratio:3 / 2; }
+  .home-about .restaurant-illustration { max-width:440px; margin-inline:auto; }
+  .home-bridge > div { gap:24px; }
+}
+@media(min-width:700px) and (max-width:1199px) and (hover:none) and (pointer:coarse) {
+  .homepage { font-size:24px; --home-space:64px; }
+  .homepage .eyebrow { font-size:16px; }
+  .homepage .home-intro,.homepage .home-service-index p,.homepage .home-service-index a,.homepage .home-section-tail,.homepage .home-context-links a,.homepage .home-quiet-link,.homepage .button { font-size:22px; }
+  .homepage .button { min-height:72px; padding:20px 28px; }
+  .homepage .home-service-index section { display:block; }
+  .homepage .home-service-index h3 { font-size:36px; margin-block:20px; }
+  .homepage .home-service-index ul { margin-top:20px; }
+  .homepage .home-service-index a { min-height:64px; }
+  .homepage .working-paper { max-width:none; }
+  .homepage .paper-note { font-size:40px; }
+  .homepage .paper-action strong,.homepage .working-paper figcaption { font-size:22px; }
+  .homepage .paper-owner,.homepage .paper-action span,.homepage .working-paper figcaption span,.homepage .home-restaurant-photo figcaption span { font-size:18px; }
+  .homepage .story-copy h3 { font-size:32px; }
+  .homepage .home-about .restaurant-illustration { max-width:580px; }
+}
+@media(max-width:540px) {
+  .home-restaurant-photo figcaption { padding-block:16px; }
+  .home-restaurant-photo figcaption strong { font-size:1rem; }
+  .home-restaurant-photo img { aspect-ratio:4 / 3; }
+}

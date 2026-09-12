@@ -18,6 +18,13 @@ for (const path of ["/", "/book-a-review", "/restaurant-finance-services", "/how
       expect(await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns.split(" ").length)).toBe(1);
     }
     if (path === "/") {
+      const image = page.locator(".home-restaurant-photo img");
+      await expect(image).toBeVisible();
+      expect(await image.evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+      if (testInfo.project.name === "phone-desktop-site") {
+        expect(await page.locator(".home-intro").evaluate(el => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(22);
+        expect((await image.boundingBox())!.width).toBeGreaterThan(800);
+      }
       await expect(page.locator("[data-story-chapter]")).toHaveCount(3);
       await expect(page.locator(".restaurant-illustration svg")).toBeVisible();
     }
