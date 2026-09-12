@@ -257,7 +257,7 @@ img {
 }
 .site-header.scrolled {
   border-bottom-color: var(--rm-line);
-  background: rgba(244, 241, 232, 0.97);
+  background: var(--rm-cream);
 }
 .header-inner {
   height: 100%;

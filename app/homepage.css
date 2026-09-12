@@ -126,7 +126,7 @@
 .home-restaurant-photo figcaption { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:20px 0; }
 .home-restaurant-photo figcaption strong { font-size:1.125rem; font-weight:500; }
 .home-restaurant-photo figcaption span { font-size:.75rem; color:var(--rm-line); }
-.home-about { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); align-items:center; gap:8%; }
+.home-about { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); align-items:center; column-gap:8%; row-gap:48px; }
 .home-about .home-section-heading { display:block; }
 .home-about h2 { margin-block:24px; }
 .home-about .restaurant-illustration { max-width:460px; }
