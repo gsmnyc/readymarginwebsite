@@ -7,7 +7,10 @@ export async function GET() {
   const origin = siteOrigin();
   const sections = [
     ["Managed services", ["capability"]],
-    ["How the service works", ["process", "rhythm", "implementation", "owner-view"]],
+    [
+      "How the service works",
+      ["process", "rhythm", "implementation", "owner-view"],
+    ],
     ["Who we support", ["audience"]],
     ["Restaurant finance guides", ["article"]],
     ["Company and enquiries", ["about", "pricing", "form", "security"]],
@@ -22,15 +25,33 @@ export async function GET() {
     `Website: ${origin}`,
     `Contact: ${settings.email}`,
   ];
+
   for (const [heading, kinds] of sections) {
     lines.push("", `## ${heading}`, "");
     for (const page of pages.filter(
-      (p) => p.published && p.indexable && (kinds as readonly string[]).includes(p.kind),
+      (page) =>
+        page.published &&
+        page.indexable &&
+        (kinds as readonly string[]).includes(page.kind),
     )) {
-      lines.push(`- [${page.seoTitle || page.title}](${origin}${page.path}): ${page.description}`);
+      lines.push(
+        `- [${page.seoTitle || page.title}](${origin}${page.path}): ${page.description}`,
+      );
     }
   }
-  lines.push("", "## New York", "", `- [Restaurant bookkeeping and payroll support in New York](${origin}/new-york-restaurant-bookkeeping)`, "");
+
+  lines.push("", "## New York restaurant services", "");
+  for (const page of pages.filter(
+    (page) =>
+      page.published &&
+      page.indexable &&
+      (page.path === "/new-york" || page.path.startsWith("/new-york/")),
+  )) {
+    lines.push(
+      `- [${page.seoTitle || page.title}](${origin}${page.path}): ${page.answer || page.description}`,
+    );
+  }
+
   return new Response(lines.join("\n"), {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",

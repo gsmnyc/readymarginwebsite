@@ -1,11 +1,19 @@
 import { z } from "zod";
 import { cache } from "react";
 import fallback from "@/content/site.json";
+import searchFallback from "@/content/search-pages.json";
+
 const sectionSchema = z.object({
   title: z.string(),
   body: z.string(),
   items: z.array(z.string()).default([]),
 });
+
+const resourceSchema = z.object({
+  url: z.string().url(),
+  label: z.string().min(3),
+});
+
 export const pageSchema = z.object({
   path: z.string().regex(/^\/[a-z0-9/-]+$/),
   title: z.string().min(5),
@@ -55,7 +63,12 @@ export const pageSchema = z.object({
   takeaway: z.string().default(""),
   author: z.string().default(""),
   keyword: z.string().default(""),
+  answer: z.string().default(""),
+  disclosure: z.string().default(""),
+  resources: z.array(resourceSchema).default([]),
+  serviceType: z.string().default(""),
 });
+
 export type Page = z.infer<typeof pageSchema>;
 export type PageSummary = Pick<
   Page,
@@ -68,6 +81,7 @@ export type PageSummary = Pick<
   | "keyword"
   | "indexable"
 >;
+
 export function summarizePage({
   path,
   title,
@@ -89,6 +103,7 @@ export function summarizePage({
     indexable,
   };
 }
+
 export type Settings = typeof fallback.settings;
 export type Tier = (typeof fallback.tiers)[number];
 export type FaqItem = (typeof fallback.faqs)[number];
@@ -98,10 +113,56 @@ export type Content = {
   tiers: Tier[];
   faqs: FaqItem[];
 };
+
+const legacyRedirectPaths = new Set(["/new-york-restaurant-bookkeeping"]);
+
+const searchPages = searchFallback.pages.map((page) =>
+  pageSchema.parse({
+    path: page.path,
+    title: page.title,
+    seoTitle: page.seoTitle,
+    heading: page.heading,
+    description: page.description,
+    kind: page.kind === "article" ? "article" : "campaign",
+    sections: page.sections,
+    published: true,
+    indexable: true,
+    publishedAt: "publishedAt" in page ? page.publishedAt : "",
+    updated: searchFallback.updated,
+    related: page.related.map((item) => item.path),
+    status: page.eyebrow,
+    category:
+      page.kind === "article"
+        ? "Payroll and provider selection"
+        : "New York restaurant services",
+    icon: page.path.includes("payroll") ? "tips" : "book",
+    takeaway: page.answer,
+    author: "author" in page ? page.author : "",
+    keyword: [
+      page.title,
+      page.serviceType,
+      "New York restaurants",
+      "NYC restaurants",
+    ]
+      .filter(Boolean)
+      .join(", "),
+    answer: page.answer,
+    disclosure: "disclosure" in page ? page.disclosure : "",
+    resources: page.resources,
+    serviceType: page.serviceType,
+  }),
+);
+
 const local: Content = {
   ...fallback,
-  pages: fallback.pages.map((p) => pageSchema.parse(p)),
+  pages: [
+    ...fallback.pages
+      .filter((page) => !legacyRedirectPaths.has(page.path))
+      .map((page) => pageSchema.parse(page)),
+    ...searchPages,
+  ],
 };
+
 export const getContent = cache(async (): Promise<Content> => {
   const id = process.env.SANITY_PROJECT_ID,
     dataset = process.env.SANITY_DATASET;
@@ -130,20 +191,31 @@ export const getContent = cache(async (): Promise<Content> => {
       };
     };
     const remote = z.array(pageSchema).parse(result.pages);
-    const byPath = new Map(local.pages.map((p) => [p.path, p]));
-    remote.forEach((p) => byPath.set(p.path, p));
+    const byPath = new Map(local.pages.map((page) => [page.path, page]));
+    remote.forEach((page) => {
+      if (!legacyRedirectPaths.has(page.path)) byPath.set(page.path, page);
+    });
     return {
       settings: {
         ...local.settings,
         ...result.settings,
-        workingDay: result.settings?.workingDay?.length === 3 && result.settings.workingDay.every((chapter) =>
-          Object.values(chapter).every((value) => typeof value === "string") &&
-          Object.keys(local.settings.workingDay[0]).every((key) => key in chapter) &&
-          byPath.get(chapter.href)?.published,
-        ) ? result.settings.workingDay : local.settings.workingDay,
+        workingDay:
+          result.settings?.workingDay?.length === 3 &&
+          result.settings.workingDay.every(
+            (chapter) =>
+              Object.values(chapter).every(
+                (value) => typeof value === "string",
+              ) &&
+              Object.keys(local.settings.workingDay[0]).every(
+                (key) => key in chapter,
+              ) &&
+              byPath.get(chapter.href)?.published,
+          )
+            ? result.settings.workingDay
+            : local.settings.workingDay,
         experiments: [],
       },
-      pages: [...byPath.values()].filter((p) => p.published),
+      pages: [...byPath.values()].filter((page) => page.published),
       tiers: result.tiers?.length ? result.tiers : local.tiers,
       faqs: result.faqs?.length ? result.faqs : local.faqs,
     };
@@ -151,10 +223,13 @@ export const getContent = cache(async (): Promise<Content> => {
     return local;
   }
 });
+
 export const siteOrigin = () => {
   const configured = process.env.SITE_URL?.trim().replace(/\/+$/, "");
   return configured || "https://readymargin.com";
 };
-export const isProduction = () => process.env.VERCEL_ENV
-  ? process.env.VERCEL_ENV === "production"
-  : process.env.SITE_ENV === "production";
+
+export const isProduction = () =>
+  process.env.VERCEL_ENV
+    ? process.env.VERCEL_ENV === "production"
+    : process.env.SITE_ENV === "production";

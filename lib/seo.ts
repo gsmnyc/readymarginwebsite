@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Page } from "./content";
 import { siteOrigin, isProduction } from "./content";
+
 export function metadataFor(
   p: Pick<Page, "title" | "description" | "path" | "indexable"> & {
     kind: string;
@@ -39,47 +40,77 @@ export function metadataFor(
     },
   };
 }
+
 export function pageSchemaData(p: Page) {
   const origin = siteOrigin();
   const crumbs = p.path.split("/").filter(Boolean);
+  const isNewYorkPage = p.path === "/new-york" || p.path.startsWith("/new-york/");
+  const isServicePage = p.kind === "capability" || isNewYorkPage;
   const base: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: origin },
-        ...crumbs.map((n, i) => ({
+        ...crumbs.map((name, index) => ({
           "@type": "ListItem",
-          position: i + 2,
-          name: i === crumbs.length - 1 ? p.title : n.replaceAll("-", " "),
-          item: origin + "/" + crumbs.slice(0, i + 1).join("/"),
+          position: index + 2,
+          name: index === crumbs.length - 1 ? p.title : name.replaceAll("-", " "),
+          item: origin + "/" + crumbs.slice(0, index + 1).join("/"),
         })),
       ],
     },
   ];
-  if (p.kind === "capability" || p.path === "/new-york-restaurant-bookkeeping")
+
+  if (isServicePage)
     base.push({
       "@context": "https://schema.org",
       "@type": "Service",
+      "@id": origin + p.path + "/#service",
       name: p.title,
+      serviceType: p.serviceType || p.title,
       description: p.description,
-      provider: { "@type": "Organization", "@id": origin + "/#organization", name: "Ready Margin" },
+      provider: {
+        "@type": "Organization",
+        "@id": origin + "/#organization",
+        name: "Ready Margin",
+        url: origin,
+      },
       url: origin + p.path,
-      ...(p.path === "/new-york-restaurant-bookkeeping"
-        ? { areaServed: { "@type": "AdministrativeArea", name: "New York" } }
+      ...(isNewYorkPage
+        ? {
+            areaServed: [
+              { "@type": "State", name: "New York" },
+              { "@type": "City", name: "New York City" },
+            ],
+          }
         : {}),
     });
+
   if (p.kind === "article")
     base.push({
       "@context": "https://schema.org",
       "@type": "Article",
+      "@id": origin + p.path + "/#article",
       headline: p.heading,
       description: p.description,
       datePublished: p.publishedAt || p.updated,
       dateModified: p.updated,
-      author: { "@type": "Organization", name: p.author },
-      publisher: { "@type": "Organization", "@id": origin + "/#organization", name: "Ready Margin" },
+      author: {
+        "@type": "Organization",
+        name: p.author || "Ready Margin editorial",
+        url: origin,
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": origin + "/#organization",
+        name: "Ready Margin",
+      },
       mainEntityOfPage: origin + p.path,
+      about: p.keyword
+        ? p.keyword.split(", ").map((name) => ({ "@type": "Thing", name }))
+        : undefined,
     });
+
   return base;
 }
