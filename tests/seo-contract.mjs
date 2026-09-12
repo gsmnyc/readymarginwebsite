@@ -74,6 +74,14 @@ for (const page of indexable) {
     assert.equal(service.provider["@id"], "https://readymargin.com/#organization");
     if (page.path === "/new-york" || page.path.startsWith("/new-york/")) assert(Array.isArray(service.areaServed));
   }
+
+  if (page.kind === "answer") {
+    const qa = pageSchemaData(page).find((item) => item["@type"] === "QAPage");
+    assert(qa, `Missing QAPage schema: ${page.path}`);
+    assert.equal(qa.mainEntity["@type"], "Question");
+    assert.equal(qa.mainEntity.acceptedAnswer["@type"], "Answer");
+    assert.equal(qa.mainEntity.acceptedAnswer.text, page.answer);
+  }
 }
 
 const llmsResponse = await llms.GET();
@@ -97,4 +105,4 @@ for (const group of generatedGroups) {
 
 assert(content.pages.length < merged.pages.length);
 await rm(dir, { recursive: true, force: true });
-console.log(`PASS: ${map.length} canonical sitemap URLs, major crawler access, service schema, article schema and full intent-family discovery.`);
+console.log(`PASS: ${map.length} canonical sitemap URLs, major crawler access, Service/QAPage/Article schema and full intent-family discovery.`);
