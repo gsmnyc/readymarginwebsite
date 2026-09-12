@@ -1,6 +1,4 @@
 export const eventNames = [
-  "intro_skip",
-  "intro_complete",
   "cta_click",
   "form_start",
   "form_submit",

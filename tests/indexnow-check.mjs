@@ -22,8 +22,8 @@ const dry = run({
 });
 assert.equal(dry.status, 0);
 const payload = JSON.parse(dry.stdout);
-assert.equal(payload.host, "readymargin.com");
-assert.equal(payload.keyLocation, "https://readymargin.com/66eeb2baaca24bc4b9ca1da852de3551.txt");
+assert.equal(payload.host, "www.readymargin.com");
+assert.equal(payload.keyLocation, "https://www.readymargin.com/66eeb2baaca24bc4b9ca1da852de3551.txt");
 
 const expectedPaths = new Set([
   ...content.pages.filter((page) => page.published && page.indexable && !legacyRedirectPaths.has(page.path)).map((page) => page.path),
@@ -31,8 +31,8 @@ const expectedPaths = new Set([
 ]);
 assert.equal(payload.urlList.length, expectedPaths.size + 1);
 for (const path of expectedPaths) {
-  assert(payload.urlList.includes("https://readymargin.com" + path), `Missing IndexNow URL ${path}`);
+  assert(payload.urlList.includes("https://www.readymargin.com" + path), `Missing IndexNow URL ${path}`);
 }
-assert(!payload.urlList.includes("https://readymargin.com/new-york-restaurant-bookkeeping"), "Redirected legacy URL must not be submitted to IndexNow");
-assert(payload.urlList.every((url) => url === "https://readymargin.com" || url.startsWith("https://readymargin.com/")));
+assert(!payload.urlList.includes("https://www.readymargin.com/new-york-restaurant-bookkeeping"), "Redirected legacy URL must not be submitted to IndexNow");
+assert(payload.urlList.every((url) => url === "https://www.readymargin.com" || url.startsWith("https://www.readymargin.com/")));
 console.log(`PASS: IndexNow includes ${expectedPaths.size} canonical content URLs and excludes redirects.`);
