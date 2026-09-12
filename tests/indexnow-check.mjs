@@ -14,6 +14,13 @@ const skipped = run({ INDEXNOW_ENABLED: "false", VERCEL_ENV: "production" });
 assert.equal(skipped.status, 0);
 assert.match(skipped.stdout, /skipped/);
 
+const preview = run({ INDEXNOW_ENABLED: "true", INDEXNOW_DRY_RUN: "true", VERCEL_ENV: "preview", SITE_ENV: "production" });
+assert.equal(preview.status, 0);
+assert.match(preview.stdout, /skipped/);
+const invalid = run({ INDEXNOW_ENABLED: "true", INDEXNOW_DRY_RUN: "true", VERCEL_ENV: "production", SITE_URL: "invalid-url" });
+assert.equal(invalid.status, 0);
+assert.match(invalid.stderr, /SITE_URL is invalid/);
+
 const dry = run({
   INDEXNOW_ENABLED: "true",
   INDEXNOW_DRY_RUN: "true",

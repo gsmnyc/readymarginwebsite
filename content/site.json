@@ -2485,7 +2485,7 @@
       "sections": [
         {
           "title": "Essential local preferences",
-          "body": "The site can store your analytics choice and whether you skipped the introduction in this browser. These preferences support the experience and are not used to identify you across websites.",
+          "body": "The site can store your analytics choice in this browser. These preferences support the experience and are not used to identify you across websites.",
           "items": []
         },
         {
@@ -2529,7 +2529,7 @@
         },
         {
           "title": "Control the experience",
-          "body": "Skip the introduction at any time. Use your device’s reduced-motion setting to disable scroll scenes. Text can be enlarged and layouts adapt to narrow screens.",
+          "body": "Use your device’s reduced-motion setting to disable content movement. Text can be enlarged and layouts adapt to narrow screens.",
           "items": []
         },
         {

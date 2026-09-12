@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+.page-form .lead-form .caption {
+  color: var(--rm-ink);
+}
+
 .page-form .lead-form .button {
   max-width: 100%;
 }

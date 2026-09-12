@@ -163,8 +163,8 @@ export default async function ContentPage({ params }: Props) {
         {p.kind === "diagnostic" && <ClarityCheck />}
         {p.kind === "form" ? (
           <div className="form-layout">
-            <SectionCopy page={p} />
             <LeadForm settings={c.settings} />
+            <SectionCopy page={p} />
           </div>
         ) : (
           p.kind !== "rhythm" && (
