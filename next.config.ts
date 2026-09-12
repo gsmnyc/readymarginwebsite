@@ -15,6 +15,11 @@ const config: NextConfig = {
         permanent: true,
       },
       { source: "/blog", destination: "/insights", permanent: true },
+      {
+        source: "/new-york-restaurant-bookkeeping",
+        destination: "/new-york/restaurant-bookkeeping-services",
+        permanent: true,
+      },
     ];
   },
   async headers() {
