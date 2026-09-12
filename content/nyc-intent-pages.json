@@ -1,4 +1,447 @@
 {
   "updated": "2026-09-13",
-  "pages": []
+  "pages": [
+    {
+      "path": "/new-york/restaurant-accounting-payroll-services",
+      "kind": "local-service",
+      "title": "Restaurant Accounting & Payroll Services in New York",
+      "seoTitle": "Restaurant Accounting & Payroll Services New York & NYC | Ready Margin",
+      "heading": "Restaurant accounting and payroll support for New York operators.",
+      "description": "Ready Margin combines restaurant accounting and payroll support for New York and NYC operators, connecting hours, tips, payroll, reconciliations, close, reporting and follow-up in one managed workflow.",
+      "eyebrow": "New York / Restaurant accounting + payroll",
+      "serviceType": "Restaurant accounting and payroll services",
+      "answer": "Ready Margin provides restaurant accounting and payroll support for New York operators who want one accountable team across the handoff between labor records and the books. Depending on the confirmed scope, we can support hours and attendance review, tip inputs, payroll preparation and processing, reconciliations, vendor bills, monthly close, financial statements, labor reporting and owner-ready follow-up.",
+      "queries": [
+        "restaurant accounting payroll service new york",
+        "restaurant accounting and payroll services nyc",
+        "restaurant accountant payroll new york",
+        "restaurant payroll bookkeeping new york",
+        "outsourced restaurant accounting payroll nyc"
+      ],
+      "sections": [
+        {
+          "title": "Payroll and accounting should explain the same restaurant week",
+          "body": "A payroll correction changes labor cost. A tip input affects payroll records. Payroll entries then have to reconcile into the books and the cash plan. Ready Margin keeps those handoffs connected so the owner is not rebuilding the same week across a payroll company, a bookkeeper and a spreadsheet.",
+          "items": [
+            "Hours, attendance and payroll-input review within the agreed workflow",
+            "Tip and correction handoffs tied to the source period",
+            "Payroll preparation and processing where included in scope",
+            "Bank, card and payroll-account reconciliation",
+            "Monthly close and financial statements where scoped",
+            "Labor-cost and cash-impact follow-up"
+          ]
+        },
+        {
+          "title": "Restaurant payroll problems often start before the payroll system",
+          "body": "A missed punch, changed shift, incomplete tip input or late manager correction can create a payroll problem even when the payroll software itself works correctly. We organize the operating inputs, unresolved questions and approvals before cutoff, then carry the final payroll information into the accounting process.",
+          "items": []
+        },
+        {
+          "title": "The accounting record keeps the operating context",
+          "body": "Restaurant accounting needs more than a generic ledger. POS settlements, payroll, delivery payouts, supplier bills and cash timing can move on different schedules. Ready Margin keeps open questions visible through reconciliation and close instead of forcing the owner to rediscover them after the month ends.",
+          "items": []
+        },
+        {
+          "title": "New York responsibilities are documented, not assumed",
+          "body": "Payroll-tax, wage-and-hour, tax-filing and legal responsibilities can vary by engagement and jurisdiction. Ready Margin documents which operational and finance tasks are included, who approves payroll, which filings are handled or coordinated, and when a qualified tax, employment or legal adviser remains responsible.",
+          "items": []
+        },
+        {
+          "title": "One recurring finance rhythm instead of separate providers to chase",
+          "body": "The goal is not to replace every system. It is to create a dependable operating rhythm around the systems already in the restaurant so payroll, bookkeeping, close, reporting and financial questions move through one clear responsibility map.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york/restaurant-payroll-services", "label": "Restaurant payroll services in New York" },
+        { "path": "/new-york/restaurant-accounting-services", "label": "Restaurant accounting services in New York" },
+        { "path": "/new-york/restaurant-financial-reporting-services", "label": "Restaurant financial reporting in New York" },
+        { "path": "/book-a-review", "label": "Book a Restaurant Operations Review" }
+      ],
+      "resources": [
+        { "url": "https://dol.ny.gov/hospitality-industry", "label": "New York State Department of Labor — Hospitality Industry" }
+      ]
+    },
+    {
+      "path": "/new-york/restaurant-financial-reporting-services",
+      "kind": "local-service",
+      "title": "Restaurant Financial Reporting Services in New York",
+      "seoTitle": "Restaurant Financial Reporting Services New York & NYC | Ready Margin",
+      "heading": "Restaurant financial reporting that helps New York operators decide sooner.",
+      "description": "Restaurant financial reporting for New York and NYC operators covering weekly P&L review, cash visibility, labor and food cost, location comparison, financial statements and owner-ready explanations.",
+      "eyebrow": "New York / Restaurant financial reporting",
+      "serviceType": "Restaurant financial reporting services",
+      "answer": "Ready Margin provides restaurant financial reporting support for New York operators who need more than a monthly packet. Within the agreed scope, reporting can include weekly P&L views, monthly financial statements, cash visibility, labor and food-cost movement, payables context, location comparison and an explanation of what changed, what is still provisional and what needs attention next.",
+      "queries": [
+        "restaurant financial reporting service new york",
+        "restaurant financial reports nyc",
+        "restaurant p&l reporting new york",
+        "restaurant weekly financial reporting nyc",
+        "restaurant management reporting new york"
+      ],
+      "sections": [
+        {
+          "title": "A report should answer the owner’s next question",
+          "body": "Restaurant owners rarely need another dashboard for its own sake. They need to know whether sales became cash, why labor or food cost moved, which bills are coming due and whether one location is carrying another. Ready Margin builds the reporting rhythm around those operating questions.",
+          "items": [
+            "Weekly P&L or flash reporting where included",
+            "Monthly income statement, balance sheet and cash-flow reporting where scoped",
+            "Labor-cost, food-cost and prime-cost review",
+            "Cash commitments and accounts-payable visibility",
+            "Per-location and consolidated views for multi-location groups",
+            "Named open items, assumptions and follow-up actions"
+          ]
+        },
+        {
+          "title": "Know what is final, estimated and still waiting on an answer",
+          "body": "A useful restaurant report makes uncertainty visible. If a supplier credit is unresolved, an inventory count is provisional or a payroll correction is still being confirmed, that status should travel with the number instead of disappearing inside the report.",
+          "items": []
+        },
+        {
+          "title": "Reporting works better when it is connected to the source records",
+          "body": "POS settlements, bank activity, payroll, vendor bills and inventory all influence the financial picture. Ready Margin can manage or coordinate those recurring records so the review starts with a cleaner source trail instead of spending the meeting reconstructing the month.",
+          "items": []
+        },
+        {
+          "title": "Multi-location operators need both the unit and group view",
+          "body": "A consolidated result can hide which restaurant, concept or cost line moved. Where the accounting structure supports it, Ready Margin can present location-level reporting beside the group picture so management can identify the source of a change before deciding what to do.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york/restaurant-accounting-services", "label": "Restaurant accounting services in New York" },
+        { "path": "/new-york/restaurant-cfo-services", "label": "Restaurant CFO services in New York" },
+        { "path": "/new-york/multi-location-restaurant-finance-services", "label": "Multi-location restaurant finance in New York" },
+        { "path": "/what-we-handle/reporting-cash-visibility", "label": "Restaurant reporting and cash visibility" }
+      ],
+      "resources": []
+    },
+    {
+      "path": "/new-york/restaurant-finance-solutions",
+      "kind": "local-service",
+      "title": "Restaurant Finance & Operations Solutions in New York",
+      "seoTitle": "Restaurant Finance Solutions New York & NYC | Ready Margin",
+      "heading": "One managed finance and back-office solution for New York restaurants.",
+      "description": "Ready Margin supports New York restaurants with managed accounting, bookkeeping, payroll, tips, reporting, cash visibility, cost control, compliance workflows and financial guidance.",
+      "eyebrow": "New York / Restaurant finance solutions",
+      "serviceType": "Restaurant finance and operations solutions",
+      "answer": "Ready Margin is a managed restaurant finance and back-office service for New York operators. Rather than selling one more disconnected tool, we agree the work that needs an owner, handle or coordinate the recurring finance workflows, explain the numbers and keep the next actions moving. Scope can include accounting, bookkeeping, payroll, tips, payables, reporting, food and labor cost review, cash visibility and CFO-level guidance.",
+      "queries": [
+        "restaurant solutions service new york",
+        "restaurant finance solutions new york",
+        "restaurant operations finance services nyc",
+        "restaurant back office solution new york",
+        "restaurant financial operations company nyc"
+      ],
+      "sections": [
+        {
+          "title": "The problem is usually the handoff, not one missing app",
+          "body": "Restaurant finance work crosses the POS, scheduling, payroll, bank, vendor and accounting systems. When every provider owns only its own screen, the restaurant owner becomes the person carrying information between them. Ready Margin is designed to own the agreed workflow across those handoffs.",
+          "items": [
+            "Accounting, bookkeeping and monthly close",
+            "Payroll, tips, attendance and discrepancy workflows",
+            "Vendor bills, payables and reconciliation",
+            "Weekly reporting and cash visibility",
+            "Food-cost, labor-cost and vendor-cost review",
+            "Financial guidance, profitability review and turnaround support"
+          ]
+        },
+        {
+          "title": "Use the technology that already works",
+          "body": "A managed service does not require the restaurant to replace every system on day one. We map the current POS, payroll, accounting, scheduling and vendor workflows, confirm the source of truth and build a responsibility map around what already exists.",
+          "items": []
+        },
+        {
+          "title": "Software organizes data; an accountable team owns the recurring work",
+          "body": "Ready Margin is not positioned as software alone. The service is built around people taking responsibility for agreed tasks, exceptions and follow-up, with technology used to make the work more accurate, visible and repeatable.",
+          "items": []
+        },
+        {
+          "title": "Start with the recurring problem, then widen the scope only when it helps",
+          "body": "A restaurant can begin with the area creating the most friction—payroll corrections, late books, vendor bills, reporting or cash visibility—and expand the managed scope after the workflow is stable. The engagement should stay specific enough that everyone knows what Ready Margin owns and what remains with the restaurant or another adviser.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york", "label": "New York restaurant support" },
+        { "path": "/new-york/restaurant-back-office-services", "label": "Restaurant back-office services in New York" },
+        { "path": "/new-york/restaurant-accounting-payroll-services", "label": "Restaurant accounting and payroll in New York" },
+        { "path": "/restaurant-finance-solutions", "label": "Restaurant finance solutions" }
+      ],
+      "resources": []
+    },
+    {
+      "path": "/new-york/restaurant-cfo-services",
+      "kind": "local-service",
+      "title": "Restaurant CFO Services in New York",
+      "seoTitle": "Fractional Restaurant CFO Services New York & NYC | Ready Margin",
+      "heading": "CFO-level financial guidance for New York restaurant operators.",
+      "description": "Fractional restaurant CFO support for New York and NYC operators covering cash planning, profitability, multi-location reporting, budgeting, growth decisions and financial follow-through.",
+      "eyebrow": "New York / Restaurant CFO support",
+      "serviceType": "Fractional restaurant CFO services",
+      "answer": "Ready Margin provides CFO-level financial support for New York restaurant operators who need help turning current records into decisions. Depending on the engagement, that can include cash planning, profitability review, budgeting, location comparison, financing preparation, growth analysis, weekly management review and a prioritized action list tied back to the underlying restaurant records.",
+      "queries": [
+        "restaurant cfo services new york",
+        "fractional cfo restaurant nyc",
+        "restaurant financial advisor new york",
+        "outsourced restaurant cfo nyc",
+        "restaurant finance consultant new york"
+      ],
+      "sections": [
+        {
+          "title": "CFO support begins where bookkeeping ends",
+          "body": "Clean books tell you what happened. CFO-level work helps decide what to do about cash pressure, margin movement, growth, financing or a weak location. Ready Margin connects that discussion to the recurring accounting and operating records instead of treating strategy as a separate presentation exercise.",
+          "items": [
+            "Cash-flow and near-term commitment planning",
+            "Profitability and prime-cost review",
+            "Budgeting, scenario planning and management reporting",
+            "Location and concept comparison",
+            "Growth, financing and investment-decision support",
+            "Prioritized actions with owners and follow-up cadence"
+          ]
+        },
+        {
+          "title": "The underlying records have to be current enough to trust",
+          "body": "Strategic advice becomes weaker when the books, payroll or payables are weeks behind. Ready Margin can combine CFO-level review with recurring finance work so the decision layer is connected to the same records used to close and report the period.",
+          "items": []
+        },
+        {
+          "title": "Advice should show the evidence and the uncertainty",
+          "body": "A forecast or recommendation is not a fact. We identify the source records, assumptions and unresolved inputs behind the view so the operator can see which conclusions are firm and which depend on information that still needs confirmation.",
+          "items": []
+        },
+        {
+          "title": "Specialist legal, tax, lending and investment advice stays with the right professional",
+          "body": "CFO-level support can organize the financial picture and prepare management for a decision, but regulated legal, tax, securities, lending or insolvency advice remains outside the engagement unless separately provided by an appropriately qualified professional.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york/restaurant-financial-reporting-services", "label": "Restaurant financial reporting in New York" },
+        { "path": "/new-york/restaurant-financial-consulting", "label": "Restaurant financial consulting in New York" },
+        { "path": "/new-york/restaurant-turnaround-consulting", "label": "Restaurant turnaround consulting in New York" },
+        { "path": "/restaurant-cfo-services", "label": "Restaurant CFO services" }
+      ],
+      "resources": []
+    },
+    {
+      "path": "/new-york/restaurant-turnaround-consulting",
+      "kind": "local-service",
+      "title": "Restaurant Turnaround Consulting in New York",
+      "seoTitle": "Restaurant Turnaround Consultant New York & NYC | Ready Margin",
+      "heading": "Restaurant turnaround support for New York operators under financial pressure.",
+      "description": "Restaurant turnaround consulting for New York and NYC operators facing cash pressure, weak profitability, high food or labor cost, reporting gaps or an operation that needs a structured recovery plan.",
+      "eyebrow": "New York / Restaurant turnaround",
+      "serviceType": "Restaurant turnaround consulting",
+      "answer": "Ready Margin supports New York restaurant operators who need a structured financial turnaround process. We can help establish the current cash and obligations, get the core records current enough to trust, identify the largest food, labor, vendor or operating pressures, build a prioritized 30/60/90-day action plan and keep the follow-up visible. No turnaround outcome, profit level or financing result is guaranteed.",
+      "queries": [
+        "restaurant turnaround consultant new york",
+        "restaurant turnaround consulting nyc",
+        "restaurant losing money help new york",
+        "restaurant profitability consultant nyc",
+        "restaurant recovery financial consultant new york"
+      ],
+      "sections": [
+        {
+          "title": "Stabilize the facts before choosing the fix",
+          "body": "A restaurant under pressure may have incomplete books, unknown payables, tax obligations, payroll questions and several explanations for the same cash problem. The first job is to build a dated, usable view of cash, commitments, recent performance and unresolved records.",
+          "items": [
+            "Cash and near-term obligation review",
+            "Books, payroll and payables status assessment",
+            "Food, labor and vendor-cost pressure review",
+            "Location or daypart performance review where the data supports it",
+            "30/60/90-day priorities with named owners",
+            "Recurring follow-up against the agreed plan"
+          ]
+        },
+        {
+          "title": "Separate timing pressure from a structurally weak model",
+          "body": "A restaurant can run short of cash because receipts and payments are badly timed, because one-time obligations hit together or because the operation is consistently spending more than it earns. Those situations require different responses, so the turnaround review should distinguish them before management cuts indiscriminately.",
+          "items": []
+        },
+        {
+          "title": "Turnaround work needs operating follow-through",
+          "body": "A cost decision only matters when someone owns the next step. A supplier issue needs a vendor conversation, a labor issue needs manager action and a reporting issue needs a stronger close process. Ready Margin keeps the financial finding attached to the operating owner and the next review date.",
+          "items": []
+        },
+        {
+          "title": "No consultant can guarantee recovery",
+          "body": "Restaurant results depend on sales, lease terms, capital, market conditions, management execution and other factors outside any adviser’s control. Ready Margin can organize the evidence, priorities and follow-through but does not promise profitability, financing, insolvency outcomes or a particular recovery result.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york/restaurant-cfo-services", "label": "Restaurant CFO services in New York" },
+        { "path": "/new-york/restaurant-food-cost-inventory-services", "label": "Restaurant food cost and inventory services in New York" },
+        { "path": "/solutions/restaurant-not-profitable", "label": "Help when a restaurant is not profitable" },
+        { "path": "/restaurant-turnaround-consulting", "label": "Restaurant turnaround consulting" }
+      ],
+      "resources": []
+    },
+    {
+      "path": "/new-york/restaurant-food-cost-inventory-services",
+      "kind": "local-service",
+      "title": "Restaurant Food Cost & Inventory Services in New York",
+      "seoTitle": "Restaurant Food Cost & Inventory Services New York & NYC | Ready Margin",
+      "heading": "Food-cost and inventory support for New York restaurant operators.",
+      "description": "Restaurant food-cost and inventory support in New York and NYC covering purchasing, vendor-price changes, counts, waste, recipe costing, menu margins and the financial follow-up behind them.",
+      "eyebrow": "New York / Food cost + inventory",
+      "serviceType": "Restaurant food cost and inventory services",
+      "answer": "Ready Margin helps New York restaurants connect purchasing, vendor prices, inventory counts, waste, recipes and sales mix to the food-cost result. Within the confirmed scope, we can review supplier-cost changes, inventory and par workflows, recipe or dish margins, waste records and financial reporting so management can identify the specific driver before deciding what to change.",
+      "queries": [
+        "restaurant food cost consultant new york",
+        "restaurant inventory service nyc",
+        "restaurant food cost management new york",
+        "restaurant recipe costing nyc",
+        "restaurant cost control service new york"
+      ],
+      "sections": [
+        {
+          "title": "Food cost is a result; the work is finding what moved it",
+          "body": "A higher food-cost percentage can come from supplier prices, pack-size changes, purchasing, inventory-count errors, waste, recipe drift, portioning or sales mix. Ready Margin connects the supporting records so management can test the likely driver instead of applying a blanket cost cut.",
+          "items": [
+            "Vendor price and pack-size change review",
+            "Inventory-count and par-level workflows",
+            "Waste and liquor tracking where included",
+            "Recipe and dish-margin analysis",
+            "Purchasing and invoice follow-up",
+            "Food-cost reporting tied to the same accounting period"
+          ]
+        },
+        {
+          "title": "The vendor bill and the inventory count need to land in the same financial story",
+          "body": "Purchases alone do not equal food consumed, and an inventory count without reliable vendor records can still mislead. We keep the purchasing, inventory and accounting periods aligned so a cost movement can be investigated with evidence.",
+          "items": []
+        },
+        {
+          "title": "Recipe costing is useful when the source prices stay current",
+          "body": "A recipe margin can become stale as soon as a supplier price or pack size changes. Where recipe analysis is included, Ready Margin can help update the cost inputs and surface dishes whose contribution changed enough to deserve management review.",
+          "items": []
+        },
+        {
+          "title": "Financial control still needs kitchen and manager judgment",
+          "body": "A spreadsheet cannot decide whether a portion, ingredient, prep method or menu item should change. Ready Margin provides the financial evidence and workflow; the restaurant’s operational leaders keep the culinary and service decisions.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york/restaurant-financial-reporting-services", "label": "Restaurant financial reporting in New York" },
+        { "path": "/new-york/restaurant-turnaround-consulting", "label": "Restaurant turnaround consulting in New York" },
+        { "path": "/restaurant-food-cost-management", "label": "Restaurant food-cost management" },
+        { "path": "/restaurant-inventory-cost-control", "label": "Restaurant inventory and cost control" }
+      ],
+      "resources": []
+    },
+    {
+      "path": "/new-york/restaurant-tax-compliance-support",
+      "kind": "local-service",
+      "title": "Restaurant Tax & Compliance Support in New York",
+      "seoTitle": "Restaurant Tax & Compliance Support New York & NYC | Ready Margin",
+      "heading": "Restaurant tax and compliance workflows for New York operators.",
+      "description": "Ready Margin supports New York restaurant tax and compliance workflows by keeping sales, payroll, filing records, deadlines and specialist handoffs organized within the agreed engagement.",
+      "eyebrow": "New York / Tax + compliance workflows",
+      "serviceType": "Restaurant tax and compliance support",
+      "answer": "Ready Margin can support New York restaurants with the records and recurring workflows behind tax and compliance work, including sales records, payroll information, bookkeeping, document collection, deadline tracking and coordination with the responsible tax or legal professional. Filing, advice and representation are included only when expressly confirmed in the engagement and handled by the appropriate qualified party.",
+      "queries": [
+        "restaurant tax services new york",
+        "restaurant compliance service nyc",
+        "restaurant payroll tax support new york",
+        "restaurant sales tax bookkeeping nyc",
+        "restaurant tax compliance support new york"
+      ],
+      "sections": [
+        {
+          "title": "Compliance starts with records that can be traced",
+          "body": "Sales tax, payroll tax and other compliance workflows depend on the underlying sales, payroll, bank and accounting records. Ready Margin can keep those records current and organize the handoff so the filing or specialist adviser is not starting with a month of missing information.",
+          "items": [
+            "Sales and settlement record organization",
+            "Payroll and payroll-tax source record coordination",
+            "Document and deadline tracking",
+            "Bookkeeping and reconciliation support",
+            "Notice and exception routing to the responsible person",
+            "Coordination with the restaurant’s CPA, tax or legal adviser"
+          ]
+        },
+        {
+          "title": "The engagement should state who files, who approves and who advises",
+          "body": "The word compliance can hide several different responsibilities. Ready Margin documents which records we prepare, which returns or payments are included if any, who approves submissions and which matters require a CPA, attorney, payroll provider or other qualified specialist.",
+          "items": []
+        },
+        {
+          "title": "New York rules change, so the source matters",
+          "body": "Tax, wage and employment requirements can change and can differ by location or classification. Operational pages and checklists should not replace current government guidance or professional advice where interpretation is required.",
+          "items": []
+        },
+        {
+          "title": "A compliance workflow should make missed inputs visible before the deadline",
+          "body": "A missing payroll record, sales report or authorization should appear on a dated follow-up list with an owner. The purpose is to surface the exception early enough for the responsible person to act instead of discovering it after a filing date passes.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york/restaurant-payroll-services", "label": "Restaurant payroll services in New York" },
+        { "path": "/new-york/restaurant-accounting-services", "label": "Restaurant accounting services in New York" },
+        { "path": "/restaurant-tax-services", "label": "Restaurant tax services" },
+        { "path": "/answers/does-restaurant-bookkeeping-include-taxes", "label": "Does restaurant bookkeeping include taxes?" }
+      ],
+      "resources": [
+        { "url": "https://www.tax.ny.gov/bus/st/stidx.htm", "label": "New York State Department of Taxation and Finance — Sales and Use Tax" },
+        { "url": "https://dol.ny.gov/hospitality-industry", "label": "New York State Department of Labor — Hospitality Industry" }
+      ]
+    },
+    {
+      "path": "/new-york/multi-location-restaurant-finance-services",
+      "kind": "local-service",
+      "title": "Multi-Location Restaurant Finance Services in New York",
+      "seoTitle": "Multi-Location Restaurant Finance Services New York & NYC | Ready Margin",
+      "heading": "A consistent finance function across multiple New York restaurant locations.",
+      "description": "Multi-location restaurant finance support in New York and NYC covering standardized books, payroll, reporting, cash visibility, location comparison, close and financial guidance across a growing group.",
+      "eyebrow": "New York / Multi-location restaurant finance",
+      "serviceType": "Multi-location restaurant finance services",
+      "answer": "Ready Margin supports New York restaurant groups that need one consistent finance process across multiple locations. Depending on scope, we can standardize accounting and close, coordinate payroll and tips, produce location and consolidated reporting, track cash and payables, compare food and labor costs and give management one follow-up process instead of a separate back office at every unit.",
+      "queries": [
+        "multi location restaurant accounting new york",
+        "multi unit restaurant finance nyc",
+        "restaurant group accounting services new york",
+        "multi location restaurant payroll reporting nyc",
+        "outsourced finance restaurant group new york"
+      ],
+      "sections": [
+        {
+          "title": "Use one definition across every location",
+          "body": "Location comparisons fail when each restaurant classifies sales, payroll, vendor bills or inventory differently. Ready Margin can standardize the working definitions and close rhythm so management compares like with like instead of spending each review reconciling local habits.",
+          "items": [
+            "Standard chart-of-accounts and close conventions",
+            "Per-location and consolidated P&L reporting",
+            "Payroll and labor-cost comparison",
+            "Food-cost and vendor-cost comparison",
+            "Cash, payables and commitment visibility",
+            "Group-level financial review and follow-up"
+          ]
+        },
+        {
+          "title": "A consolidated number should still let you find the location that moved",
+          "body": "The group result is useful for ownership, but the operating question is often unit-specific. Ready Margin keeps location-level reporting available beside the consolidated view so a margin, labor or cash issue can be traced back to the restaurant where it started.",
+          "items": []
+        },
+        {
+          "title": "Growth creates finance coordination work before it creates a finance department",
+          "body": "A second or third location can multiply bank accounts, payroll inputs, managers, bills, systems and deadlines long before the group is ready to hire a full internal finance team. An outsourced finance function can absorb that coordination while keeping approvals with ownership.",
+          "items": []
+        },
+        {
+          "title": "Keep the same responsibility map as the group grows",
+          "body": "Every location should know who sends records, who answers exceptions, who approves payroll and payments, when the close happens and who reviews the result. Ready Margin documents that cadence so expansion does not depend on one owner remembering every handoff.",
+          "items": []
+        }
+      ],
+      "related": [
+        { "path": "/new-york/restaurant-financial-reporting-services", "label": "Restaurant financial reporting in New York" },
+        { "path": "/new-york/restaurant-cfo-services", "label": "Restaurant CFO services in New York" },
+        { "path": "/multi-location-restaurant-finance", "label": "Multi-location restaurant finance" },
+        { "path": "/new-york/restaurant-back-office-services", "label": "Restaurant back-office services in New York" }
+      ],
+      "resources": []
+    }
+  ]
 }
