@@ -77,7 +77,6 @@ export function pageSchemaData(p: Page) {
         : { "@type": "Country", name: "United States" },
       audience: { "@type": "BusinessAudience", audienceType: "Restaurant owners and operators" },
       category: "Managed restaurant financial operations",
-      termsOfService: origin + "/terms",
     });
     base.push({
       "@context": "https://schema.org",
