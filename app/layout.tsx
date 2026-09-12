@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "./micro-interactions.css";
 import "./form-responsive.css";
+import "./editorial.css";
 import { getContent } from "@/lib/content";
 import {
   SiteHeader,
@@ -61,7 +62,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <AnalyticsListener />
         {process.env.VERCEL === "1" && <Telemetry />}
         <noscript>
-          <style>{".reveal,.motion-step{opacity:1!important;transform:none!important}.mobile-nav-fallback{display:block!important}.js-only,.desk-phases,.desk-pause{display:none!important}.operating-desk *{animation:none!important}.timeline-copy section,.faq [data-slot=accordion-content]{display:block!important}.carousel-track{display:grid!important;grid-template-columns:1fr!important;transform:none!important}.carousel-viewport{overflow:visible!important}"}</style>
+          <style>{".reveal,.motion-step{opacity:1!important;transform:none!important}.mobile-nav-fallback{display:block!important}.js-only,.desk-phases{display:none!important}.operating-desk *{animation:none!important}.faq [data-slot=accordion-content]{display:block!important}.carousel-track{display:grid!important;grid-template-columns:1fr!important;transform:none!important}.carousel-viewport{overflow:visible!important}"}</style>
         </noscript>
       </body>
     </html>

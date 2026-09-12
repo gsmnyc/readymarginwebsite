@@ -1,5 +1,4 @@
 import Link from "@/components/site/link";
-import Image from "next/image";
 import { getContent, siteOrigin, summarizePage } from "@/lib/content";
 import { metadataFor } from "@/lib/seo";
 import { CTA, CapabilityGrid, ReviewCard, JsonLd } from "@/components/site/static";
@@ -43,15 +42,14 @@ export default async function Home() {
 
   return (
     <main id="main">
-      <section id="home-hero" tabIndex={-1} className="hero container">
+      <section id="home-hero" tabIndex={-1} className="hero container editorial-hero">
         <div className="hero-topline">
-          <span className="eyebrow">Restaurant finance, payroll & operations — handled.</span>
-          <span className="eyebrow">Run. Explain. Improve.</span>
+          <span className="eyebrow">Managed restaurant financial operations</span>
+          <span className="eyebrow">Clear numbers. Accountable people.</span>
         </div>
         <div className="hero-grid">
           <h1>{c.settings.hero}</h1>
           <div className="hero-support">
-            <Image src="/brand/logo_symbol_primary_transparent.svg" width={104} height={104} sizes="104px" alt="" />
             <p>{c.settings.heroSupport}</p>
             <Link className="button" href="/book-a-review" data-cta>
               {c.settings.cta}<span aria-hidden="true">↗</span>
@@ -145,6 +143,15 @@ export default async function Home() {
         </div>
         <Timeline steps={c.pages.find((p) => p.kind === "rhythm")!.sections} />
         <Link className="text-link" href="/how-it-works/ready-rhythm">Follow the weekly rhythm ↗</Link>
+      </section>
+
+      <section className="container advisory-note" aria-labelledby="advisory-title">
+        <p className="eyebrow">When the pressure needs a closer look</p>
+        <h2 id="advisory-title">Busy restaurant.<br />Still no breathing room?</h2>
+        <div>
+          <p>Start with the cash, the bills coming due and the costs you can influence. Our turnaround work connects the financial facts to decisions, named responsibilities and follow-through.</p>
+          <Link className="text-link" href="/restaurant-turnaround-consulting">Explore restaurant turnaround support ↗</Link>
+        </div>
       </section>
 
       <section className="experience-section">
