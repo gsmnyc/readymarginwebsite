@@ -1,0 +1,165 @@
+{
+  "updated": "2026-09-12",
+  "pages": [
+    {
+      "path": "/answers/does-restaurant-bookkeeping-include-taxes",
+      "kind": "answer",
+      "title": "Does Restaurant Bookkeeping Include Taxes?",
+      "seoTitle": "Does Restaurant Bookkeeping Include Taxes? What Is Usually Separate",
+      "heading": "Bookkeeping supports tax work, but it does not automatically include every tax responsibility.",
+      "description": "Restaurant bookkeeping usually maintains the records tax work depends on, while filings, tax advice and representation may be separate depending on the engagement and provider.",
+      "eyebrow": "Restaurant finance answer / Bookkeeping and taxes",
+      "answer": "Restaurant bookkeeping usually covers recording transactions, reconciliations and maintaining the financial records that tax work depends on. It does not automatically mean income-tax returns, sales-tax filings, payroll-tax filings, tax advice or representation are included. Those responsibilities should be written explicitly into the engagement. Ready Margin can handle or coordinate tax and compliance workflows within the confirmed scope while keeping specialist responsibilities clear.",
+      "queries": ["does restaurant bookkeeping include taxes", "does bookkeeping include tax filing", "restaurant bookkeeper do taxes", "restaurant bookkeeping and taxes", "does accounting include restaurant taxes"],
+      "sections": [
+        {"title": "Bookkeeping creates the source records", "body": "Sales, expenses, payroll activity, vendor bills, reconciliations and account balances are inputs tax professionals and filing workflows may rely on. Keeping those records current reduces the amount of reconstruction needed later.", "items": []},
+        {"title": "Tax filings and advice depend on the actual engagement", "body": "A bookkeeping provider may also offer tax services, or the restaurant may use a separate CPA or tax adviser. The title alone does not tell you who files sales tax, payroll tax or income tax, or who responds to notices.", "items": []},
+        {"title": "Write the ownership down", "body": "The cleanest model states which party prepares the records, who files, who approves, who provides tax advice and what happens when a notice or exception arrives.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-bookkeeping-services", "label": "Restaurant bookkeeping services"},
+        {"path": "/restaurant-tax-services", "label": "Restaurant tax and compliance support"},
+        {"path": "/restaurant-accounting-services", "label": "Restaurant accounting services"}
+      ],
+      "resources": [
+        {"url": "https://www.irs.gov/businesses/small-businesses-self-employed", "label": "IRS — Small Business and Self-Employed"}
+      ]
+    },
+    {
+      "path": "/answers/who-handles-restaurant-payroll-taxes",
+      "kind": "answer",
+      "title": "Who Handles Restaurant Payroll Taxes?",
+      "seoTitle": "Who Handles Restaurant Payroll Taxes? Provider vs Restaurant Responsibilities",
+      "heading": "Payroll-tax responsibility depends on the service agreement, but the restaurant should never have to guess who owns it.",
+      "description": "Restaurant payroll-tax workflows may be handled by a payroll provider, accountant or managed finance team, while employer responsibility and approvals should remain explicit.",
+      "eyebrow": "Restaurant finance answer / Payroll taxes",
+      "answer": "A payroll provider or managed finance team may calculate, file or remit payroll taxes when that work is included in the service, but the exact responsibilities vary by engagement and jurisdiction. The restaurant should have a written map of who prepares payroll, who approves it, who files and remits payroll taxes, who handles notices and who provides legal or tax advice. Ready Margin can support those workflows where included and coordinate the records when a specialist adviser is responsible.",
+      "queries": ["who handles restaurant payroll taxes", "restaurant payroll tax responsibility", "payroll company restaurant taxes", "who files payroll taxes restaurant", "restaurant payroll tax service"],
+      "sections": [
+        {"title": "Separate payroll preparation from payroll-tax responsibility", "body": "A person can prepare hours and earnings without being the party responsible for filing payroll-tax returns or remitting taxes. Those jobs should be named separately.", "items": []},
+        {"title": "Keep notices and corrections in the same responsibility map", "body": "The workflow should state who receives agency notices, who investigates source payroll records and who is authorized to respond or amend filings.", "items": []},
+        {"title": "Check current federal, state and local requirements", "body": "Payroll-tax obligations can vary by location and change over time, so the process should point back to current government sources and qualified tax or employment advisers when interpretation is required.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/restaurant-tax-services", "label": "Restaurant tax services"},
+        {"path": "/solutions/restaurant-tax-compliance", "label": "Restaurant tax and compliance help"}
+      ],
+      "resources": [
+        {"url": "https://www.irs.gov/businesses/small-businesses-self-employed/employment-taxes", "label": "IRS — Employment Taxes"}
+      ]
+    },
+    {
+      "path": "/answers/when-does-a-restaurant-need-a-fractional-cfo",
+      "kind": "answer",
+      "title": "When Does a Restaurant Need a Fractional CFO?",
+      "seoTitle": "When Does a Restaurant Need a Fractional CFO? Practical Signs",
+      "heading": "A restaurant may need CFO-level help when the questions have moved beyond keeping the books current.",
+      "description": "Signs a restaurant may need fractional CFO support include cash pressure, growth, multi-location complexity, weak profitability, financing decisions and reports that are not turning into action.",
+      "eyebrow": "Restaurant finance answer / Fractional CFO",
+      "answer": "A restaurant may benefit from fractional CFO support when the books are reasonably current but the owner still needs help with cash planning, profitability, growth, multi-location decisions, financing questions, turnaround priorities or translating reports into action. If the underlying records are still incomplete, the immediate need may be bookkeeping or accounting first—or a provider like Ready Margin that can connect both the recurring work and CFO-level review.",
+      "queries": ["when does restaurant need fractional CFO", "does my restaurant need a CFO", "fractional CFO restaurant signs", "restaurant CFO help", "restaurant CFO vs accountant"],
+      "sections": [
+        {"title": "The decision load has grown", "body": "The owner is regularly deciding between cash commitments, staffing, purchasing, expansion or financing choices and needs a structured financial view rather than another raw report.", "items": []},
+        {"title": "The business has more moving parts", "body": "Multiple locations, entities or management teams increase the need for consistent reporting, forecasting and common definitions.", "items": []},
+        {"title": "The records need to be usable first", "body": "CFO-level advice is limited when the books, payroll or payables are weeks behind. A combined operating-finance relationship can reduce the handoff between recordkeeping and interpretation.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/restaurant-financial-consulting", "label": "Restaurant financial consulting"},
+        {"path": "/insights/restaurant-bookkeeper-cpa-fractional-cfo", "label": "Bookkeeper vs CPA vs fractional CFO"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/answers/how-to-fix-restaurant-cash-flow",
+      "kind": "answer",
+      "title": "How Do You Fix Restaurant Cash Flow Problems?",
+      "seoTitle": "How to Fix Restaurant Cash Flow Problems: A Practical First Review",
+      "heading": "Start by separating current cash, committed cash and uncertain cash.",
+      "description": "A practical first review for restaurant cash-flow problems covering balances, settlements, payroll, vendor bills, taxes, assumptions and the difference between timing and profitability.",
+      "eyebrow": "Restaurant finance answer / Cash flow",
+      "answer": "To work through restaurant cash-flow problems, first list current cash, expected near-term receipts and dated commitments such as payroll, vendor bills and taxes. Then separate confirmed amounts from estimates, compare the pressure with profitability and identify the largest controllable decision. Ready Margin can build and maintain this view while connecting it to accounting, payables and operating records.",
+      "queries": ["how to fix restaurant cash flow", "restaurant cash flow problem solution", "restaurant running out of cash what to do", "improve restaurant cash flow", "restaurant cash management help"],
+      "sections": [
+        {"title": "Build a dated commitment list", "body": "The bank balance alone does not show what is already promised. Put incoming settlements, payroll, vendor bills, taxes and other known obligations on a near-term timeline.", "items": []},
+        {"title": "Separate a timing problem from a margin problem", "body": "If the restaurant is profitable but receipts and payments are mismatched, the response differs from a business that consistently spends more than it earns.", "items": []},
+        {"title": "Update the view as facts change", "body": "A cash forecast is a working model. Mark assumptions clearly and replace them with actuals as payroll, sales and supplier records become known.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-cash-flow-management", "label": "Restaurant cash-flow management"},
+        {"path": "/solutions/restaurant-cash-flow-problems", "label": "Restaurant cash-flow problem support"},
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/answers/how-to-reduce-restaurant-food-cost",
+      "kind": "answer",
+      "title": "How Do You Reduce Restaurant Food Cost?",
+      "seoTitle": "How to Reduce Restaurant Food Cost Without Guessing",
+      "heading": "Reduce food cost by finding the specific driver, not by cutting blindly.",
+      "description": "A practical restaurant food-cost review covering supplier prices, purchasing, inventory, waste, recipes, portions and sales mix before deciding what to change.",
+      "eyebrow": "Restaurant finance answer / Food cost",
+      "answer": "To reduce restaurant food cost, first confirm the calculation and reporting period, then test supplier-price changes, pack sizes, purchasing, inventory counts, waste, recipe costs, portions and sales mix. The right action may be a supplier conversation, recipe update, count fix or menu decision. Ready Margin can connect those records and identify which driver is actually moving.",
+      "queries": ["how to reduce restaurant food cost", "lower restaurant food cost", "restaurant food cost control tips", "fix high food cost restaurant", "reduce restaurant COGS"],
+      "sections": [
+        {"title": "Make the period comparable", "body": "Purchases, inventory and sales should cover the same period before you interpret a food-cost percentage.", "items": []},
+        {"title": "Check the largest likely drivers", "body": "Supplier price, pack size, waste, count accuracy, portioning, recipe changes and sales mix can all move the result.", "items": []},
+        {"title": "Change the process that caused the movement", "body": "A price issue needs a vendor or menu response; a count issue needs a stronger inventory process; a portion issue needs operating follow-through. One universal target cannot diagnose all three.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-food-cost-management", "label": "Restaurant food-cost management"},
+        {"path": "/solutions/restaurant-food-cost-too-high", "label": "High restaurant food-cost support"},
+        {"path": "/restaurant-inventory-cost-control", "label": "Restaurant inventory and cost control"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/answers/how-to-control-restaurant-labor-cost",
+      "kind": "answer",
+      "title": "How Do You Control Restaurant Labor Cost?",
+      "seoTitle": "How to Control Restaurant Labor Cost: Hours, Payroll & Sales",
+      "heading": "Control labor cost by matching staffing records to the sales period and service reality.",
+      "description": "Restaurant labor-cost control starts with aligned schedules, attendance, recorded hours, payroll and sales, then separates lower sales from higher labor inputs.",
+      "eyebrow": "Restaurant finance answer / Labor cost",
+      "answer": "To control restaurant labor cost, compare scheduled hours, recorded attendance, payroll cost and sales for the same period. Identify whether the percentage changed because sales fell, hours increased, overtime or corrections changed, wage rates moved or the service model required more coverage. Ready Margin can organize that evidence so management makes targeted decisions instead of cutting labor blindly.",
+      "queries": ["how to control restaurant labor cost", "reduce restaurant labor cost", "restaurant labor cost control", "lower restaurant payroll cost", "manage restaurant labor percentage"],
+      "sections": [
+        {"title": "Align the records first", "body": "Use the same dates for sales, attendance and payroll, and mark corrections or missing records before comparing periods.", "items": []},
+        {"title": "Find the reason the percentage moved", "body": "Lower sales and higher labor inputs produce the same percentage symptom but require different management responses.", "items": []},
+        {"title": "Use financial data with operating judgment", "body": "Staffing decisions also need to account for service, safety, wage-and-hour requirements and the restaurant's actual operating model.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-labor-cost-management", "label": "Restaurant labor-cost management"},
+        {"path": "/solutions/restaurant-labor-cost-too-high", "label": "High restaurant labor-cost support"},
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"}
+      ],
+      "resources": [
+        {"url": "https://www.dol.gov/agencies/whd", "label": "U.S. Department of Labor — Wage and Hour Division"}
+      ]
+    },
+    {
+      "path": "/answers/what-is-restaurant-back-office-support",
+      "kind": "answer",
+      "title": "What Is Restaurant Back-Office Support?",
+      "seoTitle": "What Is Restaurant Back Office Support? Finance, Payroll & Operations",
+      "heading": "Restaurant back-office support handles the recurring work behind service so the owner is not the handoff between every system and provider.",
+      "description": "Restaurant back-office support can include bookkeeping, accounting, payroll, tips, payables, reporting, cash visibility, cost control and finance follow-up depending on the engagement.",
+      "eyebrow": "Restaurant finance answer / Back office",
+      "answer": "Restaurant back-office support is the recurring administrative, finance and operating work behind the restaurant. Depending on the provider and scope, it can include bookkeeping, accounting, payroll, tips, vendor bills, reporting, cash visibility, food and labor cost review and financial guidance. Ready Margin combines agreed pieces of that work into one managed relationship instead of only supplying software.",
+      "queries": ["what is restaurant back office support", "restaurant back office services meaning", "what does restaurant back office do", "outsourced restaurant back office", "restaurant administrative finance support"],
+      "sections": [
+        {"title": "The back office connects operating events to financial records", "body": "A shift becomes payroll, a delivery becomes a bill, a sale becomes a settlement and those records become financial reports. Back-office support manages the handoffs between those steps.", "items": []},
+        {"title": "Software and managed support are not the same thing", "body": "A software product may organize data or automate calculations. Managed support also assigns people to recurring work, exceptions and follow-up. Restaurants should compare providers on responsibility, not only feature lists.", "items": []},
+        {"title": "The exact scope should be written", "body": "There is no universal back-office package. The restaurant should know which jobs are included, which approvals remain internal and which specialist services stay with outside advisers.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-back-office-services", "label": "Restaurant back-office services"},
+        {"path": "/outsourced-restaurant-finance-team", "label": "Outsourced restaurant finance team"},
+        {"path": "/restaurant-finance-services", "label": "Restaurant finance services"}
+      ],
+      "resources": []
+    }
+  ]
+}

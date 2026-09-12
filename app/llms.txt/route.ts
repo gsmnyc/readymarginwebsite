@@ -5,51 +5,34 @@ export const revalidate = 3600;
 export async function GET() {
   const { pages, settings } = await getContent();
   const origin = siteOrigin();
-  const sections = [
-    ["Managed services", ["capability"]],
-    [
-      "How the service works",
-      ["process", "rhythm", "implementation", "owner-view"],
-    ],
-    ["Who we support", ["audience"]],
-    ["Restaurant finance guides", ["article"]],
-    ["Company and enquiries", ["about", "pricing", "form", "security"]],
-  ] as const;
   const lines = [
     "# Ready Margin",
     "",
-    "> Managed restaurant finance and operations support.",
+    "> Managed restaurant finance, accounting, payroll, tax/compliance workflow and operations support.",
     "",
-    "Ready Margin provides agreed support with restaurant accounting, payroll, tips, reporting, food cost and operating work. Service scope and pricing are agreed through an enquiry. Software described as in development is not a released product. Illustrative workflows are not customer results.",
+    "Ready Margin helps restaurant owners with agreed recurring accounting, bookkeeping, payroll, tips, tax and compliance workflows, payables, reporting, cash visibility, food and labor cost analysis, profitability and CFO-level guidance. Service boundaries, approvals and specialist responsibilities are confirmed in the engagement.",
     "",
     `Website: ${origin}`,
     `Contact: ${settings.email}`,
   ];
 
-  for (const [heading, kinds] of sections) {
-    lines.push("", `## ${heading}`, "");
-    for (const page of pages.filter(
-      (page) =>
-        page.published &&
-        page.indexable &&
-        (kinds as readonly string[]).includes(page.kind),
-    )) {
-      lines.push(
-        `- [${page.seoTitle || page.title}](${origin}${page.path}): ${page.description}`,
-      );
-    }
-  }
+  const groups: [string, (page: (typeof pages)[number]) => boolean][] = [
+    ["Restaurant finance services", (page) => ["service", "service-hub", "capability"].includes(page.kind) && !page.path.startsWith("/new-york")],
+    ["Restaurant problems and solutions", (page) => ["solution", "solution-hub"].includes(page.kind)],
+    ["Direct restaurant finance answers", (page) => page.kind === "answer"],
+    ["New York restaurant services", (page) => page.path === "/new-york" || page.path.startsWith("/new-york/")],
+    ["Restaurant finance guides", (page) => page.kind === "article"],
+    ["How the service works", (page) => ["process", "rhythm", "implementation", "owner-view"].includes(page.kind)],
+    ["Who we support", (page) => page.kind === "audience"],
+  ];
 
-  lines.push("", "## New York restaurant services", "");
-  for (const page of pages.filter(
-    (page) =>
-      page.published &&
-      page.indexable &&
-      (page.path === "/new-york" || page.path.startsWith("/new-york/")),
-  )) {
-    lines.push(
-      `- [${page.seoTitle || page.title}](${origin}${page.path}): ${page.answer || page.description}`,
-    );
+  for (const [heading, matches] of groups) {
+    const found = pages.filter((page) => page.published && page.indexable && matches(page));
+    if (!found.length) continue;
+    lines.push("", `## ${heading}`, "");
+    for (const page of found) {
+      lines.push(`- [${page.seoTitle || page.title}](${origin}${page.path}): ${page.answer || page.description}`);
+    }
   }
 
   return new Response(lines.join("\n"), {

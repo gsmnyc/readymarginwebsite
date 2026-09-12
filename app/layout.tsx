@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "./micro-interactions.css";
 import { getContent } from "@/lib/content";
 import {
   SiteHeader,
@@ -11,6 +12,7 @@ import {
 import { ChoreographyLoader } from "@/components/site/choreography-loader";
 import { Footer } from "@/components/site/static";
 import { Telemetry } from "@/components/site/telemetry";
+
 const jakarta = localFont({
   src: "../public/fonts/PlusJakartaSans-variable.woff2",
   weight: "400 800",
@@ -18,9 +20,11 @@ const jakarta = localFont({
   variable: "--font-jakarta",
   preload: true,
 });
+
 export const metadata: Metadata = {
   title: { default: "Ready Margin", template: "%s | Ready Margin" },
-  description: "Managed restaurant finance and operations support.",
+  description:
+    "Managed restaurant finance, accounting, payroll, tax workflow and operations support.",
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
@@ -33,11 +37,8 @@ export const metadata: Metadata = {
     apple: "/favicon_180.png",
   },
 };
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const content = await getContent();
   return (
     <html lang="en" className={jakarta.variable} suppressHydrationWarning>
@@ -49,9 +50,7 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <a className="skip-link" href="#main">
-          Skip to content
-        </a>
+        <a className="skip-link" href="#main">Skip to content</a>
         <SiteHeader settings={content.settings} />
         {children}
         <Footer content={content} />
@@ -61,11 +60,7 @@ export default async function RootLayout({
         <AnalyticsListener />
         {process.env.VERCEL === "1" && <Telemetry />}
         <noscript>
-          <style>
-            {
-              ".intro{display:none!important}.reveal,.motion-step{opacity:1!important;transform:none!important}.mobile-nav-fallback{display:block!important}.js-only,.desk-phases,.desk-pause{display:none!important}.operating-desk *{animation:none!important}.timeline-copy section,.faq [data-slot=accordion-content]{display:block!important}.carousel-track{display:grid!important;grid-template-columns:1fr!important;transform:none!important}.carousel-viewport{overflow:visible!important}"
-            }
-          </style>
+          <style>{".intro{display:none!important}.reveal,.motion-step{opacity:1!important;transform:none!important}.mobile-nav-fallback{display:block!important}.js-only,.desk-phases,.desk-pause{display:none!important}.operating-desk *{animation:none!important}.timeline-copy section,.faq [data-slot=accordion-content]{display:block!important}.carousel-track{display:grid!important;grid-template-columns:1fr!important;transform:none!important}.carousel-viewport{overflow:visible!important}"}</style>
         </noscript>
       </body>
     </html>

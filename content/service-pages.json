@@ -1,0 +1,483 @@
+{
+  "updated": "2026-09-12",
+  "pages": [
+    {
+      "path": "/restaurant-finance-services",
+      "kind": "service-hub",
+      "title": "Restaurant Finance Services",
+      "seoTitle": "Restaurant Finance Services: Accounting, Payroll, Tax & CFO Support",
+      "heading": "Restaurant finance, payroll and back-office work handled together.",
+      "description": "Managed restaurant finance services covering accounting, bookkeeping, payroll, taxes and compliance workflows, reporting, cash flow, food cost, labor cost and CFO-level guidance.",
+      "eyebrow": "Restaurant finance services / Managed support",
+      "serviceType": "Managed restaurant finance services",
+      "answer": "Ready Margin is an outsourced restaurant finance and operations partner. Depending on the agreed scope, we can handle recurring accounting, bookkeeping, payroll, tax and compliance workflows, payables, reporting, cash visibility, food and labor cost review, tip workflows and CFO-level financial guidance so owners do not have to coordinate every back-office handoff themselves.",
+      "queries": ["restaurant finance services", "restaurant financial services", "finance services for restaurants", "restaurant finance company", "restaurant financial management services", "outsourced restaurant finance"],
+      "sections": [
+        {"title": "One restaurant week creates several finance workflows", "body": "A schedule becomes payroll. A delivery becomes a supplier bill. A card settlement becomes a bank reconciliation. Those records become the P&L, cash view and questions an owner has to act on. Ready Margin is designed around that chain rather than treating each task as an unrelated subscription.", "items": ["Accounting and bookkeeping", "Payroll, attendance and tip workflows", "Tax and compliance coordination within the agreed scope", "Accounts payable and vendor follow-up", "Reporting, cash flow and multi-location review", "Food cost, labor cost and profitability analysis", "CFO-level guidance and turnaround support"]},
+        {"title": "Managed service means work is assigned, not merely displayed", "body": "The engagement begins by agreeing which systems are used, which records Ready Margin receives, which recurring jobs we own, who approves sensitive actions and what remains with the restaurant or another adviser. The goal is a dependable operating rhythm, not another dashboard the owner has to manage.", "items": []},
+        {"title": "Start with one recurring problem", "body": "A restaurant does not need to replace every provider or system at once. The best starting point is often the job that keeps returning to the owner: late books, payroll corrections, cash uncertainty, vendor bills, tax-document chasing, rising food cost or inconsistent reporting. The scope can then expand only where the handoffs genuinely connect.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-accounting-services", "label": "Restaurant accounting services"},
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/restaurant-tax-services", "label": "Restaurant tax and compliance support"},
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/restaurant-finance-solutions", "label": "Find support by the problem you need to solve"},
+        {"path": "/book-a-review", "label": "Book a Restaurant Operations Review"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-accounting-services",
+      "kind": "service",
+      "title": "Restaurant Accounting Services",
+      "seoTitle": "Restaurant Accounting Services | Managed Accounting for Restaurants",
+      "heading": "Accounting built around the way restaurants actually operate.",
+      "description": "Restaurant accounting services covering reconciliations, payables, monthly close, financial statements, reporting and follow-up on the operating records behind the numbers.",
+      "eyebrow": "Restaurant accounting / Managed service",
+      "serviceType": "Restaurant accounting services",
+      "answer": "Ready Margin provides restaurant-specific accounting support that can include reconciliations, accounts payable workflows, monthly close, financial statements, reporting and follow-up on unresolved records. The work stays connected to POS settlements, payroll, supplier bills, inventory and the operating events that created the numbers.",
+      "queries": ["restaurant accounting services", "accounting services for restaurants", "restaurant accountant service", "restaurant accounting company", "outsourced accounting for restaurants", "restaurant accounting solutions"],
+      "sections": [
+        {"title": "Restaurant accounting needs restaurant context", "body": "Sales can arrive through several channels, payroll moves with the schedule, supplier credits can land after the delivery and inventory cutoffs affect how a period reads. Ready Margin keeps those operating questions attached to the accounting process instead of stripping away the context and handing the owner a unexplained statement.", "items": ["Bank, card and settlement reconciliations", "Vendor bills and payables support", "Close preparation and financial statements where scoped", "Open-item tracking and owner-ready explanations"]},
+        {"title": "A close is useful when someone can explain what changed", "body": "Where reporting is included, the handoff should identify material movement, incomplete inputs and the next person who needs to act. That gives the owner a usable picture while keeping provisional information visible rather than quietly treating every number as final.", "items": []},
+        {"title": "Specialist tax, assurance and legal work stays explicit", "body": "Accounting support does not automatically mean every regulated filing or legal responsibility is included. Ready Margin confirms tax, compliance, assurance and adviser responsibilities in the engagement so the restaurant knows who owns each deadline and decision.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-bookkeeping-services", "label": "Restaurant bookkeeping services"},
+        {"path": "/restaurant-accounts-payable-services", "label": "Restaurant accounts payable services"},
+        {"path": "/restaurant-tax-services", "label": "Restaurant tax and compliance support"},
+        {"path": "/what-we-handle/accounting-close", "label": "Accounting and close scope"},
+        {"path": "/solutions/restaurant-books-behind", "label": "Help when restaurant books are behind"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-bookkeeping-services",
+      "kind": "service",
+      "title": "Restaurant Bookkeeping Services",
+      "seoTitle": "Restaurant Bookkeeping Services | Bookkeeping for Restaurants",
+      "heading": "Bookkeeping that keeps the restaurant records moving.",
+      "description": "Managed restaurant bookkeeping covering bank and card reconciliation, sales settlements, supplier bills, payroll records, month-end preparation and unresolved-item follow-up.",
+      "eyebrow": "Restaurant bookkeeping / Managed service",
+      "serviceType": "Restaurant bookkeeping services",
+      "answer": "Ready Margin provides restaurant bookkeeping support that can bring together POS sales, delivery-platform settlements, bank and card activity, supplier bills, payroll records and approvals. We reconcile the records, keep missing information visible and prepare the books for a dependable close.",
+      "queries": ["restaurant bookkeeping services", "bookkeeping services for restaurants", "restaurant bookkeeper", "outsourced restaurant bookkeeping", "restaurant bookkeeping company", "bookkeeping solution for restaurant"],
+      "sections": [
+        {"title": "The restaurant record comes from more than the bank feed", "body": "A clean ledger depends on understanding the source records behind each deposit and charge. Ready Margin can connect POS reports, delivery statements, card settlements, vendor bills, payroll activity and bank transactions so timing differences and unexplained amounts are not treated as the same problem.", "items": ["Transaction recording and categorization", "Bank and card reconciliation", "Sales and settlement reconciliation support", "Vendor-bill workflows", "Month-end preparation and open-item tracking"]},
+        {"title": "Missing records should stay visible until resolved", "body": "If an invoice, credit, settlement or payroll correction is missing, it should have an owner and a follow-up date. That creates a recurring bookkeeping process instead of a month-end scavenger hunt.", "items": []},
+        {"title": "Bookkeeping can feed reporting instead of ending at reconciliation", "body": "Where included, Ready Margin uses the completed records to support financial statements, cash visibility and owner review. That makes the bookkeeping function part of the restaurant's operating rhythm rather than a historical archive.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-accounting-services", "label": "Restaurant accounting services"},
+        {"path": "/restaurant-accounts-payable-services", "label": "Restaurant accounts payable services"},
+        {"path": "/answers/does-restaurant-bookkeeping-include-taxes", "label": "Does restaurant bookkeeping include taxes?"},
+        {"path": "/solutions/restaurant-books-behind", "label": "Fix books that are behind"},
+        {"path": "/insights/best-restaurant-bookkeeping-services", "label": "How to compare restaurant bookkeeping services"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-payroll-services",
+      "kind": "service",
+      "title": "Restaurant Payroll Services",
+      "seoTitle": "Restaurant Payroll Services | Payroll, Tips & Time Support",
+      "heading": "Restaurant payroll support that starts before the pay run.",
+      "description": "Managed restaurant payroll support connecting hours, attendance, tips, corrections, approvals, payroll processing and payroll-tax workflows within the agreed engagement.",
+      "eyebrow": "Restaurant payroll / Managed service",
+      "serviceType": "Restaurant payroll services",
+      "answer": "Ready Margin can support restaurant payroll from the operating inputs through the approved run: hours, attendance exceptions, tip inputs, manager corrections, payroll preparation, processing and payroll-tax workflows where included. The restaurant keeps defined approval authority while unresolved items stay visible before cutoff.",
+      "queries": ["restaurant payroll services", "payroll services for restaurants", "restaurant payroll company", "restaurant payroll solution", "outsourced payroll for restaurants", "payroll for tipped restaurant employees", "restaurant payroll and tips"],
+      "sections": [
+        {"title": "Payroll errors often begin before payroll software sees the data", "body": "A changed shift, missed punch, incomplete tip input or late manager correction can create the problem before a payroll calculation begins. Ready Margin can organize those exceptions, route questions to the responsible manager and keep the approval trail with the source period.", "items": ["Pay-period and cutoff coordination", "Hours and attendance verification workflows", "Tip inputs within the restaurant's documented policy", "Correction and discrepancy tracking", "Payroll preparation and processing where scoped"]},
+        {"title": "Tipped and variable-hour teams need a clear handoff", "body": "Restaurant teams can combine tipped and non-tipped roles, variable schedules and multiple locations. The workflow should show what period each input covers, what changed, who confirmed it and who authorized the final run.", "items": []},
+        {"title": "Payroll works better when it connects to labor reporting and cash", "body": "When payroll is isolated, the owner still has to reconcile labor movement and cash commitments later. Ready Margin can connect payroll support with bookkeeping, labor-cost review, reporting and cash visibility within one agreed finance rhythm.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-tip-management", "label": "Restaurant tip management support"},
+        {"path": "/restaurant-labor-cost-management", "label": "Restaurant labor cost management"},
+        {"path": "/solutions/restaurant-payroll-problems", "label": "Help with restaurant payroll problems"},
+        {"path": "/answers/who-handles-restaurant-payroll-taxes", "label": "Who handles restaurant payroll taxes?"},
+        {"path": "/insights/best-restaurant-payroll-services", "label": "How to compare restaurant payroll services"}
+      ],
+      "resources": [
+        {"url": "https://www.dol.gov/agencies/whd", "label": "U.S. Department of Labor — Wage and Hour Division"}
+      ]
+    },
+    {
+      "path": "/restaurant-tax-services",
+      "kind": "service",
+      "title": "Restaurant Tax and Compliance Support",
+      "seoTitle": "Restaurant Tax Services & Compliance Support | Ready Margin",
+      "heading": "Keep restaurant tax and compliance work connected to the records behind it.",
+      "description": "Restaurant tax and compliance support for payroll-tax workflows, sales-tax records, income-tax preparation support, document readiness, notices and adviser coordination within the agreed scope.",
+      "eyebrow": "Restaurant tax & compliance / Managed support",
+      "serviceType": "Restaurant tax and compliance support",
+      "answer": "Ready Margin can support the recurring records and workflows behind restaurant taxes and compliance, including payroll-tax processes, sales-tax records, tax-document readiness, deadline coordination, notices and handoffs to the appropriate tax or legal adviser. The exact filing, representation and sign-off responsibilities are confirmed in the engagement rather than assumed.",
+      "queries": ["restaurant tax services", "tax services for restaurants", "restaurant tax help", "restaurant tax compliance", "restaurant sales tax help", "restaurant payroll tax support", "restaurant tax accountant support", "restaurant compliance services"],
+      "sections": [
+        {"title": "Tax work is only as clean as the underlying records", "body": "Sales, payroll, vendor records and reconciliations feed tax and compliance workflows. Ready Margin can help keep those source records current, gather required documents, maintain deadline ownership and resolve missing information before it becomes a filing-day problem.", "items": ["Payroll-tax workflow support where scoped", "Sales-tax record organization and reconciliation support", "Income-tax document readiness and adviser handoff", "Notice and document tracking", "Compliance calendar and responsibility mapping where agreed"]},
+        {"title": "Know who files, who approves and who advises", "body": "Tax and compliance responsibilities can depend on jurisdiction, entity structure and the qualifications required for a specific service. Ready Margin documents whether a task is handled by us, by the restaurant or by a separate CPA, attorney or other qualified adviser so there is no hidden gap in ownership.", "items": []},
+        {"title": "This is operational support, not a blanket legal promise", "body": "Ready Margin does not imply that every tax filing, legal interpretation, audit defense or regulated representation is automatically included. Those responsibilities are performed only when expressly within the approved engagement and legally appropriate; otherwise we coordinate the records and handoff to the qualified adviser responsible for the work.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-accounting-services", "label": "Restaurant accounting services"},
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/restaurant-compliance-services", "label": "Restaurant compliance workflow support"},
+        {"path": "/solutions/restaurant-tax-compliance", "label": "Help with restaurant tax and compliance problems"},
+        {"path": "/answers/does-restaurant-bookkeeping-include-taxes", "label": "Does bookkeeping include taxes?"}
+      ],
+      "resources": [
+        {"url": "https://www.irs.gov/businesses/small-businesses-self-employed", "label": "IRS — Small Business and Self-Employed"}
+      ]
+    },
+    {
+      "path": "/restaurant-compliance-services",
+      "kind": "service",
+      "title": "Restaurant Compliance Workflow Support",
+      "seoTitle": "Restaurant Compliance Services & Workflow Support | Ready Margin",
+      "heading": "Make recurring restaurant compliance deadlines easier to see and own.",
+      "description": "Operational restaurant compliance support covering deadline tracking, payroll and tax documentation, record readiness, responsibility mapping and adviser coordination within scope.",
+      "eyebrow": "Restaurant compliance / Workflow support",
+      "serviceType": "Restaurant compliance workflow support",
+      "answer": "Ready Margin can help organize recurring restaurant compliance work by mapping deadlines, required records, responsible people and adviser handoffs. The service focuses on keeping documentation and recurring finance workflows ready; legal opinions, licenses and regulated filings remain with the qualified party responsible unless expressly included.",
+      "queries": ["restaurant compliance services", "restaurant compliance support", "restaurant compliance help", "restaurant compliance management", "restaurant tax compliance solution", "restaurant payroll compliance support"],
+      "sections": [
+        {"title": "Compliance problems often begin as ownership problems", "body": "A requirement can be known and still be missed when nobody owns the source record, deadline or approval. Ready Margin can maintain a recurring checklist that identifies the task, the record required, the responsible person and the escalation route.", "items": ["Deadline and responsibility mapping", "Document-readiness workflows", "Payroll and tax record coordination", "Open-item follow-up", "Qualified-adviser handoffs where required"]},
+        {"title": "The workflow follows the current requirement", "body": "Rules can change and can vary by jurisdiction, employee classification and business structure. Operational checklists should point back to the current responsible government source or qualified adviser instead of relying on a stale generic template.", "items": []},
+        {"title": "Operational coordination does not replace legal advice", "body": "Ready Margin can help the restaurant keep the work organized, but legal interpretation, licensing decisions and other regulated professional work remain with the appropriate qualified adviser unless explicitly provided within an authorized engagement.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-tax-services", "label": "Restaurant tax and compliance support"},
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/solutions/restaurant-tax-compliance", "label": "Restaurant tax and compliance problem support"},
+        {"path": "/book-a-review", "label": "Book a Restaurant Operations Review"}
+      ],
+      "resources": [
+        {"url": "https://www.irs.gov/businesses/small-businesses-self-employed", "label": "IRS — Small Business and Self-Employed"},
+        {"url": "https://www.dol.gov/agencies/whd", "label": "U.S. Department of Labor — Wage and Hour Division"}
+      ]
+    },
+    {
+      "path": "/restaurant-cfo-services",
+      "kind": "service",
+      "title": "Restaurant CFO Services",
+      "seoTitle": "Restaurant CFO Services | Fractional CFO & Financial Guidance",
+      "heading": "CFO-level restaurant guidance grounded in the work underneath it.",
+      "description": "Restaurant CFO and fractional CFO support connecting cash flow, profitability, labor, food cost, reporting, forecasting and operating decisions to current financial records.",
+      "eyebrow": "Restaurant CFO / Financial guidance",
+      "serviceType": "Restaurant CFO services",
+      "answer": "Ready Margin provides CFO-level financial guidance for restaurant owners who need help interpreting cash, profitability, labor, food cost, reporting, growth or turnaround decisions. Because we can also handle recurring finance work, the advisory conversation can stay connected to current records instead of beginning with a reconstruction of the facts.",
+      "queries": ["restaurant CFO services", "fractional CFO for restaurants", "restaurant CFO consultant", "outsourced CFO restaurant", "restaurant financial advisor", "restaurant finance consultant", "CFO services for restaurants"],
+      "sections": [
+        {"title": "Start with the decision the owner has to make", "body": "A CFO conversation should not exist simply to review a dashboard. Ready Margin works from the decision back into the evidence: what cash is committed, what changed in labor or food cost, what the books support and what remains uncertain.", "items": ["Cash-flow and commitment review", "Profitability and margin analysis", "Labor and food-cost interpretation", "Forecast and scenario review where scoped", "Multi-location financial review", "Turnaround priorities and follow-through"]},
+        {"title": "Advice is stronger when the records are current", "body": "If the close is late or payroll and vendor records are incomplete, the advisory meeting becomes an exercise in rebuilding the past. Ready Margin can combine CFO-level interpretation with recurring accounting and operating support so the review starts from a cleaner base.", "items": []},
+        {"title": "Guidance supports decisions; it does not guarantee outcomes", "body": "Restaurant performance depends on many factors outside an adviser's control. Ready Margin can organize the facts, test assumptions and recommend priorities, but does not guarantee profit, financing, recovery or a specific business result.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-financial-consulting", "label": "Restaurant financial consulting"},
+        {"path": "/restaurant-cash-flow-management", "label": "Restaurant cash-flow management"},
+        {"path": "/restaurant-profitability-consulting", "label": "Restaurant profitability consulting"},
+        {"path": "/restaurant-turnaround-consulting", "label": "Restaurant turnaround consulting"},
+        {"path": "/answers/when-does-a-restaurant-need-a-fractional-cfo", "label": "When does a restaurant need a fractional CFO?"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-financial-consulting",
+      "kind": "service",
+      "title": "Restaurant Financial Consulting",
+      "seoTitle": "Restaurant Financial Consulting & Advisory Services | Ready Margin",
+      "heading": "Turn restaurant numbers into a prioritized next move.",
+      "description": "Restaurant financial consulting across cash flow, profitability, labor, food cost, reporting, growth, multi-location complexity and turnaround priorities.",
+      "eyebrow": "Restaurant financial consulting",
+      "serviceType": "Restaurant financial consulting",
+      "answer": "Ready Margin helps restaurant owners work through financial questions using current operating and accounting evidence. The engagement can cover cash pressure, profitability, labor, food cost, reporting, growth, multi-location decisions and turnaround priorities, with follow-up tied to the people responsible for the next action.",
+      "queries": ["restaurant financial consulting", "restaurant finance consultant", "restaurant financial advisor", "restaurant consulting financial", "restaurant profitability consultant", "restaurant business finance help"],
+      "sections": [
+        {"title": "Name the decision before opening the report", "body": "The useful question may be whether cash can support an upcoming commitment, why margin changed, where labor moved or whether a second location is masking a problem. Ready Margin defines the decision and then traces the records that can inform it.", "items": []},
+        {"title": "Separate facts, assumptions and unknowns", "body": "A reliable recommendation shows which figures are reconciled, which depend on an estimate and which question still needs an operating answer. That keeps a decision from looking more certain than the underlying information allows.", "items": []},
+        {"title": "Follow-through is part of the value", "body": "A recommendation becomes useful when someone owns the next check. Ready Margin can keep agreed actions, dates and unresolved questions in the recurring finance rhythm so the same issue does not restart from zero at the next review.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/restaurant-profitability-consulting", "label": "Restaurant profitability consulting"},
+        {"path": "/restaurant-turnaround-consulting", "label": "Restaurant turnaround consulting"},
+        {"path": "/restaurant-finance-solutions", "label": "Restaurant finance solutions by problem"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-back-office-services",
+      "kind": "service",
+      "title": "Restaurant Back-Office Services",
+      "seoTitle": "Restaurant Back Office Services | Outsourced Finance & Operations",
+      "heading": "The restaurant back office, handled as a connected workflow.",
+      "description": "Outsourced restaurant back-office support across accounting, bookkeeping, payroll, tips, payables, reporting, food cost, labor cost, cash visibility and finance follow-up.",
+      "eyebrow": "Restaurant back office / Outsourced support",
+      "serviceType": "Restaurant back-office services",
+      "answer": "Ready Margin acts as an outsourced restaurant back-office partner. We agree the recurring work, handle the defined accounting, payroll and operating-finance tasks, explain the financial picture and keep unresolved handoffs moving instead of giving the owner another tool to manage alone.",
+      "queries": ["restaurant back office services", "restaurant back office support", "outsourced restaurant back office", "restaurant administrative services", "restaurant finance back office", "restaurant operations back office"],
+      "sections": [
+        {"title": "Back-office work crosses departments whether the vendors do or not", "body": "A time correction affects payroll and labor cost. A delivery affects payables, food cost and cash. A sales settlement affects the books and bank. Ready Margin is structured around those handoffs so the owner spends less time translating information between disconnected providers.", "items": ["Accounting and close", "Payroll, tips and attendance workflows", "Vendor bills and accounts payable", "Reporting and cash visibility", "Food and labor cost review", "Financial interpretation and follow-up"]},
+        {"title": "Keep the systems that already work", "body": "Managed support does not require replacing every restaurant system on day one. Ready Margin reviews the existing POS, payroll, accounting, scheduling and other tools, then defines how usable records move through the service.", "items": []},
+        {"title": "One accountable relationship still keeps approvals clear", "body": "The restaurant nominates the people who approve payroll, payments and business decisions. Ready Margin's role is to prepare the work, surface exceptions, keep deadlines visible and make those approvals easier to make with context.", "items": []}
+      ],
+      "related": [
+        {"path": "/outsourced-restaurant-finance-team", "label": "Outsourced restaurant finance team"},
+        {"path": "/restaurant-accounting-services", "label": "Restaurant accounting services"},
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/restaurant-accounts-payable-services", "label": "Restaurant accounts payable services"},
+        {"path": "/answers/what-is-restaurant-back-office-support", "label": "What is restaurant back-office support?"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-accounts-payable-services",
+      "kind": "service",
+      "title": "Restaurant Accounts Payable Services",
+      "seoTitle": "Restaurant Accounts Payable Services | Vendor Bills & AP Support",
+      "heading": "Vendor bills should become clear approvals, not another owner inbox.",
+      "description": "Restaurant accounts payable support covering vendor bills, coding, approval routing, credits, due-date visibility, payment preparation and follow-up within scope.",
+      "eyebrow": "Restaurant accounts payable / Vendor workflows",
+      "serviceType": "Restaurant accounts payable services",
+      "answer": "Ready Margin can manage restaurant accounts payable workflows by collecting and organizing vendor bills, checking required details, coding records, routing approvals, tracking credits and exceptions, preparing payments where scoped and keeping due items visible to the responsible approver.",
+      "queries": ["restaurant accounts payable services", "restaurant AP services", "restaurant bill pay service", "restaurant vendor invoice management", "accounts payable for restaurants", "restaurant vendor bill management"],
+      "sections": [
+        {"title": "A vendor bill should keep its operating context", "body": "A bill can reflect a price change, duplicate delivery, missing credit or different pack size. Ready Margin can keep those questions attached to the record and route them to the person who can confirm what actually happened before the accounting entry is treated as settled.", "items": ["Invoice intake and organization", "Coding and supporting-record checks", "Approval routing", "Credit and discrepancy tracking", "Due-date and payment-preparation workflow where scoped"]},
+        {"title": "Approvals remain with the restaurant's nominated people", "body": "Ready Margin can prepare and organize the payment workflow, but the restaurant defines who has authority to approve payments. That separation helps preserve control while reducing administrative chasing.", "items": []},
+        {"title": "AP should connect to cash and food-cost review", "body": "Vendor bills affect more than the ledger. When payables connect to cash visibility and supplier-cost analysis, the owner can see both what is due and whether the underlying cost pattern changed.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-cash-flow-management", "label": "Restaurant cash-flow management"},
+        {"path": "/restaurant-food-cost-management", "label": "Restaurant food-cost management"},
+        {"path": "/solutions/restaurant-vendor-bill-errors", "label": "Help with restaurant vendor bill errors"},
+        {"path": "/what-we-handle/accounting-close", "label": "Accounting and close support"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-cash-flow-management",
+      "kind": "service",
+      "title": "Restaurant Cash Flow Management",
+      "seoTitle": "Restaurant Cash Flow Management & Forecasting Support | Ready Margin",
+      "heading": "Know what cash is available, committed and still uncertain.",
+      "description": "Restaurant cash-flow support connecting bank activity, payroll, payables, taxes, upcoming commitments, reporting and scenario review within an agreed finance rhythm.",
+      "eyebrow": "Restaurant cash flow / Financial visibility",
+      "serviceType": "Restaurant cash-flow management",
+      "answer": "Ready Margin can help restaurant owners understand cash by bringing together current balances, expected receipts, payroll, vendor bills, tax commitments and other known outflows, then separating confirmed items from assumptions. The goal is a usable near-term view and a clear list of decisions, not a false promise that a forecast will predict every outcome.",
+      "queries": ["restaurant cash flow management", "restaurant cash flow help", "restaurant cash flow forecasting", "cash flow solution for restaurants", "restaurant cash management", "restaurant cash flow consultant"],
+      "sections": [
+        {"title": "Cash questions need more than the bank balance", "body": "Today's balance can ignore payroll about to run, supplier bills awaiting approval, tax commitments or card settlements not yet received. Ready Margin can organize those commitments into a dated view so the owner sees what is available and what is already spoken for.", "items": ["Current cash and settlement review", "Payroll and AP commitments", "Known tax and recurring obligations", "Near-term scenario review", "Uncertain or unconfirmed items identified separately"]},
+        {"title": "Forecasts should show assumptions", "body": "Sales expectations, payment timing and unusual costs can change. A useful cash view states the assumptions and is updated when the underlying facts change instead of presenting one projection as certainty.", "items": []},
+        {"title": "Cash visibility connects to the operating decisions causing it", "body": "The next move may involve payment timing, staffing, purchasing, menu decisions or a deeper profitability issue. Ready Margin can connect the cash view to the accounting and operating records that explain the pressure.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/restaurant-accounts-payable-services", "label": "Restaurant accounts payable services"},
+        {"path": "/solutions/restaurant-cash-flow-problems", "label": "Help with restaurant cash-flow problems"},
+        {"path": "/answers/how-to-fix-restaurant-cash-flow", "label": "How to work through restaurant cash-flow problems"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-food-cost-management",
+      "kind": "service",
+      "title": "Restaurant Food Cost Management",
+      "seoTitle": "Restaurant Food Cost Management & Vendor Cost Analysis | Ready Margin",
+      "heading": "Find what changed behind the food-cost percentage.",
+      "description": "Restaurant food-cost support across vendor prices, purchasing, inventory, waste, recipe costing, portions, sales mix and follow-up on cost movement.",
+      "eyebrow": "Restaurant food cost / Cost control",
+      "serviceType": "Restaurant food-cost management",
+      "answer": "Ready Margin helps restaurants investigate food-cost movement by connecting purchasing, supplier price changes, inventory, waste, recipe costs, portions and sales mix. Rather than reacting to one percentage, we trace the records that can explain the change and identify the next check or decision.",
+      "queries": ["restaurant food cost management", "restaurant food cost control", "food cost consultant restaurant", "restaurant food cost service", "reduce restaurant food cost", "restaurant vendor cost analysis", "restaurant COGS management"],
+      "sections": [
+        {"title": "A food-cost percentage is a signal, not the diagnosis", "body": "The movement may come from supplier prices, purchasing mix, inventory count timing, waste, portions, recipe changes or sales mix. Ready Margin can align the reporting period and trace those inputs before recommending a response.", "items": ["Supplier-price and pack-size review", "Purchasing and inventory comparison", "Waste and variance review where records exist", "Recipe and portion-cost analysis", "Sales-mix context"]},
+        {"title": "Keep the source record close to the question", "body": "If a vendor price changed, the invoice should support the finding. If a recipe cost changed, the current pack size and usable yield should support it. That makes the analysis repeatable instead of dependent on memory.", "items": []},
+        {"title": "The restaurant team still decides what changes on the floor", "body": "Ready Margin can surface patterns and recommendations, while kitchen and operating leaders confirm what is actually happening and decide how purchasing, prep, portions or menu choices should change.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-inventory-cost-control", "label": "Restaurant inventory and cost control"},
+        {"path": "/restaurant-profitability-consulting", "label": "Restaurant profitability consulting"},
+        {"path": "/solutions/restaurant-food-cost-too-high", "label": "Help when restaurant food cost is too high"},
+        {"path": "/answers/how-to-reduce-restaurant-food-cost", "label": "How to reduce restaurant food cost"},
+        {"path": "/what-we-handle/food-cost-vendors", "label": "Food cost and vendor support"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-labor-cost-management",
+      "kind": "service",
+      "title": "Restaurant Labor Cost Management",
+      "seoTitle": "Restaurant Labor Cost Management & Payroll Analysis | Ready Margin",
+      "heading": "Connect labor cost to the hours, payroll and service week behind it.",
+      "description": "Restaurant labor-cost support connecting schedules, attendance, recorded hours, payroll, sales and operating context to explain movement and improve visibility.",
+      "eyebrow": "Restaurant labor cost / Workforce finance",
+      "serviceType": "Restaurant labor-cost management",
+      "answer": "Ready Margin can help restaurants understand labor cost by connecting schedules, attendance records, approved hours, payroll and sales for the same period. We separate record problems from operating movement so owners can see whether the next action is a correction, a staffing decision or a deeper review.",
+      "queries": ["restaurant labor cost management", "restaurant labor cost control", "restaurant labor cost consultant", "reduce restaurant labor cost", "restaurant payroll labor analysis", "restaurant staffing cost analysis"],
+      "sections": [
+        {"title": "Match the reporting periods before judging the percentage", "body": "Labor and sales comparisons are misleading when the payroll period, attendance records and sales period do not align. Ready Margin confirms the dates and identifies missing or provisional records before interpreting a change.", "items": ["Scheduled vs recorded hours", "Attendance and correction review", "Payroll cost for the matching period", "Sales and service context", "Location or department comparison where useful"]},
+        {"title": "A higher labor percentage can have more than one cause", "body": "Sales may have fallen while staffing stayed steady, overtime or corrections may have changed, or the service model may genuinely need more coverage. The useful action depends on which input moved.", "items": []},
+        {"title": "Labor control should not become blind cost cutting", "body": "Ready Margin can identify financial movement and operating questions, but management decides staffing levels based on service, safety, legal requirements and the realities of the restaurant. The goal is informed control, not a universal labor target.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/solutions/restaurant-labor-cost-too-high", "label": "Help when restaurant labor cost is too high"},
+        {"path": "/answers/how-to-control-restaurant-labor-cost", "label": "How to control restaurant labor cost"},
+        {"path": "/what-we-handle/scheduling-attendance", "label": "Scheduling and attendance support"}
+      ],
+      "resources": [
+        {"url": "https://www.dol.gov/agencies/whd", "label": "U.S. Department of Labor — Wage and Hour Division"}
+      ]
+    },
+    {
+      "path": "/restaurant-tip-management",
+      "kind": "service",
+      "title": "Restaurant Tip Management Support",
+      "seoTitle": "Restaurant Tip Management, Tip Pooling & Payroll Support | Ready Margin",
+      "heading": "Keep tip inputs, policy and payroll handoffs tied together.",
+      "description": "Restaurant tip workflow support connecting documented tip policies, source sales, hours, distributions, corrections, approvals and payroll inputs within scope.",
+      "eyebrow": "Restaurant tips / Payroll workflow",
+      "serviceType": "Restaurant tip management support",
+      "answer": "Ready Margin can support restaurant tip workflows by organizing the restaurant's documented policy, source inputs, hours, calculations, corrections, approvals and payroll handoff. We do not create legal entitlement rules for the restaurant; applicable wage and tip requirements should be confirmed with current government sources or qualified counsel.",
+      "queries": ["restaurant tip management", "restaurant tip pooling service", "restaurant tip distribution service", "tip payroll restaurant", "restaurant gratuity management", "restaurant tip calculation support"],
+      "sections": [
+        {"title": "The calculation needs an approved policy and traceable inputs", "body": "A tip workflow should identify the source sales or tip record, the covered period, eligible roles under the restaurant's approved policy, recorded hours where relevant, corrections and the person who approves the final distribution.", "items": ["Documented-policy workflow", "Source input and period checks", "Hours or allocation inputs where applicable", "Correction tracking", "Payroll handoff and approval trail"]},
+        {"title": "Late corrections should not disappear into messages", "body": "If a shift or source input changes, the correction should remain attached to the affected period and show who confirmed it. That makes later questions easier to resolve and reduces repeated reconstruction.", "items": []},
+        {"title": "Tip law is jurisdiction-specific and can change", "body": "Ready Margin supports the operational workflow; legal eligibility, tip-credit rules and other wage-law interpretations should be confirmed against current law and the appropriate qualified adviser. The service does not replace employment-law advice.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/solutions/restaurant-tip-disputes", "label": "Help with restaurant tip disputes and discrepancies"},
+        {"path": "/what-we-handle/payroll-tips", "label": "Payroll and tips support"},
+        {"path": "/book-a-review", "label": "Book a Restaurant Operations Review"}
+      ],
+      "resources": [
+        {"url": "https://www.dol.gov/agencies/whd", "label": "U.S. Department of Labor — Wage and Hour Division"}
+      ]
+    },
+    {
+      "path": "/restaurant-inventory-cost-control",
+      "kind": "service",
+      "title": "Restaurant Inventory and Cost Control",
+      "seoTitle": "Restaurant Inventory & Cost Control Services | Ready Margin",
+      "heading": "Connect counts, purchasing, waste and recipe costs to the financial picture.",
+      "description": "Restaurant inventory and cost-control support covering count discipline, purchasing, par levels, waste, vendor changes, recipe costs and reporting connections.",
+      "eyebrow": "Restaurant inventory / Cost control",
+      "serviceType": "Restaurant inventory and cost-control support",
+      "answer": "Ready Margin can support restaurant inventory and cost control by connecting count routines, purchasing, par levels, waste records, vendor-cost movement, recipe costs and financial reporting. The goal is to make cost movement explainable and assign the next operating check rather than relying on a single inventory number.",
+      "queries": ["restaurant inventory cost control", "restaurant inventory management service", "restaurant cost control service", "restaurant inventory consultant", "restaurant par level management", "restaurant waste tracking", "restaurant liquor cost control"],
+      "sections": [
+        {"title": "A useful count starts with consistent method and timing", "body": "Comparisons lose value when one count includes different storage areas, units or cutoff timing from the next. Ready Margin can help document the count basis and connect it to purchasing and sales periods so the resulting cost analysis has a repeatable foundation.", "items": ["Count cadence and unit consistency", "Purchasing and vendor-cost connection", "Par-level and replenishment review where scoped", "Waste and variance records", "Recipe and dish-cost connection"]},
+        {"title": "Investigate the movement, not just the variance", "body": "A change may reflect vendor price, pack size, count error, waste, transfer, portioning or sales mix. The next step should be tied to the source record that can confirm or reject the explanation.", "items": []},
+        {"title": "Operations owns what happens in storage and on the line", "body": "Ready Margin can structure the record and analysis, while restaurant leaders confirm physical counts, handling, portions and operational changes. Financial control is strongest when those responsibilities are explicit.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-food-cost-management", "label": "Restaurant food-cost management"},
+        {"path": "/solutions/restaurant-food-cost-too-high", "label": "Help when food cost is too high"},
+        {"path": "/what-we-handle/food-cost-vendors", "label": "Food cost and vendor support"},
+        {"path": "/insights/restaurant-recipe-costing", "label": "Restaurant recipe costing guide"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-turnaround-consulting",
+      "kind": "service",
+      "title": "Restaurant Turnaround Consulting",
+      "seoTitle": "Restaurant Turnaround Consulting & Financial Recovery Support",
+      "heading": "When the restaurant is under pressure, make the next decision from current facts.",
+      "description": "Restaurant turnaround support connecting cash, profitability, labor, food cost, payables, reporting and 30/60/90-day operating priorities without promising a guaranteed outcome.",
+      "eyebrow": "Restaurant turnaround / Financial and operating support",
+      "serviceType": "Restaurant turnaround consulting",
+      "answer": "Ready Margin can support restaurant turnaround work by establishing a current financial baseline, identifying immediate cash and operating pressures, prioritizing the largest controllable issues and maintaining follow-up against a defined action plan. We do not guarantee recovery or profitability; the work is designed to improve decision quality and accountability under pressure.",
+      "queries": ["restaurant turnaround consultant", "restaurant turnaround consulting", "fix struggling restaurant finances", "restaurant financial recovery consultant", "restaurant restructuring consultant", "restaurant profit turnaround"],
+      "sections": [
+        {"title": "Stabilize the information before multiplying initiatives", "body": "A turnaround can lose time when cash, payables, payroll, sales and cost reports disagree. Ready Margin first identifies the source records that can be trusted, the items still uncertain and the commitments that cannot wait.", "items": ["Cash and near-term obligations", "Current P&L and margin pressure", "Labor and food-cost movement", "Vendor and payable issues", "Immediate operating decisions", "Named owners and follow-up dates"]},
+        {"title": "Prioritize a small number of controllable actions", "body": "The plan should distinguish urgent cash protection from structural profitability work. Ready Margin can help rank actions by impact, evidence, responsibility and time horizon instead of producing a long generic checklist.", "items": []},
+        {"title": "Turnaround support cannot promise the outcome", "body": "Performance can depend on demand, lease obligations, financing, management execution and other factors outside any adviser's control. Legal, insolvency, restructuring, lending or investment advice stays with the appropriate qualified professionals where required.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/restaurant-profitability-consulting", "label": "Restaurant profitability consulting"},
+        {"path": "/solutions/restaurant-not-profitable", "label": "Help when a restaurant is not profitable"},
+        {"path": "/what-we-handle/turnaround-support", "label": "Turnaround and CFO support"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/restaurant-profitability-consulting",
+      "kind": "service",
+      "title": "Restaurant Profitability Consulting",
+      "seoTitle": "Restaurant Profitability Consulting & Margin Analysis | Ready Margin",
+      "heading": "Find where restaurant margin is moving and what can actually be changed.",
+      "description": "Restaurant profitability consulting connecting sales, labor, food cost, vendor costs, payroll, overhead, cash and operating context to identify margin drivers and priorities.",
+      "eyebrow": "Restaurant profitability / Financial guidance",
+      "serviceType": "Restaurant profitability consulting",
+      "answer": "Ready Margin helps restaurant owners analyze profitability by connecting sales, food cost, labor, vendor movement, payroll, overhead and cash to the same reporting period. We identify the drivers that the records support, separate assumptions from facts and help prioritize the next operating or financial action.",
+      "queries": ["restaurant profitability consultant", "restaurant profit consultant", "improve restaurant profitability", "restaurant margin consultant", "restaurant profit analysis", "restaurant financial performance consultant"],
+      "sections": [
+        {"title": "Profitability is not one percentage", "body": "Prime cost, gross margin and operating profit answer different questions. Ready Margin aligns the reporting period, confirms what each measure includes and then looks for the operating records that explain the movement.", "items": ["Sales and mix", "Food and beverage cost", "Labor and payroll", "Vendor price changes", "Operating expenses and commitments", "Location-level comparison where useful"]},
+        {"title": "Do not prescribe before checking the cause", "body": "A margin decline may come from lower sales, price movement, waste, staffing, mix, missing records or one-time costs. The recommendation should follow the cause the evidence supports rather than applying a universal restaurant benchmark blindly.", "items": []},
+        {"title": "Translate analysis into a named next action", "body": "The output should identify what to check, who owns it and when it will be reviewed. That creates a feedback loop between the financial picture and the operating changes made in response.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-food-cost-management", "label": "Restaurant food-cost management"},
+        {"path": "/restaurant-labor-cost-management", "label": "Restaurant labor-cost management"},
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/solutions/restaurant-not-profitable", "label": "Help when a restaurant is not profitable"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/multi-location-restaurant-finance",
+      "kind": "service",
+      "title": "Multi-Location Restaurant Finance",
+      "seoTitle": "Multi-Location Restaurant Accounting, Payroll & Finance Support",
+      "heading": "One financial operating rhythm across multiple restaurant locations.",
+      "description": "Multi-location restaurant finance support covering consistent accounting, payroll handoffs, reporting, location comparisons, cash visibility and shared operating controls.",
+      "eyebrow": "Multi-location restaurants / Finance operations",
+      "serviceType": "Multi-location restaurant finance support",
+      "answer": "Ready Margin can help multi-location restaurant groups standardize the recurring finance work across locations: accounting, payroll handoffs, vendor records, reporting, cash visibility and location comparisons. The goal is consistent definitions and deadlines without losing the operating context of each restaurant.",
+      "queries": ["multi location restaurant accounting", "multi location restaurant finance", "restaurant group accounting services", "multi unit restaurant payroll", "multi location restaurant bookkeeping", "restaurant group financial reporting"],
+      "sections": [
+        {"title": "Consistency matters before comparison", "body": "A location comparison is weak if each restaurant closes on different definitions, timing or account mappings. Ready Margin can standardize the recurring reporting basis while keeping exceptions visible for each location.", "items": ["Consistent chart and location mapping", "Shared close and payroll calendars", "Location-level reporting", "Cash and payable visibility", "Cross-location cost and margin review"]},
+        {"title": "Centralize the finance process without erasing local ownership", "body": "Managers still need defined responsibilities for time corrections, invoices, inventory and operating questions. The shared workflow should make local inputs easier to see rather than pushing every decision to a central office.", "items": []},
+        {"title": "Growth exposes weak handoffs quickly", "body": "A process that works through owner memory at one location can break at three. Ready Margin helps turn those unwritten handoffs into named records, deadlines and approvers before volume multiplies the confusion.", "items": []}
+      ],
+      "related": [
+        {"path": "/outsourced-restaurant-finance-team", "label": "Outsourced restaurant finance team"},
+        {"path": "/restaurant-accounting-services", "label": "Restaurant accounting services"},
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/solutions/restaurant-multi-location-reporting", "label": "Help with multi-location reporting problems"},
+        {"path": "/who-we-help/multi-location-groups", "label": "Support for multi-location restaurant groups"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/outsourced-restaurant-finance-team",
+      "kind": "service",
+      "title": "Outsourced Restaurant Finance Team",
+      "seoTitle": "Outsourced Restaurant Finance Team | Accounting, Payroll & CFO Support",
+      "heading": "A restaurant finance team without rebuilding every function in-house.",
+      "description": "Outsourced restaurant finance support combining bookkeeping, accounting, payroll, payables, reporting, cash visibility and CFO-level guidance under an agreed operating model.",
+      "eyebrow": "Outsourced restaurant finance team",
+      "serviceType": "Outsourced restaurant finance team",
+      "answer": "Ready Margin can operate as an outsourced restaurant finance team for owners who have outgrown DIY administration but do not want to build every function internally. The engagement can combine bookkeeping, accounting, payroll, payables, reporting, cash visibility and financial guidance with explicit roles, approvals and service boundaries.",
+      "queries": ["outsourced restaurant finance team", "outsourced accounting team restaurant", "restaurant finance outsourcing", "restaurant back office outsourcing", "outsourced CFO and accounting restaurant", "restaurant finance department outsourcing"],
+      "sections": [
+        {"title": "Outsource responsibility, not visibility", "body": "The owner should know which jobs Ready Margin handles, when the work arrives, who answers an exception and which decisions remain with the restaurant. The objective is less administrative load without creating a black box around the finances.", "items": ["Recurring accounting and bookkeeping", "Payroll and tip workflows", "Accounts payable support", "Reporting and cash visibility", "Financial analysis and CFO-level guidance"]},
+        {"title": "Use specialist advisers where specialist work is required", "body": "An outsourced finance team can coordinate information across providers, but legal, assurance, tax representation and other regulated services remain with the appropriately qualified party unless explicitly included and authorized.", "items": []},
+        {"title": "The model can scale with the restaurant", "body": "A single-location restaurant may begin with a narrow recurring workflow. A growing group may need common close calendars, location reporting and more frequent financial review. The scope should grow because the operating need grew, not because more software was sold.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-back-office-services", "label": "Restaurant back-office services"},
+        {"path": "/restaurant-finance-services", "label": "Restaurant finance services"},
+        {"path": "/multi-location-restaurant-finance", "label": "Multi-location restaurant finance"},
+        {"path": "/restaurant-cfo-services", "label": "Restaurant CFO services"},
+        {"path": "/book-a-review", "label": "Book a Restaurant Operations Review"}
+      ],
+      "resources": []
+    }
+  ]
+}
