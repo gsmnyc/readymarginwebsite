@@ -13,6 +13,7 @@ import {
   OperatorImage,
   JsonLd,
 } from "@/components/site/static";
+
 const Timeline = dynamic(() =>
   import("@/components/site/timeline").then((module) => module.Timeline),
 );
@@ -37,11 +38,14 @@ const CaseCarousel = dynamic(() =>
 const Faq = dynamic(() =>
   import("@/components/site/faq").then((module) => module.Faq),
 );
+
 type Props = { params: Promise<{ slug: string[] }> };
+
 export async function generateStaticParams() {
   const c = await getContent();
   return c.pages.map((p) => ({ slug: p.path.slice(1).split("/") }));
 }
+
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const c = await getContent();
@@ -50,6 +54,7 @@ export async function generateMetadata({ params }: Props) {
     ? metadataFor(p)
     : { title: "Page not found", robots: { index: false } };
 }
+
 export default async function ContentPage({ params }: Props) {
   const { slug } = await params;
   const c = await getContent();
@@ -101,6 +106,18 @@ export default async function ContentPage({ params }: Props) {
         </div>
       </section>
       <div className="container page-body">
+        {p.answer && (
+          <section className="fit-note" aria-labelledby="answer-title">
+            <h2 id="answer-title">At a glance</h2>
+            <p>{p.answer}</p>
+          </section>
+        )}
+        {p.disclosure && (
+          <section className="fit-note" aria-labelledby="disclosure-title">
+            <h2 id="disclosure-title">About this guide</h2>
+            <p>{p.disclosure}</p>
+          </section>
+        )}
         {p.kind === "capability-index" && <CapabilityGrid pages={c.pages} />}{" "}
         {p.kind === "audience-index" && (
           <div className="audience-grid">
@@ -160,6 +177,24 @@ export default async function ContentPage({ params }: Props) {
               <Related page={p} pages={c.pages} />
             </div>
           )
+        )}
+        {p.resources.length > 0 && (
+          <section className="section" aria-labelledby="official-resources-title">
+            <p className="eyebrow">Primary sources</p>
+            <h2 id="official-resources-title">Official resources</h2>
+            <div className="resource-links">
+              {p.resources.map((resource) => (
+                <a
+                  key={resource.url}
+                  href={resource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {resource.label} ↗
+                </a>
+              ))}
+            </div>
+          </section>
         )}
         {p.kind === "download" && (
           <a
