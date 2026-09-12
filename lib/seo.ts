@@ -92,8 +92,8 @@ export function pageSchemaData(p: Page) {
   if (p.kind === "answer") {
     base.push({
       "@context": "https://schema.org",
-      "@type": "QAPage",
-      "@id": origin + p.path + "/#qa",
+      "@type": "WebPage",
+      "@id": origin + p.path + "/#webpage",
       name: p.title,
       description: p.description,
       url: origin + p.path,
@@ -101,11 +101,15 @@ export function pageSchemaData(p: Page) {
       mainEntity: {
         "@type": "Question",
         name: p.title,
-        answerCount: 1,
         acceptedAnswer: {
           "@type": "Answer",
           text: p.answer,
           url: origin + p.path,
+          author: {
+            "@type": "Organization",
+            "@id": origin + "/#organization",
+            name: "Ready Margin",
+          },
         },
       },
     });
