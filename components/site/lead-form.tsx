@@ -103,6 +103,18 @@ export function LeadForm({ settings }: { settings: Settings }) {
       className="lead-form"
       onSubmit={submit}
       noValidate
+      aria-busy={state === "sending"}
+      onChangeCapture={(event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement)) return;
+        const name = target.name;
+        if (name && errors[name])
+          setErrors((current) => {
+            const next = { ...current };
+            delete next[name];
+            return next;
+          });
+      }}
       onFocus={() => {
         if (!started.current) {
           started.current = true;
@@ -135,6 +147,7 @@ export function LeadForm({ settings }: { settings: Settings }) {
                 name={field.name}
                 rows={3}
                 maxLength={2000}
+                autoComplete="off"
                 aria-invalid={!!errors[field.name]}
                 aria-describedby={
                   errors[field.name] ? field.name + "-error" : undefined
@@ -153,6 +166,7 @@ export function LeadForm({ settings }: { settings: Settings }) {
                       : "text"
                 }
                 inputMode={field.name === "locations" ? "numeric" : undefined}
+                enterKeyHint={field.name === "email" ? "next" : undefined}
                 autoComplete={
                   field.name === "name"
                     ? "name"

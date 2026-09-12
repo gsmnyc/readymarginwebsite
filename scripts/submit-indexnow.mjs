@@ -8,8 +8,9 @@ const legacyRedirectPaths = new Set(["/new-york-restaurant-bookkeeping"]);
 if (!enabled || !production) {
   console.log("IndexNow skipped outside an enabled production build.");
 } else {
-  const origin = new URL(process.env.SITE_URL || "https://readymargin.com");
-  if (origin.protocol !== "https:" || origin.hostname !== "readymargin.com") {
+  const origin = new URL(process.env.SITE_URL || "https://www.readymargin.com");
+  if (origin.hostname === "readymargin.com") origin.hostname = "www.readymargin.com";
+  if (origin.protocol !== "https:" || origin.hostname !== "www.readymargin.com") {
     console.warn("IndexNow skipped because SITE_URL is not the canonical HTTPS host.");
   } else {
     const read = (name) => JSON.parse(readFileSync(new URL(`../content/${name}`, import.meta.url), "utf8"));

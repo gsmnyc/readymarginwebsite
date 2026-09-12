@@ -105,8 +105,70 @@
  * remain legible after the browser scales the desktop viewport to the screen.
  */
 @media (min-width: 768px) and (max-width: 1199px) and (hover: none) and (pointer: coarse) {
+  html {
+    font-size: 19px;
+  }
+
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .desktop-nav,
+  .header-cta {
+    display: none;
+  }
+
+  .menu-button {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 7px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .container,
+  .footer .container {
+    width: min(calc(100% - 80px), 800px);
+  }
+
+  .hero-grid,
+  .page-hero-grid,
+  .split,
+  .review-scene .split,
+  .form-layout,
+  .timeline,
+  .desk-chapter,
+  .article-layout,
+  .diagnostic {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-grid,
+  .page-hero-grid,
+  .split,
+  .form-layout,
+  .timeline {
+    gap: 36px;
+  }
+
+  .capability-grid,
+  .audience-grid,
+  .pricing-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-copy > section,
+  .related > a,
+  .timeline-nav button,
+  .footer-grid a {
+    min-height: 48px;
+  }
+
   html:has(.page-form) {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   body:has(.page-form) {

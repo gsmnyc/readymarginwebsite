@@ -147,5 +147,14 @@ export const getContent = cache(async (): Promise<Content> => {
   } catch { return local; }
 });
 
-export const siteOrigin = () => process.env.SITE_URL?.trim().replace(/\/+$/, "") || "https://readymargin.com";
+export const siteOrigin = () => {
+  const configured = process.env.SITE_URL?.trim() || "https://www.readymargin.com";
+  try {
+    const url = new URL(configured);
+    if (url.hostname === "readymargin.com") url.hostname = "www.readymargin.com";
+    return url.origin;
+  } catch {
+    return "https://www.readymargin.com";
+  }
+};
 export const isProduction = () => process.env.VERCEL_ENV ? process.env.VERCEL_ENV === "production" : process.env.SITE_ENV === "production";

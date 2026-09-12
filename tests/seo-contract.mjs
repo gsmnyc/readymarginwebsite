@@ -27,7 +27,9 @@ const robots = (await load("app/robots.ts", "robots")).default;
 const sitemap = (await load("app/sitemap.ts", "sitemap")).default;
 const { metadataFor, pageSchemaData } = await load("lib/seo.ts", "seo");
 const llms = await load("app/llms.txt/route.ts", "llms");
-const { getContent } = await load("lib/content.ts", "content");
+const { getContent, siteOrigin } = await load("lib/content.ts", "content");
+
+assert.equal(siteOrigin(), "https://www.readymargin.com", "Apex configuration must normalize to the public www host");
 
 const robotRules = robots().rules;
 assert(Array.isArray(robotRules));
@@ -53,13 +55,13 @@ const merged = await getContent();
 const indexable = merged.pages.filter((page) => page.published && page.indexable);
 const map = await sitemap();
 assert.equal(map.length, indexable.length + 1);
-assert(map.every((item) => item.url === "https://readymargin.com" || item.url.startsWith("https://readymargin.com/")));
+assert(map.every((item) => item.url === "https://www.readymargin.com" || item.url.startsWith("https://www.readymargin.com/")));
 assert.equal(new Set(map.map((item) => item.url)).size, map.length);
 
 for (const page of indexable) {
   const metadata = metadataFor(page);
   assert.equal(metadata.robots?.index, true, `Indexable page has noindex: ${page.path}`);
-  assert.equal(metadata.alternates?.canonical, "https://readymargin.com" + page.path);
+  assert.equal(metadata.alternates?.canonical, "https://www.readymargin.com" + page.path);
 
   if (page.kind === "article") {
     const article = pageSchemaData(page).find((item) => item["@type"] === "Article");
@@ -71,7 +73,7 @@ for (const page of indexable) {
   if (["service", "service-hub", "capability"].includes(page.kind)) {
     const service = pageSchemaData(page).find((item) => item["@type"] === "Service");
     assert(service, `Missing Service schema: ${page.path}`);
-    assert.equal(service.provider["@id"], "https://readymargin.com/#organization");
+    assert.equal(service.provider["@id"], "https://www.readymargin.com/#organization");
     if (page.path === "/new-york" || page.path.startsWith("/new-york/")) assert(Array.isArray(service.areaServed));
   }
 
@@ -93,7 +95,7 @@ for (const page of indexable.filter((page) =>
   ["capability", "service", "service-hub", "solution", "solution-hub", "answer", "article", "process", "rhythm", "implementation", "owner-view", "audience"].includes(page.kind) ||
   page.path === "/new-york" || page.path.startsWith("/new-york/"),
 )) {
-  assert(llmsText.includes("https://readymargin.com" + page.path), `Missing llms.txt URL ${page.path}`);
+  assert(llmsText.includes("https://www.readymargin.com" + page.path), `Missing llms.txt URL ${page.path}`);
 }
 
 for (const group of generatedGroups) {

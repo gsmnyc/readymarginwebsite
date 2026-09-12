@@ -46,7 +46,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{var n=navigator,d=document.documentElement;var off=new URLSearchParams(location.search).get('motion')==='off'||matchMedia('(prefers-reduced-motion: reduce)').matches||(n.connection&&n.connection.saveData);if(off||sessionStorage.getItem('rm-motion')==='off')d.dataset.motion='off';else if(!(n.deviceMemory&&n.deviceMemory<4)&&matchMedia('(min-width:1024px) and (min-height:700px)').matches)d.dataset.intro='desktop'}catch(e){}`,
+            __html: `try{var n=navigator,d=document.documentElement;var off=new URLSearchParams(location.search).get('motion')==='off'||matchMedia('(prefers-reduced-motion: reduce)').matches||(n.connection&&n.connection.saveData);if(off||sessionStorage.getItem('rm-motion')==='off')d.dataset.motion='off'}catch(e){}`,
           }}
         />
       </head>
@@ -61,7 +61,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <AnalyticsListener />
         {process.env.VERCEL === "1" && <Telemetry />}
         <noscript>
-          <style>{".intro{display:none!important}.reveal,.motion-step{opacity:1!important;transform:none!important}.mobile-nav-fallback{display:block!important}.js-only,.desk-phases,.desk-pause{display:none!important}.operating-desk *{animation:none!important}.timeline-copy section,.faq [data-slot=accordion-content]{display:block!important}.carousel-track{display:grid!important;grid-template-columns:1fr!important;transform:none!important}.carousel-viewport{overflow:visible!important}"}</style>
+          <style>{".reveal,.motion-step{opacity:1!important;transform:none!important}.mobile-nav-fallback{display:block!important}.js-only,.desk-phases,.desk-pause{display:none!important}.operating-desk *{animation:none!important}.timeline-copy section,.faq [data-slot=accordion-content]{display:block!important}.carousel-track{display:grid!important;grid-template-columns:1fr!important;transform:none!important}.carousel-viewport{overflow:visible!important}"}</style>
         </noscript>
       </body>
     </html>

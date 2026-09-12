@@ -1,14 +1,3 @@
-"use client";
-
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import { motionAllowed } from "./motion-utils";
-
-if (typeof window !== "undefined" && typeof document !== "undefined")
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
-
 const steps = [
   {
     word: "Run",
@@ -43,51 +32,8 @@ const steps = [
 ] as const;
 
 export function ModelScene() {
-  const root = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!motionAllowed()) return;
-      const media = gsap.matchMedia();
-      media.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.utils
-          .toArray<HTMLElement>(".model-step", root.current!)
-          .forEach((element) => {
-            const sequence = gsap.timeline({
-              scrollTrigger: { trigger: element, start: "top 82%", once: true },
-            });
-            sequence
-              .from(element.querySelector(".model-word"), {
-                yPercent: 95,
-                duration: 0.85,
-                ease: "power3.out",
-              })
-              .from(
-                element.querySelectorAll(".model-evidence div"),
-                { x: 18, stagger: 0.1, duration: 0.6 },
-                0.2,
-              )
-              .from(
-                element.querySelector(".model-rule"),
-                { scaleX: 0, transformOrigin: "left", duration: 0.85 },
-                0,
-              );
-          });
-      });
-      const stop = (event: KeyboardEvent) => {
-        if (event.key === "Tab") media.revert();
-      };
-      window.addEventListener("keydown", stop);
-      return () => {
-        media.revert();
-        window.removeEventListener("keydown", stop);
-      };
-    },
-    { scope: root },
-  );
-
   return (
-    <div className="model" ref={root}>
+    <div className="model">
       <p className="model-example-label">
         One payroll question, followed through. An illustrative workflow.
       </p>

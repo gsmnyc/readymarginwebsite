@@ -3,7 +3,6 @@ import Image from "next/image";
 import { getContent, siteOrigin, summarizePage } from "@/lib/content";
 import { metadataFor } from "@/lib/seo";
 import { CTA, CapabilityGrid, ReviewCard, JsonLd } from "@/components/site/static";
-import { IntroReveal } from "@/components/site/intro-reveal";
 import { ModelScene } from "@/components/site/model-scene";
 import { Timeline } from "@/components/site/timeline";
 import { Workstreams } from "@/components/site/workstreams";
@@ -44,7 +43,6 @@ export default async function Home() {
 
   return (
     <main id="main">
-      <IntroReveal />
       <section id="home-hero" tabIndex={-1} className="hero container">
         <div className="hero-topline">
           <span className="eyebrow">Restaurant finance, payroll & operations — handled.</span>
