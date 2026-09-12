@@ -5,6 +5,7 @@ const enabled = process.env.INDEXNOW_ENABLED === "true";
 const production =
   process.env.VERCEL_ENV === "production" ||
   process.env.SITE_ENV === "production";
+const legacyRedirectPaths = new Set(["/new-york-restaurant-bookkeeping"]);
 
 if (!enabled || !production) {
   console.log("IndexNow skipped outside an enabled production build.");
@@ -26,7 +27,12 @@ if (!enabled || !production) {
     );
     const canonicalPaths = new Set([
       ...site.pages
-        .filter((page) => page.published && page.indexable)
+        .filter(
+          (page) =>
+            page.published &&
+            page.indexable &&
+            !legacyRedirectPaths.has(page.path),
+        )
         .map((page) => page.path),
       ...search.pages.map((page) => page.path),
     ]);
