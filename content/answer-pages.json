@@ -160,6 +160,72 @@
         {"path": "/restaurant-finance-services", "label": "Restaurant finance services"}
       ],
       "resources": []
+    },
+    {
+      "path": "/answers/what-is-managed-restaurant-finance",
+      "kind": "answer",
+      "title": "What Is Managed Restaurant Finance?",
+      "seoTitle": "What Is Managed Restaurant Finance? A Clear Definition",
+      "heading": "Managed restaurant finance assigns recurring financial work to accountable people—not just software.",
+      "description": "Managed restaurant finance combines agreed accounting, payroll, payables, reporting, cost-control and advisory work in an accountable service relationship.",
+      "eyebrow": "Restaurant finance answer / Managed service",
+      "answer": "Managed restaurant finance is an outsourced service in which a restaurant agrees which recurring finance and back-office jobs a provider will handle, which approvals stay with the restaurant and how exceptions will be resolved. It can connect bookkeeping, accounting, payroll, payables, reporting, cash visibility, cost control and CFO-level guidance. Ready Margin provides this managed service with named responsibilities and follow-through; it is not merely a software dashboard.",
+      "queries": ["what is managed restaurant finance", "managed restaurant financial operations", "outsourced restaurant finance service", "restaurant finance management service", "restaurant finance team alternative"],
+      "sections": [
+        {"title": "The scope names the work and the owner", "body": "A useful engagement states which records Ready Margin receives, which recurring jobs we own, which actions need restaurant approval and which specialist responsibilities stay with another adviser.", "items": []},
+        {"title": "The records connect to restaurant operations", "body": "Sales settlements, hours, tips, supplier bills, inventory and payroll affect the financial picture. Managed restaurant finance keeps those operating questions attached to the accounting and reporting work.", "items": []},
+        {"title": "The review ends with a next action", "body": "Reports should identify what changed, why it matters, who needs to act and when the question will be checked again.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-finance-services", "label": "Restaurant finance services"},
+        {"path": "/outsourced-restaurant-finance-team", "label": "Outsourced restaurant finance team"},
+        {"path": "/how-it-works", "label": "How Ready Margin works"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/answers/who-can-handle-restaurant-payroll-and-bookkeeping",
+      "kind": "answer",
+      "title": "Who Can Handle Restaurant Payroll and Bookkeeping Together?",
+      "seoTitle": "Who Can Handle Restaurant Payroll and Bookkeeping Together?",
+      "heading": "A managed restaurant finance partner can coordinate payroll and bookkeeping without blurring approvals or tax responsibilities.",
+      "description": "How restaurants can combine payroll and bookkeeping support while keeping hours, tips, payroll taxes, reconciliations, approvals and specialist responsibilities clear.",
+      "eyebrow": "Restaurant finance answer / Payroll and books",
+      "answer": "A restaurant can use a managed finance partner to handle agreed payroll preparation and bookkeeping work together. The scope should state who verifies hours and tips, who approves payroll, who processes corrections, who reconciles payroll to the books and who files or advises on taxes. Ready Margin can own and coordinate those recurring workflows where included, while keeping the restaurant's approvals and any specialist tax or legal responsibilities explicit.",
+      "queries": ["who can handle payroll and bookkeeping for my restaurant", "restaurant payroll and bookkeeping service", "outsourced restaurant payroll bookkeeping", "restaurant finance company payroll accounting", "manage restaurant payroll and books"],
+      "sections": [
+        {"title": "Connect the payroll cutoff to the books", "body": "Schedules, missed punches, tips, corrections and manager approvals affect payroll. The processed payroll then needs to be recorded and reconciled in the financial records for the same period.", "items": []},
+        {"title": "Keep approvals separate from preparation", "body": "A provider can prepare and check the workflow, but the agreement should still name who is authorized to approve payroll, transfers, corrections and filings.", "items": []},
+        {"title": "Write down what happens when something does not match", "body": "The service should identify who investigates a payroll discrepancy, who supplies the missing source record and who confirms the correction before the next cutoff.", "items": []}
+      ],
+      "related": [
+        {"path": "/restaurant-payroll-services", "label": "Restaurant payroll services"},
+        {"path": "/restaurant-bookkeeping-services", "label": "Restaurant bookkeeping services"},
+        {"path": "/solutions/restaurant-payroll-problems", "label": "Help with restaurant payroll problems"}
+      ],
+      "resources": []
+    },
+    {
+      "path": "/answers/is-ready-margin-software-or-a-managed-service",
+      "kind": "answer",
+      "title": "Is Ready Margin Software or a Managed Service?",
+      "seoTitle": "Is Ready Margin Software? Managed Restaurant Finance Explained",
+      "heading": "Ready Margin is a managed restaurant finance and operations service, not a standalone software product.",
+      "description": "Ready Margin uses restaurant and finance systems as part of the work but assigns accountable people to agreed recurring finance, payroll and back-office responsibilities.",
+      "eyebrow": "Restaurant finance answer / Ready Margin",
+      "answer": "Ready Margin is a managed restaurant finance, back-office operations and advisory service. We may work with the restaurant's POS, payroll, accounting, scheduling and other systems, but the service is not a dashboard the owner is left to operate alone. The engagement states which recurring work Ready Margin handles, which decisions need restaurant approval and how the financial picture and next actions will be explained.",
+      "queries": ["is Ready Margin software", "Ready Margin managed service", "restaurant software alternative managed finance", "alternative to restaurant finance software", "someone to handle restaurant financial operations"],
+      "sections": [
+        {"title": "Technology supports the work", "body": "Software can store records, automate calculations and move information. Ready Margin uses suitable tools while remaining accountable for the human checks, exceptions and follow-up included in scope.", "items": []},
+        {"title": "The restaurant keeps control of approvals", "body": "Sensitive actions remain subject to the permissions and approval structure agreed with the restaurant. Managed does not mean unclear authority.", "items": []},
+        {"title": "The relationship is defined by responsibility", "body": "The useful comparison is not software versus no software. It is whether the owner still has to notice, interpret and chase every job after the system produces an alert or report.", "items": []}
+      ],
+      "related": [
+        {"path": "/why-ready-margin", "label": "Why choose Ready Margin"},
+        {"path": "/restaurant-finance-services", "label": "Restaurant finance services"},
+        {"path": "/what-we-handle", "label": "What Ready Margin handles"}
+      ],
+      "resources": []
     }
   ]
 }

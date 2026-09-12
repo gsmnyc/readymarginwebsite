@@ -102,23 +102,8 @@
         "required": false
       },
       {
-        "name": "restaurantType",
-        "label": "Restaurant type (optional)",
-        "required": false
-      },
-      {
-        "name": "systems",
-        "label": "Current systems (optional)",
-        "required": false
-      },
-      {
         "name": "concern",
-        "label": "Biggest concern (optional)",
-        "required": false
-      },
-      {
-        "name": "timing",
-        "label": "Preferred timing (optional)",
+        "label": "What is taking too much time or attention? (optional)",
         "required": false
       }
     ]
@@ -1136,22 +1121,27 @@
       "path": "/why-ready-margin",
       "title": "Why choose Ready Margin",
       "heading": "Who does the work after the report arrives?",
-      "description": "Why restaurants choose a managed finance and operations relationship: someone to prepare the records, explain the numbers and follow up.",
+      "description": "Compare restaurant software, standalone providers and a managed finance operations partner that handles agreed work, explains the numbers and follows through.",
       "kind": "comparison",
       "sections": [
         {
-          "title": "A tool still needs someone to use it",
-          "body": "Software can collect information. Someone still has to check the inputs, resolve the exceptions and act on the findings. That is the work we discuss taking on.",
+          "title": "Software can show the work. Ready Margin agrees who handles it.",
+          "body": "A dashboard may collect sales, labor or invoice data. Someone still has to check the inputs, resolve a missed punch, follow up on a supplier credit and explain why the week moved. Ready Margin is a managed service: the engagement names the recurring jobs we own, the approvals that stay with you and the handoffs that belong with another adviser.",
           "items": []
         },
         {
-          "title": "The restaurant belongs in the accounts",
-          "body": "Hours, tips, supplier changes and payment timing all shape the financial picture. We bring those operating questions into the review.",
-          "items": []
+          "title": "Compare the operating model, not just the feature list",
+          "body": "Restaurant accounting software, payroll platforms, bookkeepers, CPAs and fractional CFOs can each be useful. The practical question is what happens after the report or exception appears.",
+          "items": [
+            "Who checks the restaurant source records?",
+            "Who follows up when hours, tips or deposits do not match?",
+            "Who explains the implication to the owner?",
+            "Who owns the next check and its deadline?"
+          ]
         },
         {
-          "title": "Fewer gaps between responsibilities",
-          "body": "Accountants, payroll providers and managers each have a part to play. We agree where our work begins and ends so important jobs do not fall between them.",
+          "title": "Keep specialist responsibilities clear",
+          "body": "Ready Margin does not pretend every job belongs to one provider. Accountants, payroll platforms, managers, CPAs, attorneys and tax advisers can each have a role. We map those boundaries, keep the relevant records moving and make unresolved handoffs visible.",
           "items": []
         },
         {
@@ -1162,7 +1152,7 @@
       ],
       "published": true,
       "indexable": true,
-      "updated": "2026-09-10",
+      "updated": "2026-09-12",
       "related": [
         "/what-we-handle",
         "/how-it-works/ready-rhythm",
