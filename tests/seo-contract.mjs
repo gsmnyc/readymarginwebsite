@@ -8,8 +8,9 @@ import searchContent from "../content/search-pages.json" with { type: "json" };
 import serviceContent from "../content/service-pages.json" with { type: "json" };
 import solutionContent from "../content/solution-pages.json" with { type: "json" };
 import answerContent from "../content/answer-pages.json" with { type: "json" };
+import nycIntentContent from "../content/nyc-intent-pages.json" with { type: "json" };
 
-const generatedGroups = [searchContent, serviceContent, solutionContent, answerContent];
+const generatedGroups = [searchContent, serviceContent, solutionContent, answerContent, nycIntentContent];
 const dir = await mkdtemp(tmpdir() + "/rm-seo-");
 async function load(entry, name) {
   const out = dir + "/" + name + ".mjs";
@@ -71,9 +72,14 @@ for (const page of indexable) {
   }
 
   if (["service", "service-hub", "capability"].includes(page.kind)) {
-    const service = pageSchemaData(page).find((item) => item["@type"] === "Service");
+    const schemas = pageSchemaData(page);
+    const service = schemas.find((item) => item["@type"] === "Service");
+    const webpage = schemas.find((item) => item["@type"] === "WebPage");
     assert(service, `Missing Service schema: ${page.path}`);
+    assert(webpage, `Missing service WebPage schema: ${page.path}`);
     assert.equal(service.provider["@id"], "https://www.readymargin.com/#organization");
+    assert.equal(service.provider.legalName, "GSM Consultants Inc.");
+    assert.equal(webpage.mainEntity["@id"], service["@id"]);
     if (page.path === "/new-york" || page.path.startsWith("/new-york/")) assert(Array.isArray(service.areaServed));
   }
 
@@ -105,6 +111,22 @@ for (const group of generatedGroups) {
     assert(page.indexable && page.published);
     assert(page.answer.length >= 80, `Answer-first copy is too thin: ${raw.path}`);
   }
+}
+
+for (const expected of [
+  "/new-york/restaurant-accounting-payroll-services",
+  "/new-york/restaurant-financial-reporting-services",
+  "/new-york/restaurant-finance-solutions",
+  "/new-york/restaurant-cfo-services",
+  "/new-york/restaurant-turnaround-consulting",
+  "/new-york/restaurant-food-cost-inventory-services",
+  "/new-york/restaurant-tax-compliance-support",
+  "/new-york/multi-location-restaurant-finance-services",
+]) {
+  const page = merged.pages.find((item) => item.path === expected);
+  assert(page, `Missing priority NYC intent page: ${expected}`);
+  assert(page.queries.length >= 5, `Priority NYC page needs query coverage: ${expected}`);
+  assert(llmsText.includes("https://www.readymargin.com" + expected), `Priority NYC page missing from llms.txt: ${expected}`);
 }
 
 assert(content.pages.length < merged.pages.length);
