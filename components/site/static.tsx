@@ -124,11 +124,6 @@ export function Footer({ content }: { content: Content }) {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Ready Margin</span>
           <CookieButton />
-          {content.settings.credit.url ? (
-            <a href={content.settings.credit.url}>{content.settings.credit.label}</a>
-          ) : (
-            <span>{content.settings.credit.label}</span>
-          )}
         </div>
       </div>
     </footer>
