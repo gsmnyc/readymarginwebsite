@@ -1,0 +1,309 @@
+/*
+ * Booking/contact form responsive hardening.
+ *
+ * These rules deliberately cover both normal responsive layouts and mobile
+ * browsers with "Desktop site" enabled. In that mode a phone may expose a
+ * ~980px CSS viewport, so width-only breakpoints are not enough.
+ */
+
+.page-form .page-hero-grid,
+.page-form .form-layout,
+.page-form .form-grid {
+  min-width: 0;
+}
+
+.page-form .lead-form {
+  width: 100%;
+}
+
+.page-form .lead-form .button {
+  max-width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .page-form .page-hero {
+    padding-bottom: clamp(44px, 6vw, 72px);
+  }
+
+  .page-form .page-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .page-form .page-hero h1 {
+    max-width: 15ch;
+    font-size: clamp(2.75rem, 6.25vw, 4.75rem);
+  }
+
+  .page-form .page-intro {
+    max-width: 54ch;
+    font-size: 1rem;
+  }
+
+  .page-form .form-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(36px, 6vw, 72px);
+  }
+
+  .page-form .lead-form {
+    max-width: 820px;
+    margin-inline: auto;
+  }
+}
+
+/*
+ * Touch-first devices can still report a desktop-sized layout viewport when
+ * the browser's Desktop site option is enabled. Pointer capability remains a
+ * reliable signal, so make the conversion path readable instead of allowing a
+ * two-column desktop form to be scaled down onto a phone.
+ */
+@media (max-width: 1199px) and (hover: none) and (pointer: coarse) {
+  .page-form .form-layout > .section-copy {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    max-width: 680px;
+  }
+
+  .page-form .form-layout > .section-copy section {
+    padding-block: 24px;
+  }
+
+  .page-form .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .page-form .lead-form {
+    max-width: 720px;
+    padding: clamp(28px, 4vw, 40px);
+  }
+
+  .page-form .field label,
+  .page-form .consent-line label {
+    font-size: 0.9375rem;
+  }
+
+  .page-form .field input,
+  .page-form .field textarea {
+    min-height: 54px !important;
+  }
+
+  .page-form .field textarea {
+    min-height: 132px !important;
+  }
+
+  .page-form .lead-form .button {
+    width: 100%;
+    min-height: 56px;
+  }
+}
+
+/*
+ * Phone + Desktop site mode. The reported viewport is commonly 768-1199px even
+ * though the physical display is phone-sized. Scale the entire conversion
+ * experience intentionally and narrow the content canvas so text and controls
+ * remain legible after the browser scales the desktop viewport to the screen.
+ */
+@media (min-width: 768px) and (max-width: 1199px) and (hover: none) and (pointer: coarse) {
+  html:has(.page-form) {
+    font-size: 20px;
+  }
+
+  body:has(.page-form) {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .page-form .container,
+  body:has(.page-form) .footer .container {
+    width: min(calc(100% - 96px), 780px);
+  }
+
+  body:has(.page-form) .site-header {
+    height: 112px;
+  }
+
+  body:has(.page-form) .header-inner {
+    padding-inline: 48px;
+  }
+
+  body:has(.page-form) .brand-link img {
+    width: 260px;
+  }
+
+  body:has(.page-form) .menu-button {
+    width: 64px;
+    height: 64px;
+  }
+
+  .page-form .page-hero {
+    padding-top: 32px;
+    padding-bottom: 56px;
+  }
+
+  .page-form .page-hero h1 {
+    max-width: 12ch;
+    font-size: clamp(3.2rem, 7vw, 4.5rem);
+    line-height: 1.02;
+  }
+
+  .page-form .page-intro {
+    max-width: 36ch;
+    font-size: 1.08rem;
+    line-height: 1.55;
+  }
+
+  .page-form .form-layout {
+    gap: 44px;
+  }
+
+  .page-form .form-layout > .section-copy {
+    max-width: none;
+  }
+
+  .page-form .form-layout > .section-copy h2 {
+    font-size: 1.55rem;
+  }
+
+  .page-form .form-layout > .section-copy p {
+    max-width: 40ch;
+  }
+
+  .page-form .lead-form {
+    max-width: 100%;
+    padding: 40px;
+  }
+
+  .page-form .form-heading h2 {
+    font-size: 2.25rem;
+    line-height: 1.08;
+  }
+
+  .page-form .form-heading p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .page-form .field label,
+  .page-form .consent-line label,
+  .page-form .caption {
+    font-size: 0.95rem;
+  }
+
+  .page-form .field input,
+  .page-form .field textarea {
+    font-size: 1rem !important;
+  }
+
+  body:has(.page-form) .footer {
+    padding-top: 56px;
+  }
+
+  body:has(.page-form) .footer-top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+
+  body:has(.page-form) .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 28px;
+    padding-block: 40px;
+  }
+
+  body:has(.page-form) .footer-top img {
+    width: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-form .page-hero {
+    padding-top: 16px;
+    padding-bottom: 36px;
+  }
+
+  .page-form .page-hero h1 {
+    max-width: 12ch;
+    font-size: clamp(2.35rem, 11vw, 3.5rem);
+  }
+
+  .page-form .page-intro {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .page-form .form-layout {
+    gap: 28px;
+  }
+
+  .page-form .form-layout > .section-copy {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .page-form .form-layout > .section-copy section {
+    padding-block: 22px;
+  }
+
+  .page-form .form-layout > .section-copy h2 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .page-form .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .page-form .lead-form {
+    padding: 24px 20px;
+    margin-inline: 0;
+  }
+
+  .page-form .form-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.25rem);
+    line-height: 1.08;
+  }
+
+  .page-form .form-heading p:not(.eyebrow) {
+    font-size: 0.9375rem;
+    margin-bottom: 24px;
+  }
+
+  .page-form .field label,
+  .page-form .consent-line label {
+    font-size: 0.875rem;
+  }
+
+  .page-form .field input,
+  .page-form .field textarea {
+    min-height: 52px !important;
+  }
+
+  .page-form .field textarea {
+    min-height: 124px !important;
+  }
+
+  .page-form .consent-line {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .page-form .lead-form .button {
+    width: 100%;
+    min-height: 56px;
+  }
+
+  .page-form .caption {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .page-form .lead-form {
+    padding-inline: 16px;
+  }
+
+  .page-form .page-hero h1 {
+    font-size: 2.2rem;
+  }
+}

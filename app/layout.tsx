@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./micro-interactions.css";
+import "./form-responsive.css";
 import { getContent } from "@/lib/content";
 import {
   SiteHeader,
