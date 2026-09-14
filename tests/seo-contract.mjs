@@ -84,7 +84,7 @@ for (const page of indexable) {
     assert(service, `Missing Service schema: ${page.path}`);
     assert(webpage, `Missing service WebPage schema: ${page.path}`);
     assert.equal(service.provider["@id"], "https://www.readymargin.com/#organization");
-    assert.equal(service.provider.legalName, "GSM Consultants Inc.");
+    assert.equal(service.provider.legalName, "Bancroft and Co ltd");
     assert.equal(webpage.mainEntity["@id"], service["@id"]);
     if (page.path === "/new-york" || page.path.startsWith("/new-york/")) assert(Array.isArray(service.areaServed));
   }

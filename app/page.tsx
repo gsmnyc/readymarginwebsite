@@ -81,7 +81,7 @@ export default async function Home() {
           "@type": "Organization",
           "@id": origin + "/#organization",
           name: "Ready Margin",
-          legalName: "GSM Consultants Inc.",
+          legalName: "Bancroft and Co ltd",
           alternateName: ["ReadyMargin"],
           url: origin,
           logo: origin + "/brand/logo_horizontal_primary_transparent.svg",
