@@ -122,7 +122,7 @@ export function Footer({ content }: { content: Content }) {
         </div>
 
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Ready Margin · A service of Bancroft and Co ltd</span>
+          <span>© {new Date().getFullYear()} Ready Margin Inc</span>
           <CookieButton />
         </div>
       </div>

@@ -41,7 +41,7 @@ export function pageSchemaData(p: Page) {
     "@type": "Organization",
     "@id": origin + "/#organization",
     name: "Ready Margin",
-    legalName: "Bancroft and Co ltd",
+    legalName: "Ready Margin Inc",
     url: origin,
   };
   const base: Record<string, unknown>[] = [{
