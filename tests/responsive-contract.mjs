@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
-const [responsive, globalCss, home, shell, faq, dependencies] = await Promise.all([
+const [responsive, globalCss, interactions, choreography, home, shell, faq, dependencies] = await Promise.all([
   readFile("app/form-responsive.css", "utf8"),
   readFile("app/globals.css", "utf8"),
+  readFile("app/micro-interactions.css", "utf8"),
+  readFile("components/site/page-choreography.tsx", "utf8"),
   readFile("app/page.tsx", "utf8"),
   readFile("components/site/shell.tsx", "utf8"),
   readFile("components/site/faq.tsx", "utf8"),
@@ -32,5 +34,17 @@ assert(shell.includes("<dialog") && shell.includes("showModal()"), "The mobile m
 assert.match(faq, /<details[\s\S]+<summary/, "FAQs should remain keyboard-operable without client JavaScript.");
 assert(!shell.includes("@/components/ui/sheet") && !faq.includes("@/components/ui/accordion"), "Navigation and FAQs must not reintroduce avoidable Radix bundles.");
 assert(!dependencies.dependencies?.gsap && !dependencies.dependencies?.["@gsap/react"], "Global GSAP runtime must remain removed.");
+assert.match(interactions, /prefers-reduced-motion:\s*no-preference/, "Motion must remain an enhancement, not a requirement.");
+assert.match(interactions, /mobile-drawer nav a:nth-child\(14\)/, "The full drawer needs the same entrance cadence as its first links.");
+for (const selector of [
+  ".section-copy > section",
+  ".lead-form > *",
+  ".faq > details",
+  ".footer-grid > *",
+  ".story-chapter > .working-paper",
+]) {
+  assert(choreography.includes(selector), `Missing shared motion coverage for ${selector}`);
+}
+assert(!choreography.includes("motionExcluded"), "Public route types must not be excluded from shared choreography.");
 
-console.log("PASS: touch desktop-mode, one-column form, tap targets, native navigation/FAQs and lightweight-motion contracts.");
+console.log("PASS: touch desktop-mode, one-column form, tap targets, native navigation/FAQs and sitewide lightweight-motion contracts.");

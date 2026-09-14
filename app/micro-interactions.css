@@ -44,3 +44,92 @@ html[data-motion="off"] :where(.button,.text-link,.quiet-link,.resource-links a,
   transition: none !important;
   transform: none !important;
 }
+
+/* First paint: concise hierarchy without waiting for JavaScript. */
+@keyframes rm-opening-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rm-opening-visual {
+  from { opacity: .35; transform: translateY(14px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes rm-drawer-enter {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes rm-backdrop-enter {
+  from { background-color: transparent; }
+  to { background-color: rgba(34,34,34,.55); }
+}
+
+@keyframes rm-menu-enter {
+  from { opacity: 0; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rm-disclosure-enter {
+  from { opacity: .25; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-hero .breadcrumbs,
+  .page-hero-grid > div:first-child > .eyebrow,
+  .page-hero-grid > div:first-child > h1,
+  .page-hero-grid > .page-intro,
+  .home-opening-copy > .eyebrow,
+  .home-opening-copy > h1,
+  .home-opening-copy > .home-intro,
+  .home-opening-copy > .home-actions {
+    animation: rm-opening-enter 480ms cubic-bezier(.16,1,.3,1) both;
+  }
+
+  .page-hero-grid > div:first-child > .eyebrow,
+  .home-opening-copy > .eyebrow { animation-delay: 40ms; }
+  .page-hero-grid > div:first-child > h1,
+  .home-opening-copy > h1 { animation-delay: 90ms; }
+  .page-hero-grid > .page-intro,
+  .home-opening-copy > .home-intro { animation-delay: 150ms; }
+  .home-opening-copy > .home-actions { animation-delay: 210ms; }
+
+  .home-restaurant-photo {
+    animation: rm-opening-visual 540ms 170ms cubic-bezier(.16,1,.3,1) both;
+  }
+
+  .mobile-drawer[open] {
+    animation: rm-drawer-enter 360ms cubic-bezier(.16,1,.3,1) both;
+  }
+
+  .mobile-drawer[open]::backdrop {
+    animation: rm-backdrop-enter 280ms ease-out both;
+  }
+
+  .mobile-drawer[data-state="open"] nav a {
+    animation: rm-menu-enter 420ms cubic-bezier(.16,1,.3,1) both;
+    animation-delay: calc(var(--rm-menu-order, 0) * 34ms + 60ms);
+  }
+
+  .mobile-drawer nav a:nth-child(1) { --rm-menu-order: 0; }
+  .mobile-drawer nav a:nth-child(2) { --rm-menu-order: 1; }
+  .mobile-drawer nav a:nth-child(3) { --rm-menu-order: 2; }
+  .mobile-drawer nav a:nth-child(4) { --rm-menu-order: 3; }
+  .mobile-drawer nav a:nth-child(5) { --rm-menu-order: 4; }
+  .mobile-drawer nav a:nth-child(6) { --rm-menu-order: 5; }
+  .mobile-drawer nav a:nth-child(7) { --rm-menu-order: 6; }
+  .mobile-drawer nav a:nth-child(8) { --rm-menu-order: 7; }
+  .mobile-drawer nav a:nth-child(9) { --rm-menu-order: 8; }
+  .mobile-drawer nav a:nth-child(10) { --rm-menu-order: 9; }
+  .mobile-drawer nav a:nth-child(11) { --rm-menu-order: 10; }
+  .mobile-drawer nav a:nth-child(12) { --rm-menu-order: 11; }
+  .mobile-drawer nav a:nth-child(13) { --rm-menu-order: 12; }
+  .mobile-drawer nav a:nth-child(14) { --rm-menu-order: 13; }
+  .mobile-drawer nav a:nth-child(n+15) { --rm-menu-order: 14; }
+
+  :where(.faq details,.article-directory)[open] > :where([data-slot="accordion-content"],nav) {
+    animation: rm-disclosure-enter 300ms cubic-bezier(.16,1,.3,1) both;
+  }
+}

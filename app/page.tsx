@@ -6,7 +6,6 @@ import { JsonLd } from "@/components/site/static";
 import { Faq } from "@/components/site/faq";
 import { RestaurantIllustration, CashPressureIllustration } from "@/components/home/restaurant-illustration";
 import { OperatingStory } from "@/components/home/operating-story";
-import { HomeMotion } from "@/components/home/home-motion";
 import { home } from "@/content/home";
 import "./homepage.css";
 
@@ -21,7 +20,6 @@ export default async function Home() {
   const origin = siteOrigin();
   return (
     <main id="main" className="homepage">
-      <HomeMotion />
       <section id="home-hero" tabIndex={-1} className="home-opening">
         <div className="home-wrap hero-grid">
           <div className="home-opening-copy">

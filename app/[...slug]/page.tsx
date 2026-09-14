@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 import Link from "@/components/site/link";
+import { Faq } from "@/components/site/faq";
 import { getContent, summarizePage } from "@/lib/content";
 import { metadataFor, pageSchemaData } from "@/lib/seo";
 import {
@@ -35,10 +36,6 @@ const Pricing = dynamic(() =>
 const CaseCarousel = dynamic(() =>
   import("@/components/site/case-carousel").then((module) => module.CaseCarousel),
 );
-const Faq = dynamic(() =>
-  import("@/components/site/faq").then((module) => module.Faq),
-);
-
 type Props = { params: Promise<{ slug: string[] }> };
 
 export async function generateStaticParams() {
