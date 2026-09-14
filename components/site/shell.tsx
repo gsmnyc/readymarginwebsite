@@ -3,16 +3,8 @@
 import Link from "@/components/site/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { Settings } from "@/lib/content";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetTitle,
-  SheetDescription,
-  SheetClose,
-} from "@/components/ui/sheet";
 import { track } from "@/lib/analytics";
 
 const popularRoutes = [
@@ -28,6 +20,9 @@ const popularRoutes = [
 export function SiteHeader({ settings }: { settings: Settings }) {
   const path = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menu = useRef<HTMLDialogElement>(null);
+  const menuTrigger = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     let frame = 0;
@@ -54,6 +49,15 @@ export function SiteHeader({ settings }: { settings: Settings }) {
     { label: "About", href: "/about" },
     { label: "Search", href: "/search" },
   ].filter((item, index, all) => all.findIndex((candidate) => candidate.href === item.href) === index);
+
+  function openMenu() {
+    if (!menu.current?.open) menu.current?.showModal();
+    setMenuOpen(true);
+  }
+
+  function closeMenu() {
+    if (menu.current?.open) menu.current.close();
+  }
 
   return (
     <>
@@ -87,38 +91,51 @@ export function SiteHeader({ settings }: { settings: Settings }) {
             {settings.cta}<span aria-hidden="true">↗</span>
           </Link>
 
-          <Sheet>
-            <SheetTrigger asChild>
-              <button
-                className="menu-button js-only"
-                aria-label="Open navigation"
-                aria-controls="ready-margin-mobile-nav"
-              >
-                <span />
-                <span />
-              </button>
-            </SheetTrigger>
-            <SheetContent id="ready-margin-mobile-nav" className="mobile-drawer">
-              <SheetTitle>Ready Margin</SheetTitle>
-              <SheetDescription>Find the work, problem or guide you need.</SheetDescription>
-              <nav aria-label="Mobile navigation">
-                {drawerLinks.map((item) => (
-                  <SheetClose asChild key={item.href}>
-                    <Link href={item.href}>
-                      {item.label}<span aria-hidden="true">↗</span>
-                    </Link>
-                  </SheetClose>
-                ))}
-              </nav>
-              <SheetClose asChild>
-                <Link className="button" href="/book-a-review" data-cta>
-                  {settings.cta}
-                </Link>
-              </SheetClose>
-            </SheetContent>
-          </Sheet>
+          <button
+            className="menu-button js-only"
+            ref={menuTrigger}
+            type="button"
+            aria-label="Open navigation"
+            aria-controls="ready-margin-mobile-nav"
+            aria-expanded={menuOpen}
+            data-state={menuOpen ? "open" : "closed"}
+            onClick={openMenu}
+          >
+            <span />
+            <span />
+          </button>
         </div>
       </header>
+
+      <dialog
+        ref={menu}
+        id="ready-margin-mobile-nav"
+        className="mobile-drawer"
+        aria-labelledby="mobile-nav-title"
+        aria-describedby="mobile-nav-description"
+        data-state={menuOpen ? "open" : "closed"}
+        onClose={() => {
+          setMenuOpen(false);
+          menuTrigger.current?.focus({ preventScroll: true });
+        }}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) closeMenu();
+        }}
+      >
+        <button className="mobile-drawer-close" type="button" aria-label="Close navigation" onClick={closeMenu}>×</button>
+        <h2 id="mobile-nav-title">Ready Margin</h2>
+        <p id="mobile-nav-description">Find the work, problem or guide you need.</p>
+        <nav aria-label="Mobile navigation">
+          {drawerLinks.map((item) => (
+            <Link href={item.href} key={item.href} onClick={closeMenu}>
+              {item.label}<span aria-hidden="true">↗</span>
+            </Link>
+          ))}
+        </nav>
+        <Link className="button" href="/book-a-review" data-cta onClick={closeMenu}>
+          {settings.cta}
+        </Link>
+      </dialog>
 
       <details className="mobile-nav-fallback">
         <summary>Navigation</summary>
@@ -185,7 +202,7 @@ export function CookieConsent() {
       <div>
         <button onClick={() => choose("reject")}>Reject optional</button>
         <button onClick={() => choose("allow")}>Allow optional</button>
-        <Link href="/legal/cookies">Details</Link>
+        <Link href="/legal/cookies">Cookie details</Link>
       </div>
     </aside>
   ) : null;

@@ -122,7 +122,7 @@ export function Footer({ content }: { content: Content }) {
         </div>
 
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Ready Margin</span>
+          <span>© {new Date().getFullYear()} Ready Margin · A service of GSM Consultants Inc.</span>
           <CookieButton />
         </div>
       </div>

@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
-const [responsive, globalCss, home, dependencies] = await Promise.all([
+const [responsive, globalCss, home, shell, faq, dependencies] = await Promise.all([
   readFile("app/form-responsive.css", "utf8"),
   readFile("app/globals.css", "utf8"),
   readFile("app/page.tsx", "utf8"),
+  readFile("components/site/shell.tsx", "utf8"),
+  readFile("components/site/faq.tsx", "utf8"),
   readFile("package.json", "utf8").then(JSON.parse),
 ]);
 
@@ -26,6 +28,9 @@ assert.match(responsive, /\.page-form \.form-grid[^}]*grid-template-columns:\s*m
 assert.match(responsive, /\.page-form \.lead-form \.button[^}]*min-height:\s*56px/s);
 assert.match(globalCss, /\.footer-grid a\s*\{[^}]*min-height:\s*44px/s);
 assert(!home.includes("IntroReveal"), "The homepage must expose the service proposition without an intro gate.");
+assert(shell.includes("<dialog") && shell.includes("showModal()"), "The mobile menu should use the native modal dialog without a global UI runtime.");
+assert.match(faq, /<details[\s\S]+<summary/, "FAQs should remain keyboard-operable without client JavaScript.");
+assert(!shell.includes("@/components/ui/sheet") && !faq.includes("@/components/ui/accordion"), "Navigation and FAQs must not reintroduce avoidable Radix bundles.");
 assert(!dependencies.dependencies?.gsap && !dependencies.dependencies?.["@gsap/react"], "Global GSAP runtime must remain removed.");
 
-console.log("PASS: touch desktop-mode, one-column form, tap-target and lightweight-motion contracts.");
+console.log("PASS: touch desktop-mode, one-column form, tap targets, native navigation/FAQs and lightweight-motion contracts.");

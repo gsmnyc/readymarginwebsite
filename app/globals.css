@@ -315,11 +315,25 @@ img {
   margin: 7px 0;
 }
 .mobile-drawer {
-  padding: 64px 28px 32px !important;
-  width: min(90vw, 440px) !important;
-  max-width: none !important;
+  position: fixed;
+  inset: 0 0 0 auto;
+  box-sizing: border-box;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 64px 28px 32px;
+  width: min(90vw, 440px);
+  max-width: none;
+  border: 0;
+  border-left: 1px solid var(--rm-line);
+  background: var(--rm-cream);
+  color: var(--rm-ink);
   overflow-y: auto;
 }
+.mobile-drawer::backdrop { background: rgba(34,34,34,.55); }
+.mobile-drawer:not([open]) { display: none; }
+.mobile-drawer h2 { font-size: 1.35rem; margin: 0 52px 6px 0; }
+.mobile-drawer > p { color: var(--rm-text-gray); font-size: .875rem; }
 .mobile-drawer nav {
   display: flex;
   flex-direction: column;
@@ -331,10 +345,23 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.mobile-drawer button[aria-label],
-.mobile-drawer [data-slot="sheet-content"] > button {
+.mobile-drawer button[aria-label] {
   min-width: 44px;
   min-height: 44px;
+}
+.mobile-drawer-close {
+  position: absolute;
+  inset: 16px 16px auto auto;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--rm-line);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--rm-ink);
+  font: inherit;
+  font-size: 1.75rem;
+  line-height: 1;
 }
 .mobile-nav-fallback {
   display: none;
@@ -724,6 +751,11 @@ img {
 .faq {
   width: 100%;
 }
+.faq details { border-bottom: 1px solid var(--rm-ink); }
+.faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq-toggle { width: 10px; height: 10px; flex: none; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform var(--fast); }
+.faq details[open] .faq-toggle { transform: rotate(225deg); }
 .faq [data-slot="accordion-trigger"] {
   font-size: 1rem;
   padding-block: 24px;
@@ -736,7 +768,9 @@ img {
   line-height: 1.6;
   max-width: 65ch;
   color: var(--rm-text-gray);
+  padding: 0 0 24px;
 }
+.faq [data-slot="accordion-content"] p { margin: 0; }
 .cta-section {
   background: var(--rm-ready-gold);
   padding-block: clamp(64px, 7vw, 120px);
@@ -1933,9 +1967,6 @@ html[data-motion="off"] .intro {
   }
 }
 
-.faq [data-slot="accordion-content"][data-state="closed"] {
-  display: none;
-}
 .mobile-table-label {
   display: none;
 }
@@ -2139,9 +2170,8 @@ html[data-keyboard="true"] .word{transform:none!important;}
 .menu-button[data-state="open"]{background:var(--rm-ready-gold);border-color:var(--rm-ink);}
 .menu-button[data-state="open"] span:first-child{transform:translateY(3.5px) rotate(45deg);}
 .menu-button[data-state="open"] span:last-child{transform:translateY(-3.5px) rotate(-45deg);}
-.mobile-drawer>button{display:grid;place-items:center;width:44px;height:44px;min-width:44px;min-height:44px;padding:0;border:1px solid var(--rm-line);border-radius:2px;background:transparent;color:var(--rm-ink);line-height:0;opacity:1;transition:background-color .22s var(--ease),border-color .22s var(--ease),transform .22s var(--ease);}
-.mobile-drawer>button:hover,.mobile-drawer>button:focus-visible{background:var(--rm-ready-gold);border-color:var(--rm-ink);opacity:1;transform:rotate(3deg);}
-.mobile-drawer>button svg{display:block;width:18px;height:18px;margin:0;}
+.mobile-drawer>button{transition:background-color .22s var(--ease),border-color .22s var(--ease),transform .22s var(--ease);}
+.mobile-drawer>button:hover,.mobile-drawer>button:focus-visible{background:var(--rm-ready-gold);border-color:var(--rm-ink);transform:rotate(3deg);}
 .mobile-drawer nav a>span{transition:transform .32s var(--ease);}
 .mobile-drawer nav a:hover>span,.mobile-drawer nav a:focus-visible>span{transform:translate(3px,-3px);}
 @media(max-width:1023px){.menu-button{display:grid;place-items:center;align-content:center;gap:7px;}}
@@ -2217,4 +2247,5 @@ html[data-motion="off"] .menu-button[data-state="open"] span:first-child,html[da
  .footer-grid a{font-size:.875rem;}
 }
 @media(prefers-reduced-motion:reduce){.reading-progress{display:none;}}
+@media(prefers-reduced-motion:reduce){.faq-toggle{transition:none;}}
 html[data-motion="off"]::before,html[data-motion="off"] *::before,html[data-motion="off"] *::after{animation:none!important;transition:none!important;}

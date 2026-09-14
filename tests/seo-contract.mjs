@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, rm } from "node:fs/promises";
+import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { pathToFileURL } from "node:url";
 import { build } from "esbuild";
@@ -12,6 +12,12 @@ import nycIntentContent from "../content/nyc-intent-pages.json" with { type: "js
 
 const generatedGroups = [searchContent, serviceContent, solutionContent, answerContent, nycIntentContent];
 const dir = await mkdtemp(tmpdir() + "/rm-seo-");
+const homeSource = await readFile("app/page.tsx", "utf8");
+const homeTitle = homeSource.match(/title: "([^"]+)"/)?.[1];
+const homeDescription = homeSource.match(/description: "([^"]+)"/)?.[1];
+assert(homeTitle && homeDescription, "Homepage search metadata must remain explicit.");
+assert((homeTitle + " | Ready Margin").length >= 50 && (homeTitle + " | Ready Margin").length <= 60, "Homepage title should fit an unclipped search result.");
+assert(homeDescription.length >= 120 && homeDescription.length <= 160, "Homepage description should fit a useful search snippet.");
 async function load(entry, name) {
   const out = dir + "/" + name + ".mjs";
   await build({ entryPoints: [entry], outfile: out, bundle: true, platform: "node", format: "esm", packages: "bundle" });

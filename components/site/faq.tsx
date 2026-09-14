@@ -1,30 +1,19 @@
-"use client";
-
 import type { FaqItem } from "@/lib/content";
-import { track } from "@/lib/analytics";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
 
 export function Faq({ items }: { items: FaqItem[] }) {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      onValueChange={(value) => {
-        if (value) track("faq_open");
-      }}
-      className="faq"
-    >
+    <div className="faq">
       {items.map((item, index) => (
-        <AccordionItem key={item.question} value={String(index)}>
-          <AccordionTrigger>{item.question}</AccordionTrigger>
-          <AccordionContent forceMount>{item.answer}</AccordionContent>
-        </AccordionItem>
+        <details key={item.question} name="ready-margin-faq">
+          <summary data-slot="accordion-trigger">
+            <span>{item.question}</span>
+            <span className="faq-toggle" aria-hidden="true" />
+          </summary>
+          <div data-slot="accordion-content" id={`faq-answer-${index}`}>
+            <p>{item.answer}</p>
+          </div>
+        </details>
       ))}
-    </Accordion>
+    </div>
   );
 }

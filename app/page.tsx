@@ -11,8 +11,8 @@ import { home } from "@/content/home";
 import "./homepage.css";
 
 export const generateMetadata = () => metadataFor({
-  title: "Restaurant Finance Services: Accounting, Payroll, Tax & Operations",
-  description: "Ready Margin is a managed restaurant finance and back-office partner for accounting, bookkeeping, payroll, tax and compliance workflows, reporting, cost control and CFO-level guidance.",
+  title: "Managed Restaurant Finance Services",
+  description: "Ready Margin handles restaurant accounting, bookkeeping, payroll, reporting and back-office finance, with accountable people who explain what comes next.",
   path: "", indexable: true, kind: "home",
 });
 
@@ -34,7 +34,7 @@ export default async function Home() {
             </div>
           </div>
           <figure className="home-restaurant-photo">
-            <Image src="/brand/restaurant-pass.webp" alt="Illustrative restaurant kitchen pass with plates ready for service and order tickets" width={1536} height={1024} sizes="(max-width: 1199px) 100vw, 55vw" priority />
+            <Image src="/brand/restaurant-pass.webp" alt="Illustrative restaurant kitchen pass with plates ready for service and order tickets" width={1536} height={1024} sizes="(max-width: 1199px) 100vw, 55vw" preload />
             <figcaption><strong>The restaurant is the reason.</strong></figcaption>
           </figure>
         </div>
@@ -44,7 +44,7 @@ export default async function Home() {
 
       <section id="the-work" className="home-wrap home-work">
         <div className="home-section-heading">
-          <div><p className="eyebrow">What comes off your desk</p><h2>Less chasing.<br />More restaurant.</h2></div>
+          <div><p className="eyebrow">What comes off your desk</p><h2>Restaurant finance.<br />Without the chasing.</h2></div>
           <p>A changed shift. A supplier bill. A report you’re still waiting for. We connect the recurring work so every question doesn’t end up back with you.</p>
         </div>
         <div className="home-service-index">
