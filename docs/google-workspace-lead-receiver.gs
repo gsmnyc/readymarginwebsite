@@ -1,9 +1,10 @@
 // Set SHEET_ID and LEAD_WEBHOOK_TOKEN in Project Settings → Script properties.
+// DOCUMENT_ID is optional and archives each accepted enquiry in a Google Doc.
 const SHEET_NAME = "Website enquiries";
 const HEADERS = [
   "Receipt ID", "Received at", "Name", "Restaurant", "Email", "Phone",
   "Locations", "Restaurant type", "Systems", "Concern", "Timing",
-  "Consent", "Notification",
+  "Consent", "Notification", "Document",
 ];
 
 function doPost(e) {
@@ -38,6 +39,7 @@ function doPost(e) {
     const existing = last > 1 && sheet.getRange(2, 1, last - 1, 1)
       .createTextFinder(lead.submissionId).matchEntireCell(true).findNext();
     if (existing) {
+      archiveRow(sheet, existing.getRow(), properties);
       notifyRow(sheet, existing.getRow(), properties);
       return json({ ok: true, submissionId: lead.submissionId });
     }
@@ -52,18 +54,53 @@ function doPost(e) {
       clean(lead.name, 100), clean(lead.business, 160), clean(lead.email, 254),
       clean(lead.phone, 40), clean(lead.locations, 20), clean(lead.restaurantType, 100),
       clean(lead.systems, 500), clean(lead.concern, 2000), clean(lead.timing, 200),
-      "Yes", "Pending",
+      "Yes", "Pending", properties.getProperty("DOCUMENT_ID") ? "Pending" : "Not configured",
     ];
     const row = last + 1;
     sheet.getRange(row, 1, 1, HEADERS.length).setNumberFormat("@").setValues([values]);
     SpreadsheetApp.flush();
     // A saved enquiry is accepted even if the notification needs another attempt.
+    archiveRow(sheet, row, properties);
     notifyRow(sheet, row, properties);
     return json({ ok: true, submissionId: lead.submissionId });
   } catch (_) {
     return json({ ok: false });
   } finally {
     lock.releaseLock();
+  }
+}
+
+function archiveRow(sheet, row, properties) {
+  const documentId = properties.getProperty("DOCUMENT_ID");
+  if (!documentId) return;
+  try {
+    const values = sheet.getRange(row, 1, 1, HEADERS.length).getValues()[0];
+    if (values[13] === "Saved") return;
+    const document = DocumentApp.openById(documentId);
+    const body = document.getBody();
+    const receipt = String(values[0]);
+    if (!body.findText(receipt)) {
+      body.appendParagraph([
+        "Website enquiry — " + values[3],
+        "Receipt ID: " + receipt,
+        "Received: " + values[1],
+        "Name: " + values[2],
+        "Restaurant: " + values[3],
+        "Email: " + values[4],
+        "Phone: " + (values[5] || "Not provided"),
+        "Locations: " + (values[6] || "Not provided"),
+        "Restaurant type: " + (values[7] || "Not provided"),
+        "Systems: " + (values[8] || "Not provided"),
+        "Concern: " + (values[9] || "Not provided"),
+        "Timing: " + (values[10] || "Not provided"),
+        "Consent: " + values[11],
+      ].join("\n"));
+      body.appendHorizontalRule();
+    }
+    document.saveAndClose();
+    sheet.getRange(row, 14).setValue("Saved");
+  } catch (_) {
+    // The Sheet row remains durable and can be archived on the next retry.
   }
 }
 
@@ -82,6 +119,8 @@ function enquirySheet(properties) {
   } else if (sheet.getRange(1, 1).getValue() !== HEADERS[0]) {
     throw new Error("Use a new Website enquiries tab with the current column structure.");
   }
+  if (sheet.getRange(1, 14).getValue() !== HEADERS[13])
+    sheet.getRange(1, 14).setValue(HEADERS[13]);
   return sheet;
 }
 
@@ -110,8 +149,11 @@ function retryPendingNotifications() {
   try {
     const sheet = enquirySheet(properties);
     for (let row = 2, attempted = 0; row <= sheet.getLastRow() && attempted < 20; row++) {
-      if (sheet.getRange(row, 13).getValue() === "Pending") {
-        notifyRow(sheet, row, properties);
+      const notificationPending = sheet.getRange(row, 13).getValue() === "Pending";
+      const documentPending = sheet.getRange(row, 14).getValue() === "Pending";
+      if (notificationPending || documentPending) {
+        if (documentPending) archiveRow(sheet, row, properties);
+        if (notificationPending) notifyRow(sheet, row, properties);
         attempted++;
       }
     }

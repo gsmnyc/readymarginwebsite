@@ -6,11 +6,14 @@ const values = [];
 const properties = new Map([
   ["SHEET_ID", "private-test-sheet"],
   ["LEAD_WEBHOOK_TOKEN", "test-only-token-with-at-least-32-characters"],
+  ["DOCUMENT_ID", "private-test-document"],
   ["MAX_DAILY_ENQUIRIES", "2"],
 ]);
 let sends = 0;
 let failMail = false;
+let failDocument = true;
 let locked = false;
+const documentRecords = [];
 const sheet = {
   getLastRow: () => values.length,
   appendRow: (row) => values.push([...row]),
@@ -69,6 +72,19 @@ const context = {
     openById: () => ({ getSheetByName: () => sheet }),
     flush() {},
   },
+  DocumentApp: {
+    openById() {
+      if (failDocument) throw new Error("document unavailable");
+      return {
+        getBody: () => ({
+          findText: (receipt) => documentRecords.some((record) => record.includes(receipt)) ? {} : null,
+          appendParagraph(record) { documentRecords.push(record); },
+          appendHorizontalRule() {},
+        }),
+        saveAndClose() {},
+      };
+    },
+  },
   LockService: {
     getScriptLock: () => ({
       tryLock() {
@@ -119,10 +135,14 @@ failMail = true;
 assert.equal(submit(lead).ok, true);
 assert.equal(values.length, 2);
 assert.equal(values[1][12], "Pending");
+assert.equal(values[1][13], "Pending");
 assert(values[1][3].startsWith("'="));
 assert(values[1][9].startsWith("'+"));
+failDocument = false;
 assert.equal(submit(lead).ok, true);
 assert.equal(values.length, 2, "Retry must not duplicate the saved enquiry");
+assert.equal(values[1][13], "Saved");
+assert.equal(documentRecords.length, 1, "Retry archives exactly one Document entry");
 failMail = false;
 context.retryPendingNotifications();
 assert.equal(values[1][12], "Sent");
@@ -138,5 +158,5 @@ assert.equal(
 );
 assert.equal(locked, false);
 console.log(
-  "PASS: receiver authentication, consent, formula escaping, durable row deduplication, pending notification recovery and daily cap. Simulated Google services; no messages sent.",
+  "PASS: receiver authentication, consent, formula escaping, durable row deduplication, Document archiving, pending delivery recovery and daily cap. Simulated Google services; no messages sent.",
 );
