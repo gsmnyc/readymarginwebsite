@@ -118,7 +118,7 @@ const local: Content = {
     ...solutionPages,
     ...answerPages,
     ...nycIntentPages,
-  ],
+  ].filter((page) => page.published),
 };
 
 export const getContent = cache(async (): Promise<Content> => {

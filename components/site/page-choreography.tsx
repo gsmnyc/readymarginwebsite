@@ -12,7 +12,7 @@ const revealTargets = [
   ".stream-detail", ".pricing-grid > article", ".pricing-matrix",
   ".article-grid > *", ".related", ".resource-links > a", ".case-card",
   ".cta-inner", ".lead-form", ".diagnostic", ".home-responsibility > article",
-  ".home-service-index > article", "[data-motion-card]", ".home-cash-copy", ".cash-review",
+  ".home-service-index > section", "[data-motion-card]", ".home-cash-copy", ".cash-review",
   ".home-proof li", ".home-finish-copy",
 ].join(",");
 

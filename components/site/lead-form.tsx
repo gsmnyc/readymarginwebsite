@@ -22,6 +22,7 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
   const sending = useRef(false);
   const form = useRef<HTMLFormElement>(null);
   const success = useRef<HTMLElement>(null);
+  const draft = useRef<HTMLDivElement>(null);
 
   useEffect(
     () => () => {
@@ -30,8 +31,12 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
     [],
   );
   useEffect(() => {
-    if (state === "success")
-      requestAnimationFrame(() => success.current?.focus({ preventScroll: true }));
+    if (state !== "success" && state !== "email-ready") return;
+    const frame = requestAnimationFrame(() => {
+      if (state === "success") success.current?.focus({ preventScroll: true });
+      else draft.current?.focus();
+    });
+    return () => cancelAnimationFrame(frame);
   }, [state]);
 
   function prepareEmail(details: Lead) {
@@ -236,7 +241,7 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
         No commitment to a service package. Please do not include sensitive
         financial or employee information.
       </p>
-      {state === "email-ready" && <div className="email-draft-ready" role="status"><h3>{demo ? "Your free demo request is ready to send." : "Your enquiry is ready to send."}</h3><p>Open the draft in your email app, then send it to {settings.email}. You can adjust the details above before opening it.</p><a className="button" href={emailDraft}>{demo ? "Open demo request email" : "Open enquiry email"}</a><p className="caption">The request is sent when you send the email from your email app.</p></div>}
+      {state === "email-ready" && <div ref={draft} tabIndex={-1} className="email-draft-ready" role="status"><h3>{demo ? "Your free demo request is ready to send." : "Your enquiry is ready to send."}</h3><p>Open the draft in your email app, then send it to {settings.email}. You can adjust the details above before opening it.</p><a className="button" href={emailDraft}>{demo ? "Open demo request email" : "Open enquiry email"}</a><p className="caption">The request is sent when you send the email from your email app.</p></div>}
       {state === "error" && (
         <div className="form-error" role="alert">
           <strong>Your request has not been sent.</strong>

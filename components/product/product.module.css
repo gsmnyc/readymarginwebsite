@@ -11,7 +11,7 @@
 .overlay { position:fixed; inset:0; z-index:120; background:color-mix(in srgb,var(--brand-ink) 75%,transparent); animation:product-fade-in var(--motion-fast) var(--motion-ease); }
 .dialog { position:fixed; z-index:121; top:50%; left:50%; transform:translate(-50%,-50%); width:min(calc(100vw - 32px),1720px); max-height:calc(100dvh - 32px); overflow:auto; padding:24px; border:1px solid var(--site-border); border-radius:24px; background:var(--site-surface); color:var(--site-text); animation:product-dialog-in var(--motion-normal) var(--motion-ease); }
 .dialogHeading { display:flex; align-items:center; justify-content:space-between; gap:24px; }
-.dialogHeading h2 { font-size:1.2rem; line-height:1.4; font-weight:600; letter-spacing:-.03em; }
+.dialog .dialogHeading h2 { font-size:1.2rem; line-height:1.4; font-weight:600; letter-spacing:-.03em; }
 .close { flex:none; display:grid; place-items:center; width:44px; height:44px; border:1px solid var(--site-border); border-radius:50%; background:var(--site-surface-soft); color:var(--site-text); }
 .disclosure { margin:12px 0 20px; max-width:90ch; color:var(--rm-text-gray); font-size:.8rem; line-height:1.7; }
 .imageScroll { max-height:70dvh; overflow:auto; overscroll-behavior:contain; border:1px solid var(--site-border); border-radius:14px; background:var(--brand-paper); }

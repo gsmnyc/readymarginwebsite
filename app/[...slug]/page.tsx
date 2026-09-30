@@ -129,7 +129,7 @@ export default async function ContentPage({ params }: Props) {
           </div>
         )}
         {p.kind === "rhythm" && <Timeline steps={p.sections} pinned />}
-        {p.kind === "pricing" && <Pricing tiers={c.tiers} />}{" "}
+        {p.kind === "pricing" && <Pricing />}{" "}
         {p.kind === "about" && <OperatorImage />}
         {p.kind === "cases" && (
           <CaseCarousel

@@ -1,6 +1,5 @@
 import Link from "@/components/site/link";
-import type { Tier } from "@/lib/content";
-export function Pricing(_: { tiers: Tier[] }) {
+export function Pricing() {
  const factors = [
  { title: "Your locations", body: "One restaurant and a growing group need different reporting, coordination and review time." },
  { title: "Your working week", body: "Payroll cycles, team size, transaction volume and the systems you use shape the recurring work." },
