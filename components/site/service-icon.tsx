@@ -1,12 +1,13 @@
 import {
   BadgeDollarSign, BookOpen, Building2, Calculator, ChartNoAxesCombined,
-  ClipboardCheck, Clock3, Coins, Landmark, MessagesSquare, PackageSearch,
+  ClipboardCheck, Clock3, Coins, Landmark, MapPin, MessagesSquare, PackageSearch,
   PanelsTopLeft, ReceiptText, RefreshCw, ShieldCheck, Store, TrendingUp,
   UsersRound, UtensilsCrossed, Wallet,
   type LucideIcon,
 } from "lucide-react";
 
 const serviceIcons: Record<string, LucideIcon> = {
+  "/new-york": MapPin,
   "/restaurant-finance-services": Landmark,
   "/restaurant-accounting-services": Calculator,
   "/restaurant-bookkeeping-services": BookOpen,
