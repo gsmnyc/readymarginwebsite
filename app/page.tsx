@@ -1,17 +1,17 @@
 import Link from "@/components/site/link";
-import Image from "next/image";
 import { getContent, siteOrigin } from "@/lib/content";
 import { metadataFor } from "@/lib/seo";
 import { JsonLd } from "@/components/site/static";
 import { Faq } from "@/components/site/faq";
-import { RestaurantIllustration, CashPressureIllustration } from "@/components/home/restaurant-illustration";
-import { OperatingStory } from "@/components/home/operating-story";
-import { home } from "@/content/home";
+import { ProductTour } from "@/components/product/product-tour";
+import { ProductShot } from "@/components/product/product-shot";
+import { ProductHero } from "@/components/product/product-hero";
+import { serviceGroups } from "@/content/service-navigation";
 import "./homepage.css";
 
 export const generateMetadata = () => metadataFor({
-  title: "Managed Restaurant Finance Services",
-  description: "Ready Margin handles restaurant accounting, bookkeeping, payroll, reporting and back-office finance, with accountable people who explain what comes next.",
+  title: "Restaurant Finance and Back-Office Support",
+  description: "Restaurant accounting, bookkeeping, payroll and CFO support from Ready Margin. Keep the finance work moving, understand your numbers and plan your next step.",
   path: "", indexable: true, kind: "home",
 });
 
@@ -19,61 +19,47 @@ export default async function Home() {
   const c = await getContent();
   const origin = siteOrigin();
   return (
-    <main id="main" className="homepage">
-      <section id="home-hero" tabIndex={-1} className="home-opening">
-        <div className="home-wrap hero-grid">
-          <div className="home-opening-copy">
-            <p className="eyebrow">{home.eyebrow}</p>
-            <h1>{home.headline[0]}<br /><span>{home.headline[1]}</span></h1>
-            <p className="home-intro">{home.introduction}</p>
-            <div className="home-actions">
-              <Link className="button" href="/book-a-review" data-cta>{c.settings.cta}<span aria-hidden="true">↗</span></Link>
-              <Link className="home-quiet-link" href="#the-work">See what we handle <span aria-hidden="true">↓</span></Link>
-            </div>
+    <main id="main" tabIndex={-1} className="homepage">
+      <section id="home-hero" className="home-opening">
+        <div className="home-opening-copy">
+          <div className="home-opening-heading">
+            <p className="eyebrow">Restaurant accounting, bookkeeping &amp; payroll</p>
+            <h1>Service is over.<br /><span>Payroll is due.</span></h1>
           </div>
-          <figure className="home-restaurant-photo">
-            <Image src="/brand/restaurant-pass.webp" alt="Illustrative restaurant kitchen pass with plates ready for service and order tickets" width={1536} height={1024} sizes="(max-width: 1199px) 100vw, 55vw" preload />
-            <figcaption><strong>The restaurant is the reason.</strong></figcaption>
-          </figure>
+          <div className="home-opening-support">
+            <p className="home-intro">We check the hours, reconcile the books and keep supplier bills in order. You get the records, the explanation and a clear list of what needs your decision.</p>
+            <div className="home-actions"><Link className="button" href="/book-a-review" data-cta>Book your free demo</Link><a className="home-quiet-link" href="#workspace-preview">See the work <span aria-hidden="true">↓</span></a></div>
+          </div>
+        </div>
+        <ProductHero />
+        <nav className="home-ledger" aria-label="Restaurant finance support"><Link href="/restaurant-accounting-services">Books &amp; close <span aria-hidden="true">↗</span></Link><Link href="/restaurant-payroll-services">Payroll &amp; tips <span aria-hidden="true">↗</span></Link><Link href="/restaurant-cfo-services">Costs &amp; cash <span aria-hidden="true">↗</span></Link></nav>
+      </section>
+      <section className="home-wrap home-panel home-tension" aria-labelledby="responsibility-title">
+        <div className="home-section-heading"><div><p className="eyebrow">Built around the working week</p><h2 id="responsibility-title">A team for the work<br />that follows service.</h2></div><p>Hours need confirming. Bills need checking. The books need closing. We take responsibility for the finance work you want off your desk.</p></div>
+        <div className="home-responsibility">
+          <article><span className="home-index-number">01</span><h3>Before payroll</h3><p>Check hours, tips and corrections. Get outstanding questions to the manager who can answer them.</p><Link href="/restaurant-payroll-services">Payroll support <span aria-hidden="true">↗</span></Link></article>
+          <article><span className="home-index-number">02</span><h3>Through the month</h3><p>Record bills, reconcile transactions and follow up on missing information before the close.</p><Link href="/restaurant-accounting-services">Accounting support <span aria-hidden="true">↗</span></Link></article>
+          <article><span className="home-index-number">03</span><h3>At the review</h3><p>Explain the movement in costs and cash. Bring the decisions that need your attention into one conversation.</p><Link href="/restaurant-cfo-services">Financial guidance <span aria-hidden="true">↗</span></Link></article>
         </div>
       </section>
-
-      <div className="home-bridge"><div className="home-wrap"><p>You didn’t open a restaurant<br />to chase <span>supplier bills.</span></p><p>Or missed punches. Or a deposit that doesn’t match.<br />That’s where we come in.</p></div></div>
-
-      <section id="the-work" className="home-wrap home-work">
-        <div className="home-section-heading">
-          <div><p className="eyebrow">What comes off your desk</p><h2>Restaurant finance.<br />Without the chasing.</h2></div>
-          <p>A changed shift. A supplier bill. A report you’re still waiting for. We connect the recurring work so every question doesn’t end up back with you.</p>
-        </div>
-        <div className="home-service-index">
-          {home.services.map((service, index) => <section key={service.title}>
-            <span className="home-index-number" aria-hidden="true">0{index + 1}</span>
-            <h3>{service.title}</h3><p>{service.description}</p>
-            <ul>{service.links.map(link => <li key={link.href}><Link href={link.href}>{link.label}<span aria-hidden="true">↗</span></Link></li>)}</ul>
-          </section>)}
-        </div>
-        <div className="home-section-tail"><p>Start with the work you need handled. Agree the scope together.</p><Link className="text-link" href="/restaurant-finance-services">Explore all restaurant finance services ↗</Link></div>
+      <ProductTour />
+      <section id="the-work" className="home-wrap home-panel home-work">
+        <div className="home-section-heading"><div><p className="eyebrow">Choose your support</p><h2>The right work.<br />The right team.</h2></div><p>Start with bookkeeping, payroll or a specific financial question. We build the service around your locations, systems and priorities.</p></div>
+        <div className="home-service-index">{serviceGroups.map((service,index) => <section key={service.title}><span className="home-index-number">0{index+1}</span><h3>{service.title}</h3><p>{service.description}</p><ul>{service.links.map(link => <li key={link.href}><Link href={link.href}>{link.label}<span aria-hidden="true">↗</span></Link></li>)}</ul></section>)}</div>
+        <div className="home-section-tail"><p>One written scope. Clear responsibilities.</p><Link className="text-link" href="/restaurant-finance-services">See all services</Link></div>
       </section>
-
-      <OperatingStory />
-
-      <section className="home-turnaround">
-        <div className="home-wrap"><p className="eyebrow">When the question is bigger</p><div className="home-turnaround-layout"><div><h2>Busy tables.<br /><span>Tight margins?</span></h2><CashPressureIllustration /></div><div><h3>Start with the facts.<br />Then decide what needs to change.</h3><p>When sales aren’t turning into cash, we help establish the obligations, costs and operating pressures that need attention. Then we agree practical actions and keep the follow-up moving.</p><Link className="button" href="/restaurant-turnaround-consulting">Explore turnaround support <span aria-hidden="true">↗</span></Link><Link className="home-quiet-link" href="/solutions/restaurant-not-profitable">Why a busy restaurant can still lose money</Link></div></div></div>
+      <section className="home-wrap home-panel home-cash" aria-labelledby="cash-title">
+        <div className="home-cash-copy"><p className="eyebrow">Cash &amp; decision support</p><h2 id="cash-title">See the balance.<br /><span>Understand the commitments.</span></h2><p>Payroll, supplier bills and timing all affect cash. We review the records together so you can see what is known, what needs checking and which decisions come first.</p><Link className="button" href="/restaurant-cfo-services">Explore financial guidance</Link></div>
+        <div className="home-product-cash"><span className="product-demo-label">Demo workspace / cash position</span><ProductShot shot="cash" /></div>
       </section>
-
-      <section className="home-wrap home-about">
-        <RestaurantIllustration />
-        <div className="home-about-copy">
-        <p className="eyebrow">Built from restaurant work</p>
-        <div className="home-section-heading"><h2>We know what happens<br />after the last table.</h2><div><p>The changed shift. The tip question. The supplier bill that doesn’t look right. Ready Margin comes from hands-on restaurant operations and finance work.</p><p>From one location to a growing group, the starting point is your operation — and the work you need someone to own.</p><Link className="text-link" href="/about">Meet Ready Margin ↗</Link></div></div>
-        <div className="home-context-links"><Link href="/who-we-help">Who we help ↗</Link><Link href="/multi-location-restaurant-finance">Multi-location restaurants ↗</Link><Link href="/new-york">New York & NYC restaurant support ↗</Link><Link href="/restaurant-finance-solutions">Find help by the problem ↗</Link></div>
-        </div>
+      <section className="home-wrap home-panel home-proof" aria-labelledby="proof-title">
+        <div className="home-section-heading"><div><p className="eyebrow">How we work together</p><h2 id="proof-title">You know what’s covered.<br />You keep the decisions.</h2></div><p>Before we start, we agree the work, the people involved and the review schedule. You know what we handle and when we need an answer from you.</p></div>
+        <ol><li><span>01</span><h3>A defined service</h3><p>Your proposal names the recurring work, fees and any specialist support.</p><Link href="/pricing">How pricing works <span aria-hidden="true">↗</span></Link></li><li><span>02</span><h3>A regular review</h3><p>We bring the records, findings and outstanding questions to an agreed review.</p><Link href="/how-it-works">See the process <span aria-hidden="true">↗</span></Link></li><li><span>03</span><h3>Your approval</h3><p>Your nominated people keep the defined payroll, payment and operating approvals.</p><Link href="/security">Data &amp; access <span aria-hidden="true">↗</span></Link></li></ol>
       </section>
-
-      <section className="home-wrap home-faq"><div><p className="eyebrow">Before we talk</p><h2>A few good<br />questions.</h2></div><Faq items={c.faqs.slice(0, 5)} /></section>
-
-      <section className="home-finish"><div className="home-wrap"><p className="eyebrow">Start with your restaurant</p><h2>Make room<br />for the <span>good part.</span></h2><div><p>{c.settings.reviewOffer}</p><Link className="button" href="/book-a-review" data-cta>{c.settings.cta}<span aria-hidden="true">↗</span></Link><a className="text-link" href={"mailto:" + c.settings.email}>{c.settings.email}</a></div></div></section>
+      <section className="home-wrap home-panel home-faq" aria-labelledby="faq-title"><div><p className="eyebrow">Before your demo</p><h2 id="faq-title">A few things<br />to know.</h2></div><Faq items={c.faqs.slice(0,5)} /></section>
+      <section className="home-wrap home-panel home-finish"><div><p className="eyebrow">Free demo. A price for your restaurant.</p><h2>Let’s put your<br /><span>finance work in order.</span></h2></div><div className="home-finish-copy"><p>Show us where you need help. We’ll walk you through the service and prepare a quote for the work you want handled.</p><Link className="button" href="/book-a-review" data-cta>Book your free demo</Link></div></section>
       <JsonLd data={[
+        { "@context": "https://schema.org", "@type": "ItemList", name: "Restaurant finance services", itemListElement: serviceGroups.flatMap(group => group.links).map((link,index) => ({ "@type": "ListItem", position: index + 1, name: link.label, url: origin + link.href })) },
         {
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -92,20 +78,10 @@ export default async function Home() {
             { "@type": "City", name: "New York City" },
           ],
           knowsAbout: [
-            "Restaurant accounting",
-            "Restaurant bookkeeping",
-            "Restaurant payroll",
-            "Restaurant tips",
-            "Restaurant tax and compliance workflows",
-            "Restaurant financial reporting",
-            "Restaurant cash flow",
-            "Restaurant food cost",
-            "Restaurant inventory",
-            "Restaurant labor cost",
-            "Restaurant profitability",
-            "Restaurant fractional CFO services",
-            "Restaurant turnaround consulting",
-            "Multi-location restaurant finance",
+            "Restaurant accounting", "Restaurant bookkeeping", "Restaurant payroll", "Restaurant tips",
+            "Restaurant tax and compliance workflows", "Restaurant financial reporting", "Restaurant cash flow",
+            "Restaurant food cost", "Restaurant inventory", "Restaurant labor cost", "Restaurant profitability",
+            "Restaurant fractional CFO services", "Restaurant turnaround consulting", "Multi-location restaurant finance",
           ],
         },
         {

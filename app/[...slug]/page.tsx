@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 import Link from "@/components/site/link";
 import { Faq } from "@/components/site/faq";
+import { ServiceProduct } from "@/components/product/service-product";
 import { getContent, summarizePage } from "@/lib/content";
 import { metadataFor, pageSchemaData } from "@/lib/seo";
 import {
@@ -10,16 +11,12 @@ import {
   CapabilityGrid,
   SectionCopy,
   Related,
-  ReviewCard,
   OperatorImage,
   JsonLd,
 } from "@/components/site/static";
 
 const Timeline = dynamic(() =>
   import("@/components/site/timeline").then((module) => module.Timeline),
-);
-const Workstreams = dynamic(() =>
-  import("@/components/site/workstreams").then((module) => module.Workstreams),
 );
 const ArticleGrid = dynamic(() =>
   import("@/components/site/article-grid").then((module) => module.ArticleGrid),
@@ -57,6 +54,7 @@ export default async function ContentPage({ params }: Props) {
   const c = await getContent();
   const p = c.pages.find((p) => p.path === "/" + slug.join("/"));
   if (!p) notFound();
+  const palette = /food|inventory|vendor|about/.test(p.path) ? "gold-soft" : /payroll|tip|scheduling|attendance/.test(p.path) ? "gold" : /accounting|bookkeeping|books/.test(p.path) ? "stone" : "paper";
   const list = [
     "articles",
     "guides",
@@ -65,7 +63,7 @@ export default async function ContentPage({ params }: Props) {
     "search",
   ].includes(p.kind);
   return (
-    <main id="main" className={"page page-" + p.kind}>
+    <main id="main" tabIndex={-1} className={"page page-" + p.kind} data-palette={palette}>
       <section className="container page-hero">
         <Breadcrumbs page={p} pages={c.pages} />
         <div className="page-hero-grid">
@@ -73,7 +71,7 @@ export default async function ContentPage({ params }: Props) {
             <p className="eyebrow">
               {p.status ||
                 p.category ||
-                "The work behind service / Ready Margin"}
+                "Restaurant finance / Ready Margin"}
             </p>
             <h1>{p.heading}</h1>
           </div>
@@ -81,7 +79,7 @@ export default async function ContentPage({ params }: Props) {
             <p>{p.description}</p>
             {!["form", "legal", "thanks", "search"].includes(p.kind) && (
               <Link className="text-link" href="/book-a-review" data-cta>
-                {c.settings.cta} ↗
+                {c.settings.cta}
               </Link>
             )}
             {p.kind === "article" && (
@@ -103,7 +101,8 @@ export default async function ContentPage({ params }: Props) {
         </div>
       </section>
       <div className="container page-body">
-        {p.answer && (
+        <ServiceProduct page={p} />
+        {p.answer && p.answer.trim() !== p.description.trim() && (
           <section className="fit-note" aria-labelledby="answer-title">
             <h2 id="answer-title">At a glance</h2>
             <p>{p.answer}</p>
@@ -124,21 +123,13 @@ export default async function ContentPage({ params }: Props) {
                 <Link href={q.path} key={q.path}>
                   <h2>{q.title}</h2>
                   <p>{q.description}</p>
-                  <span className="text-link">Explore the fit ↗</span>
+                  <span className="text-link">Explore the fit</span>
                 </Link>
               ))}
           </div>
         )}
         {p.kind === "rhythm" && <Timeline steps={p.sections} pinned />}
-        {["process", "workstreams", "platform"].includes(p.kind) && (
-          <Workstreams />
-        )}
         {p.kind === "pricing" && <Pricing tiers={c.tiers} />}{" "}
-        {p.kind === "owner-view" && (
-          <div className="owner-stage">
-            <ReviewCard />
-          </div>
-        )}
         {p.kind === "about" && <OperatorImage />}
         {p.kind === "cases" && (
           <CaseCarousel
@@ -160,11 +151,11 @@ export default async function ContentPage({ params }: Props) {
         {p.kind === "diagnostic" && <ClarityCheck />}
         {p.kind === "form" ? (
           <div className="form-layout">
-            <LeadForm settings={c.settings} />
+            <LeadForm settings={c.settings} demo={p.path === "/book-a-review"} />
             <SectionCopy page={p} />
           </div>
         ) : (
-          p.kind !== "rhythm" && (
+          !["rhythm", "pricing"].includes(p.kind) && (
             <div
               className={
                 "body-grid " + (p.kind === "article" ? "article-layout" : "")
@@ -187,7 +178,7 @@ export default async function ContentPage({ params }: Props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {resource.label} ↗
+                  {resource.label}
                 </a>
               ))}
             </div>
@@ -207,7 +198,7 @@ export default async function ContentPage({ params }: Props) {
             className="button"
             href="/resources/review-preparation-checklist"
           >
-            Get the preparation checklist ↗
+            Get the preparation checklist
           </Link>
         )}
         {["capability", "pricing", "process"].includes(p.kind) && (
@@ -226,7 +217,7 @@ export default async function ContentPage({ params }: Props) {
               )
               .map((q) => (
                 <Link href={q.path} key={q.path}>
-                  {q.title} ↗
+                  {q.title}
                 </Link>
               ))}
           </div>
@@ -244,7 +235,7 @@ export default async function ContentPage({ params }: Props) {
           }
         />
       )}
-      <JsonLd data={pageSchemaData(p)} />
+      <JsonLd data={pageSchemaData(p,c.pages)} />
     </main>
   );
 }

@@ -43,7 +43,7 @@
 .desk-story h2 { font-size: clamp(2rem, 3.6vw, 4rem); margin-block: 16px 24px; max-width: 18ch; }
 .desk-story > p:not(.eyebrow) { color: var(--rm-gray); max-width: 45ch; }
 .desk-story .text-link { margin-top: 24px; }
-.desk-work { min-width: 0; border-top: 6px solid var(--rm-ready-gold); background: var(--rm-cream); color: var(--rm-ink); }
+.desk-work { min-width: 0; border-top: 6px solid var(--rm-ready-gold); background: var(--site-bg); color: var(--site-text); }
 .desk-record { padding: clamp(24px, 3vw, 40px); }
 .desk-record strong { display: block; font-size: clamp(1.5rem, 2.5vw, 2.5rem); line-height: 1.15; margin-top: 24px; letter-spacing: -.04em; }
 .desk-record-lines { display: grid; gap: 10px; margin-top: 28px; }

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { isProduction, siteOrigin } from "@/lib/content";
+export const dynamic = "force-static";
 
 const discoveryAgents = [
   "Googlebot",

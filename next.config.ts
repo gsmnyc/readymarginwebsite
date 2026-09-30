@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 const config: NextConfig = {
+  ...(process.env.RM_SITES_EXPORT === "1" ? { output: "export" as const, typescript: { tsconfigPath: "tsconfig.sites.json" } } : {}),
   distDir:
-    process.env.RM_NATIVE_NEXT === "1" || process.env.VERCEL === "1"
+    process.env.RM_SITES_EXPORT === "1" ? ".next-sites" : process.env.RM_NATIVE_NEXT === "1" || process.env.VERCEL === "1"
       ? ".next-vercel"
       : ".next",
   images: { loader: "custom", loaderFile: "./lib/image-loader.ts" },
@@ -15,6 +16,7 @@ const config: NextConfig = {
         permanent: true,
       },
       { source: "/blog", destination: "/insights", permanent: true },
+      { source: "/resources/podcast", destination: "/resources", permanent: true },
       {
         source: "/new-york-restaurant-bookkeeping",
         destination: "/new-york/restaurant-bookkeeping-services",

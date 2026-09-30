@@ -4,6 +4,11 @@ import "./globals.css";
 import "./micro-interactions.css";
 import "./form-responsive.css";
 import "./editorial.css";
+import "./brand-colors.css";
+import "./site-refresh.css";
+import "./motion-polish.css";
+import "./site-refinement.css";
+import { motionVariables } from "@/lib/motion-tokens";
 import { getContent } from "@/lib/content";
 import {
   SiteHeader,
@@ -43,8 +48,9 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const content = await getContent();
   return (
-    <html lang="en" className={jakarta.variable} suppressHydrationWarning>
+    <html lang="en" className={jakarta.variable} style={motionVariables} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var saved=localStorage.getItem('rm-theme');document.documentElement.dataset.theme=saved==='light'||saved==='dark'?saved:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}` }} />
         <script
           dangerouslySetInnerHTML={{
             __html: `try{var n=navigator,d=document.documentElement;var off=new URLSearchParams(location.search).get('motion')==='off'||matchMedia('(prefers-reduced-motion: reduce)').matches||(n.connection&&n.connection.saveData);if(off||sessionStorage.getItem('rm-motion')==='off')d.dataset.motion='off'}catch(e){}`,

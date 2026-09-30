@@ -4,17 +4,19 @@ import { useEffect, useRef, useState } from "react";
 import Link from "@/components/site/link";
 import type { Settings } from "@/lib/content";
 import { track } from "@/lib/analytics";
-import { leadSchema } from "@/lib/forms";
+import { leadSchema, type Lead } from "@/lib/forms";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 
-export function LeadForm({ settings }: { settings: Settings }) {
+export function LeadForm({ settings, demo = false }: { settings: Settings; demo?: boolean }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [state, setState] = useState<"idle" | "sending" | "error" | "success">(
+  const [state, setState] = useState<"idle" | "sending" | "error" | "success" | "email-ready">(
     "idle",
   );
   const [message, setMessage] = useState("");
   const [consent, setConsent] = useState(false);
+  const [emailDraft, setEmailDraft] = useState("");
+  const emailOnly = process.env.NEXT_PUBLIC_ENQUIRY_MODE === "email";
   const started = useRef(false);
   const submitted = useRef(false);
   const sending = useRef(false);
@@ -31,6 +33,12 @@ export function LeadForm({ settings }: { settings: Settings }) {
     if (state === "success")
       requestAnimationFrame(() => success.current?.focus({ preventScroll: true }));
   }, [state]);
+
+  function prepareEmail(details: Lead) {
+    const body = [demo ? "Free demo request" : "Restaurant finance enquiry", "", `Name: ${details.name}`, `Restaurant: ${details.business}`, `Email: ${details.email}`, details.phone && `Phone: ${details.phone}`, details.locations && `Locations: ${details.locations}`, "", demo && "I’d like to book my free demo and discuss a price tailored to my restaurant.", details.concern || "I’d like to discuss finance support for my restaurant."].filter(Boolean).join("\n");
+    setEmailDraft(`mailto:${settings.email}?subject=${encodeURIComponent(`${demo ? "Free demo request" : "Restaurant finance enquiry"} — ${details.business}`)}&body=${encodeURIComponent(body)}`);
+    setState("email-ready");
+  }
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -52,6 +60,7 @@ export function LeadForm({ settings }: { settings: Settings }) {
     }
     setErrors({});
     setMessage("");
+    if (emailOnly) { prepareEmail(parsed.data); return; }
     setState("sending");
     sending.current = true;
     track("form_submit");
@@ -63,6 +72,7 @@ export function LeadForm({ settings }: { settings: Settings }) {
         signal: AbortSignal.timeout(15000),
       });
       const data = (await response.json()) as { message?: string };
+      if (response.status === 503) { prepareEmail(parsed.data); return; }
       if (!response.ok)
         throw new Error(
           data.message ||
@@ -91,13 +101,13 @@ export function LeadForm({ settings }: { settings: Settings }) {
         <span className="eyebrow">Request received</span>
         <h2>Thank you. We have your enquiry.</h2>
         <p>
-          We will contact you to agree the next step and a suitable review time.
+          {demo ? "We’ll contact you to arrange your free demo." : "We’ll contact you to agree the next step and a suitable time."}
         </p>
         <Link className="button" href="/thank-you">
-          Prepare for your review ↗
+          Prepare for your free demo
         </Link>
         <Link className="text-link" href="/insights/weekly-pnl-review">
-          Read the weekly P&amp;L guide ↗
+          Read the weekly P&amp;L guide
         </Link>
       </section>
     );
@@ -128,13 +138,13 @@ export function LeadForm({ settings }: { settings: Settings }) {
       }}
     >
       <div className="form-heading">
-        <p className="eyebrow">Start the conversation</p>
+        <p className="eyebrow">{demo ? "Book your free demo" : "Start the conversation"}</p>
         <h2>
           Tell us a little
           <br />
           about your restaurant.
         </h2>
-        <p>Only your name, business, email and consent are required.</p>
+        <p>{demo ? "Share a few details and we’ll arrange your free demo." : "Only your name, business, email and consent are required."}</p>
       </div>
       <div className="form-grid">
         {settings.formFields.map((field) => (
@@ -220,13 +230,13 @@ export function LeadForm({ settings }: { settings: Settings }) {
         </p>
       )}
       <button disabled={state === "sending"} className="button" type="submit">
-        {state === "sending" ? "Sending your request…" : settings.cta}
-        <span aria-hidden="true">↗</span>
+        {state === "sending" ? "Sending your request…" : state === "email-ready" ? "Update email draft" : emailOnly ? (demo ? "Prepare free demo request" : "Prepare enquiry email") : (demo ? "Request your free demo" : "Send enquiry")}
       </button>
       <p className="caption">
         No commitment to a service package. Please do not include sensitive
         financial or employee information.
       </p>
+      {state === "email-ready" && <div className="email-draft-ready" role="status"><h3>{demo ? "Your free demo request is ready to send." : "Your enquiry is ready to send."}</h3><p>Open the draft in your email app, then send it to {settings.email}. You can adjust the details above before opening it.</p><a className="button" href={emailDraft}>{demo ? "Open demo request email" : "Open enquiry email"}</a><p className="caption">The request is sent when you send the email from your email app.</p></div>}
       {state === "error" && (
         <div className="form-error" role="alert">
           <strong>Your request has not been sent.</strong>

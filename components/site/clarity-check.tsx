@@ -182,7 +182,7 @@ export function ClarityCheck() {
         )}
         <div className="actions">
           <button className="button" type="submit">
-            See what to review ↗
+            See what to review
           </button>
           <button
             type="button"
@@ -231,13 +231,13 @@ export function ClarityCheck() {
               of financial performance.
             </p>
             <Link className="button" href="/book-a-review" data-cta>
-              Book a Restaurant Operations Review ↗
+              Book your free demo
             </Link>
             <Link
               className="text-link"
               href={"/what-we-handle/" + result.capability}
             >
-              Explore the relevant support ↗
+              Explore the relevant support
             </Link>
           </div>
         ) : (

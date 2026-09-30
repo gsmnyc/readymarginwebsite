@@ -10,3 +10,16 @@ next-env.d.ts
 # Local browser QA output
 /test-results/
 /playwright-report/
+
+# Local packaging and generated exports
+/.brand-build/
+/brand-guidelines/
+/deliverables/
+/.sites-runtime/
+/dist/
+/out/
+/.next-sites/
+/release/
+
+# Temporary brand export runtimes
+/.brand-build/

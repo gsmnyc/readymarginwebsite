@@ -162,7 +162,7 @@ export function ArticleGrid({
               </h2>
               <p>{item.description}</p>
               <Link className="text-link" href={item.path}>
-                Read {item.kind === "article" ? "the insight" : "more"} ↗
+                Read {item.kind === "article" ? "the insight" : "more"}
               </Link>
             </article>
           ))}

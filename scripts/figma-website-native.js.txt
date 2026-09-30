@@ -1,0 +1,52 @@
+const page=await figma.getNodeByIdAsync('3:2');await figma.setCurrentPageAsync(page);
+const source=await figma.getNodeByIdAsync('9:372');
+const createdNodeIds=[],mutatedNodeIds=[];
+await Promise.all(['Regular','Medium','SemiBold'].map(style=>figma.loadFontAsync({family:'Plus Jakarta Sans',style})));
+const variables=await figma.variables.getLocalVariablesAsync();
+const colors=Object.fromEntries(variables.filter(v=>v.variableCollectionId==='VariableCollectionId:3:36').map(v=>[v.name,v]));
+const rgb=h=>({r:parseInt(h.slice(1,3),16)/255,g:parseInt(h.slice(3,5),16)/255,b:parseInt(h.slice(5,7),16)/255});
+const byHex={};const DATA=BRAND_DATA;
+DATA.palettes.forEach(f=>f.colors.forEach(c=>byHex[c.hex]=colors[f.id+'/'+c.step]));
+function paint(h){const p={type:'SOLID',color:rgb(h)};return byHex[h]?figma.variables.setBoundVariableForPaint(p,'color',byHex[h]):p;}
+function remember(n){createdNodeIds.push(n.id);return n;}
+function allNodes(n){return [n,...('children'in n?n.findAll(()=>true):[])];}
+function correctFont(t){
+  const segments=t.getStyledTextSegments(['fontName','fontSize','fills','letterSpacing','lineHeight']);
+  const replacement=remember(figma.createText());replacement.fontName={family:'Plus Jakarta Sans',style:'Regular'};replacement.characters=t.characters;replacement.name=t.name;
+  for(const s of segments){const old=s.fontName?.style||'Regular';replacement.setRangeFontName(s.start,s.end,{family:'Plus Jakarta Sans',style:/bold/i.test(old)?'SemiBold':/medium/i.test(old)?'Medium':'Regular'});replacement.setRangeFontSize(s.start,s.end,s.fontSize);replacement.setRangeFills(s.start,s.end,s.fills);replacement.setRangeLetterSpacing(s.start,s.end,s.letterSpacing);replacement.setRangeLineHeight(s.start,s.end,s.lineHeight);}
+  replacement.textAlignHorizontal=t.textAlignHorizontal;replacement.textAlignVertical=t.textAlignVertical;replacement.resize(t.width,t.height);replacement.textAutoResize=t.textAutoResize;replacement.x=t.x;replacement.y=t.y;
+  const parent=t.parent,index=parent.children.indexOf(t);parent.insertChild(index,replacement);replacement.layoutAlign=t.layoutAlign;replacement.layoutGrow=t.layoutGrow;t.remove();return replacement;
+}
+function reconcile(n){for(let child of allNodes(n)){
+  if(child.type==='TEXT')child=correctFont(child);
+  if('fills'in child&&Array.isArray(child.fills))child.fills=child.fills.map(f=>{if(f.type!=='SOLID')return f;const hex='#'+[f.color.r,f.color.g,f.color.b].map(c=>Math.round(c*255).toString(16).padStart(2,'0')).join('').toUpperCase();const target=byHex[hex]||byHex[hex==='#000000'?'#222222':hex];return target?figma.variables.setBoundVariableForPaint(f,'color',target):f;});
+}}
+const master=source.children.find(n=>n.name==='Main Content');
+const main=remember(master.clone());page.appendChild(main);createdNodeIds.push(...main.findAll(()=>true).map(n=>n.id));reconcile(main);main.name='Website / Main content';
+const sidebarSource=source.children.find(n=>n.name==='Sidebar');
+const sidebarClone=remember(sidebarSource.clone());createdNodeIds.push(...sidebarClone.findAll(()=>true).map(n=>n.id));reconcile(sidebarClone);
+const sidebar=remember(figma.createComponentFromNode(sidebarClone));sidebar.name='Ready Margin / Website sidebar';sidebar.description='Website navigation at desktop widths. The production sidebar is fixed; the long layout represents its resting state.';sidebar.x=3500;sidebar.y=760;
+const root=remember(figma.createAutoLayout('HORIZONTAL'));root.name='Website / Desktop — 1280';root.resize(1280,100);root.layoutSizingHorizontal='FIXED';root.layoutSizingVertical='HUG';root.fills=[paint('#F4F1E8')];root.itemSpacing=0;root.clipsContent=false;root.x=5400;root.y=100;
+const sidebarInstance=remember(sidebar.createInstance());root.appendChild(sidebarInstance);root.appendChild(main);main.layoutSizingHorizontal='FIXED';main.layoutSizingVertical='HUG';
+const sectionNames=['Utility header','01 / The brand','02 / Logo use','03 / Color system','04 / Typography','05 / Our voice','06 / In practice','07 / The toolkit','Footer'];
+main.children.forEach((child,i)=>{child.name=sectionNames[i]||child.name;});
+
+const swatches=main.findAll(n=>n.type==='FRAME'&&n.name.startsWith('Button - Copy')&&n.height>100&&n.height<150);
+const specimenSource=swatches[0];const clone=remember(specimenSource.clone());createdNodeIds.push(...clone.findAll(()=>true).map(n=>n.id));const specimen=remember(figma.createComponentFromNode(clone));specimen.name='Ready Margin / Website color specimen';specimen.description='Website palette swatch. HEX, name and tone are editable; the surface is bound to brand color variables.';specimen.x=3500;specimen.y=1580;
+const texts=specimen.findAllWithCriteria({types:['TEXT']});
+const stepNode=texts.find(t=>t.characters==='50'),nameNode=texts.find(t=>t.characters==='Paper'),hexNode=texts.find(t=>t.characters==='#F4F1E8');
+const keys={step:specimen.addComponentProperty('Tone','TEXT','50'),name:specimen.addComponentProperty('Color name','TEXT','Paper'),hex:specimen.addComponentProperty('HEX','TEXT','#F4F1E8')};
+stepNode.componentPropertyReferences={characters:keys.step};nameNode.componentPropertyReferences={characters:keys.name};hexNode.componentPropertyReferences={characters:keys.hex};
+const flat=DATA.palettes.flatMap(f=>f.colors);
+const replacements=[];
+for(const [index,old] of swatches.entries()){
+  const color=flat[index];const parent=old.parent;const childIndex=parent.children.indexOf(old);const instance=remember(specimen.createInstance());instance.setProperties({[keys.step]:color.step,[keys.name]:color.name,[keys.hex]:color.hex});parent.insertChild(childIndex,instance);instance.resize(old.width,old.height);instance.name=`Color / ${color.name}`;
+  const surface=instance.children[0];surface.fills=[paint(color.hex)];const light=index%6>=4?'#F4F1E8':'#222222';for(const t of surface.findAllWithCriteria({types:['TEXT']}))t.fills=[paint(light)];replacements.push({removed:old.id,instance:instance.id,hex:color.hex});old.remove();
+}
+const logoMasters={Primary:await figma.getNodeByIdAsync('3:90'),Reverse:await figma.getNodeByIdAsync('3:111')};
+const logoNodes=[...main.findAll(n=>'fills'in n&&Array.isArray(n.fills)&&n.fills.some(f=>f.type==='IMAGE')),...sidebar.findAll(n=>'fills'in n&&Array.isArray(n.fills)&&n.fills.some(f=>f.type==='IMAGE'))];
+for(const old of logoNodes){let reversed=false;for(let a=old.parent;a&&a!==root;a=a.parent){if('fills'in a&&Array.isArray(a.fills)&&a.fills.some(f=>f.type==='SOLID'&&Math.abs(f.color.r-32/255)<.005&&Math.abs(f.color.g-61/255)<.005))reversed=true;}const parent=old.parent,index=parent.children.indexOf(old),i=remember(logoMasters[reversed?'Reverse':'Primary'].createInstance());i.rescale(old.width/433);parent.insertChild(index,i);i.name='Ready Margin / '+(reversed?'Reverse':'Primary');old.remove();}
+const typography=main.findAllWithCriteria({types:['TEXT']});
+const overflow=main.findAll(n=>n.type==='TEXT'&&n.width===0).map(n=>n.id);
+await main.children[1].screenshot({scale:.85});
+return {createdNodeIds,mutatedNodeIds,rootId:root.id,mainId:main.id,sidebarId:sidebar.id,overviewId:main.children[1].id,swatchComponentId:specimen.id,replacements,editableTextCount:typography.length,instanceCount:root.findAllWithCriteria({types:['INSTANCE']}).length,remainingRasterImages:root.findAll(n=>'fills'in n&&Array.isArray(n.fills)&&n.fills.some(f=>f.type==='IMAGE')).length,zeroWidthText:overflow,width:root.width,height:root.height};

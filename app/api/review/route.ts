@@ -84,7 +84,7 @@ export async function POST(request: Request) {
           locations: parsed.data.locations || "Not provided",
           revenue: "Not collected by this form",
           setup: parsed.data.systems || "Not provided",
-          trigger: [parsed.data.concern, parsed.data.timing].filter(Boolean).join("\n") || "Restaurant Operations Review enquiry",
+          trigger: [parsed.data.concern, parsed.data.timing].filter(Boolean).join("\n") || "Restaurant finance enquiry",
           needs: [],
           marketingOptIn: false,
           meetingRequested: false,

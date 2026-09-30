@@ -1,19 +1,19 @@
 // Homepage copy. Detailed scope and search content remain in the JSON page collections.
 export const home = {
   eyebrow: "Restaurant finance, run for you",
-  headline: ["Back to the", "good part."],
-  introduction: "Ready Margin is a managed restaurant finance and back-office partner. We handle agreed accounting, bookkeeping, payroll, tips, reporting, tax and compliance workflows, cost control and financial follow-up — then help you understand what the numbers mean.",
+  headline: ["Your restaurant.", "Your finance team."],
+  introduction: "Books, payroll, bills and the decisions between them. We handle your restaurant’s finance work, so you can spend less of the week chasing it.",
   services: [
-    { title: "People & shifts", description: "The hours, corrections and approvals behind dependable restaurant payroll, tips and labor reporting.", links: [
+    { title: "People & payroll", shot: "schedule", description: "Keep hours, tips and corrections together, with a clear route to the person who approves payroll.", links: [
       { label: "Restaurant payroll & tips", href: "/restaurant-payroll-services" },
       { label: "Labor cost & scheduling workflows", href: "/restaurant-labor-cost-management" },
     ] },
-    { title: "Books & cash", description: "Restaurant accounting, bookkeeping, supplier bills, reconciliations and close work that make the financial picture useful.", links: [
+    { title: "Books & bills", shot: "reconciliation", description: "Bring sales, bank activity and supplier invoices into a close that explains the month and what remains open.", links: [
       { label: "Restaurant accounting & bookkeeping", href: "/restaurant-accounting-services" },
       { label: "Payables & vendor bills", href: "/restaurant-accounts-payable-services" },
       { label: "Tax & compliance support", href: "/restaurant-tax-services" },
     ] },
-    { title: "Decisions & progress", description: "Financial reporting, food cost, cash flow and CFO-level guidance connected to what happens on the floor.", links: [
+    { title: "Costs & decisions", shot: "cash", description: "Understand the change in cash or margin, then use the records and operating context to decide what to check next.", links: [
       { label: "Food cost & inventory", href: "/restaurant-food-cost-management" },
       { label: "Financial reporting, cash flow & CFO guidance", href: "/restaurant-cfo-services" },
       { label: "Restaurant turnaround consulting", href: "/restaurant-turnaround-consulting" },

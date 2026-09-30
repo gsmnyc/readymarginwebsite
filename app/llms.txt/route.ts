@@ -1,6 +1,7 @@
 import { getContent, isProduction, siteOrigin } from "@/lib/content";
 
 export const revalidate = 3600;
+export const dynamic = "force-static";
 
 export async function GET() {
   const { pages, settings } = await getContent();

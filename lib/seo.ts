@@ -32,9 +32,11 @@ export function metadataFor(
   };
 }
 
-export function pageSchemaData(p: Page) {
+export function pageSchemaData(p: Page, pages: Page[] = []) {
   const origin = siteOrigin();
-  const crumbs = p.path.split("/").filter(Boolean);
+  const parts = p.path.split("/").filter(Boolean);
+  const crumbs = parts.map((name,index) => ({ name, path: "/" + parts.slice(0,index + 1).join("/") }))
+    .filter(crumb => crumb.path === p.path || pages.some(page => page.path === crumb.path));
   const isNewYorkPage = p.path === "/new-york" || p.path.startsWith("/new-york/");
   const isServicePage = p.kind === "capability" || p.kind === "service" || p.kind === "service-hub" || isNewYorkPage;
   const organization = {
@@ -49,11 +51,11 @@ export function pageSchemaData(p: Page) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: origin },
-      ...crumbs.map((name, index) => ({
+      ...crumbs.map((crumb, index) => ({
         "@type": "ListItem",
         position: index + 2,
-        name: index === crumbs.length - 1 ? p.title : name.replaceAll("-", " "),
-        item: origin + "/" + crumbs.slice(0, index + 1).join("/"),
+        name: crumb.path === p.path ? p.title : pages.find(page => page.path === crumb.path)?.title || crumb.name.replaceAll("-", " "),
+        item: origin + crumb.path,
       })),
     ],
   }];
@@ -85,10 +87,7 @@ export function pageSchemaData(p: Page) {
       name: p.title,
       description: p.description,
       url: origin + p.path,
-      about: [
-        { "@id": serviceId },
-        ...p.queries.map((name) => ({ "@type": "Thing", name })),
-      ],
+      about: { "@id": serviceId },
       mainEntity: { "@id": serviceId },
       isPartOf: { "@id": origin + "/#website" },
     });
@@ -118,7 +117,7 @@ export function pageSchemaData(p: Page) {
       name: p.title,
       description: p.description,
       url: origin + p.path,
-      about: p.queries.map((name) => ({ "@type": "Thing", name })),
+      about: { "@type": "Thing", name: p.title },
       mainEntity: {
         "@type": "Question",
         name: p.title,

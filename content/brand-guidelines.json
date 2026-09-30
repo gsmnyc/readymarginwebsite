@@ -1,0 +1,350 @@
+{
+  "brand": "Ready Margin",
+  "version": "1.1",
+  "date": "September 2026",
+  "positioning": "Restaurant finance and operations support, from daily sales reconciliation to the monthly close.",
+  "promise": "You focus on the restaurant. We handle the work behind it.",
+  "palettes": [
+    {
+      "id": "neutral",
+      "name": "Paper, stone & ink",
+      "role": "Core neutrals and their mixes for surfaces, type and borders.",
+      "colors": [
+        {
+          "step": "50",
+          "name": "Paper",
+          "hex": "#F4F1E8"
+        },
+        {
+          "step": "100",
+          "name": "Paper shade",
+          "hex": "#E9E7DE"
+        },
+        {
+          "step": "200",
+          "name": "Stone",
+          "hex": "#D5D5CC"
+        },
+        {
+          "step": "400",
+          "name": "Stone shade",
+          "hex": "#969691"
+        },
+        {
+          "step": "600",
+          "name": "Muted ink",
+          "hex": "#585855"
+        },
+        {
+          "step": "900",
+          "name": "Ink",
+          "hex": "#222222"
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Ready gold",
+      "role": "Only gold-to-paper tints and gold-to-ink shades extend the signature color.",
+      "colors": [
+        {
+          "step": "50",
+          "name": "Soft gold",
+          "hex": "#F2EBD5"
+        },
+        {
+          "step": "100",
+          "name": "Light gold",
+          "hex": "#F1E5C1"
+        },
+        {
+          "step": "200",
+          "name": "Mid gold",
+          "hex": "#EED99A"
+        },
+        {
+          "step": "400",
+          "name": "Ready gold",
+          "hex": "#E7C14B"
+        },
+        {
+          "step": "600",
+          "name": "Deep gold",
+          "hex": "#AC913F"
+        },
+        {
+          "step": "900",
+          "name": "Gold ink",
+          "hex": "#716232"
+        }
+      ]
+    }
+  ],
+  "semantic": [
+    {
+      "id": "positive",
+      "name": "Complete",
+      "hex": "#222222",
+      "background": "#E9E7DE",
+      "use": "Use a check icon and an explicit complete label."
+    },
+    {
+      "id": "attention",
+      "name": "Needs review",
+      "hex": "#716232",
+      "background": "#F1E5C1",
+      "use": "Use a review icon and a next-step label."
+    },
+    {
+      "id": "risk",
+      "name": "Issue to resolve",
+      "hex": "#222222",
+      "background": "#EED99A",
+      "use": "Use an issue icon and a specific explanation. Color alone never signals status."
+    }
+  ],
+  "compositions": [
+    {
+      "id": "signature",
+      "name": "Paper & gold",
+      "note": "Paper, ink and gold are the primary identity.",
+      "background": "#F4F1E8",
+      "foreground": "#222222",
+      "accent": "#E7C14B",
+      "colors": [
+        "#222222",
+        "#F4F1E8",
+        "#E7C14B",
+        "#D5D5CC"
+      ]
+    },
+    {
+      "id": "ink",
+      "name": "Ink & gold",
+      "note": "Reverse panels use ink, paper and gold.",
+      "background": "#222222",
+      "foreground": "#F4F1E8",
+      "accent": "#E7C14B",
+      "colors": [
+        "#222222",
+        "#F4F1E8",
+        "#E7C14B"
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold & ink",
+      "note": "Use ink text on gold and its lighter tints.",
+      "background": "#F1E5C1",
+      "foreground": "#222222",
+      "accent": "#716232",
+      "colors": [
+        "#F1E5C1",
+        "#222222",
+        "#E7C14B"
+      ]
+    },
+    {
+      "id": "stone",
+      "name": "Stone & paper",
+      "note": "Neutral panels use only mixes of the core paper, stone and ink.",
+      "background": "#E9E7DE",
+      "foreground": "#222222",
+      "accent": "#716232",
+      "colors": [
+        "#E9E7DE",
+        "#D5D5CC",
+        "#222222",
+        "#E7C14B"
+      ]
+    }
+  ],
+  "typeScale": [
+    {
+      "role": "Display",
+      "size": 80,
+      "line": 88,
+      "weight": 600,
+      "tracking": -4,
+      "use": "Short campaign headlines; 2–3 lines."
+    },
+    {
+      "role": "Heading 1",
+      "size": 56,
+      "line": 62,
+      "weight": 600,
+      "tracking": -2.24,
+      "use": "Page titles and opening statements."
+    },
+    {
+      "role": "Heading 2",
+      "size": 40,
+      "line": 46,
+      "weight": 600,
+      "tracking": -1.2,
+      "use": "Section headings and key messages."
+    },
+    {
+      "role": "Heading 3",
+      "size": 24,
+      "line": 31,
+      "weight": 600,
+      "tracking": -0.48,
+      "use": "Subsections and card titles."
+    },
+    {
+      "role": "Body",
+      "size": 16,
+      "line": 26,
+      "weight": 400,
+      "tracking": 0,
+      "use": "Paragraphs, interface copy and guidance."
+    },
+    {
+      "role": "Caption",
+      "size": 12,
+      "line": 18,
+      "weight": 500,
+      "tracking": 0.12,
+      "use": "Supporting notes and metadata."
+    }
+  ],
+  "voice": [
+    {
+      "title": "Name the record",
+      "description": "Say which invoice, settlement or time record needs attention. Include the amount or date that identifies it.",
+      "before": "There are outstanding items on your account.",
+      "after": "Two supplier invoices from 29 September need your approval."
+    },
+    {
+      "title": "Give the next step",
+      "description": "Tell the owner what to do, where to do it and when the work is due.",
+      "before": "Please review this when you get a chance.",
+      "after": "Approve the two invoices in your workspace by Friday, 2 October."
+    },
+    {
+      "title": "Keep the scope clear",
+      "description": "Distinguish prepared work from approved work. Keep the owner’s decision separate from the finance task.",
+      "before": "Payroll is sorted.",
+      "after": "Payroll is prepared. The manager needs to approve the amended hours before submission."
+    }
+  ],
+  "identity": [
+    {
+      "id": "ready-margin",
+      "name": "Primary logo",
+      "use": "Website headers, client letters, invoices and email sign-offs. Minimum width: 140 px / 35 mm.",
+      "width": 433,
+      "height": 70
+    },
+    {
+      "id": "ready-margin-stacked",
+      "name": "Stacked logo",
+      "use": "Square covers and narrow placements where the horizontal logo will not fit. Minimum width: 110 px / 28 mm.",
+      "width": 320,
+      "height": 306
+    },
+    {
+      "id": "ready-margin-wordmark",
+      "name": "Wordmark",
+      "use": "Small document footers and text-led placements where the full logo already appears nearby. Minimum width: 110 px / 28 mm.",
+      "width": 351,
+      "height": 61
+    },
+    {
+      "id": "ready-margin-logomark",
+      "name": "Logomark",
+      "use": "Workspace navigation, app icons, favicons and the back of a business card. Minimum width: 24 px / 6 mm.",
+      "width": 144,
+      "height": 144
+    },
+    {
+      "id": "ready-margin-badge",
+      "name": "Badge",
+      "use": "Notebook labels, folder seals and square profile artwork. Keep the badge as a single supplied asset. Minimum width: 120 px / 30 mm.",
+      "width": 320,
+      "height": 320
+    },
+    {
+      "id": "ready-margin-badge-xl",
+      "name": "Badge XL",
+      "use": "Review folders, larger notebook covers and presentation cover panels. Includes the service descriptor. Minimum width: 240 px / 60 mm.",
+      "width": 800,
+      "height": 520
+    }
+  ],
+  "applications": [
+    {
+      "id": "dashboard",
+      "title": "Restaurant workspace",
+      "category": "Digital",
+      "description": "A product application for sales, prime cost, reconciliation and the owner’s approval queue.",
+      "template": "dashboard",
+      "format": "1280 px / responsive HTML",
+      "usage": "Use paper for the work area, ink for navigation and gold for key figures. Show a text status beside every colored indicator. Sample records are included in the prototype."
+    },
+    {
+      "id": "business-cards",
+      "title": "Business cards",
+      "category": "Print",
+      "description": "Contact cards for restaurant visits. The front carries the full logo; the back can carry the logomark.",
+      "template": "business-card",
+      "format": "85 × 55 mm",
+      "usage": "Scale the supplied artwork to 85 × 55 mm. Add a 3 mm bleed for print and keep contact details at least 4 mm from the trim."
+    },
+    {
+      "id": "letterhead",
+      "title": "Letters & correspondence",
+      "category": "Print",
+      "description": "An A4 letterhead for review summaries, agreed next steps and formal client correspondence.",
+      "template": "letterhead",
+      "format": "A4 / 210 × 297 mm",
+      "usage": "Keep the logo at the top left and the contact details at the top right. Use the subject line to identify the month and the task."
+    },
+    {
+      "id": "invoice",
+      "title": "Client invoices",
+      "category": "Print",
+      "description": "A service invoice with clear dates, line items, payment terms and an easy-to-find total.",
+      "template": "invoice",
+      "format": "A4 / 210 × 297 mm",
+      "usage": "Replace the sample client, invoice number, service lines and payment terms. Use the gold panel for the total only; keep tax and payment details explicit."
+    },
+    {
+      "id": "client-email",
+      "title": "Client emails",
+      "category": "Digital",
+      "description": "A monthly-close update and email signature, with the requested action and deadline above the sign-off.",
+      "template": "client-email",
+      "format": "600 px email / HTML & EML",
+      "usage": "Lead with the task, name the records and give one deadline. The EML file embeds the logo as an attachment; edit the recipient and message before sending."
+    },
+    {
+      "id": "monthly-review",
+      "title": "Monthly review packs",
+      "category": "Print",
+      "description": "A printed cover for the sales reconciliation, cost review and decisions discussed with the owner.",
+      "template": "monthly-review",
+      "format": "A4 / 210 × 297 mm",
+      "usage": "Put the restaurant and reporting month on the cover. Keep sample figures out of live reports; replace them with the approved client records."
+    },
+    {
+      "id": "review-notebook",
+      "title": "Restaurant review notebooks",
+      "category": "Print",
+      "description": "A working notebook for site visits, supplier questions, payroll approvals and the next review.",
+      "template": "review-notebook",
+      "format": "A5 cover / scale artwork",
+      "usage": "Use Badge XL on the cover and keep the working title separate. The notebook belongs to the operations team; it is not restaurant guest-facing merchandise."
+    },
+    {
+      "id": "review-folder",
+      "title": "Client review folders",
+      "category": "Print",
+      "description": "Document folders for the close letter, invoice and monthly review. The square badge identifies the pack; the stacked logo fits narrow cover panels.",
+      "template": "review-folder",
+      "format": "A4 presentation folder",
+      "usage": "Use the supplied badge as a single label. Keep the restaurant name and reporting period outside the badge. Set the folder dieline and bleed with the print supplier."
+    }
+  ]
+}
