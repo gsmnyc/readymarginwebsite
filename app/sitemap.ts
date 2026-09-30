@@ -7,7 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     { url: siteOrigin(), changeFrequency: "monthly", priority: 1 },
     ...c.pages
-      .filter((p) => p.published && p.indexable)
+      .filter((p) => p.published && p.indexable && (!p.canonicalPath || p.canonicalPath === p.path))
       .map((p) => ({
         url: siteOrigin() + p.path,
         lastModified: p.updated,

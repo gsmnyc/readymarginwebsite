@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { metadataFor } from "@/lib/seo";
 import { BrandGuide } from "./guide";
 
-export const metadata: Metadata = {
+export const generateMetadata = () => metadataFor({
   title: "Brand Guidelines",
-  description: "The Ready Margin brand system. Logo use, expanded color palettes, typography, voice and practical applications.",
-  alternates: { canonical: "https://readymargin.com/brand-guidelines" },
-};
+  description: "Ready Margin’s logo, color, typography and writing guidelines, with examples and downloadable brand assets.",
+  path: "/brand-guidelines", kind: "brand", indexable: false,
+});
 
 export default function BrandGuidelinesPage() {
   return <BrandGuide />;

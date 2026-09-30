@@ -3,7 +3,7 @@ import type { Page } from "./content";
 import { siteOrigin, isProduction } from "./content";
 
 export function metadataFor(
-  p: Pick<Page, "title" | "description" | "path" | "indexable"> & { kind: string; seoTitle?: string },
+  p: Pick<Page, "title" | "description" | "path" | "indexable"> & { kind: string; seoTitle?: string; canonicalPath?: string },
 ): Metadata {
   const url = siteOrigin() + p.path;
   const searchTitle = p.seoTitle || p.title;
@@ -12,8 +12,8 @@ export function metadataFor(
   return {
     title: { absolute: title },
     description: p.description,
-    alternates: { canonical: url },
-    robots: { index: isProduction() && p.indexable, follow: true },
+    alternates: { canonical: siteOrigin() + (p.canonicalPath || p.path) },
+    robots: { index: isProduction() && p.indexable, follow: true, googleBot: { index: isProduction() && p.indexable, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
     openGraph: {
       title,
       description: p.description,
@@ -47,6 +47,7 @@ export function pageSchemaData(p: Page, pages: Page[] = []) {
     legalName: "Ready Margin Inc",
     url: origin,
   };
+  const url = origin + p.path;
   const base: Record<string, unknown>[] = [{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -62,7 +63,7 @@ export function pageSchemaData(p: Page, pages: Page[] = []) {
   }];
 
   if (isServicePage) {
-    const serviceId = origin + p.path + "/#service";
+    const serviceId = url + "#service";
     base.push({
       "@context": "https://schema.org",
       "@type": "Service",
@@ -81,54 +82,56 @@ export function pageSchemaData(p: Page, pages: Page[] = []) {
       audience: { "@type": "BusinessAudience", audienceType: "Restaurant owners and operators" },
       category: "Managed restaurant financial operations",
     });
-    base.push({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": origin + p.path + "/#webpage",
-      name: p.title,
-      description: p.description,
-      url: origin + p.path,
-      about: { "@id": serviceId },
-      mainEntity: { "@id": serviceId },
-      isPartOf: { "@id": origin + "/#website" },
-    });
   }
+
+  base.push({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": url + "#webpage",
+    name: p.title,
+    description: p.description,
+    url,
+    inLanguage: "en-US",
+    dateModified: p.updated,
+    isPartOf: { "@id": origin + "/#website" },
+    publisher: organization,
+    ...(isServicePage ? { mainEntity: { "@id": url + "#service" } } : {}),
+    ...(p.kind === "article" ? { mainEntity: { "@id": url + "#article" } } : {}),
+    ...(p.kind === "answer" && p.answer ? {
+      mainEntity: { "@type": "Question", name: p.heading, acceptedAnswer: { "@type": "Answer", text: p.answer, url, author: organization } },
+    } : {}),
+  });
 
   if (p.kind === "article") {
     base.push({
       "@context": "https://schema.org",
       "@type": "Article",
-      "@id": origin + p.path + "/#article",
+      "@id": url + "#article",
       headline: p.heading,
       description: p.description,
       datePublished: p.publishedAt || p.updated,
       dateModified: p.updated,
-      author: { ...organization, name: p.author || "Ready Margin editorial" },
+      author: organization,
       publisher: organization,
-      mainEntityOfPage: origin + p.path,
-      about: p.keyword ? p.keyword.split(", ").map((name) => ({ "@type": "Thing", name })) : undefined,
+      mainEntityOfPage: { "@id": url + "#webpage" },
+      image: origin + "/social/insights.jpg",
+      ...(p.takeaway ? { abstract: p.takeaway } : {}),
     });
   }
 
-  if (p.kind === "answer") {
+  if (p.faqs.length > 0) {
     base.push({
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": origin + p.path + "/#webpage",
-      name: p.title,
-      description: p.description,
-      url: origin + p.path,
-      about: { "@type": "Thing", name: p.title },
-      mainEntity: {
+      "@type": "FAQPage",
+      "@id": url + "#faq",
+      mainEntity: p.faqs.map(faq => ({
         "@type": "Question",
-        name: p.title,
+        name: faq.question,
         acceptedAnswer: {
           "@type": "Answer",
-          text: p.answer,
-          url: origin + p.path,
-          author: organization,
+          text: faq.answer,
         },
-      },
+      })),
     });
   }
 

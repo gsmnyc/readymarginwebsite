@@ -68,11 +68,6 @@ export default async function ContentPage({ params }: Props) {
         <Breadcrumbs page={p} pages={c.pages} />
         <div className="page-hero-grid">
           <div>
-            <p className="eyebrow">
-              {p.status ||
-                p.category ||
-                "Restaurant finance / Ready Margin"}
-            </p>
             <h1>{p.heading}</h1>
           </div>
           <div className="page-intro">
@@ -93,8 +88,6 @@ export default async function ContentPage({ params }: Props) {
                     Updated {p.updated}
                   </>
                 )}
-                <br />
-                General operating guidance
               </p>
             )}
           </div>
@@ -102,9 +95,9 @@ export default async function ContentPage({ params }: Props) {
       </section>
       <div className="container page-body">
         <ServiceProduct page={p} />
-        {p.answer && p.answer.trim() !== p.description.trim() && (
+        {p.kind !== "article" && p.answer && p.answer.trim() !== p.description.trim() && (
           <section className="fit-note" aria-labelledby="answer-title">
-            <h2 id="answer-title">At a glance</h2>
+            <h2 id="answer-title">{p.kind === "answer" ? "Short answer" : "Service overview"}</h2>
             <p>{p.answer}</p>
           </section>
         )}
@@ -112,6 +105,12 @@ export default async function ContentPage({ params }: Props) {
           <section className="fit-note" aria-labelledby="disclosure-title">
             <h2 id="disclosure-title">About this guide</h2>
             <p>{p.disclosure}</p>
+          </section>
+        )}
+        {p.kind === "article" && p.takeaway && (
+          <section className="fit-note" aria-labelledby="summary-title">
+            <h2 id="summary-title">Summary</h2>
+            <p>{p.takeaway}</p>
           </section>
         )}
         {["capability-index", "service-hub"].includes(p.kind) && (
@@ -206,10 +205,10 @@ export default async function ContentPage({ params }: Props) {
             Get the preparation checklist
           </Link>
         )}
-        {["capability", "pricing", "process"].includes(p.kind) && (
+        {(p.faqs.length > 0 || ["pricing", "process"].includes(p.kind)) && (
           <section className="section faq-section">
-            <h2>Before you decide.</h2>
-            <Faq items={c.faqs.slice(0, 3)} />
+            <h2>Questions about {p.kind === "service" ? "this service" : "the work"}</h2>
+            <Faq items={p.faqs.length ? p.faqs : c.faqs.slice(0, 3)} />
           </section>
         )}
         {p.kind === "resources" && (
@@ -235,7 +234,7 @@ export default async function ContentPage({ params }: Props) {
           settings={c.settings}
           heading={
             p.kind === "capability"
-              ? "Let’s talk about your restaurant."
+              ? "Discuss the support your restaurant needs."
               : undefined
           }
         />
