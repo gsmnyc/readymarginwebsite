@@ -19,6 +19,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+const checklistPaths = new Set([
+  "/insights/restaurant-month-end-close-checklist", "/insights/payroll-cutoff-checklist",
+  "/insights/supplier-bill-review", "/insights/attendance-before-payroll",
+  "/insights/restaurant-compliance-handoffs", "/insights/review-preparation-checklist",
+]);
+
 function Choice({
   id,
   label,
@@ -78,9 +84,8 @@ export function ArticleGrid({
       (item.title + " " + item.description + " " + item.keyword)
         .toLowerCase()
         .includes(query.toLowerCase()) &&
-      (kind !== "checklists" ||
-        /checklist|payroll|preparation/.test(item.path)) &&
-      (kind !== "guides" || !/checklist/.test(item.path)),
+      (kind !== "checklists" || checklistPaths.has(item.path)) &&
+      (kind !== "guides" || !checklistPaths.has(item.path)),
   );
   const total = Math.max(1, Math.ceil(filtered.length / 6));
 
@@ -162,7 +167,7 @@ export function ArticleGrid({
               </h2>
               <p>{item.description}</p>
               <Link className="text-link" href={item.path}>
-                Read {item.kind === "article" ? "the insight" : "more"} ↗
+                {item.kind === "article" ? "Read the guide" : "View the page"}
               </Link>
             </article>
           ))}
@@ -191,7 +196,7 @@ export function ArticleGrid({
       )}
       {!all && (
         <details className="article-directory">
-          <summary>Browse all operator insights</summary>
+          <summary>Browse all restaurant finance articles</summary>
           <nav aria-label="All operator insights">
             {pool.map((item) => (
               <Link key={item.path} href={item.path}>

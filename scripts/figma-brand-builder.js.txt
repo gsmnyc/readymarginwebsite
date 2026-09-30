@@ -1,0 +1,58 @@
+const { data, boards, logos } = INPUT;
+function hydrate(n){if(n.svg)n.svg=logos[n.svg];if(n.children)n.children.forEach(hydrate);}
+boards.forEach(b=>b.nodes.forEach(hydrate));
+const createdNodeIds = [];
+const remember = node => { createdNodeIds.push(node.id); return node; };
+const existing = figma.root.children.find(p => p.name === 'Ready Margin / Studio Guidelines');
+if (existing) return { alreadyExists: true, pageId: existing.id, message: 'Use the existing brand guidelines page. No duplicates created.' };
+await Promise.all(['Regular','Medium','SemiBold'].map(style => figma.loadFontAsync({family:'Plus Jakarta Sans',style})));
+const page = remember(figma.createPage());
+page.name = 'Ready Margin / Studio Guidelines';
+await figma.setCurrentPageAsync(page);
+
+HELPER_COLLECTION
+HELPER_TOKENS
+
+const {collection: primitives,modeIds: primitiveModes} = await createVariableCollection('Ready Margin / Primitives',['Value']);
+const colorDefinitions = data.palettes.flatMap(f => f.colors.map(c => ({name:`color/${f.id}/${c.step}`,type:'COLOR',values:{Value:c.hex},scopes:[],codeSyntax:{WEB:`var(--rm-${f.id}-${c.step})`}})));
+for(const status of data.semantic.filter(s=>s.id!=='attention')) colorDefinitions.push({name:`color/status/${status.id}`,type:'COLOR',values:{Value:status.hex},scopes:[],codeSyntax:{WEB:`var(--rm-${status.id})`}});
+const {variables: primitiveVars} = await createSemanticTokens(primitives,primitiveModes,colorDefinitions);
+const {collection: semantic,modeIds: semanticModes} = await createVariableCollection('Ready Margin / Color',['Brand']);
+const semanticDefs = colorDefinitions.map(d=>({name:d.name.replace('color/',''),type:'COLOR',values:{Brand:{type:'VARIABLE_ALIAS',id:primitiveVars[d.name].id}},scopes:['FRAME_FILL','SHAPE_FILL','TEXT_FILL','STROKE_COLOR'],codeSyntax:d.codeSyntax}));
+for(const [name,primitive] of Object.entries({surface:'neutral/50',text:'neutral/900',muted:'neutral/600',border:'neutral/200',accent:'gold/400',attention:'gold/900'})) semanticDefs.push({name:`role/${name}`,type:'COLOR',values:{Brand:{type:'VARIABLE_ALIAS',id:primitiveVars[`color/${primitive}`].id}},scopes:name==='text'||name==='muted'?['TEXT_FILL']:name==='border'?['STROKE_COLOR']:['FRAME_FILL','SHAPE_FILL','TEXT_FILL'],codeSyntax:{WEB:`var(--rm-${name})`}});
+const {variables: colorVars} = await createSemanticTokens(semantic,semanticModes,semanticDefs);
+const hexMap = {};
+data.palettes.forEach(f=>f.colors.forEach(c=>hexMap[c.hex]=colorVars[`${f.id}/${c.step}`]));
+data.semantic.filter(s=>s.id!=='attention').forEach(s=>hexMap[s.hex]=colorVars[`status/${s.id}`]);
+const {collection: spacing,modeIds: spacingModes} = await createVariableCollection('Ready Margin / Spacing',['Value']);
+const {variables: spaceVars} = await createSemanticTokens(spacing,spacingModes,[4,8,16,24,32,48,64,96].map(n=>({name:`space/${n}`,type:'FLOAT',values:{Value:n},scopes:['GAP'],codeSyntax:{WEB:`var(--rm-space-${n})`}})));
+const styles = {};
+for(const spec of data.typeScale){const style=figma.createTextStyle();style.name=`Ready Margin / ${spec.role}`;style.fontName={family:'Plus Jakarta Sans',style:spec.weight===600?'SemiBold':spec.weight===500?'Medium':'Regular'};style.fontSize=spec.size;style.lineHeight={unit:'PIXELS',value:spec.line};style.letterSpacing={unit:'PIXELS',value:spec.tracking};styles[spec.role]=style;}
+function fill(hex){const base={type:'SOLID',color:hexToFigmaColor(hex)};delete base.color.a;return hexMap[hex]?figma.variables.setBoundVariableForPaint(base,'color',hexMap[hex]):base;}
+function textNode(spec){const t=remember(figma.createText());t.fontName={family:'Plus Jakarta Sans',style:spec.weight===600?'SemiBold':spec.weight===500?'Medium':'Regular'};t.characters=spec.text;t.fontSize=spec.size;t.lineHeight={unit:'PIXELS',value:spec.line};t.letterSpacing={unit:'PIXELS',value:spec.size>=35?-spec.size*.04:0};t.fills=[fill(spec.color)];t.resize(spec.w,Math.max(spec.line,1));t.textAutoResize='HEIGHT';t.name=spec.text.split('\n')[0].slice(0,80);const match=data.typeScale.find(s=>s.size===spec.size&&s.weight===spec.weight&&s.line===spec.line);if(match)t.textStyleId=styles[match.role].id;return t;}
+function bindSpacing(node,field,value){if(spaceVars[`space/${value}`])node.setBoundVariable(field,spaceVars[`space/${value}`]);else node[field]=value;}
+function container(spec){const f=remember(figma.createAutoLayout(spec.direction==='horizontal'?'HORIZONTAL':'VERTICAL'));f.name=spec.name||'Group';f.resize(spec.w,10);f.layoutSizingHorizontal='FIXED';f.layoutSizingVertical='HUG';f.counterAxisAlignItems='MIN';f.fills=spec.color?[fill(spec.color)]:[];f.clipsContent=false;bindSpacing(f,'itemSpacing',spec.gap||0);['paddingTop','paddingBottom','paddingLeft','paddingRight'].forEach(k=>bindSpacing(f,k,spec.padding||0));return f;}
+
+// Construction masters sit outside the final review artboards.
+const logoMasters={};
+for(const [variant,svg] of Object.entries({Primary:logos.primary,Reverse:logos.reverse,OneColor:logos.primary.replaceAll('#E7C14B','#222222')})){
+  const c=remember(figma.createComponent());c.name=`Ready Margin / Logo / ${variant}`;c.resize(433,70);c.fills=[];c.description='Use at a minimum 140 px wide with clear space of half the logo height. Preserve the original artwork.';const art=remember(figma.createNodeFromSvg(svg));c.appendChild(art);art.resize(433,70);art.x=0;art.y=0;c.x=3500;c.y=100+Object.keys(logoMasters).length*125;logoMasters[variant]=c;
+}
+const swatch=remember(figma.createComponent());swatch.name='Ready Margin / Color specimen';swatch.layoutMode='VERTICAL';swatch.resize(158,100);swatch.primaryAxisSizingMode='AUTO';swatch.counterAxisSizingMode='FIXED';swatch.itemSpacing=5;swatch.fills=[];swatch.description='Reusable palette specimen. Override the bound surface color and text labels; preserve HEX values.';swatch.x=3500;swatch.y=525;
+const swatchRect=remember(figma.createRectangle());swatchRect.name='Color surface';swatchRect.resize(158,55);swatchRect.fills=[fill('#E7C14B')];swatch.appendChild(swatchRect);
+const label=textNode({text:'400 / Ready gold',size:11,color:'#222222',w:158,weight:500,line:15});const hex=textNode({text:'#E7C14B',size:12,color:'#596058',w:158,weight:400,line:17});swatch.appendChild(label);swatch.appendChild(hex);const labelKey=swatch.addComponentProperty('Color name','TEXT','400 / Ready gold');label.componentPropertyReferences={characters:labelKey};const hexKey=swatch.addComponentProperty('HEX','TEXT','#E7C14B');hex.componentPropertyReferences={characters:hexKey};
+
+function native(spec){
+  if(spec.type==='text')return textNode(spec);
+  if(spec.type==='rect'){const r=remember(figma.createRectangle());r.name='Color block';r.resize(spec.w,spec.h);r.fills=[fill(spec.color)];return r;}
+  if(spec.type==='logo'){if(spec.form){const v=remember(figma.createNodeFromSvg(spec.svg));v.resize(spec.w,spec.h);v.name=spec.form;return v;}const variant=spec.svg.includes('#F4F1E8')?'Reverse':'Primary';const i=remember(logoMasters[variant].createInstance());i.rescale(spec.w/433);i.name=`Ready Margin / ${variant}`;return i;}
+  if(spec.type==='group'&&spec.name.endsWith(' swatch')){const i=remember(swatch.createInstance());i.setProperties({[labelKey]:spec.children[1].text,[hexKey]:spec.children[2].text});const r=i.findOne(n=>n.type==='RECTANGLE'&&n.name==='Color surface');r.fills=[fill(spec.children[0].color)];return i;}
+  const f=container(spec);for(const child of spec.children){f.appendChild(native(child));}return f;
+}
+const boardIds=[];
+for(const [index,b] of boards.entries()){
+  const frame=remember(figma.createFrame());frame.name=b.name;frame.resize(b.width,b.height);frame.fills=[fill(b.background)];frame.x=200+(index%2)*1640;frame.y=100+Math.floor(index/2)*1200;frame.clipsContent=false;page.appendChild(frame);boardIds.push({id:frame.id,name:frame.name,width:frame.width,height:frame.height});
+  for(const spec of b.nodes){const node=native(spec);frame.appendChild(node);node.x=spec.x;node.y=spec.y;}
+}
+figma.viewport.scrollAndZoomIntoView([await figma.getNodeByIdAsync(boardIds[0].id)]);
+return {createdNodeIds,pageId:page.id,boardIds,components:{swatch:swatch.id,swatchPropertyKeys:{labelKey,hexKey},logos:Object.fromEntries(Object.entries(logoMasters).map(([k,v])=>[k,v.id]))},collections:[primitives,semantic,spacing].map(c=>({id:c.id,name:c.name,count:c.variableIds.length})),textStyles:Object.values(styles).map(s=>({id:s.id,name:s.name})),editableTextCount:page.findAllWithCriteria({types:['TEXT']}).length,instanceCount:page.findAllWithCriteria({types:['INSTANCE']}).length};

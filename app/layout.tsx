@@ -4,7 +4,12 @@ import "./globals.css";
 import "./micro-interactions.css";
 import "./form-responsive.css";
 import "./editorial.css";
-import { getContent } from "@/lib/content";
+import "./brand-colors.css";
+import "./site-refresh.css";
+import "./motion-polish.css";
+import "./site-refinement.css";
+import { motionVariables } from "@/lib/motion-tokens";
+import { getContent, siteOrigin } from "@/lib/content";
 import {
   SiteHeader,
   CookieConsent,
@@ -24,9 +29,11 @@ const jakarta = localFont({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Ready Margin", template: "%s | Ready Margin" },
+  metadataBase: new URL(siteOrigin()),
+  applicationName: "Ready Margin",
+  title: { default: "Restaurant Accounting & Payroll Services | Ready Margin", template: "%s | Ready Margin" },
   description:
-    "Managed restaurant finance, accounting, payroll, tax workflow and operations support.",
+    "Ready Margin handles restaurant bookkeeping, accounting and payroll preparation, with financial review for owners and operators.",
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
@@ -43,8 +50,9 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const content = await getContent();
   return (
-    <html lang="en" className={jakarta.variable} suppressHydrationWarning>
+    <html lang="en" className={jakarta.variable} style={motionVariables} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var saved=localStorage.getItem('rm-theme');document.documentElement.dataset.theme=saved==='light'||saved==='dark'?saved:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}` }} />
         <script
           dangerouslySetInnerHTML={{
             __html: `try{var n=navigator,d=document.documentElement;var off=new URLSearchParams(location.search).get('motion')==='off'||matchMedia('(prefers-reduced-motion: reduce)').matches||(n.connection&&n.connection.saveData);if(off||sessionStorage.getItem('rm-motion')==='off')d.dataset.motion='off'}catch(e){}`,

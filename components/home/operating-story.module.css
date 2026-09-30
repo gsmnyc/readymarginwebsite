@@ -1,0 +1,24 @@
+.section { margin-bottom:var(--home-space,48px); }
+.introduction { display:grid; grid-template-columns:1.1fr .9fr; gap:20px 8%; align-items:end; margin-bottom:48px; }
+.introduction > p:first-child { grid-column:1 / -1; color:var(--rm-text-gray); }
+.introduction > p:last-child { color:var(--rm-text-gray); line-height:1.8; max-width:46ch; }
+.chapters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.chapter { display:flex; flex-direction:column; gap:28px; padding:28px; color:var(--site-text); min-width:0; border:1px solid var(--site-border); border-radius:26px; background:var(--site-surface); }
+.chapter:nth-child(2) { background:var(--tint-gold); }
+.chapter:nth-child(3) { background:var(--tint-paper); }
+.verb { font-size:.72rem; margin:0 0 22px; font-weight:700; letter-spacing:.11em; color:var(--accent-gold); }
+.copy h3 { font-size:1.5rem; line-height:1.25; margin:0 0 16px; letter-spacing:-.04em; }
+.copy > p:last-child { font-size:.9rem; line-height:1.8; color:var(--rm-text-gray); }
+.paper { display:flex; flex-direction:column; gap:18px; margin:auto 0 0; min-height:265px; padding:22px; min-width:0; border-radius:18px; border:1px solid var(--site-border); background:var(--site-surface); }
+.paper figcaption { font-size:.65rem; color:var(--rm-text-gray); line-height:1.5; letter-spacing:.04em; text-transform:uppercase; }
+.paper dl { margin:0; }
+.paper dl > div { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:16px; padding:11px 0; border-bottom:1px solid var(--site-border); font-size:.76rem; line-height:1.6; }
+.paper dt { color:var(--rm-text-gray); }
+.paper dd { margin:0; text-align:right; font-weight:600; font-variant-numeric:tabular-nums; }
+.note { font-size:1.15rem; line-height:1.5; margin:0; font-weight:500; letter-spacing:-.03em; }
+.owner { margin-top:auto; color:var(--rm-text-gray); font-size:.65rem; line-height:1.6; }
+.ending { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; padding-top:24px; }
+.ending p { max-width:70ch!important; font-size:.75rem; line-height:1.7; color:var(--rm-text-gray); }
+.ending a { font-size:.8rem; }
+@media(max-width:1000px) { .introduction { grid-template-columns:1fr; } .chapters { grid-template-columns:1fr; } .chapter { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); } .paper { margin:0; min-height:240px; } }
+@media(max-width:580px) { .chapter { display:flex; padding:24px 20px; } .paper { min-height:230px; padding:20px; } .introduction { margin-bottom:28px; } }

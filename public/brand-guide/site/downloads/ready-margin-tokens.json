@@ -1,0 +1,92 @@
+{
+  "$description": "Ready Margin core colors and hues derived from them",
+  "color": {
+    "neutral": {
+      "50": {
+        "$type": "color",
+        "$value": "#F4F1E8",
+        "$description": "Paper"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#E9E7DE",
+        "$description": "Paper shade"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#D5D5CC",
+        "$description": "Stone"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#969691",
+        "$description": "Stone shade"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#585855",
+        "$description": "Muted ink"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#222222",
+        "$description": "Ink"
+      }
+    },
+    "gold": {
+      "50": {
+        "$type": "color",
+        "$value": "#F2EBD5",
+        "$description": "Soft gold"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#F1E5C1",
+        "$description": "Light gold"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#EED99A",
+        "$description": "Mid gold"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#E7C14B",
+        "$description": "Ready gold"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#AC913F",
+        "$description": "Deep gold"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#716232",
+        "$description": "Gold ink"
+      }
+    }
+  },
+  "semantic": {
+    "positive": {
+      "$type": "color",
+      "$value": "#222222",
+      "$description": "Use a check icon and an explicit complete label."
+    },
+    "attention": {
+      "$type": "color",
+      "$value": "#716232",
+      "$description": "Use a review icon and a next-step label."
+    },
+    "risk": {
+      "$type": "color",
+      "$value": "#222222",
+      "$description": "Use an issue icon and a specific explanation. Color alone never signals status."
+    }
+  },
+  "typography": {
+    "family": {
+      "$type": "fontFamily",
+      "$value": "Plus Jakarta Sans"
+    }
+  }
+}

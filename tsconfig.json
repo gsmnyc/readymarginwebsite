@@ -43,6 +43,9 @@
   ],
   "exclude": [
     "node_modules",
-    "sanity/studio"
+    "sanity/studio",
+    "deliverables",
+    ".brand-build",
+    "release"
   ]
 }

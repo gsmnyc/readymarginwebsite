@@ -1,72 +1,9 @@
-"use client";
-
 import Link from "@/components/site/link";
-import type { Tier } from "@/lib/content";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-
-export function Pricing({ tiers }: { tiers: Tier[] }) {
-  return (
-    <>
-      <div className="pricing-grid">
-        {tiers.map((tier, index) => (
-          <article
-            className={"price-card " + (index === 1 ? "featured" : "")}
-            key={tier.name}
-          >
-            <p className="eyebrow">
-              {index === 1
-                ? "A connected relationship"
-                : "Scope " + String(index + 1).padStart(2, "0")}
-            </p>
-            <h2>{tier.name}</h2>
-            <h3>{tier.description}</h3>
-            <p>{tier.fit}</p>
-            <Link className="text-link" href="/book-a-review" data-cta>
-              Discuss this scope ↗
-            </Link>
-            <p className="scope-note">{tier.note}</p>
-          </article>
-        ))}
-      </div>
-      <div className="pricing-matrix">
-        <h2>Compare the starting points.</h2>
-        <p>
-          These are proposed service levels, not automatic inclusions. The
-          signed scope confirms what is included and what is an add-on.
-        </p>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Workflow</TableHead>
-              {tiers.map((tier) => (
-                <TableHead key={tier.name}>{tier.name}</TableHead>
-              ))}
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {tiers[0].features.map((feature, index) => (
-              <TableRow key={feature}>
-                <TableHead>{feature.split(":")[0]}</TableHead>
-                {tiers.map((tier) => (
-                  <TableCell key={tier.name}>
-                    <span className="mobile-table-label" aria-hidden="true">
-                      {tier.name}
-                    </span>
-                    {tier.features[index]?.split(":").slice(1).join(":").trim()}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-    </>
-  );
+export function Pricing() {
+ const factors = [
+ { title: "Locations and entities", body: "We assess the sites and legal entities covered, including location reporting and shared-cost treatment." },
+ { title: "Recurring workload", body: "Transaction volume, payroll cycles, input quality and current systems affect the preparation and review required." },
+ { title: "Selected services", body: "Choose recurring bookkeeping or payroll preparation, monthly accounting, a defined consulting project or CFO support." },
+ ];
+ return <><section className="pricing-demo" aria-labelledby="pricing-demo-title"><div><p className="eyebrow">Quoted after your free demo</p><h2 id="pricing-demo-title">How we calculate<br />your quote.</h2><p>We discuss the records, preparation and reviews your restaurant needs before quoting. Your written proposal names the deliverables, responsibilities and fees.</p></div><Link className="button" href="/book-a-review" data-cta>Book your free demo</Link></section><div className="pricing-factors">{factors.map(factor => <article key={factor.title}><h3>{factor.title}</h3><p>{factor.body}</p></article>)}</div><section className="fit-note"><h2>What is listed separately?</h2><p>Historic cleanup, specialist advice and third-party costs are identified separately from recurring service. Additional tasks or locations are agreed as scope changes.</p></section></>;
 }

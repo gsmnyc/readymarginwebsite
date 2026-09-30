@@ -6,23 +6,50 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { Settings } from "@/lib/content";
 import { track } from "@/lib/analytics";
+import { Moon, Sun, X } from "lucide-react";
+import { HomeLink } from "./home-link";
+import { motionTokens } from "@/lib/motion-tokens";
+import { lightMotion, motionAllowed } from "./motion-utils";
+import { serviceGroups } from "@/content/service-navigation";
 
-const popularRoutes = [
-  { label: "Restaurant finance services", href: "/restaurant-finance-services" },
-  { label: "Restaurant accounting", href: "/restaurant-accounting-services" },
-  { label: "Restaurant payroll", href: "/restaurant-payroll-services" },
-  { label: "Tax & compliance support", href: "/restaurant-tax-services" },
-  { label: "Turnaround consulting", href: "/restaurant-turnaround-consulting" },
-  { label: "Problems we help solve", href: "/restaurant-finance-solutions" },
-  { label: "Useful reading", href: "/insights" },
+function ThemeToggle() {
+  const [dark, setDark] = useState(false);
+  useEffect(() => {
+    const update = () => setDark(document.documentElement.dataset.theme === "dark");
+    update();
+    window.addEventListener("rm-theme-change", update);
+    return () => window.removeEventListener("rm-theme-change", update);
+  }, []);
+  function toggle() {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("rm-theme", next); } catch { /* Keep the current visit usable without storage. */ }
+    window.dispatchEvent(new Event("rm-theme-change"));
+  }
+  return <button type="button" className="theme-toggle" onClick={toggle} aria-label={dark ? "Switch to light mode" : "Switch to dark mode"} title={dark ? "Switch to light mode" : "Switch to dark mode"}>{dark ? <Sun size={19} strokeWidth={1.7} aria-hidden="true" /> : <Moon size={19} strokeWidth={1.7} aria-hidden="true" />}</button>;
+}
+
+const companyRoutes = [
+  { label: "About Ready Margin", href: "/about" },
+  { label: "New York restaurants", href: "/new-york" },
+  { label: "Contact us", href: "/contact" },
 ] as const;
 
 export function SiteHeader({ settings }: { settings: Settings }) {
   const path = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [footerVisible, setFooterVisible] = useState(false);
   const menu = useRef<HTMLDialogElement>(null);
   const menuTrigger = useRef<HTMLButtonElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (closeTimer.current) clearTimeout(closeTimer.current); document.body.style.overflow = ""; }, []);
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    const observer = new IntersectionObserver(entries => setFooterVisible(entries[0]?.isIntersecting ?? false));
+    if (footer) observer.observe(footer);
+    return () => observer.disconnect();
+  }, [path]);
 
   useEffect(() => {
     let frame = 0;
@@ -43,20 +70,26 @@ export function SiteHeader({ settings }: { settings: Settings }) {
 
   const drawerLinks = [
     ...settings.navigation,
-    ...popularRoutes,
-    { label: "Pricing", href: "/pricing" },
-    { label: "Margin Clarity Check", href: "/margin-clarity-check" },
-    { label: "About", href: "/about" },
-    { label: "Search", href: "/search" },
+    ...serviceGroups.flatMap(group => group.links),
+    { label: "All restaurant finance services", href: "/restaurant-finance-services" },
+    ...companyRoutes,
   ].filter((item, index, all) => all.findIndex((candidate) => candidate.href === item.href) === index);
 
   function openMenu() {
+    if (closeTimer.current) { clearTimeout(closeTimer.current); closeTimer.current = null; }
     if (!menu.current?.open) menu.current?.showModal();
+    document.body.style.overflow = "hidden";
     setMenuOpen(true);
   }
 
   function closeMenu() {
-    if (menu.current?.open) menu.current.close();
+    if (!menu.current?.open || closeTimer.current) return;
+    setMenuOpen(false);
+    if (!motionAllowed() || lightMotion()) { menu.current.close(); return; }
+    closeTimer.current = setTimeout(() => {
+      menu.current?.close();
+      closeTimer.current = null;
+    }, motionTokens.duration.fast * 1000);
   }
 
   return (
@@ -65,15 +98,17 @@ export function SiteHeader({ settings }: { settings: Settings }) {
         className={`site-header ${scrolled ? "scrolled" : ""}`}
       >
         <div className="header-inner">
-          <Link href="/" className="brand-link" aria-label="Ready Margin home">
+          <HomeLink className="brand-link" aria-label="Ready Margin home">
             <Image
+              className="logo-light"
               src="/brand/logo_horizontal_primary_transparent.svg"
               width={220}
               height={52}
               sizes="(max-width: 1023px) 190px, 220px"
               alt="Ready Margin"
             />
-          </Link>
+            <Image className="logo-dark" src="/brand/logo_horizontal_primary_mono_white.svg" width={220} height={52} sizes="(max-width: 1023px) 190px, 220px" alt="Ready Margin" />
+          </HomeLink>
 
           <nav aria-label="Main navigation" className="desktop-nav">
             {settings.navigation.map((item) => (
@@ -87,9 +122,12 @@ export function SiteHeader({ settings }: { settings: Settings }) {
             ))}
           </nav>
 
+          <div className="header-actions">
           <Link href="/book-a-review" className="button header-cta" data-cta>
             {settings.cta}<span aria-hidden="true">↗</span>
           </Link>
+
+          <ThemeToggle />
 
           <button
             className="menu-button js-only"
@@ -104,6 +142,7 @@ export function SiteHeader({ settings }: { settings: Settings }) {
             <span />
             <span />
           </button>
+          </div>
         </div>
       </header>
 
@@ -114,25 +153,32 @@ export function SiteHeader({ settings }: { settings: Settings }) {
         aria-labelledby="mobile-nav-title"
         aria-describedby="mobile-nav-description"
         data-state={menuOpen ? "open" : "closed"}
+        onCancel={(event) => { event.preventDefault(); closeMenu(); }}
         onClose={() => {
+          document.body.style.overflow = "";
           setMenuOpen(false);
           menuTrigger.current?.focus({ preventScroll: true });
         }}
         onClick={(event) => {
-          if (event.target === event.currentTarget) closeMenu();
+          if (event.target !== event.currentTarget) return;
+          const rect = event.currentTarget.getBoundingClientRect();
+          if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeMenu();
         }}
       >
-        <button className="mobile-drawer-close" type="button" aria-label="Close navigation" onClick={closeMenu}>×</button>
+        <button className="mobile-drawer-close" type="button" aria-label="Close navigation" onClick={closeMenu}><X size={20} strokeWidth={1.7} aria-hidden="true" /></button>
         <h2 id="mobile-nav-title">Ready Margin</h2>
-        <p id="mobile-nav-description">Find the work, problem or guide you need.</p>
-        <nav aria-label="Mobile navigation">
-          {drawerLinks.map((item) => (
-            <Link href={item.href} key={item.href} onClick={closeMenu}>
-              {item.label}<span aria-hidden="true">↗</span>
-            </Link>
-          ))}
+        <p id="mobile-nav-description">Find the support your restaurant needs.</p>
+        <nav aria-label="Main menu" className="drawer-primary">
+          {settings.navigation.map(item => <Link href={item.href} key={item.href} onClick={closeMenu}>{item.label}<span aria-hidden="true">↗</span></Link>)}
         </nav>
-        <Link className="button" href="/book-a-review" data-cta onClick={closeMenu}>
+        <div className="drawer-services">
+          <Link className="drawer-all-services" href="/restaurant-finance-services" onClick={closeMenu}>All restaurant finance services <span aria-hidden="true">↗</span></Link>
+          {serviceGroups.map((group,index) => <details key={group.title} className="drawer-group" open={index === 0}><summary>{group.title}<span aria-hidden="true">+</span></summary><nav aria-label={group.title + " services"}>{group.links.map(item => <Link key={item.href} href={item.href} onClick={closeMenu}>{item.label}<span aria-hidden="true">↗</span></Link>)}</nav></details>)}
+        </div>
+        <nav aria-label="Ready Margin company" className="drawer-company">
+          {companyRoutes.map(item => <Link href={item.href} key={item.href} onClick={closeMenu}>{item.label}<span aria-hidden="true">↗</span></Link>)}
+        </nav>
+        <Link className="button drawer-primary-cta" href="/book-a-review" data-cta onClick={closeMenu}>
           {settings.cta}
         </Link>
       </dialog>
@@ -147,7 +193,7 @@ export function SiteHeader({ settings }: { settings: Settings }) {
       </details>
 
       {path !== "/book-a-review" && path !== "/contact" && (
-        <Link className="mobile-cta" href="/book-a-review" data-cta>
+        <Link className="mobile-cta" href="/book-a-review" data-cta data-footer-visible={footerVisible}>
           {settings.cta}<span aria-hidden="true">↗</span>
         </Link>
       )}

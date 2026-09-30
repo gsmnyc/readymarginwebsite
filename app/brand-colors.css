@@ -1,0 +1,22 @@
+/* Core brand colors plus hues mixed only from those four colors. */
+:root {
+  --brand-ink: #222222;
+  --brand-paper: #F4F1E8;
+  --brand-gold: #E7C14B;
+  --brand-stone: #D5D5CC;
+  --brand-paper-soft: #E9E7DE;
+  --brand-stone-light: #E0DFD6;
+  --brand-stone-muted: #585855;
+  --brand-stone-mid: #969691;
+  --brand-stone-on-ink: #B1B1AA;
+  --brand-ink-surface: #2B2B2B;
+  --brand-ink-raised: #373736;
+  --brand-ink-border: #4F4F4D;
+  --brand-gold-soft: #F2EBD5;
+  --brand-gold-light: #F1E5C1;
+  --brand-gold-mid: #EED99A;
+  --brand-gold-deep: #AC913F;
+  --brand-gold-ink: #716232;
+  --brand-gold-dark-soft: #403A28;
+  --brand-gold-dark-mid: #534A2C;
+}

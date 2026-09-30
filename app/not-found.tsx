@@ -2,8 +2,8 @@ import Link from "@/components/site/link";
 export default function NotFound() {
   return (
     <main id="main" className="container utility">
-      <p className="eyebrow">404 · A missing handoff</p>
-      <h1>Let’s get you to the right place.</h1>
+      <p className="eyebrow">404 · Page not found</p>
+      <h1>Page not found.</h1>
       <p>
         This page is not available. Explore the services or search for the
         question you came with.

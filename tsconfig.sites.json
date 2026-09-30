@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["next-env.d.ts", "app/**/*.ts", "app/**/*.tsx", "components/**/*.ts", "components/**/*.tsx", "content/**/*.ts", "lib/**/*.ts", ".next-sites/types/**/*.ts"],
+  "exclude": ["node_modules", ".next", ".next-vercel", "sanity/studio", "deliverables", ".brand-build", "release"]
+}
