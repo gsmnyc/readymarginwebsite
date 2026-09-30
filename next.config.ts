@@ -5,7 +5,7 @@ const config: NextConfig = {
     process.env.RM_SITES_EXPORT === "1" ? ".next-sites" : process.env.RM_NATIVE_NEXT === "1" || process.env.VERCEL === "1"
       ? ".next-vercel"
       : ".next",
-  images: { loader: "custom", loaderFile: "./lib/image-loader.ts" },
+  images: { unoptimized: true },
   poweredByHeader: false,
   async redirects() {
     return [

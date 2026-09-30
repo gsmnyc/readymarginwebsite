@@ -1,5 +1,5 @@
 import { spawn } from "node:child_process";
-import { existsSync, renameSync, mkdirSync, writeFileSync, cpSync } from "node:fs";
+import { existsSync, lstatSync, renameSync, mkdirSync, writeFileSync, cpSync, rmSync } from "node:fs";
 import path from "node:path";
 
 // Keep the normal Next.js server deployment and its webhook API intact.
@@ -25,7 +25,10 @@ try {
   // Next uses a custom distDir as the export destination. Normalize it to
   // the portable static root declared in the Sites hosting manifest.
   if (!existsSync(".next-sites/index.html")) throw new Error("Missing Sites export index.html.");
-  cpSync(".next-sites", "out", { recursive: true });
+  const output = path.resolve("out");
+  if (existsSync(output) && lstatSync(output).isSymbolicLink()) throw new Error("Static output must be a regular directory.");
+  rmSync(output, { recursive: true, force: true });
+  cpSync(".next-sites", output, { recursive: true });
   const aliases = { "/products": "/what-we-handle", "/book-a-demo": "/book-a-review", "/blog": "/insights", "/resources/podcast": "/resources", "/new-york-restaurant-bookkeeping": "/new-york/restaurant-bookkeeping-services" };
   for (const [from, to] of Object.entries(aliases)) {
     const filename = path.resolve("out", from.slice(1) + ".html");

@@ -63,15 +63,15 @@ export type Content = { settings: Settings; pages: Page[]; tiers: Tier[]; faqs: 
 
 const legacyRedirectPaths = new Set(["/new-york-restaurant-bookkeeping"]);
 
-type GeneratedPage = {
+type PageSource = {
   path: string; kind: string; title: string; seoTitle?: string; heading: string;
   description: string; eyebrow: string; answer: string; serviceType?: string;
   queries?: string[]; sections: { title: string; body: string; items: string[] }[];
   related: { path: string; label: string }[]; resources: { url: string; label: string }[];
-  publishedAt?: string; author?: string; disclosure?: string;
+  publishedAt?: string; updated?: string; author?: string; disclosure?: string;
 };
 
-function normalizeGenerated(page: GeneratedPage, updated: string, category: string): Page {
+function normalizePage(page: PageSource, updated: string, category: string): Page {
   return pageSchema.parse({
     path: page.path,
     title: page.title,
@@ -83,7 +83,7 @@ function normalizeGenerated(page: GeneratedPage, updated: string, category: stri
     published: true,
     indexable: true,
     publishedAt: page.publishedAt || "",
-    updated,
+    updated: page.updated || updated,
     related: page.related.map((item) => item.path),
     status: page.eyebrow,
     category,
@@ -99,15 +99,15 @@ function normalizeGenerated(page: GeneratedPage, updated: string, category: stri
   });
 }
 
-const searchPages = searchFallback.pages.map((page) => normalizeGenerated(
-  page as GeneratedPage,
+const searchPages = searchFallback.pages.map((page) => normalizePage(
+  page as PageSource,
   searchFallback.updated,
   page.kind === "article" ? "Payroll and provider selection" : "New York restaurant services",
 ));
-const servicePages = serviceFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, serviceFallback.updated, "Restaurant finance services"));
-const solutionPages = solutionFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, solutionFallback.updated, "Restaurant finance solutions"));
-const answerPages = answerFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, answerFallback.updated, "Restaurant finance answers"));
-const nycIntentPages = nycIntentFallback.pages.map((page) => normalizeGenerated(page as GeneratedPage, nycIntentFallback.updated, "New York restaurant finance services"));
+const servicePages = serviceFallback.pages.map((page) => normalizePage(page as PageSource, serviceFallback.updated, "Restaurant finance services"));
+const solutionPages = solutionFallback.pages.map((page) => normalizePage(page as PageSource, solutionFallback.updated, "Restaurant finance solutions"));
+const answerPages = answerFallback.pages.map((page) => normalizePage(page as PageSource, answerFallback.updated, "Restaurant finance answers"));
+const nycIntentPages = nycIntentFallback.pages.map((page) => normalizePage(page as PageSource, nycIntentFallback.updated, "New York restaurant finance services"));
 
 const local: Content = {
   ...fallback,
@@ -154,6 +154,7 @@ export const siteOrigin = () => {
   const configured = process.env.SITE_URL?.trim() || "https://www.readymargin.com";
   try {
     const url = new URL(configured);
+    if (!['https:', 'http:'].includes(url.protocol)) return "https://www.readymargin.com";
     if (url.hostname === "readymargin.com") url.hostname = "www.readymargin.com";
     return url.origin;
   } catch {

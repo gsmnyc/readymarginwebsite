@@ -8,6 +8,7 @@ export function metadataFor(
   const url = siteOrigin() + p.path;
   const searchTitle = p.seoTitle || p.title;
   const title = searchTitle.includes("| Ready Margin") ? searchTitle : `${searchTitle} | Ready Margin`;
+  const socialImage = `${siteOrigin()}/social/${p.kind === "article" ? "insights.jpg" : ["capability", "service", "service-hub"].includes(p.kind) ? "services.png" : "brand.png"}`;
   return {
     title: { absolute: title },
     description: p.description,
@@ -20,14 +21,14 @@ export function metadataFor(
       siteName: "Ready Margin",
       type: p.kind === "article" ? "article" : "website",
       images: [{
-        url: `${siteOrigin()}/social/${p.kind === "article" ? "insights.jpg" : ["capability", "service", "service-hub"].includes(p.kind) ? "services.png" : "brand.png"}`,
+        url: socialImage,
       }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: p.description,
-      images: [`${siteOrigin()}/social/${p.kind === "article" ? "insights.jpg" : ["capability", "service", "service-hub"].includes(p.kind) ? "services.png" : "brand.png"}`],
+      images: [socialImage],
     },
   };
 }

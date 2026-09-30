@@ -1,15 +1,15 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "pages": [
     {
       "path": "/restaurant-finance-solutions",
       "kind": "solution-hub",
       "title": "Restaurant Finance Solutions by Problem",
-      "seoTitle": "Restaurant Finance Solutions for Payroll, Cash, Cost & Accounting Problems",
+      "seoTitle": "Restaurant Finance Solutions by Problem",
       "heading": "Start with the problem you need solved.",
-      "description": "Find support for late books, payroll questions, unexplained costs and cash pressure.",
+      "description": "Find restaurant finance support for overdue books, payroll questions, supplier bill errors, high costs and cash pressure. Start with the problem.",
       "eyebrow": "Restaurant finance solutions / Problem-first",
-      "answer": "Find support for late books, payroll questions, unexplained costs and cash pressure.",
+      "answer": "Find restaurant finance support for overdue books, payroll questions, supplier bill errors, high costs and cash pressure. Start with the problem.",
       "queries": [
         "restaurant finance solutions",
         "restaurant financial problems",
@@ -54,17 +54,17 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-payroll-problems",
       "kind": "solution",
       "title": "Restaurant Payroll Problems",
-      "seoTitle": "Restaurant Payroll Problems? Fix Hours, Tips, Corrections & Cutoffs",
+      "seoTitle": "Restaurant Payroll Problems: Hours & Tips",
       "heading": "Resolve the payroll question before cutoff.",
-      "description": "Trace payroll errors to hours, tip inputs, corrections and approval records for the relevant pay period.",
+      "description": "Review restaurant payroll problems against hours, tips, corrections and approvals. Trace the affected record and resolve questions before cutoff.",
       "eyebrow": "Problem / Restaurant payroll",
-      "answer": "Trace payroll errors to hours, tip inputs, corrections and approval records for the relevant pay period.",
+      "answer": "Review restaurant payroll problems against hours, tips, corrections and approvals. Trace the affected record and resolve questions before cutoff.",
       "queries": [
         "restaurant payroll problems",
         "restaurant payroll errors",
@@ -115,17 +115,17 @@
           "label": "U.S. Department of Labor — Wage and Hour Division"
         }
       ],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-books-behind",
       "kind": "solution",
       "title": "Restaurant Books Are Behind",
-      "seoTitle": "Restaurant Books Behind? Catch Up Bookkeeping & Close Support",
+      "seoTitle": "Restaurant Books Behind? Catch-Up Support",
       "heading": "Bring the books up to date.",
-      "description": "Establish the missing periods, collect the source records and agree a sequence for restaurant bookkeeping catch-up.",
+      "description": "Catch up restaurant books by collecting missing records, reconciling accounts and agreeing a close plan. See where recurring support can help.",
       "eyebrow": "Problem / Late restaurant books",
-      "answer": "Establish the missing periods, collect the source records and agree a sequence for restaurant bookkeeping catch-up.",
+      "answer": "Catch up restaurant books by collecting missing records, reconciling accounts and agreeing a close plan. See where recurring support can help.",
       "queries": [
         "restaurant books behind",
         "restaurant bookkeeping catch up",
@@ -170,17 +170,17 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-tax-compliance",
       "kind": "solution",
       "title": "Restaurant Tax and Compliance Problems",
-      "seoTitle": "Restaurant Tax & Compliance Help | Records, Deadlines & Adviser Coordination",
+      "seoTitle": "Restaurant Tax & Compliance Record Support",
       "heading": "Put the deadlines and records in order.",
-      "description": "Clarify the documents, approvals and professional responsibilities behind restaurant tax and compliance work.",
+      "description": "Organize restaurant tax and compliance records, deadlines and adviser questions. Confirm who prepares, approves and files each required item.",
       "eyebrow": "Problem / Restaurant tax and compliance",
-      "answer": "Clarify the documents, approvals and professional responsibilities behind restaurant tax and compliance work.",
+      "answer": "Organize restaurant tax and compliance records, deadlines and adviser questions. Confirm who prepares, approves and files each required item.",
       "queries": [
         "restaurant tax help",
         "restaurant tax problems",
@@ -231,17 +231,17 @@
           "label": "IRS — Small Business and Self-Employed"
         }
       ],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-cash-flow-problems",
       "kind": "solution",
       "title": "Restaurant Cash Flow Problems",
-      "seoTitle": "Restaurant Cash Flow Problems? Build a Clear Near-Term Cash View",
+      "seoTitle": "Restaurant Cash Flow Problems",
       "heading": "Understand what is putting pressure on cash.",
-      "description": "Review dated balances, incoming settlements and upcoming commitments before deciding which cash question comes first.",
+      "description": "Review restaurant cash pressure using dated balances, expected receipts and known obligations. Identify timing gaps and the next records to check.",
       "eyebrow": "Problem / Restaurant cash flow",
-      "answer": "Review dated balances, incoming settlements and upcoming commitments before deciding which cash question comes first.",
+      "answer": "Review restaurant cash pressure using dated balances, expected receipts and known obligations. Identify timing gaps and the next records to check.",
       "queries": [
         "restaurant cash flow problems",
         "restaurant running out of cash",
@@ -286,17 +286,17 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-food-cost-too-high",
       "kind": "solution",
       "title": "Restaurant Food Cost Too High",
-      "seoTitle": "Restaurant Food Cost Too High? Find the Cause Before Cutting",
+      "seoTitle": "High Restaurant Food Cost: Review the Cause",
       "heading": "Find the reason food cost has risen.",
-      "description": "Check purchasing, quantities, inventory and recipes before deciding how to respond to a higher food-cost figure.",
+      "description": "Investigate high restaurant food cost through supplier prices, purchases, recipes, waste and stock records before choosing an operating response.",
       "eyebrow": "Problem / High restaurant food cost",
-      "answer": "Check purchasing, quantities, inventory and recipes before deciding how to respond to a higher food-cost figure.",
+      "answer": "Investigate high restaurant food cost through supplier prices, purchases, recipes, waste and stock records before choosing an operating response.",
       "queries": [
         "restaurant food cost too high",
         "why is restaurant food cost high",
@@ -341,17 +341,17 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-labor-cost-too-high",
       "kind": "solution",
       "title": "Restaurant Labor Cost Too High",
-      "seoTitle": "Restaurant Labor Cost Too High? Trace Hours, Payroll & Sales",
+      "seoTitle": "High Restaurant Labor Cost: Review the Cause",
       "heading": "Check what changed in the working week.",
-      "description": "Compare sales, planned coverage, attendance and payroll before responding to a higher labor-cost percentage.",
+      "description": "Review high restaurant labor cost with sales, schedules, recorded hours and payroll inputs. Confirm the cause before management changes staffing.",
       "eyebrow": "Problem / High restaurant labor cost",
-      "answer": "Compare sales, planned coverage, attendance and payroll before responding to a higher labor-cost percentage.",
+      "answer": "Review high restaurant labor cost with sales, schedules, recorded hours and payroll inputs. Confirm the cause before management changes staffing.",
       "queries": [
         "restaurant labor cost too high",
         "reduce restaurant labor cost",
@@ -401,17 +401,17 @@
           "label": "U.S. Department of Labor — Wage and Hour Division"
         }
       ],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-not-profitable",
       "kind": "solution",
       "title": "Restaurant Not Profitable",
-      "seoTitle": "Restaurant Not Profitable? Find the Margin and Cash Drivers",
+      "seoTitle": "Restaurant Profitability Problems",
       "heading": "See where the margin is being used.",
-      "description": "Review restaurant sales, food costs, labor and other expenses to identify the financial questions worth investigating first.",
+      "description": "Review restaurant profitability through comparable sales, food costs, labor and operating expenses. Identify the questions affecting margin and cash.",
       "eyebrow": "Problem / Restaurant profitability",
-      "answer": "Review restaurant sales, food costs, labor and other expenses to identify the financial questions worth investigating first.",
+      "answer": "Review restaurant profitability through comparable sales, food costs, labor and operating expenses. Identify the questions affecting margin and cash.",
       "queries": [
         "restaurant not profitable",
         "why is my restaurant not profitable",
@@ -457,17 +457,17 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-vendor-bill-errors",
       "kind": "solution",
       "title": "Restaurant Vendor Bill Errors",
-      "seoTitle": "Restaurant Vendor Bill Errors? Fix Invoice, Credit & Price Problems",
+      "seoTitle": "Restaurant Vendor Bill & Invoice Errors",
       "heading": "Check the invoice before approving it.",
-      "description": "Trace a supplier-bill question through quantities, pack sizes, delivery records and agreed pricing.",
+      "description": "Check restaurant vendor bill errors against orders, delivery records, agreed prices and credits. Keep the correction and supplier answer together.",
       "eyebrow": "Problem / Restaurant vendor bills",
-      "answer": "Trace a supplier-bill question through quantities, pack sizes, delivery records and agreed pricing.",
+      "answer": "Check restaurant vendor bill errors against orders, delivery records, agreed prices and credits. Keep the correction and supplier answer together.",
       "queries": [
         "restaurant vendor bill errors",
         "restaurant invoice discrepancy",
@@ -512,17 +512,17 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-tip-disputes",
       "kind": "solution",
       "title": "Restaurant Tip Disputes and Discrepancies",
-      "seoTitle": "Restaurant Tip Disputes? Trace Hours, Inputs, Policy & Payroll",
+      "seoTitle": "Restaurant Tip Disputes: Check the Records",
       "heading": "Trace the tip question to its source.",
-      "description": "Review recorded checks, employee references, corrections and the restaurant’s documented tip policy.",
+      "description": "Trace restaurant tip questions through the source check, recorded inputs, documented policy and approval history. Confirm the unresolved details.",
       "eyebrow": "Problem / Restaurant tips",
-      "answer": "Review recorded checks, employee references, corrections and the restaurant’s documented tip policy.",
+      "answer": "Trace restaurant tip questions through the source check, recorded inputs, documented policy and approval history. Confirm the unresolved details.",
       "queries": [
         "restaurant tip dispute",
         "restaurant tip discrepancy",
@@ -572,17 +572,17 @@
           "label": "U.S. Department of Labor — Wage and Hour Division"
         }
       ],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/solutions/restaurant-multi-location-reporting",
       "kind": "solution",
       "title": "Multi-Location Restaurant Reporting Problems",
-      "seoTitle": "Multi-Location Restaurant Reporting Problems? Standardize the Numbers",
+      "seoTitle": "Multi-Location Restaurant Reporting Problems",
       "heading": "Make the locations comparable.",
-      "description": "Align dates, accounts and input completeness before interpreting differences across restaurant locations.",
+      "description": "Make restaurant location reports comparable using consistent dates, account definitions and shared-cost allocation. Keep each location’s context.",
       "eyebrow": "Problem / Multi-location reporting",
-      "answer": "Align dates, accounts and input completeness before interpreting differences across restaurant locations.",
+      "answer": "Make restaurant location reports comparable using consistent dates, account definitions and shared-cost allocation. Keep each location’s context.",
       "queries": [
         "multi location restaurant reporting problems",
         "restaurant group reporting inconsistent",
@@ -626,7 +626,7 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     }
   ]
 }

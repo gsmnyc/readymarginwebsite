@@ -29,6 +29,7 @@ export function CTA({
 }
 
 export function Footer({ content }: { content: Content }) {
+  const [emailName, emailDomain] = content.settings.email.split("@");
   const groups = [
     { title: "Services", links: [["Accounting & books", "/restaurant-accounting-services"], ["Payroll & tips", "/restaurant-payroll-services"], ["Costs & cash", "/restaurant-cfo-services"], ["All services", "/restaurant-finance-services"]] },
     { title: "Explore", links: [["How it works", "/how-it-works"], ["Pricing", "/pricing"], ["About us", "/about"], ["Insights", "/insights"]] },
@@ -39,7 +40,7 @@ export function Footer({ content }: { content: Content }) {
       <div className="footer-upper">
         <div className="footer-invitation"><span className="footer-label">Ready when you are</span><h2>The work.<br />The follow-through.</h2><Link className="footer-demo" href="/book-a-review" data-cta>Book your free demo <span aria-hidden="true">↗</span></Link></div>
         <div className="footer-navigation">{groups.map(group => <nav key={group.title} aria-label={group.title + " footer links"}><h2 className="footer-label">{group.title}</h2>{group.links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>)}</div>
-        <div className="footer-reach"><span className="footer-label">Contact us</span><a className="footer-email" href={"mailto:" + content.settings.email}>{content.settings.email.split("@")[0]}@<wbr />{content.settings.email.split("@")[1]}</a><p>Tell us about your restaurant.</p><div className="footer-socials">{content.settings.socials.filter(social => social.url).map(social => <a key={social.label} href={social.url} rel="noopener noreferrer">{social.label} <span aria-hidden="true">↗</span></a>)}</div></div>
+        <div className="footer-reach"><span className="footer-label">Contact us</span><a className="footer-email" href={"mailto:" + content.settings.email}>{emailName}@<wbr />{emailDomain}</a><p>Tell us about your restaurant.</p><div className="footer-socials">{content.settings.socials.filter(social => social.url).map(social => <a key={social.label} href={social.url} rel="noopener noreferrer">{social.label} <span aria-hidden="true">↗</span></a>)}</div></div>
       </div>
       <div className="footer-brand-ending">
         <div className="footer-stickers" aria-hidden="true"><span><Check strokeWidth={1.6} /><b>Work<br />accounted<br />for</b></span><span><Clock3 strokeWidth={1.4} /><b>Ready for<br />next week</b></span></div>
@@ -53,10 +54,10 @@ export function Footer({ content }: { content: Content }) {
 export function CapabilityGrid({ pages }: { pages: Page[] }) {
   return (
     <div className="capability-grid">
-      {pages.filter((page) => page.kind === "capability").map((page, index) => (
+      {pages.filter((page) => page.kind === "service" && !page.path.startsWith("/new-york/")).map((page, index) => (
         <Link className="capability" href={page.path} key={page.path}>
           <div className="cap-top">
-            <span>0{index + 1}</span>
+            <span>{String(index + 1).padStart(2, "0")}</span>
             <Image src={"/icons/" + page.icon + ".svg"} alt="" width={48} height={48} sizes="48px" />
           </div>
           <h3>{page.title}</h3>

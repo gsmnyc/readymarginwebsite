@@ -114,7 +114,12 @@ export default async function ContentPage({ params }: Props) {
             <p>{p.disclosure}</p>
           </section>
         )}
-        {p.kind === "capability-index" && <CapabilityGrid pages={c.pages} />}{" "}
+        {["capability-index", "service-hub"].includes(p.kind) && (
+          <section className="section" aria-labelledby="service-directory-title">
+            <h2 id="service-directory-title">Restaurant finance services</h2>
+            <CapabilityGrid pages={c.pages} />
+          </section>
+        )}{" "}
         {p.kind === "audience-index" && (
           <div className="audience-grid">
             {c.pages
