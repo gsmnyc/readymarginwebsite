@@ -261,6 +261,15 @@
           "title": "Confirm the processor and approver",
           "body": "Your engagement names the payroll processor, the restaurant’s authorized approver and the people responsible for tax tasks. Preparing records does not authorize a payroll run or establish that wages or taxes have been paid.",
           "items": []
+        },
+        {
+          "title": "From weekly review to the entry-sheet handoff",
+          "body": "Review attendance, tickets, tip rules, pool shares and adjustment decisions before final preparation. Closed entry sheets retain the period and recorded inputs. A manual-entry status documents the handoff; it is not proof that a provider processed payroll.",
+          "items": [
+            "Open questions and the person responsible for each answer",
+            "Adjustment proposals and the authorized decision",
+            "Closed payroll records, CSV exports and print handoffs"
+          ]
         }
       ],
       "related": [
@@ -417,6 +426,15 @@
           "title": "Keep evidence of the completed action",
           "body": "A reminder marked done does not prove a filing or payment happened. The handoff should retain the relevant receipt or confirmation. Legal interpretation, representation and certification require a separately appointed professional.",
           "items": []
+        },
+        {
+          "title": "Licence, permit and expiry records",
+          "body": "Maintain the records supplied by your restaurant, including licence or permit type, reference, issue date and expiry date. Identify the contact responsible for the next review and agree reminder arrangements. A record list does not establish legal compliance.",
+          "items": [
+            "Licence and permit references by location",
+            "Issue dates, expiry dates and supporting notes",
+            "Recorded review responsibilities and reminder arrangements"
+          ]
         }
       ],
       "related": [
@@ -493,6 +511,15 @@
           "title": "Evaluate options with your management team",
           "body": "The review explains the effect of the scenarios we agree to examine and the records that need updating. You decide on spending, staffing and financing. Lending, investment, tax and legal advice are separate professional responsibilities.",
           "items": []
+        },
+        {
+          "title": "Reporting with period and source context",
+          "body": "Review the accounts, dated cash records and payroll history for the period being discussed. Retain the sources and recorded decisions behind a management comparison. If the records cannot support a report or forecast, agree the information needed before drawing a conclusion.",
+          "items": [
+            "Period-specific financial and payroll records",
+            "Cash commitments and payment timing",
+            "Source references and documented management decisions"
+          ]
         }
       ],
       "related": [
@@ -629,6 +656,24 @@
           "title": "Keep operating authority with the restaurant",
           "body": "Your team confirms deliveries, worked hours and other operating facts, then gives the defined approvals. We prepare the finance records and maintain the work list. General administration and specialist tasks are included only where named.",
           "items": []
+        },
+        {
+          "title": "Team records, source identities and access",
+          "body": "Keep employee names, designations, rates and effective dates consistent across the records used for payroll and reporting. Review POS names and clock IDs before confirming a person match. Agree who sees each location and who reviews requests.",
+          "items": [
+            "Employee records and pay-rate changes with effective dates",
+            "POS name, clock and designation mappings",
+            "Manager requests, employee record views and scoped access"
+          ]
+        },
+        {
+          "title": "Company and location setup",
+          "body": "Document the company behind each location, its time zone, operating hours and business-day cutoff. Confirm provider handoffs and the source of attendance records before recurring preparation starts.",
+          "items": [
+            "Company and location records",
+            "Business-day and clock-location mappings",
+            "Provider access and setup questions with a named contact"
+          ]
         }
       ],
       "related": [
@@ -699,6 +744,15 @@
           "title": "Review obligations alongside cash",
           "body": "The approved and outstanding bill lists support your payment planning. Your authorized person decides on payment. We record the supplied payment evidence; a reviewed invoice is not evidence that a transfer was made.",
           "items": []
+        },
+        {
+          "title": "Registers and payment references",
+          "body": "Maintain recurring due dates, check references and recorded obligations. Keep already-paid and bank-scheduled payment records distinct, with the account, date and confirmation reference. Your authorized contact approves payments.",
+          "items": [
+            "Recurring bills, cadence and review status",
+            "Check registers and manual obligations",
+            "Recorded payment references and confirmation evidence"
+          ]
         }
       ],
       "related": [
@@ -769,6 +823,15 @@
           "title": "Review the plan before committing money",
           "body": "A cash review sets out timing assumptions, incomplete inputs and the decisions due before the next update. We can model agreed scenarios where the records support them; projections do not guarantee future balances.",
           "items": []
+        },
+        {
+          "title": "Dated cash records and the morning review",
+          "body": "Review each account’s observed balance and date alongside bills and other recorded commitments. Check bank-to-books matches before treating records as cleared. A complete forecast needs confirmed inflow and outflow timing; incomplete inputs remain identified.",
+          "items": [
+            "Account balances with source and observation time",
+            "Matched, possible and unmatched bank activity",
+            "Morning cash reviews with commitments shown separately"
+          ]
         }
       ],
       "related": [
@@ -906,6 +969,15 @@
           "title": "Review staffing options in operating context",
           "body": "Opening hours, sales mix and service requirements matter to coverage. We explain the financial comparison and outstanding records; management decides on staffing and pay, with appropriate employment advice where required.",
           "items": []
+        },
+        {
+          "title": "Shift coverage and cross-location work",
+          "body": "Review the published schedule against availability, department coverage and worked time. Keep requested cover separate from an approved assignment, and confirm the applicable location and rate when staff work elsewhere.",
+          "items": [
+            "Weekly shifts and availability",
+            "Hours by person, designation and department",
+            "Cross-location cover requests and assignment confirmation"
+          ]
         }
       ],
       "related": [
@@ -977,6 +1049,15 @@
           "title": "Document adjustments and the approval",
           "body": "Corrections retain the source amount, reason and authorizing person. We prepare the agreed tip inputs for payroll review. Employment-law interpretation and resolution of legal disputes belong with the appropriate professional.",
           "items": []
+        },
+        {
+          "title": "Pool versions and allocation evidence",
+          "body": "Review the effective pool version, source checks, eligible hours and recorded rules together. Groups, cuts, day parts and configured percentages describe the agreed rule; held amounts need a resolved identity and supporting evidence before allocation can be reviewed.",
+          "items": [
+            "Pool versions and effective dates",
+            "Group percentages, cuts and day-part records",
+            "Held checks, person assignments and calculated share evidence"
+          ]
         }
       ],
       "related": [
@@ -1255,6 +1336,15 @@
           "title": "Review differences with operating context",
           "body": "Opening hours, format and recent changes can explain location performance. The review shows the agreed group and site measures, their reporting basis and actions for each responsible person.",
           "items": []
+        },
+        {
+          "title": "Cross-location staff and intercompany records",
+          "body": "Keep the operating location attached to shifts, attendance and review responsibilities. Record intercompany movements with the source, destination, amount, date, authorizing person and recorder. Recording a movement does not execute a transfer.",
+          "items": [
+            "Location-specific records, settings and access",
+            "Staff-cover requests and confirmed assignments",
+            "Intercompany and transfer evidence for reconciliation"
+          ]
         }
       ],
       "related": [
