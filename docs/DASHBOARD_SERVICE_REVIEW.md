@@ -47,4 +47,6 @@ Manual browser review on the public review site covered the audience, Insights a
 
 The dashboard review inspected the available screens and read-only records. It did not execute payments, change payroll records or exercise every mutation. No automated test suites, Lighthouse scores or field-speed measurements are claimed for this revision.
 
-Branch: `codex/service-directory-refinements`, based on the merged PR #13. UI, dashboard coverage, the location-icon correction and documentation have separate commits. This follow-up remains a new pull request for review.
+Branch: `codex/service-directory-refinements`, based on the merged PR #13. UI, dashboard coverage, the location-icon correction and documentation have separate commits in PR #14.
+
+The user’s final layout annotations identified inherited directory section padding of approximately 128px on each side and zero space between card descriptions and their links. The follow-up removes that section padding, adds a directory introduction and a service-selection heading, uses deliberate card text/link spacing, and places the two selection-guidance cards side by side on desktop. The user authorized adding this correction to PR #14 and merging after checks pass.

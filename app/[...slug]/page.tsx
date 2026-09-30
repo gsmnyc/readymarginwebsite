@@ -117,8 +117,11 @@ export default async function ContentPage({ params }: Props) {
           </section>
         )}
         {["capability-index", "service-hub"].includes(p.kind) && (
-          <section className="section" aria-labelledby="service-directory-title">
-            <h2 id="service-directory-title">Restaurant finance services</h2>
+          <section className="service-directory" aria-labelledby="service-directory-title">
+            <div className="directory-heading">
+              <h2 id="service-directory-title">Restaurant finance services</h2>
+              <p>Compare the work covered by each service, from recurring books and payroll to a specific cost or cash review.</p>
+            </div>
             <CapabilityGrid pages={c.pages} />
           </section>
         )}{" "}
@@ -164,14 +167,23 @@ export default async function ContentPage({ params }: Props) {
           </div>
         ) : (
           !["rhythm", "pricing"].includes(p.kind) && (
-            <div
-              className={
-                "body-grid " + (p.kind === "article" ? "article-layout" : "")
-              }
-            >
-              <SectionCopy page={p} />
-              <Related page={p} pages={c.pages} />
-            </div>
+            <>
+              {["capability-index", "service-hub"].includes(p.kind) && (
+                <div className="directory-heading service-selection-heading">
+                  <h2>Recurring support or a one-off review?</h2>
+                  <p>Start with the work you need covered, then agree the collection schedule, review dates and approvals.</p>
+                </div>
+              )}
+              <div
+                className={
+                  "body-grid " + (p.kind === "article" ? "article-layout" : "") +
+                  (["capability-index", "service-hub"].includes(p.kind) ? " service-selection-grid" : "")
+                }
+              >
+                <SectionCopy page={p} />
+                <Related page={p} pages={c.pages} />
+              </div>
+            </>
           )
         )}
         {p.resources.length > 0 && (

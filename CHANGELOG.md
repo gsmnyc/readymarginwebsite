@@ -2,6 +2,7 @@
 
 ## 2026-10-01 — Directory cards and dashboard service coverage
 
+- Follow-up: reduced directory section spacing, added explanatory headings, aligned service-card text and separated the bottom links. Service-selection guidance uses two columns on desktop and one on phones.
 - Aligned audience cards and supporting sections; removed empty sidebar tracks where no related links exist.
 - Applied rounded cards to Insights, aligned reading links and grouped the search/topic controls in a themed surface.
 - Added nineteen distinct service icons with consistent sizing and both-theme rendering.
