@@ -45,8 +45,7 @@
 .workingPrinciples span { font-size:.7rem; font-weight:600; letter-spacing:.08em; color:var(--accent-gold); }
 .workingPrinciples h3 { margin-top:18px; font-size:1.25rem; letter-spacing:-.03em; line-height:1.4; }
 .workingPrinciples p { margin-top:12px; color:var(--rm-text-gray); font-size:1rem; line-height:1.8; }
-.service { display:grid; grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr); align-items:center; gap:32px; padding:32px; margin-bottom:40px; border:1px solid var(--site-border); border-radius:28px; background:var(--site-surface-soft); }
-.serviceCopy :global(.eyebrow) { margin-bottom:20px; color:var(--rm-text-gray); }
+.service { display:grid; grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr); align-items:center; gap:32px; padding:32px var(--page-content-padding); margin-bottom:40px; border:1px solid var(--site-border); border-radius:28px; background:var(--site-surface-soft); }
 .serviceCopy h2 { font-size:clamp(1.6rem,2.5vw,2.5rem); line-height:1.2; letter-spacing:-.045em; }
 .serviceCopy ul { margin-bottom:0; }
 .serviceDisclosure { grid-column:1 / -1; margin:0; color:var(--rm-text-gray); font-size:.75rem; line-height:1.8; }
@@ -55,5 +54,5 @@
 @keyframes product-dialog-in { from { opacity:0; transform:translate(-50%,calc(-50% + 8px)); } to { opacity:1; transform:translate(-50%,-50%); } }
 @keyframes product-dialog-out { to { opacity:0; transform:translate(-50%,calc(-50% + 8px)); } }
 @media(max-width:1000px) { .tabContent,.service { grid-template-columns:minmax(0,1fr); } .workflowCopy ul { display:flex; flex-wrap:wrap; gap:12px 24px; } .workingPrinciples { grid-template-columns:1fr; } .tourTail { gap:8px; } }
-@media(max-width:580px) { .shot { border-radius:16px; } .imageButton { border-radius:14px; } .enlarge { width:34px; height:34px; padding:0; justify-content:center; right:8px; bottom:8px; } .enlarge > span { display:none; } .tabList { width:100%; border-radius:18px; } .tabList button { padding-inline:14px; } .tabContent { padding:22px; border-radius:22px; } .service { padding:22px; gap:24px; } .dialog { padding:16px; border-radius:18px; } }
+@media(max-width:580px) { .shot { border-radius:16px; } .imageButton { border-radius:14px; } .enlarge { width:34px; height:34px; padding:0; justify-content:center; right:8px; bottom:8px; } .enlarge > span { display:none; } .tabList { width:100%; border-radius:18px; } .tabList button { padding-inline:14px; } .tabContent { padding:22px; border-radius:22px; } .service { gap:24px; border-radius:22px; } .dialog { padding:16px; border-radius:18px; } }
 @media(prefers-reduced-motion:reduce) { .dialog,.overlay,.tabContent { animation:none!important; } .imageButton > img,.tabList button { transition:none; } }

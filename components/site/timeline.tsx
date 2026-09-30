@@ -15,8 +15,7 @@ export function Timeline({
           </li>
         ))}
       </ol>
-      <p className="rhythm-return">Back to the records, with last week’s decisions in view.</p>
-      <p className="caption">A recurring managed service. Cadence is agreed for your restaurant.</p>
+      <p className="caption">Reporting dates and follow-up meetings are agreed in your service proposal.</p>
     </div>
   );
 }
