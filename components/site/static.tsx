@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { Content, Page, Settings } from "@/lib/content";
 import { CookieButton } from "./shell";
 import { HomeLink } from "./home-link";
+import { ServiceIcon } from "./service-icon";
 
 export function CTA({
   settings,
@@ -56,7 +57,7 @@ export function CapabilityGrid({ pages }: { pages: Page[] }) {
         <Link className="capability" href={page.path} key={page.path}>
           <div className="cap-top">
             <span>{String(index + 1).padStart(2, "0")}</span>
-            <Image src={"/icons/" + page.icon + ".svg"} alt="" width={48} height={48} sizes="48px" />
+            <ServiceIcon path={page.path} />
           </div>
           <h3>{page.title}</h3>
           <p>{page.description}</p>

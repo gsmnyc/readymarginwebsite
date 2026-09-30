@@ -5,6 +5,7 @@ import Link from "@/components/site/link";
 import type { PageSummary } from "@/lib/content";
 import { track } from "@/lib/analytics";
 import { Input } from "@/components/ui/input";
+import { BookOpen, ArrowUpRight } from "lucide-react";
 import {
   Pagination,
   PaginationContent,
@@ -156,18 +157,19 @@ export function ArticleGrid({
         </div>
       ) : (
         <div className="article-grid" aria-busy={pending}>
-          {filtered.slice((page - 1) * 6, page * 6).map((item, index) => (
-            <article key={item.path}>
+          {filtered.slice((page - 1) * 6, page * 6).map((item) => (
+            <article className="article-card" key={item.path}>
               <div className="article-rule">
                 <span>{item.category || item.kind.replace("-", " ")}</span>
-                <span>{String((page - 1) * 6 + index + 1).padStart(2, "0")}</span>
+                <BookOpen aria-hidden="true" size={24} strokeWidth={1.5} />
               </div>
               <h2>
                 <Link href={item.path}>{item.heading}</Link>
               </h2>
               <p>{item.description}</p>
-              <Link className="text-link" href={item.path}>
+              <Link className="text-link article-bottom" href={item.path}>
                 {item.kind === "article" ? "Read the guide" : "View the page"}
+                <ArrowUpRight aria-hidden="true" size={18} />
               </Link>
             </article>
           ))}
@@ -198,7 +200,7 @@ export function ArticleGrid({
         <details className="article-directory">
           <summary>Browse all restaurant finance articles</summary>
           <nav aria-label="All operator insights">
-            {pool.map((item) => (
+            {pool.filter((item) => (kind !== "checklists" || checklistPaths.has(item.path)) && (kind !== "guides" || !checklistPaths.has(item.path))).map((item) => (
               <Link key={item.path} href={item.path}>
                 {item.title}
               </Link>

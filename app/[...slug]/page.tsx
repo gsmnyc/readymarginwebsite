@@ -5,6 +5,8 @@ import { Faq } from "@/components/site/faq";
 import { ServiceProduct } from "@/components/product/service-product";
 import { getContent, summarizePage } from "@/lib/content";
 import { metadataFor, pageSchemaData } from "@/lib/seo";
+import { ServiceIcon } from "@/components/site/service-icon";
+import { WorkspaceCoverage } from "@/components/site/workspace-coverage";
 import {
   Breadcrumbs,
   CTA,
@@ -95,6 +97,7 @@ export default async function ContentPage({ params }: Props) {
       </section>
       <div className="container page-body">
         <ServiceProduct page={p} />
+        {["/what-we-handle", "/restaurant-finance-services", "/platform"].includes(p.path) && <WorkspaceCoverage />}
         {p.kind !== "article" && p.answer && p.answer.trim() !== p.description.trim() && (
           <section className="fit-note" aria-labelledby="answer-title">
             <h2 id="answer-title">{p.kind === "answer" ? "Short answer" : "Service overview"}</h2>
@@ -125,9 +128,10 @@ export default async function ContentPage({ params }: Props) {
               .filter((q) => q.kind === "audience")
               .map((q) => (
                 <Link href={q.path} key={q.path}>
+                  <ServiceIcon path={q.path} />
                   <h2>{q.title}</h2>
                   <p>{q.description}</p>
-                  <span className="text-link">Explore the fit</span>
+                  <span className="audience-card-link">View support for your restaurant <span aria-hidden="true">↗</span></span>
                 </Link>
               ))}
           </div>
