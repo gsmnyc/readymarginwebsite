@@ -1,5 +1,19 @@
 # Restoration release
 
+## Copy and search review — 1 October 2026
+
+This review rewrites 121 content routes, the homepage and shared product, pricing and enquiry copy. It adds page-specific questions, direct answers and consistent search metadata. See [Copy and search review](COPY_AND_SEARCH_REVIEW.md) for scope, sources and business confirmation items.
+
+The expanded product tabs, desktop/mobile menu organization, theme-aware service cards and compact mobile legal links are retained and reviewed. The desktop footer has four equal columns. The follow-up review removes the footer stickers, repeated hero badges, generic screenshot labels and arbitrary section numbering. Hero and body cards now use the same outer width and content gutter.
+
+Lint (zero warnings), standalone TypeScript, the server production build and the public static export passed. Manual browser review covered desktop and mobile menus, tab labels, centered close controls, light/dark surfaces, footer columns and an accounting-page FAQ. No automated test suites or field-speed measurements were run for this revision.
+
+The user reviewed the public website and authorized these follow-up fixes and focused GitHub commits to PR #13. Publication uses a separate Sites source snapshot. Main remains unmerged; merging requires separate confirmation.
+
+The follow-up commits are `0d7895a` (content), `21f4b81` (search and visible answers), and `efde649` (shared layout and footer). Documentation is committed separately. All 121 headings and descriptions are distinct; the content review covers 344 sections. The shared body wrapper also removes the older tablet width cap rather than compensating with route-specific offsets.
+
+Final follow-up checks: lint, standalone TypeScript, server build and public static export passed. Manual review confirmed matching hero/product card edges and heading gutters at desktop and 700px tablet width, matching service-card widths at phone width, a visible short answer, no repeated hero badges or section-number ornaments, and a footer wordmark without stickers or reserved sticker space. Desktop and phone checks included theme surfaces. These checks do not claim that every route received a separate browser session.
+
 Branch: `codex/website-quality-restoration`.
 
 ## Scope

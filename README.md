@@ -1,5 +1,7 @@
 # Ready Margin website
 
+For the current all-page writing standard, source research and search changes, see [Copy and search review](docs/COPY_AND_SEARCH_REVIEW.md). The 1 October 2026 copy update and follow-up interface corrections are included in PR #13 after public review. Main remains unmerged pending approval.
+
 Next.js, React and TypeScript. The complete website uses local Plus Jakarta Sans, supplied identity assets, editable content and enquiry-only service pricing.
 
 ## Brand colors
@@ -63,4 +65,4 @@ Review mobile and keyboard interactions, consent choices, enquiry delivery and d
 
 ## Release history
 
-The current review branch is `codex/website-quality-restoration`. It starts from the restored website before the discarded speed rewrite. The tabs, dialogs, animation library and original screenshots are preserved. See [CHANGELOG.md](CHANGELOG.md) and [release notes](docs/RELEASE_NOTES.md) for the commit sequence, changes and remaining measurement limits. Push feature branches and review a PR to `main` before merging.
+The current review branch is `codex/website-quality-restoration`, tracked by PR #13. It starts from the restored website before the discarded speed rewrite. The tabs, dialogs, animation library and original screenshots are preserved. The shared content template uses aligned card widths without generic hero badges or decorative section numbers; the footer keeps its gold wordmark without stickers. See [CHANGELOG.md](CHANGELOG.md) and [release notes](docs/RELEASE_NOTES.md) for the commit sequence, changes and remaining measurement limits. Review the PR and obtain merge approval before changing `main`.

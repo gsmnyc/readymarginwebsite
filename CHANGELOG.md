@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-10-01 — Copy, search and page consistency
+
+### Changed
+
+- Rewrote 121 public content pages and shared homepage, product, pricing and footer copy around specific restaurant finance tasks.
+- Added service-specific FAQs, visible direct answers and article summaries with fictional calculation examples.
+- Updated page descriptions, titles, publisher identity and page/article/service relationships in structured data.
+- Consolidated resource aliases with canonical URLs and excluded them from the sitemap.
+- Curated checklist browsing and refreshed official New York labor references.
+- Preserved the expanded product tabs, grouped responsive navigation, themed card surfaces and responsive footer layout requested in the annotations.
+
+- Removed the footer stickers and their reserved space after public-site review.
+- Removed repeated hero badges, generic screenshot labels and arbitrary section numbers across the shared content-page template.
+- Aligned hero, product and body cards with the same outer width and text gutter on desktop, tablet and phones.
+- Shortened remaining promotional headings and removed an unused duplicate homepage copy source.
+- Limited service screenshots to tasks actually represented by the captured demo.
+
+The user authorized focused commits and an update to the existing PR #13 after public review. Main remains unmerged pending separate approval.
+
+### Commit sequence
+
+- `0d7895a` — rewrite restaurant service and editorial copy, shared product descriptions and enquiry text.
+- `21f4b81` — connect search metadata with visible answers, summaries, FAQs and canonical resource directories.
+- `efde649` — remove footer stickers and repeated labels; align page cards and content gutters across breakpoints.
+
 ## 2026-10-01 — Restoration and quality review
 
 ### Restored baseline
