@@ -6,10 +6,10 @@
       "kind": "solution-hub",
       "title": "Restaurant Finance Solutions by Problem",
       "seoTitle": "Restaurant Finance Solutions by Problem",
-      "heading": "Start with the problem you need solved.",
-      "description": "Find restaurant finance support for overdue books, payroll questions, supplier bill errors, high costs and cash pressure. Start with the problem.",
+      "heading": "Support for restaurant payroll, cash and cost problems.",
+      "description": "Find help for late books, payroll exceptions, rising costs and cash pressure. Start with the problem, then choose the relevant Ready Margin service.",
       "eyebrow": "Restaurant finance solutions / Problem-first",
-      "answer": "Find restaurant finance support for overdue books, payroll questions, supplier bill errors, high costs and cash pressure. Start with the problem.",
+      "answer": "Find help for late books, payroll exceptions, rising costs and cash pressure. Start with the problem, then choose the relevant Ready Margin service.",
       "queries": [
         "restaurant finance solutions",
         "restaurant financial problems",
@@ -21,36 +21,36 @@
       ],
       "sections": [
         {
-          "title": "Choose a specific starting point",
-          "body": "Bring a recent example and the decision it affected. We’ll identify the records and responsibilities needed to work through it.",
+          "title": "Choose a problem you can point to",
+          "body": "Bring a late report, a recurring correction or a payment decision that lacks reliable information. The examples below help identify which records need reviewing and which service might fit.",
           "items": []
         },
         {
-          "title": "Build the service around the cause",
-          "body": "An immediate review may lead to recurring support or a defined project. The scope and price are agreed after we understand the work.",
+          "title": "Get a proposal for the underlying work",
+          "body": "A one-off investigation and a recurring bookkeeping routine require different scopes. We discuss both the immediate issue and the work needed to stop it recurring before quoting.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/solutions/restaurant-payroll-problems",
-          "label": "Restaurant payroll problems"
+          "label": "Restaurant Payroll Problems"
         },
         {
           "path": "/solutions/restaurant-books-behind",
-          "label": "Restaurant books are behind"
+          "label": "Restaurant Books Are Behind"
         },
         {
           "path": "/solutions/restaurant-cash-flow-problems",
-          "label": "Restaurant cash-flow problems"
+          "label": "Restaurant Cash Flow Problems"
         },
         {
           "path": "/solutions/restaurant-not-profitable",
-          "label": "Restaurant is not profitable"
+          "label": "Restaurant Not Profitable"
         },
         {
           "path": "/restaurant-finance-services",
-          "label": "Explore restaurant finance services"
+          "label": "Restaurant Finance Services"
         }
       ],
       "resources": [],
@@ -61,10 +61,10 @@
       "kind": "solution",
       "title": "Restaurant Payroll Problems",
       "seoTitle": "Restaurant Payroll Problems: Hours & Tips",
-      "heading": "Resolve the payroll question before cutoff.",
-      "description": "Review restaurant payroll problems against hours, tips, corrections and approvals. Trace the affected record and resolve questions before cutoff.",
+      "heading": "Payroll is approaching and the inputs are still incomplete.",
+      "description": "Get restaurant payroll exceptions organized before approval. Review missing punches, tip records and corrections with the manager responsible for each answer.",
       "eyebrow": "Problem / Restaurant payroll",
-      "answer": "Review restaurant payroll problems against hours, tips, corrections and approvals. Trace the affected record and resolve questions before cutoff.",
+      "answer": "Get restaurant payroll exceptions organized before approval. Review missing punches, tip records and corrections with the manager responsible for each answer.",
       "queries": [
         "restaurant payroll problems",
         "restaurant payroll errors",
@@ -76,37 +76,37 @@
       ],
       "sections": [
         {
-          "title": "Identify the affected record",
-          "body": "Confirm the employee, shift, period and amount in question. Compare the source entry with the version prepared for payroll.",
+          "title": "List the unresolved inputs",
+          "body": "Confirm the pay period and cutoff, then separate missing punches, rate questions, tip assignments and corrections. Record the employee, shift or check reference needed to investigate each item.",
           "items": []
         },
         {
-          "title": "Get the operating answer",
-          "body": "Ask the manager who can confirm what happened. Keep the reason and authorization with any correction.",
+          "title": "Ask the person who can confirm the facts",
+          "body": "A schedule alone cannot confirm when someone left a shift. The manager’s response needs to be recorded with the original entry and any approved correction.",
           "items": []
         },
         {
-          "title": "Improve the next cycle",
-          "body": "Agree input dates and an escalation route for late changes. Processing and payroll-tax responsibilities are confirmed in the engagement.",
+          "title": "Prepare the approval handoff",
+          "body": "Send the nominated approver the reviewed inputs and the remaining exceptions. Ready Margin can handle preparation and follow-up within a payroll service; processing and tax responsibilities are separately confirmed.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-payroll-services",
-          "label": "Restaurant payroll services"
+          "label": "Restaurant Payroll Services"
         },
         {
           "path": "/restaurant-tip-management",
-          "label": "Restaurant tip management"
+          "label": "Restaurant Tip Management Support"
         },
         {
           "path": "/restaurant-labor-cost-management",
-          "label": "Restaurant labor-cost management"
+          "label": "Restaurant Labor Cost Management"
         },
         {
           "path": "/book-a-review",
-          "label": "Discuss your payroll workflow"
+          "label": "Book your free demo"
         }
       ],
       "resources": [
@@ -122,10 +122,10 @@
       "kind": "solution",
       "title": "Restaurant Books Are Behind",
       "seoTitle": "Restaurant Books Behind? Catch-Up Support",
-      "heading": "Bring the books up to date.",
-      "description": "Catch up restaurant books by collecting missing records, reconciling accounts and agreeing a close plan. See where recurring support can help.",
+      "heading": "Your restaurant’s books are behind. Establish where to restart.",
+      "description": "Recover overdue restaurant bookkeeping by identifying the last reconciled period, available statements and missing records. Separate cleanup from ongoing work.",
       "eyebrow": "Problem / Late restaurant books",
-      "answer": "Catch up restaurant books by collecting missing records, reconciling accounts and agreeing a close plan. See where recurring support can help.",
+      "answer": "Recover overdue restaurant bookkeeping by identifying the last reconciled period, available statements and missing records. Separate cleanup from ongoing work.",
       "queries": [
         "restaurant books behind",
         "restaurant bookkeeping catch up",
@@ -137,28 +137,28 @@
       "sections": [
         {
           "title": "Find the last reliable close",
-          "body": "Confirm which accounts and periods were reconciled. List the missing sales statements, bank records, bills and payroll inputs.",
+          "body": "Check which bank and card accounts were reconciled and which reporting period was completed. A ledger with entries is not necessarily a closed or reconciled set of accounts.",
           "items": []
         },
         {
-          "title": "Work through the backlog",
-          "body": "Prioritize the records needed for the next deadline or decision. Historic cleanup is assessed separately from the recurring bookkeeping service.",
+          "title": "Collect the backlog by source",
+          "body": "Group settlement statements, invoices, payroll reports and account statements by period. Note missing files and the person or provider who can supply them.",
           "items": []
         },
         {
-          "title": "Keep the next month moving",
-          "body": "Set delivery dates and contacts for current records. Carry unresolved entries into a visible review list rather than rebuilding the backlog.",
+          "title": "Agree the cleanup sequence and ongoing routine",
+          "body": "Ready Margin assesses the workload before quoting. We agree the periods to repair and the collection routine for current work so new activity does not add to the backlog.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-bookkeeping-services",
-          "label": "Restaurant bookkeeping services"
+          "label": "Restaurant Bookkeeping Services"
         },
         {
           "path": "/restaurant-accounting-services",
-          "label": "Restaurant accounting services"
+          "label": "Restaurant Accounting Services"
         },
         {
           "path": "/insights/restaurant-month-end-close-checklist",
@@ -166,7 +166,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Discuss catching up your books"
+          "label": "Book your free demo"
         }
       ],
       "resources": [],
@@ -177,10 +177,10 @@
       "kind": "solution",
       "title": "Restaurant Tax and Compliance Problems",
       "seoTitle": "Restaurant Tax & Compliance Record Support",
-      "heading": "Put the deadlines and records in order.",
-      "description": "Organize restaurant tax and compliance records, deadlines and adviser questions. Confirm who prepares, approves and files each required item.",
+      "heading": "A tax or compliance deadline needs the right records.",
+      "description": "Organize restaurant tax and compliance handoffs with a confirmed deadline, document list and responsible provider. Resolve missing information before approval.",
       "eyebrow": "Problem / Restaurant tax and compliance",
-      "answer": "Organize restaurant tax and compliance records, deadlines and adviser questions. Confirm who prepares, approves and files each required item.",
+      "answer": "Organize restaurant tax and compliance handoffs with a confirmed deadline, document list and responsible provider. Resolve missing information before approval.",
       "queries": [
         "restaurant tax help",
         "restaurant tax problems",
@@ -192,37 +192,37 @@
       ],
       "sections": [
         {
-          "title": "Confirm the obligation",
-          "body": "Check the applicable requirement and deadline with the relevant authority or adviser. Identify which records are still needed.",
+          "title": "Confirm the requirement with the responsible adviser",
+          "body": "Identify the notice, filing or task and the professional handling it. Use dates and document requirements confirmed for your business rather than a generic restaurant checklist.",
           "items": []
         },
         {
-          "title": "Assign each responsibility",
-          "body": "Name who prepares, reviews, approves and files. Include a contact for notices or corrections.",
+          "title": "Collect the exact documents requested",
+          "body": "Accounts, payroll summaries or invoices may be needed for different tasks. Ready Margin can organize the agreed records and report what is missing.",
           "items": []
         },
         {
-          "title": "Document the handoff",
-          "body": "Keep the approved version and completion evidence with the record. Filing, tax interpretation and legal advice are explicitly confirmed in scope.",
+          "title": "Check completion with the submitting person",
+          "body": "Name who approves and who submits, then retain the relevant confirmation. Record coordination is separate from legal interpretation, tax advice and representation.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-tax-services",
-          "label": "Restaurant tax and compliance support"
+          "label": "Restaurant Tax and Compliance Support"
         },
         {
           "path": "/restaurant-compliance-services",
-          "label": "Restaurant compliance workflow support"
+          "label": "Restaurant Compliance Workflow Support"
         },
         {
           "path": "/restaurant-accounting-services",
-          "label": "Restaurant accounting services"
+          "label": "Restaurant Accounting Services"
         },
         {
           "path": "/answers/does-restaurant-bookkeeping-include-taxes",
-          "label": "Does bookkeeping include taxes?"
+          "label": "Does restaurant bookkeeping include taxes?"
         }
       ],
       "resources": [
@@ -238,10 +238,10 @@
       "kind": "solution",
       "title": "Restaurant Cash Flow Problems",
       "seoTitle": "Restaurant Cash Flow Problems",
-      "heading": "Understand what is putting pressure on cash.",
-      "description": "Review restaurant cash pressure using dated balances, expected receipts and known obligations. Identify timing gaps and the next records to check.",
+      "heading": "The bank balance will not cover the next payment week.",
+      "description": "Investigate restaurant cash pressure with dated balances, expected settlements and obligations. Identify the timing gaps before deciding on payments or spending.",
       "eyebrow": "Problem / Restaurant cash flow",
-      "answer": "Review restaurant cash pressure using dated balances, expected receipts and known obligations. Identify timing gaps and the next records to check.",
+      "answer": "Investigate restaurant cash pressure with dated balances, expected settlements and obligations. Identify the timing gaps before deciding on payments or spending.",
       "queries": [
         "restaurant cash flow problems",
         "restaurant running out of cash",
@@ -252,37 +252,37 @@
       ],
       "sections": [
         {
-          "title": "Put the dates beside the amounts",
-          "body": "List current cash, expected receipts and payroll, supplier or other obligations. Separate confirmed figures from estimates.",
+          "title": "Put the next payments on a dated list",
+          "body": "Confirm payroll, supplier bills, rent and other commitments due before the next review. Separate approved amounts from disputed bills and estimates.",
           "items": []
         },
         {
-          "title": "Check timing and performance",
-          "body": "A delayed settlement and continuing losses need different responses. Compare cash movements with the available operating and financial records.",
+          "title": "Check the receipts expected before those dates",
+          "body": "Trace card and delivery payouts to their settlement statements. Strong sales do not establish when the money will reach the bank or the net amount received.",
           "items": []
         },
         {
-          "title": "Choose the next action",
-          "body": "Confirm the receipt, resolve the invoice or update the cash view before the payment decision. Any forecast states its assumptions and input limits.",
+          "title": "Review the decisions and the information missing",
+          "body": "Ready Margin can prepare a cash review and agreed scenarios. Management decides on payments and commitments; specialist financing or restructuring advice needs a separate adviser.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-cash-flow-management",
-          "label": "Restaurant cash-flow management"
+          "label": "Restaurant Cash Flow Management"
         },
         {
           "path": "/restaurant-cfo-services",
-          "label": "Restaurant CFO services"
+          "label": "Restaurant CFO Services"
         },
         {
           "path": "/restaurant-accounts-payable-services",
-          "label": "Restaurant accounts payable services"
+          "label": "Restaurant Accounts Payable Services"
         },
         {
           "path": "/answers/how-to-fix-restaurant-cash-flow",
-          "label": "How to work through restaurant cash-flow problems"
+          "label": "How should a restaurant cash-flow review start?"
         }
       ],
       "resources": [],
@@ -293,10 +293,10 @@
       "kind": "solution",
       "title": "Restaurant Food Cost Too High",
       "seoTitle": "High Restaurant Food Cost: Review the Cause",
-      "heading": "Find the reason food cost has risen.",
-      "description": "Investigate high restaurant food cost through supplier prices, purchases, recipes, waste and stock records before choosing an operating response.",
+      "heading": "Food cost rose. Check price, usage and reporting timing.",
+      "description": "Investigate high restaurant food cost using invoices, units, stock counts, recipes and sales. Distinguish the cause before changing purchases or portions.",
       "eyebrow": "Problem / High restaurant food cost",
-      "answer": "Investigate high restaurant food cost through supplier prices, purchases, recipes, waste and stock records before choosing an operating response.",
+      "answer": "Investigate high restaurant food cost using invoices, units, stock counts, recipes and sales. Distinguish the cause before changing purchases or portions.",
       "queries": [
         "restaurant food cost too high",
         "why is restaurant food cost high",
@@ -307,37 +307,37 @@
       ],
       "sections": [
         {
-          "title": "Validate the comparison",
-          "body": "Use the same period and accounting basis. Check invoice timing, units and stock counts before reading the percentage.",
+          "title": "Make the comparison like-for-like",
+          "body": "Confirm the same reporting dates, item and unit. A larger pack or a late invoice can change the apparent cost without representing the price increase you first suspected.",
           "items": []
         },
         {
-          "title": "Trace the largest movement",
-          "body": "Review supplier prices, pack sizes, portions, waste and sales mix. The kitchen and purchasing team confirm the operating facts.",
+          "title": "Review the kitchen records",
+          "body": "Check counts, recipe quantities, yields, portions and available waste records with the kitchen. Mark estimates rather than treating them as measured usage.",
           "items": []
         },
         {
-          "title": "Change the relevant process",
-          "body": "A count problem needs a different response from a price change. Use the confirmed finding to discuss the next purchasing, recipe or operating decision.",
+          "title": "Act on a confirmed explanation",
+          "body": "We can trace the strongest evidence and prepare a supplier or operating review. A manager then decides on the change and the measure to check afterward.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-food-cost-management",
-          "label": "Restaurant food-cost management"
+          "label": "Restaurant Food Cost Management"
         },
         {
           "path": "/restaurant-inventory-cost-control",
-          "label": "Restaurant inventory and cost control"
+          "label": "Restaurant Inventory and Cost Control"
         },
         {
           "path": "/answers/how-to-reduce-restaurant-food-cost",
-          "label": "How to reduce restaurant food cost"
+          "label": "How can a restaurant investigate high food cost?"
         },
         {
           "path": "/insights/restaurant-recipe-costing",
-          "label": "Restaurant recipe costing guide"
+          "label": "Restaurant recipe costing: units, yield and portions"
         }
       ],
       "resources": [],
@@ -348,10 +348,10 @@
       "kind": "solution",
       "title": "Restaurant Labor Cost Too High",
       "seoTitle": "High Restaurant Labor Cost: Review the Cause",
-      "heading": "Check what changed in the working week.",
-      "description": "Review high restaurant labor cost with sales, schedules, recorded hours and payroll inputs. Confirm the cause before management changes staffing.",
+      "heading": "Labor cost rose. Find out what changed in the shifts.",
+      "description": "Review restaurant labor-cost pressure through sales, planned shifts, attendance and pay inputs. Compare consistent periods before making staffing decisions.",
       "eyebrow": "Problem / High restaurant labor cost",
-      "answer": "Review high restaurant labor cost with sales, schedules, recorded hours and payroll inputs. Confirm the cause before management changes staffing.",
+      "answer": "Review restaurant labor-cost pressure through sales, planned shifts, attendance and pay inputs. Compare consistent periods before making staffing decisions.",
       "queries": [
         "restaurant labor cost too high",
         "reduce restaurant labor cost",
@@ -362,37 +362,37 @@
       ],
       "sections": [
         {
-          "title": "Align the dates",
-          "body": "Make the sales, schedule and payroll periods comparable. Identify missing punches and corrections.",
+          "title": "Check the denominator and the dates",
+          "body": "Labor cost as a percentage can rise because sales fell, labor increased or the periods do not match. Establish the cost basis and comparable dates first.",
           "items": []
         },
         {
-          "title": "Separate sales and labor movement",
-          "body": "Lower sales can raise the percentage without any added hours. Review coverage, rates, overtime and manager context to understand the driver.",
+          "title": "Compare coverage with recorded hours",
+          "body": "A cover shift, training or longer service can explain extra time. Ask managers to confirm unusual shifts and missing punches before interpreting the payroll figures.",
           "items": []
         },
         {
-          "title": "Make a targeted decision",
-          "body": "Use the finding alongside service requirements and employment obligations. Staffing and pay decisions remain with your restaurant.",
+          "title": "Discuss the operating response",
+          "body": "Ready Margin can assess the agreed records and explain the cost movement. Management decides on coverage and pay, using appropriate employment advice where needed.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-labor-cost-management",
-          "label": "Restaurant labor-cost management"
+          "label": "Restaurant Labor Cost Management"
         },
         {
           "path": "/restaurant-payroll-services",
-          "label": "Restaurant payroll services"
+          "label": "Restaurant Payroll Services"
         },
         {
           "path": "/answers/how-to-control-restaurant-labor-cost",
-          "label": "How to control restaurant labor cost"
+          "label": "How can a restaurant review labor cost?"
         },
         {
           "path": "/what-we-handle/scheduling-attendance",
-          "label": "Scheduling and attendance support"
+          "label": "Scheduling & Attendance"
         }
       ],
       "resources": [
@@ -408,10 +408,10 @@
       "kind": "solution",
       "title": "Restaurant Not Profitable",
       "seoTitle": "Restaurant Profitability Problems",
-      "heading": "See where the margin is being used.",
-      "description": "Review restaurant profitability through comparable sales, food costs, labor and operating expenses. Identify the questions affecting margin and cash.",
+      "heading": "Busy tables are not showing up as profit.",
+      "description": "Investigate weak restaurant profitability across sales mix, food cost, labor and overhead. Check the accounts and cost drivers before choosing a response.",
       "eyebrow": "Problem / Restaurant profitability",
-      "answer": "Review restaurant profitability through comparable sales, food costs, labor and operating expenses. Identify the questions affecting margin and cash.",
+      "answer": "Investigate weak restaurant profitability across sales mix, food cost, labor and overhead. Check the accounts and cost drivers before choosing a response.",
       "queries": [
         "restaurant not profitable",
         "why is my restaurant not profitable",
@@ -423,37 +423,37 @@
       ],
       "sections": [
         {
-          "title": "Check the report is comparable",
-          "body": "Confirm dates, account definitions and missing inputs. A timing difference should be established before it becomes an operating conclusion.",
+          "title": "Establish whether the accounts are complete",
+          "body": "Confirm the reporting period, late supplier bills, payroll treatment and stock records. Incomplete costs can make a profitable period look better than it is.",
           "items": []
         },
         {
-          "title": "Investigate material changes",
-          "body": "Separate volume, cost and mix effects using the available records. Ask managers about the trading conditions behind the period.",
+          "title": "Trace the change through the main cost areas",
+          "body": "Review sales mix and contribution alongside food, labor and overhead. Different drivers require different actions; one overall percentage cannot explain them all.",
           "items": []
         },
         {
-          "title": "Prioritize what the team can act on",
-          "body": "Choose a specific review or operating change with a responsible person. Results depend on the decisions and conditions that follow; profitability is not guaranteed.",
+          "title": "Evaluate options with the management team",
+          "body": "Ready Margin can prepare the assessment and agreed financial scenarios. The restaurant chooses changes to pricing, purchasing or operations and a date to review their effect.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-profitability-consulting",
-          "label": "Restaurant profitability consulting"
+          "label": "Restaurant Profitability Consulting"
         },
         {
           "path": "/restaurant-turnaround-consulting",
-          "label": "Restaurant turnaround consulting"
+          "label": "Restaurant Turnaround Consulting"
         },
         {
           "path": "/restaurant-cfo-services",
-          "label": "Restaurant CFO services"
+          "label": "Restaurant CFO Services"
         },
         {
           "path": "/restaurant-cash-flow-management",
-          "label": "Restaurant cash-flow management"
+          "label": "Restaurant Cash Flow Management"
         }
       ],
       "resources": [],
@@ -464,10 +464,10 @@
       "kind": "solution",
       "title": "Restaurant Vendor Bill Errors",
       "seoTitle": "Restaurant Vendor Bill & Invoice Errors",
-      "heading": "Check the invoice before approving it.",
-      "description": "Check restaurant vendor bill errors against orders, delivery records, agreed prices and credits. Keep the correction and supplier answer together.",
+      "heading": "A supplier invoice does not match what you ordered.",
+      "description": "Review restaurant invoice errors against orders, deliveries, pack sizes and credits. Document the supplier’s answer before presenting the bill for approval.",
       "eyebrow": "Problem / Restaurant vendor bills",
-      "answer": "Check restaurant vendor bill errors against orders, delivery records, agreed prices and credits. Keep the correction and supplier answer together.",
+      "answer": "Review restaurant invoice errors against orders, deliveries, pack sizes and credits. Document the supplier’s answer before presenting the bill for approval.",
       "queries": [
         "restaurant vendor bill errors",
         "restaurant invoice discrepancy",
@@ -478,37 +478,37 @@
       ],
       "sections": [
         {
-          "title": "Compare the same item",
-          "body": "Check units, order quantities and substitutions. A different pack size can explain a changed invoice total.",
+          "title": "Compare the supporting documents",
+          "body": "Find the invoice, order and receiving record. Check the item, pack size, quantity and unit price before treating a different total as an error.",
           "items": []
         },
         {
-          "title": "Find the supporting evidence",
-          "body": "Compare the delivery, invoice and available pricing or credit records. Ask the manager or supplier contact to confirm any gap.",
+          "title": "Assign the right question to the right contact",
+          "body": "The receiving manager confirms what arrived; the supplier addresses price and credit questions. Keep both responses with the invoice.",
           "items": []
         },
         {
-          "title": "Keep the answer with the bill",
-          "body": "Record what was confirmed and any credit still expected. Your nominated approver decides whether payment is authorized.",
+          "title": "Update the bill status",
+          "body": "Record whether the item is approved, disputed or awaiting a credit. Ready Margin can maintain the review list and supporting records; your authorized person decides on payment.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-accounts-payable-services",
-          "label": "Restaurant accounts payable services"
+          "label": "Restaurant Accounts Payable Services"
         },
         {
           "path": "/restaurant-food-cost-management",
-          "label": "Restaurant food-cost management"
+          "label": "Restaurant Food Cost Management"
         },
         {
           "path": "/what-we-handle/food-cost-vendors",
-          "label": "Food cost and vendor support"
+          "label": "Food Cost & Vendors"
         },
         {
           "path": "/book-a-review",
-          "label": "Discuss your vendor workflow"
+          "label": "Book your free demo"
         }
       ],
       "resources": [],
@@ -519,10 +519,10 @@
       "kind": "solution",
       "title": "Restaurant Tip Disputes and Discrepancies",
       "seoTitle": "Restaurant Tip Disputes: Check the Records",
-      "heading": "Trace the tip question to its source.",
-      "description": "Trace restaurant tip questions through the source check, recorded inputs, documented policy and approval history. Confirm the unresolved details.",
+      "heading": "A tip question needs the source record and the approved rule.",
+      "description": "Trace restaurant tip disputes through check records, employee assignments and confirmed allocation rules. Keep unresolved evidence separate from approved inputs.",
       "eyebrow": "Problem / Restaurant tips",
-      "answer": "Trace restaurant tip questions through the source check, recorded inputs, documented policy and approval history. Confirm the unresolved details.",
+      "answer": "Trace restaurant tip disputes through check records, employee assignments and confirmed allocation rules. Keep unresolved evidence separate from approved inputs.",
       "queries": [
         "restaurant tip dispute",
         "restaurant tip discrepancy",
@@ -533,37 +533,37 @@
       ],
       "sections": [
         {
-          "title": "Identify the check and period",
-          "body": "Keep the disputed amount and original source together. Establish which name, input or allocation needs review.",
+          "title": "Identify the disputed amount",
+          "body": "Record the check, date, employee assignment and amount at issue. Preserve the original source and any later adjustment so the question can be reconstructed.",
           "items": []
         },
         {
-          "title": "Confirm the applicable policy",
-          "body": "The restaurant’s authorized people confirm the documented rules and the operating facts. Relevant employment or tax interpretation belongs with the qualified adviser.",
+          "title": "Check the rule being applied",
+          "body": "Your restaurant supplies the applicable policy and authorized allocation rule. A missing or disputed rule requires confirmation from the responsible person and, where necessary, legal advice.",
           "items": []
         },
         {
-          "title": "Document the decision",
-          "body": "Keep the correction and approval with the source record. Unresolved amounts remain visible until the responsible person confirms the next action.",
+          "title": "Document the decision before the handoff",
+          "body": "Ready Margin can organize evidence and prepare approved corrections. We do not resolve employment-law disputes or invent a distribution rule when the evidence is incomplete.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/restaurant-tip-management",
-          "label": "Restaurant tip management support"
+          "label": "Restaurant Tip Management Support"
         },
         {
           "path": "/restaurant-payroll-services",
-          "label": "Restaurant payroll services"
+          "label": "Restaurant Payroll Services"
         },
         {
           "path": "/what-we-handle/payroll-tips",
-          "label": "Payroll and tips support"
+          "label": "Payroll & Tips"
         },
         {
           "path": "/book-a-review",
-          "label": "Discuss your tip workflow"
+          "label": "Book your free demo"
         }
       ],
       "resources": [
@@ -579,10 +579,10 @@
       "kind": "solution",
       "title": "Multi-Location Restaurant Reporting Problems",
       "seoTitle": "Multi-Location Restaurant Reporting Problems",
-      "heading": "Make the locations comparable.",
-      "description": "Make restaurant location reports comparable using consistent dates, account definitions and shared-cost allocation. Keep each location’s context.",
+      "heading": "The location reports cannot be compared yet.",
+      "description": "Fix inconsistent restaurant group reporting by aligning periods, accounts and allocations. Identify local missing records before drawing a group conclusion.",
       "eyebrow": "Problem / Multi-location reporting",
-      "answer": "Make restaurant location reports comparable using consistent dates, account definitions and shared-cost allocation. Keep each location’s context.",
+      "answer": "Fix inconsistent restaurant group reporting by aligning periods, accounts and allocations. Identify local missing records before drawing a group conclusion.",
       "queries": [
         "multi location restaurant reporting problems",
         "restaurant group reporting inconsistent",
@@ -592,37 +592,37 @@
       ],
       "sections": [
         {
-          "title": "Set a shared basis",
-          "body": "Agree the reporting period and account definitions. Identify differences in entity structure or cost allocation.",
+          "title": "Agree common definitions",
+          "body": "Check reporting periods, account mappings, entity coverage and shared-cost allocation. Locations using different definitions can appear to perform differently even when operations are similar.",
           "items": []
         },
         {
-          "title": "Retain the local explanation",
-          "body": "Service format, opening hours and recent changes help explain the figures. Include the local manager’s context.",
+          "title": "Find the incomplete location inputs",
+          "body": "A missing invoice or payroll entry at one site can distort the group total. Identify what is provisional and who will supply the missing record.",
           "items": []
         },
         {
-          "title": "Assign the follow-up",
-          "body": "Mark incomplete records and the person providing them. Use the group review to agree the questions requiring a local or central decision.",
+          "title": "Retain the reasons locations differ",
+          "body": "Ready Margin can prepare consistent reporting while keeping format, opening hours and recent changes visible. The group review should support specific questions for each manager.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/multi-location-restaurant-finance",
-          "label": "Multi-location restaurant finance"
+          "label": "Multi-Location Restaurant Finance"
         },
         {
           "path": "/restaurant-cfo-services",
-          "label": "Restaurant CFO services"
+          "label": "Restaurant CFO Services"
         },
         {
           "path": "/who-we-help/multi-location-groups",
-          "label": "Support for multi-location restaurant groups"
+          "label": "Multi-location groups"
         },
         {
           "path": "/book-a-review",
-          "label": "Discuss multi-location reporting"
+          "label": "Book your free demo"
         }
       ],
       "resources": [],

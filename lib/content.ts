@@ -16,11 +16,13 @@ const resourceSchema = z.object({
   url: z.string().url(),
   label: z.string().min(3),
 });
+const faqSchema = z.object({ question: z.string().min(5), answer: z.string().min(20) });
 
 export const pageSchema = z.object({
   path: z.string().regex(/^\/[a-z0-9/-]+$/),
   title: z.string().min(5),
   seoTitle: z.string().optional(),
+  canonicalPath: z.string().regex(/^\/[a-z0-9/-]+$/).optional(),
   heading: z.string().min(5),
   description: z.string().min(20),
   kind: z.enum([
@@ -48,6 +50,7 @@ export const pageSchema = z.object({
   disclosure: z.string().default(""),
   resources: z.array(resourceSchema).default([]),
   serviceType: z.string().default(""),
+  faqs: z.array(faqSchema).default([]),
 });
 
 export type Page = z.infer<typeof pageSchema>;
@@ -64,11 +67,12 @@ export type Content = { settings: Settings; pages: Page[]; tiers: Tier[]; faqs: 
 const legacyRedirectPaths = new Set(["/new-york-restaurant-bookkeeping"]);
 
 type PageSource = {
-  path: string; kind: string; title: string; seoTitle?: string; heading: string;
+  path: string; kind: string; title: string; seoTitle?: string; canonicalPath?: string; heading: string;
   description: string; eyebrow: string; answer: string; serviceType?: string;
   queries?: string[]; sections: { title: string; body: string; items: string[] }[];
   related: { path: string; label: string }[]; resources: { url: string; label: string }[];
   publishedAt?: string; updated?: string; author?: string; disclosure?: string;
+  faqs?: { question: string; answer: string }[];
 };
 
 function normalizePage(page: PageSource, updated: string, category: string): Page {
@@ -76,6 +80,7 @@ function normalizePage(page: PageSource, updated: string, category: string): Pag
     path: page.path,
     title: page.title,
     seoTitle: page.seoTitle,
+    canonicalPath: page.canonicalPath,
     heading: page.heading,
     description: page.description,
     kind: page.kind === "local-service" || page.kind === "local-hub" ? "service" : page.kind,
@@ -96,6 +101,7 @@ function normalizePage(page: PageSource, updated: string, category: string): Pag
     disclosure: page.disclosure || "",
     resources: page.resources,
     serviceType: page.serviceType || "",
+    faqs: page.faqs || [],
   });
 }
 

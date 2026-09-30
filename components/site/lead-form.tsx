@@ -104,7 +104,7 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
     return (
       <section className="form-success" ref={success} role="status" tabIndex={-1}>
         <span className="eyebrow">Request received</span>
-        <h2>Thank you. We have your enquiry.</h2>
+        <h2>Your enquiry has been received.</h2>
         <p>
           {demo ? "We’ll contact you to arrange your free demo." : "We’ll contact you to agree the next step and a suitable time."}
         </p>
@@ -145,9 +145,9 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
       <div className="form-heading">
         <p className="eyebrow">{demo ? "Book your free demo" : "Start the conversation"}</p>
         <h2>
-          Tell us a little
+          Introduce
           <br />
-          about your restaurant.
+          your restaurant.
         </h2>
         <p>{demo ? "Share a few details and we’ll arrange your free demo." : "Only your name, business, email and consent are required."}</p>
       </div>

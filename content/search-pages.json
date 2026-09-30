@@ -5,93 +5,93 @@
       "path": "/new-york",
       "kind": "local-hub",
       "title": "Restaurant Finance Services in New York",
-      "seoTitle": "Restaurant Finance Services in New York",
-      "heading": "Restaurant Finance Services in New York",
-      "description": "Accounting, bookkeeping, payroll and financial guidance for New York restaurants. Build a service around your locations, people and review dates.",
+      "seoTitle": "New York Restaurant Finance Services",
+      "heading": "Restaurant finance support for New York operators.",
+      "description": "Ready Margin supports New York restaurants with accounting, bookkeeping, payroll preparation and financial review. Choose the jobs and locations you need covered.",
       "eyebrow": "New York / Managed restaurant financial operations",
       "serviceType": "Managed restaurant financial operations",
-      "answer": "Accounting, bookkeeping, payroll and financial guidance for New York restaurants. Build a service around your locations, people and review dates.",
+      "answer": "Ready Margin supports New York restaurants with accounting, bookkeeping, payroll preparation and financial review. Choose the jobs and locations you need covered.",
       "sections": [
         {
-          "title": "Start with your New York locations",
-          "body": "Tell us how many restaurants you run, how the records arrive and who makes payroll and payment decisions. We map the recurring work by location before proposing accounting, payroll or financial guidance. A single restaurant and a restaurant group need different handoffs.",
+          "title": "Start with the locations and responsibilities",
+          "body": "Tell us where you operate, which systems each restaurant uses and who approves payroll and payments. We map the recurring finance work and quote for the tasks you want handled.",
           "items": []
         },
         {
-          "title": "Run, explain and improve",
-          "body": "Our team handles the defined work, explains the findings and follows up on the next action. The review connects the records to the operating week that produced them.",
+          "title": "Confirm local professional requirements",
+          "body": "New York payroll and tax tasks need requirements confirmed for the business and employee situation. We identify the responsible processor and advisers alongside the record-preparation work.",
           "items": []
         },
         {
-          "title": "Agree the relationship",
-          "body": "Your written proposal confirms responsibilities, review dates and fees. Restaurant approvals and specialist work are clearly assigned before the first handoff.",
+          "title": "Choose a service or start with a problem",
+          "body": "Use the New York service links to compare scope. If the issue is overdue books, payroll exceptions or cash pressure, we can discuss the relevant first assessment in your free demo.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/new-york/restaurant-payroll-services",
-          "label": "Restaurant payroll services in New York"
+          "label": "Restaurant Payroll Services in New York"
         },
         {
           "path": "/new-york/restaurant-bookkeeping-services",
-          "label": "Restaurant bookkeeping services in New York"
+          "label": "Restaurant Bookkeeping Services in New York"
         },
         {
           "path": "/new-york/restaurant-accounting-services",
-          "label": "Restaurant accounting services in New York"
+          "label": "Restaurant Accounting Services in New York"
         },
         {
           "path": "/new-york/restaurant-financial-consulting",
-          "label": "Restaurant financial consulting in New York"
+          "label": "Restaurant Financial Consulting in New York"
         },
         {
           "path": "/new-york/restaurant-back-office-services",
-          "label": "Restaurant back-office services in New York"
+          "label": "Restaurant Back-Office Services in New York"
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/new-york/restaurant-payroll-services",
       "kind": "local-service",
       "title": "Restaurant Payroll Services in New York",
-      "seoTitle": "Restaurant Payroll Support in New York",
-      "heading": "Restaurant Payroll Support in New York",
-      "description": "New York restaurant payroll preparation: review hours, tips and corrections, resolve manager questions and organize the approval handoff.",
+      "seoTitle": "New York Restaurant Payroll Preparation",
+      "heading": "Payroll preparation for New York restaurants.",
+      "description": "Prepare New York restaurant payroll inputs with attendance checks, tip records and manager corrections. Confirm processor, approval and tax responsibilities.",
       "eyebrow": "New York / Restaurant payroll",
       "serviceType": "Restaurant payroll services",
-      "answer": "New York restaurant payroll preparation: review hours, tips and corrections, resolve manager questions and organize the approval handoff.",
+      "answer": "Prepare New York restaurant payroll inputs with attendance checks, tip records and manager corrections. Confirm processor, approval and tax responsibilities.",
       "sections": [
         {
-          "title": "Map the pay cycle by location",
-          "body": "For each New York restaurant, we confirm the pay period, attendance source, tip inputs and manager who answers corrections. We organize the records for the payroll approver and coordinate the agreed handoff to your processor. Processing and filing responsibilities are stated in the proposal.",
+          "title": "Map the pay cycle and location contacts",
+          "body": "Confirm pay periods, input cutoffs and the manager responsible for each location’s time and tip records. Different systems or cycles need an explicit handoff plan.",
           "items": []
         },
         {
-          "title": "Prepare the approval",
-          "body": "Your approver receives the prepared records and any questions that remain open. The correction history stays with the source, so a change can be traced later.",
+          "title": "Review local pay and tip questions with the responsible professional",
+          "body": "New York’s hospitality wage rules address matters including wages and tips. The appropriate provider or adviser must confirm what applies to your staff; we prepare the agreed records rather than infer a legal rule from the demo.",
           "items": []
         },
         {
-          "title": "Confirm processing and tax responsibilities",
-          "body": "The proposal names who prepares, processes and approves payroll, and who handles payroll-tax work. Your restaurant retains its defined approvals; any specialist advice is identified separately.",
+          "title": "Prepare the approver’s inputs",
+          "body": "Ready Margin tracks original entries, confirmed corrections and remaining exceptions. The engagement separately identifies processing, payroll-tax tasks and authorization.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/what-we-handle/payroll-tips",
-          "label": "See Ready Margin's payroll and tips scope"
+          "label": "Payroll & Tips"
         },
         {
           "path": "/new-york/restaurant-bookkeeping-services",
-          "label": "New York restaurant bookkeeping services"
+          "label": "Restaurant Bookkeeping Services in New York"
         },
         {
           "path": "/insights/best-restaurant-payroll-services-new-york",
-          "label": "How to compare restaurant payroll services in New York"
+          "label": "Choosing New York Restaurant Payroll Support"
         },
         {
           "path": "/book-a-review",
@@ -104,55 +104,51 @@
           "label": "New York State Department of Labor — Minimum Wage"
         },
         {
-          "url": "https://dol.ny.gov/hospitality-industry",
-          "label": "New York State Department of Labor — Hospitality Industry"
+          "url": "https://dol.ny.gov/hospitality-wage-order-faq",
+          "label": "New York Department of Labor — Hospitality Wage Order FAQ"
         }
       ],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/new-york/restaurant-bookkeeping-services",
       "kind": "local-service",
       "title": "Restaurant Bookkeeping Services in New York",
-      "seoTitle": "Restaurant Bookkeeping Services in New York",
-      "heading": "Restaurant Bookkeeping Services in New York",
-      "description": "Keep New York restaurant books current with sales settlement checks, supplier invoice records, bank reconciliation and a regular review.",
+      "seoTitle": "New York Restaurant Bookkeeping Services",
+      "heading": "Bookkeeping for New York restaurants.",
+      "description": "Keep New York restaurant books current with settlement records, supplier bills, payroll entries and reconciliation. Agree the collection routine for each site.",
       "eyebrow": "New York / Restaurant bookkeeping",
       "serviceType": "Restaurant bookkeeping services",
-      "answer": "Keep New York restaurant books current with sales settlement checks, supplier invoice records, bank reconciliation and a regular review.",
+      "answer": "Keep New York restaurant books current with settlement records, supplier bills, payroll entries and reconciliation. Agree the collection routine for each site.",
       "sections": [
         {
-          "title": "Give each input a delivery date",
-          "body": "We map the sales statements, bank activity, supplier invoices and payroll records for your New York restaurant. Each input has a restaurant contact and an agreed delivery date. Location labels stay attached to records when you operate more than one site.",
+          "title": "Give each location’s documents a route into the books",
+          "body": "Identify the contacts supplying POS and settlement statements, invoices and payroll reports. Preserve site labels and period dates, especially when staff buy for more than one restaurant.",
           "items": []
         },
         {
-          "title": "Resolve the gaps",
-          "body": "Missing invoices, unmatched deposits and unclear account entries need follow-up. We investigate the records and keep the unresolved items visible for the close.",
-          "items": [
-            "Transaction recording and categorization",
-            "Bank and card reconciliation",
-            "Missing-record and exception follow-up"
-          ]
+          "title": "Reconcile receipts and supplier activity",
+          "body": "Trace deposits to settlements and review invoice or credit questions. Delivery timing and missing documents are identified so their accounting effect can be checked.",
+          "items": []
         },
         {
-          "title": "Prepare for the close",
-          "body": "Current records give the monthly review a stronger starting point. We agree which close tasks and reports belong in the service, and which remain with your accountant or tax adviser.",
+          "title": "Set the current routine alongside any backlog work",
+          "body": "We assess cleanup separately and agree when new records arrive. Close preparation, reports and handoffs to your tax adviser are included only where named.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/what-we-handle/accounting-close",
-          "label": "See Ready Margin's accounting and close scope"
+          "label": "Accounting & Close"
         },
         {
           "path": "/new-york/restaurant-accounting-services",
-          "label": "New York restaurant accounting services"
+          "label": "Restaurant Accounting Services in New York"
         },
         {
           "path": "/new-york/restaurant-payroll-services",
-          "label": "New York restaurant payroll services"
+          "label": "Restaurant Payroll Services in New York"
         },
         {
           "path": "/book-a-review",
@@ -160,47 +156,47 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/new-york/restaurant-accounting-services",
       "kind": "local-service",
       "title": "Restaurant Accounting Services in New York",
-      "seoTitle": "Restaurant Accounting Services in New York",
-      "heading": "Restaurant Accounting Services in New York",
-      "description": "New York restaurant accounting for reconciled records, a monthly close and a review of sales, costs and outstanding questions.",
+      "seoTitle": "New York Restaurant Accounting Services",
+      "heading": "Monthly accounting for New York restaurants.",
+      "description": "Close New York restaurant accounts with reconciled sales, supplier costs and payroll records. Review agreed financial statements and outstanding inputs.",
       "eyebrow": "New York / Restaurant accounting",
       "serviceType": "Restaurant accounting services",
-      "answer": "New York restaurant accounting for reconciled records, a monthly close and a review of sales, costs and outstanding questions.",
+      "answer": "Close New York restaurant accounts with reconciled sales, supplier costs and payroll records. Review agreed financial statements and outstanding inputs.",
       "sections": [
         {
-          "title": "Close the period with the location detail intact",
-          "body": "We align sales settlements, supplier bills and payroll records to the same reporting period for your New York restaurants. Transfers and shared expenses need an agreed accounting basis. The close records unresolved items so you can read the results with their context.",
+          "title": "Define the accounts and locations covered",
+          "body": "Agree the entities, periods and location mapping before reporting. Shared costs and transfers between restaurants need a documented accounting basis.",
           "items": []
         },
         {
-          "title": "Read the month with context",
-          "body": "Your close includes the financial reports we agree to prepare, an explanation of material changes and any questions still outstanding. Reporting dates and incomplete inputs are clearly identified.",
+          "title": "Complete the period-end checks",
+          "body": "We reconcile the agreed sources and review costs belonging to the month. Late invoices and unresolved account questions are identified in the close.",
           "items": []
         },
         {
-          "title": "Agree the approval route",
-          "body": "Your team confirms operating facts and authorizes payments and filings. Cleanup, tax returns and specialist advice are confirmed separately in your proposal.",
+          "title": "Prepare the owner and adviser handoffs",
+          "body": "The owner receives the statements and explanation in the scope. Where included, supporting accounts are organized for the appointed tax professional; returns and advice remain separate responsibilities.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/new-york/restaurant-bookkeeping-services",
-          "label": "New York restaurant bookkeeping services"
+          "label": "Restaurant Bookkeeping Services in New York"
         },
         {
           "path": "/what-we-handle/reporting-cash-visibility",
-          "label": "Restaurant reporting and cash visibility"
+          "label": "Reporting & Cash Visibility"
         },
         {
           "path": "/new-york/restaurant-financial-consulting",
-          "label": "New York restaurant financial consulting"
+          "label": "Restaurant Financial Consulting in New York"
         },
         {
           "path": "/book-a-review",
@@ -208,47 +204,47 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/new-york/restaurant-financial-consulting",
       "kind": "local-service",
       "title": "Restaurant Financial Consulting in New York",
-      "seoTitle": "Restaurant Financial Consulting in New York",
-      "heading": "Restaurant Financial Consulting in New York",
-      "description": "Financial consulting for New York restaurant owners. Review cost changes, cash commitments or a new operating decision using the available records.",
+      "seoTitle": "New York Restaurant Financial Consulting",
+      "heading": "Financial consulting for a New York restaurant decision.",
+      "description": "Review a New York restaurant’s cost problem, planned change or cash commitment with Ready Margin. Agree the question, records and financial assessment.",
       "eyebrow": "New York / Financial guidance",
       "serviceType": "Restaurant financial consulting",
-      "answer": "Financial consulting for New York restaurant owners. Review cost changes, cash commitments or a new operating decision using the available records.",
+      "answer": "Review a New York restaurant’s cost problem, planned change or cash commitment with Ready Margin. Agree the question, records and financial assessment.",
       "sections": [
         {
-          "title": "Define the restaurant decision",
-          "body": "A lease commitment, staffing change or additional New York location needs a clear question and decision date. We identify the available financial records, document the assumptions and agree what needs professional or operating confirmation before you decide.",
+          "title": "Define the decision and deadline",
+          "body": "An additional site, longer hours or an equipment commitment needs a specific financial question. State the time available and the operating assumptions management wants assessed.",
           "items": []
         },
         {
-          "title": "Compare the available options",
-          "body": "We connect the financial evidence with the restaurant’s trading, staffing and purchasing context. Each option is assessed against the information available and the limits of that information.",
+          "title": "Check the records and scenarios",
+          "body": "We examine the agreed financial and operating evidence and explain the effect of the scenarios included. Unknown costs and incomplete inputs remain identified.",
           "items": []
         },
         {
-          "title": "Agree the next review",
-          "body": "You receive the findings and a practical sequence of next steps. Recurring support, a specific project or a deeper advisory relationship is priced and confirmed around the work.",
+          "title": "Bring specialist questions to the right adviser",
+          "body": "Lease terms, financing, tax treatment and employment requirements need the relevant professionals. The consulting review supports management’s decision without replacing those roles.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/what-we-handle/turnaround-support",
-          "label": "Restaurant turnaround and CFO support"
+          "label": "Turnaround Support"
         },
         {
           "path": "/new-york/restaurant-accounting-services",
-          "label": "New York restaurant accounting services"
+          "label": "Restaurant Accounting Services in New York"
         },
         {
           "path": "/new-york/restaurant-back-office-services",
-          "label": "New York restaurant back-office services"
+          "label": "Restaurant Back-Office Services in New York"
         },
         {
           "path": "/book-a-review",
@@ -256,109 +252,99 @@
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/new-york/restaurant-back-office-services",
       "kind": "local-service",
       "title": "Restaurant Back-Office Services in New York",
-      "seoTitle": "Restaurant Back-Office Services in New York",
-      "heading": "Restaurant Back-Office Services in New York",
-      "description": "Managed bookkeeping, payroll preparation, supplier bill review and reporting for New York restaurants, with named contacts and clear handoffs.",
+      "seoTitle": "New York Restaurant Back-Office Support",
+      "heading": "Back-office finance support for New York restaurants.",
+      "description": "Coordinate New York restaurant bookkeeping, payroll inputs and supplier-bill records. Set the handoffs between managers, Ready Margin and existing advisers.",
       "eyebrow": "New York / Restaurant back office",
       "serviceType": "Restaurant back-office services",
-      "answer": "Managed bookkeeping, payroll preparation, supplier bill review and reporting for New York restaurants, with named contacts and clear handoffs.",
+      "answer": "Coordinate New York restaurant bookkeeping, payroll inputs and supplier-bill records. Set the handoffs between managers, Ready Margin and existing advisers.",
       "sections": [
         {
-          "title": "Connect the restaurant to the back office",
-          "body": "We establish how each New York location supplies hours, sales records and supplier documents. Managers know where to send questions, and the finance team knows which person can confirm a record. Your scope assigns recurring jobs and keeps approval responsibilities clear.",
+          "title": "Find the dependencies between sites and providers",
+          "body": "A manager may confirm time records while another contact supplies supplier documents. Map those inputs by location and pay or accounting period before assigning preparation.",
           "items": []
         },
         {
-          "title": "Connect the recurring checks",
-          "body": "Hours affect payroll. Bills and settlements affect the books. Those records support the financial review. We coordinate the work across the responsibilities included in your service.",
+          "title": "Agree separate cutoffs for each job",
+          "body": "Payroll preparation, supplier review and bookkeeping need different inputs and dates. We organize the recurring work included in the service so contacts know when their answers are needed.",
           "items": []
         },
         {
-          "title": "Keep approvals clear",
-          "body": "Managers confirm operating facts and nominated people approve payroll, payments and major decisions. Open questions remain visible with the person responsible for resolving them.",
+          "title": "Retain restaurant approvals",
+          "body": "Your nominated people authorize payroll, payments and operating decisions. Any tax, HR or legal task must be expressly included under the appropriate professional arrangement.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/new-york/restaurant-payroll-services",
-          "label": "New York restaurant payroll services"
+          "label": "Restaurant Payroll Services in New York"
         },
         {
           "path": "/new-york/restaurant-bookkeeping-services",
-          "label": "New York restaurant bookkeeping services"
+          "label": "Restaurant Bookkeeping Services in New York"
         },
         {
           "path": "/new-york/restaurant-financial-consulting",
-          "label": "New York restaurant financial consulting"
+          "label": "Restaurant Financial Consulting in New York"
         },
         {
           "path": "/what-we-handle",
-          "label": "Explore all Ready Margin services"
+          "label": "Restaurant finance & operations services"
         }
       ],
       "resources": [],
-      "updated": "2026-09-30"
+      "updated": "2026-10-01"
     },
     {
       "path": "/insights/best-restaurant-payroll-services-new-york",
       "kind": "article",
-      "title": "Best Restaurant Payroll Services in New York: What to Compare",
-      "seoTitle": "Comparing Restaurant Payroll Services in NYC",
-      "heading": "Choose payroll support around your working week.",
-      "description": "Compare New York restaurant payroll support by hours, tips, corrections, approvals, tax scope and fees. Use one real exception to review the process.",
+      "title": "Choosing New York Restaurant Payroll Support",
+      "seoTitle": "Choosing New York Restaurant Payroll Support",
+      "heading": "How to choose payroll support for a New York restaurant.",
+      "description": "Compare New York restaurant payroll support on input checks, tip handling, approval cutoffs and provider responsibilities. Use a real exception in the demo.",
       "eyebrow": "Buyer guide / New York restaurant payroll",
       "serviceType": "",
-      "answer": "The right service depends on your systems, people and tasks. Use a recent exception to compare preparation, processing, approvals and ongoing support.",
+      "answer": "Choose payroll support by the checks, approvals and professional responsibilities you need. Compare providers against the same task list and walk through one payroll exception.",
       "publishedAt": "2026-09-12",
-      "author": "Ready Margin editorial",
-      "disclosure": "This guide is published by Ready Margin, which provides managed restaurant payroll and financial-operations support. It explains evaluation criteria rather than presenting an independent ranking of competitors.",
+      "author": "Ready Margin",
+      "disclosure": "Ready Margin provides restaurant finance services. This guide explains selection criteria and does not rank or endorse other providers.",
       "sections": [
         {
-          "title": "Define the work you need",
-          "body": "List the recurring tasks your team struggles to finish. Ask who collects records, resolves exceptions, processes payroll and updates the books.",
+          "title": "Compare the actual preparation work",
+          "body": "Ask who checks hours and tips, obtains manager confirmation and updates corrected inputs. A processor may offer a different service from a team that prepares the restaurant’s operating records.",
           "items": []
         },
         {
-          "title": "Review one real exception",
-          "body": "Use a missed punch or tip correction to understand where the record is kept, who confirms it and what happens near cutoff.",
+          "title": "Confirm local responsibilities and advice",
+          "body": "Have the relevant provider or professional confirm New York requirements for the employees and business. Ask who handles payroll-tax work and what evidence the employer receives.",
           "items": []
         },
         {
-          "title": "Confirm tax and local responsibilities",
-          "body": "Ask which jurisdiction-specific tasks, filings and advice are included and who remains responsible. Have applicable requirements confirmed by the relevant authority or qualified adviser.",
+          "title": "Try a missing punch or tip assignment",
+          "body": "Ask each provider to show how the original record, manager answer and final input stay connected. Confirm the escalation route near cutoff and the treatment of later corrections.",
           "items": []
         },
         {
-          "title": "Check approvals and corrections",
-          "body": "Request a clear approval sequence and a process for late changes. Confirm which version reaches payroll and how the explanation is retained.",
-          "items": []
-        },
-        {
-          "title": "Compare the full scope and price",
-          "body": "Check ongoing support, bookkeeping connections, implementation and any separate charges. Compare providers against the same responsibilities.",
-          "items": []
-        },
-        {
-          "title": "Ready Margin’s service",
-          "body": "Our team can handle agreed payroll preparation and related finance workflows. The restaurant retains its defined approval authority, and specialist responsibilities are confirmed in the proposal.",
+          "title": "Compare complete scopes and fees",
+          "body": "Include setup, ongoing questions, corrections, connections and separate specialist work. Ready Margin offers agreed preparation and finance support; this guide is a selection framework, not an independent ranking of providers.",
           "items": []
         }
       ],
       "related": [
         {
           "path": "/new-york/restaurant-payroll-services",
-          "label": "Ready Margin restaurant payroll services in New York"
+          "label": "Restaurant Payroll Services in New York"
         },
         {
           "path": "/what-we-handle/payroll-tips",
-          "label": "Restaurant payroll and tips support"
+          "label": "Payroll & Tips"
         },
         {
           "path": "/insights/payroll-cutoff-checklist",
@@ -366,7 +352,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Discuss your restaurant payroll workflow"
+          "label": "Book your free demo"
         }
       ],
       "resources": [
@@ -375,8 +361,8 @@
           "label": "New York State Department of Labor — Minimum Wage"
         },
         {
-          "url": "https://dol.ny.gov/hospitality-industry",
-          "label": "New York State Department of Labor — Hospitality Industry"
+          "url": "https://dol.ny.gov/hospitality-wage-order-faq",
+          "label": "New York Department of Labor — Hospitality Wage Order FAQ"
         }
       ],
       "updated": "2026-10-01"

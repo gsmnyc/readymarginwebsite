@@ -213,7 +213,7 @@ export function ClarityCheck() {
             <p className="eyebrow">Questions to start with</p>
             <h2>{result.profile}</h2>
             <p>{result.context}</p>
-            <h3>Likely gaps to investigate</h3>
+            <h3>Checks suggested by your answers</h3>
             <ul>
               {result.gaps.map((gap) => (
                 <li key={gap}>{gap}</li>
@@ -249,7 +249,7 @@ export function ClarityCheck() {
               sizes="144px"
               alt=""
             />
-            <h2>Tell us how the work gets done.</h2>
+            <h2>Review your current finance routine.</h2>
             <p>
               Answer the questions to see which parts of your process may need a
               closer look.
