@@ -81,6 +81,6 @@ All 121 content routes were reviewed by intent and heading structure. A second p
 1. Build and publish this work to the existing public review site.
 2. Incorporate the user’s public-review annotations. The user has now authorized GitHub commits.
 3. Make focused GitHub commits and push them to the existing PR #13 branch.
-4. Request explicit approval before merging into main.
+4. The later title/metadata request authorizes merging into main after the focused metadata commit and successful build checks; see [Title and metadata review](TITLE_AND_METADATA_REVIEW.md).
 
 Publishing creates a snapshot in the Sites source repository. It does not merge GitHub main. Keep the copy/search, shared interface and release documentation changes in focused commits on the existing review branch.

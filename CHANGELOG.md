@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-01 — Titles and search previews
+
+- Refined the homepage title to “Restaurant Accounting & Payroll Services | Ready Margin” and described the managed service in its search summary.
+- Refined thirteen page titles to identify their actual subject and remove repeated brand wording.
+- Aligned canonical links with social-preview URLs, including resource aliases.
+- Added verified social-image dimensions, image alternative text, locale and existing article dates.
+- Added the configured metadata base, application identity and descriptive default title.
+- Recorded competitor research, official Google guidance and the implementation scope in [Title and metadata review](docs/TITLE_AND_METADATA_REVIEW.md).
+
+The user authorized pushing this focused metadata commit and merging PR #13 after successful build checks, preserving its commit history with a normal merge.
+
 ## 2026-10-01 — Copy, search and page consistency
 
 ### Changed
@@ -17,7 +28,7 @@
 - Shortened remaining promotional headings and removed an unused duplicate homepage copy source.
 - Limited service screenshots to tasks actually represented by the captured demo.
 
-The user authorized focused commits and an update to the existing PR #13 after public review. Main remains unmerged pending separate approval.
+The user authorized focused commits and an update to the existing PR #13 after public review. The later metadata request also authorizes merging after successful build checks.
 
 ### Commit sequence
 

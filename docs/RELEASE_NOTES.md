@@ -1,5 +1,9 @@
 # Restoration release
 
+## Title and metadata follow-up — 1 October 2026
+
+The follow-up changes the homepage search title, refines thirteen route titles and aligns canonical/social URLs. It adds actual social-image dimensions, alternative text, locale, existing article dates and the root metadata base/application name. [Title and metadata review](TITLE_AND_METADATA_REVIEW.md) records competitor sources and official search guidance. The user authorized pushing this focused commit and merging PR #13 after successful build checks, preserving its existing commit history.
+
 ## Copy and search review — 1 October 2026
 
 This review rewrites 121 content routes, the homepage and shared product, pricing and enquiry copy. It adds page-specific questions, direct answers and consistent search metadata. See [Copy and search review](COPY_AND_SEARCH_REVIEW.md) for scope, sources and business confirmation items.
@@ -8,7 +12,7 @@ The expanded product tabs, desktop/mobile menu organization, theme-aware service
 
 Lint (zero warnings), standalone TypeScript, the server production build and the public static export passed. Manual browser review covered desktop and mobile menus, tab labels, centered close controls, light/dark surfaces, footer columns and an accounting-page FAQ. No automated test suites or field-speed measurements were run for this revision.
 
-The user reviewed the public website and authorized these follow-up fixes and focused GitHub commits to PR #13. Publication uses a separate Sites source snapshot. Main remains unmerged; merging requires separate confirmation.
+The user reviewed the public website and authorized these follow-up fixes and focused GitHub commits to PR #13. Publication uses a separate Sites source snapshot. The later title/metadata request authorizes merging after successful build checks.
 
 The follow-up commits are `0d7895a` (content), `21f4b81` (search and visible answers), and `efde649` (shared layout and footer). Documentation is committed separately. All 121 headings and descriptions are distinct; the content review covers 344 sections. The shared body wrapper also removes the older tablet width cap rather than compensating with route-specific offsets.
 
@@ -40,6 +44,6 @@ The release does not claim a Lighthouse score or measured field-vitals improveme
 
 ## Merge and publication
 
-Review the PR before merging to `main`. No merge is performed as part of preparing the branch. Deployment settings determine what publishes after a merge. A static enquiry prepares a visitor-controlled email draft; the server enquiry needs a configured receiver to confirm delivery.
+The user authorized merging PR #13 after the metadata follow-up passes its checks. Preserve the focused history using a normal merge commit. Deployment settings determine what publishes after a merge. A static enquiry prepares a visitor-controlled email draft; the server enquiry needs a configured receiver to confirm delivery.
 
 Before a live server release, confirm the receiver, business origin and redirect configuration in that deployment environment. Keep credentials out of commits and source archives.

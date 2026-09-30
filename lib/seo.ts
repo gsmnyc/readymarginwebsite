@@ -3,32 +3,53 @@ import type { Page } from "./content";
 import { siteOrigin, isProduction } from "./content";
 
 export function metadataFor(
-  p: Pick<Page, "title" | "description" | "path" | "indexable"> & { kind: string; seoTitle?: string; canonicalPath?: string },
+  p: Pick<Page, "title" | "description" | "path" | "indexable"> & {
+    kind: string;
+    seoTitle?: string;
+    canonicalPath?: string;
+    publishedAt?: string;
+    updated?: string;
+  },
 ): Metadata {
-  const url = siteOrigin() + p.path;
-  const searchTitle = p.seoTitle || p.title;
-  const title = searchTitle.includes("| Ready Margin") ? searchTitle : `${searchTitle} | Ready Margin`;
-  const socialImage = `${siteOrigin()}/social/${p.kind === "article" ? "insights.jpg" : ["capability", "service", "service-hub"].includes(p.kind) ? "services.png" : "brand.png"}`;
+  const origin = siteOrigin();
+  const url = origin + (p.canonicalPath || p.path);
+  const searchTitle = (p.seoTitle || p.title).trim();
+  const title = searchTitle.endsWith("| Ready Margin") ? searchTitle : `${searchTitle} | Ready Margin`;
+  const isArticle = p.kind === "article";
+  const image = isArticle
+    ? { file: "insights.jpg", width: 1536, height: 1024, alt: "Ready Margin restaurant finance guides" }
+    : ["capability", "service", "service-hub"].includes(p.kind)
+      ? { file: "services.png", width: 640, height: 612, alt: "Ready Margin restaurant finance services" }
+      : { file: "brand.png", width: 1016, height: 240, alt: "Ready Margin" };
+  const socialImage = `${origin}/social/${image.file}`;
   return {
     title: { absolute: title },
     description: p.description,
-    alternates: { canonical: siteOrigin() + (p.canonicalPath || p.path) },
+    alternates: { canonical: url },
     robots: { index: isProduction() && p.indexable, follow: true, googleBot: { index: isProduction() && p.indexable, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
     openGraph: {
       title,
       description: p.description,
       url,
       siteName: "Ready Margin",
-      type: p.kind === "article" ? "article" : "website",
+      locale: "en_US",
+      type: isArticle ? "article" : "website",
+      ...(isArticle ? {
+        publishedTime: p.publishedAt || p.updated || undefined,
+        modifiedTime: p.updated || undefined,
+      } : {}),
       images: [{
         url: socialImage,
+        width: image.width,
+        height: image.height,
+        alt: image.alt,
       }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: p.description,
-      images: [socialImage],
+      images: [{ url: socialImage, alt: image.alt }],
     },
   };
 }

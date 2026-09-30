@@ -10,8 +10,8 @@ import { serviceGroups } from "@/content/service-navigation";
 import "./homepage.css";
 
 export const generateMetadata = () => metadataFor({
-  title: "Restaurant Accounting, Bookkeeping & Payroll",
-  description: "Ready Margin handles restaurant books, payroll preparation and financial review. See the service in a free demo and get a quote for the work you need covered.",
+  title: "Restaurant Accounting & Payroll Services",
+  description: "Restaurant bookkeeping, accounting, payroll preparation and CFO support from Ready Margin. Book a free demo to discuss the finance work you need covered.",
   path: "", indexable: true, kind: "home",
 });
 
@@ -87,7 +87,7 @@ export default async function Home() {
           publisher: { "@id": origin + "/#organization" },
           inLanguage: "en-US",
         },
-        { "@context": "https://schema.org", "@type": "WebPage", "@id": origin + "/#webpage", url: origin, name: "Restaurant Accounting, Bookkeeping & Payroll", isPartOf: { "@id": origin + "/#website" }, about: { "@id": origin + "/#organization" } },
+        { "@context": "https://schema.org", "@type": "WebPage", "@id": origin + "/#webpage", url: origin, name: "Restaurant Accounting & Payroll Services", isPartOf: { "@id": origin + "/#website" }, about: { "@id": origin + "/#organization" } },
         { "@context": "https://schema.org", "@type": "FAQPage", "@id": origin + "/#faq", mainEntity: c.faqs.slice(0,5).map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
       ]} />
     </main>

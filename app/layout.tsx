@@ -9,7 +9,7 @@ import "./site-refresh.css";
 import "./motion-polish.css";
 import "./site-refinement.css";
 import { motionVariables } from "@/lib/motion-tokens";
-import { getContent } from "@/lib/content";
+import { getContent, siteOrigin } from "@/lib/content";
 import {
   SiteHeader,
   CookieConsent,
@@ -29,7 +29,9 @@ const jakarta = localFont({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Ready Margin", template: "%s | Ready Margin" },
+  metadataBase: new URL(siteOrigin()),
+  applicationName: "Ready Margin",
+  title: { default: "Restaurant Accounting & Payroll Services | Ready Margin", template: "%s | Ready Margin" },
   description:
     "Ready Margin handles restaurant bookkeeping, accounting and payroll preparation, with financial review for owners and operators.",
   manifest: "/manifest.webmanifest",
