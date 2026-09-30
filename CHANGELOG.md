@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-01 — Directory cards and dashboard service coverage
+
+- Aligned audience cards and supporting sections; removed empty sidebar tracks where no related links exist.
+- Applied rounded cards to Insights, aligned reading links and grouped the search/topic controls in a themed surface.
+- Added nineteen distinct service icons with consistent sizing and both-theme rendering.
+- Reviewed the live dashboard’s owner, employee and administrative areas; added eight workflow groups and expanded nine relevant service pages.
+- Refined the service-directory heading, title and description around the actual work; retained the demo’s calculation and provider boundaries.
+- Recorded scope and evidence in [Dashboard service review](docs/DASHBOARD_SERVICE_REVIEW.md).
+
 ## 2026-10-01 — Titles and search previews
 
 - Refined the homepage title to “Restaurant Accounting & Payroll Services | Ready Margin” and described the managed service in its search summary.

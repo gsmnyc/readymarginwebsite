@@ -1,5 +1,7 @@
 # Ready Margin website
 
+The latest directory-card and dashboard-service update is documented in [Dashboard service review](docs/DASHBOARD_SERVICE_REVIEW.md). It follows the merged restoration/metadata release in PR #13.
+
 For the all-page writing standard, see [Copy and search review](docs/COPY_AND_SEARCH_REVIEW.md). The follow-up [title and metadata review](docs/TITLE_AND_METADATA_REVIEW.md) records competitor sources and search-preview changes. The user authorized merging PR #13 after the metadata commit and successful build checks.
 
 Next.js, React and TypeScript. The complete website uses local Plus Jakarta Sans, supplied identity assets, editable content and enquiry-only service pricing.
