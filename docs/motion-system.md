@@ -12,4 +12,4 @@ The public site uses shared values from `lib/motion-tokens.ts`. The server rende
 - Keyboard navigation completes active section entrances and stops later entrances.
 - Filtered content is registered when it mounts. Observer and animation resources are released on route changes.
 
-The rounded paper, ink and gold panels use the existing brand hues. Cash and workflow previews are labelled as illustrative. Provider connections and financial actions are not live in previews.
+The rounded paper, ink and gold panels use the existing brand hues. Product views use authentic captures of the owner's demo workspace with sample records. Provider connections and financial actions are not live on the marketing website. The current restoration retains Motion and Radix interactions.
