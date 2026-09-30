@@ -9,8 +9,7 @@ const native=base.slice(base.indexOf('function native('),base.indexOf('const boa
 const ids=['3:157','3:191','3:238','3:329','4:122','4:293','4:392','5:272','5:340','5:401'];
 await fs.mkdir('.brand-build/figma-expansion',{recursive:true});
 for(let i=0;i<boards.length;i++){
- const b=boards[i];let defs='';
- const compact=n=>{if(n.svg){let svg=n.svg;if(!n.form){delete n.svg;n.svg='PRIMARY';}else{defs+=`const svg${defs.length}=${JSON.stringify(svg)};`;/* JSON stays within per-board limit */}}if(n.children)n.children.forEach(compact);};
+ const b=boards[i];
  // Standard horizontal artwork is supplied by existing native component instances.
  const reduce=n=>{if(n.type==='logo')n.svg=n.form?'':n.svg.includes('#F4F1E8')?'#F4F1E8':'#222222';if(n.children)n.children.forEach(reduce);};b.nodes.forEach(reduce);
  const code=setup+helpers+native+`const b=${JSON.stringify(b)};let frame=${i<10?`await figma.getNodeByIdAsync('${ids[i]}')`:`page.children.find(n=>n.name===b.name)`};if(!frame){frame=remember(figma.createFrame());page.appendChild(frame);frame.x=200+${i%2}*1640;frame.y=100+${Math.floor(i/2)}*1200;}for(const c of [...frame.children])c.remove();frame.name=b.name;frame.resize(b.width,b.height);frame.fills=[fill(b.background)];frame.clipsContent=false;for(const spec of b.nodes){const n=native(spec);frame.appendChild(n);n.x=spec.x;n.y=spec.y;}return {boardId:frame.id,name:frame.name,createdNodeIds,textCount:frame.findAllWithCriteria({types:['TEXT']}).length};`;
