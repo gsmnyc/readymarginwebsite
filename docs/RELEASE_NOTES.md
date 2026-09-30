@@ -1,5 +1,11 @@
 # Restoration release
 
+## Directory and dashboard coverage follow-up — 1 October 2026
+
+This follow-up addresses the audience, Insights and service-directory annotations after PR #13 merged. It uses consistent rounded cards, distinct service icons and shared workflow coverage based on a read-only review of the live dashboard. Nine service pages add specific team, shift, tip, payroll, cash, payment-record and compliance-record tasks. See [Dashboard service review](DASHBOARD_SERVICE_REVIEW.md) for the observed functionality and limits.
+
+Local lint, TypeScript, the 128-page server build and the 127-page static export passed. Public browser review covered desktop, 800px tablet and 389px phone layouts, both themes, Insights search/topic filtering and pagination. The branch is `codex/service-directory-refinements`; it follows the merged PR #13 as a new review PR. These checks do not claim live provider execution, automated test-suite coverage or measured search rankings.
+
 ## Title and metadata follow-up — 1 October 2026
 
 The follow-up changes the homepage search title, refines thirteen route titles and aligns canonical/social URLs. It adds actual social-image dimensions, alternative text, locale, existing article dates and the root metadata base/application name. [Title and metadata review](TITLE_AND_METADATA_REVIEW.md) records competitor sources and official search guidance. The user authorized pushing this focused commit and merging PR #13 after successful build checks, preserving its existing commit history.
