@@ -56,3 +56,14 @@
 @media(max-width:1000px) { .tabContent,.service { grid-template-columns:minmax(0,1fr); } .workflowCopy ul { display:flex; flex-wrap:wrap; gap:12px 24px; } .workingPrinciples { grid-template-columns:1fr; } .tourTail { gap:8px; } }
 @media(max-width:580px) { .shot { border-radius:16px; } .imageButton { border-radius:14px; } .enlarge { width:34px; height:34px; padding:0; justify-content:center; right:8px; bottom:8px; } .enlarge > span { display:none; } .tabList { width:100%; border-radius:18px; } .tabList button { padding-inline:14px; } .tabContent { padding:22px; border-radius:22px; } .service { gap:24px; border-radius:22px; } .dialog { padding:16px; border-radius:18px; } }
 @media(prefers-reduced-motion:reduce) { .dialog,.overlay,.tabContent { animation:none!important; } .imageButton > img,.tabList button { transition:none; } }
+
+.previewScroll { min-width:0; }
+.shot .previewActions { display:none; }
+@media(max-width:600px) {
+  .mobileDetail .previewScroll { max-height:min(52svh,420px); overflow:auto; overscroll-behavior:contain; scrollbar-width:thin; border-radius:14px; }
+  .mobileDetail .imageButton { width:1000px; max-width:none; }
+  .mobileDetail .enlarge { display:none; }
+  .mobileDetail .previewActions { display:flex; padding:10px 0 0; gap:8px; }
+  .shot .previewActions>span { font-size:.75rem; color:var(--brand-ink); }
+  .previewExpand { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:8px 12px; border:1px solid var(--brand-ink); border-radius:100px; background:var(--brand-ink); color:var(--brand-paper); font-size:.75rem; }
+}

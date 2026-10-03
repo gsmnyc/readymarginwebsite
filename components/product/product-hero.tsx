@@ -17,7 +17,7 @@ const views: { id: ProductShotId; label: string; description: string; href: stri
 ];
 export function ProductHero() {
   return <Tabs.Root id="workspace-preview" defaultValue="overview" className="product-hero">
-    <div className="product-hero-toolbar"><div className="product-hero-heading"><span className="product-demo-label">Demo workspace · sample data</span><a href="#the-work">Explore all services <span aria-hidden="true">↓</span></a></div><Tabs.List aria-label="Product showcase">{views.map(view => <Tabs.Trigger key={view.id} value={view.id}>{view.label}</Tabs.Trigger>)}</Tabs.List></div>
-    {views.map(view => <Tabs.Content key={view.id} value={view.id}><div className="product-hero-context"><p>{view.description}</p><Link href={view.href}>{view.service} <span aria-hidden="true">↗</span></Link></div><ProductShot shot={view.id} priority={view.id === "overview"} /></Tabs.Content>)}
+    <div className="product-hero-toolbar"><div className="product-hero-heading"><span className="product-demo-label">Demo · sample data</span><a href="#the-work">Explore all services <span aria-hidden="true">↓</span></a></div><Tabs.List aria-label="Product showcase">{views.map(view => <Tabs.Trigger key={view.id} value={view.id}>{view.label}</Tabs.Trigger>)}</Tabs.List></div>
+    {views.map(view => <Tabs.Content key={view.id} value={view.id}><ProductShot shot={view.id} priority={view.id === "overview"} mobileDetail /><div className="product-hero-context"><p>{view.description}</p><Link href={view.href}>{view.service} <span aria-hidden="true">↗</span></Link></div></Tabs.Content>)}
   </Tabs.Root>;
 }
