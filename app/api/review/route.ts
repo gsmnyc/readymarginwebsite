@@ -1,4 +1,6 @@
 import { leadSchema } from "@/lib/forms";
+import { hasDurableCrmReceipt } from "@/lib/crm-receipt";
+import { readEnquiryBody, EnquiryBodyTooLarge } from "@/lib/enquiry-body";
 export async function POST(request: Request) {
   if (Number(request.headers.get("content-length") || 0) > 16000)
     return Response.json(
@@ -12,12 +14,13 @@ export async function POST(request: Request) {
       { status: 403 },
     );
   try {
-    const raw = await request.text();
-    if (raw.length > 16000)
-      return Response.json(
-        { message: "Please keep the enquiry concise." },
-        { status: 413 },
-      );
+    let raw: string;
+    try { raw = await readEnquiryBody(request); }
+    catch (error) {
+      if (error instanceof EnquiryBodyTooLarge)
+        return Response.json({ message: "Please keep the enquiry concise." }, { status: 413 });
+      throw error;
+    }
     let input: unknown;
     try {
       input = JSON.parse(raw);
@@ -53,13 +56,18 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     const appsScript = legacy || process.env.LEAD_WEBHOOK_MODE === "apps-script";
+    const crm = !legacy && process.env.LEAD_WEBHOOK_MODE === "crm";
     const target = new URL(url);
     const receivedAt = new Date().toISOString();
-    // Identical enquiries within the same UTC day share a durable receipt key.
+    const attemptId = request.headers.get("x-submission-id");
+    if (attemptId && !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(attemptId))
+      return Response.json({ message: "Please retry from the enquiry form." }, { status: 400 });
+    // Updated forms retain an attempt across retries, including UTC midnight.
+    // Preserve same-day content receipts for older clients without this header.
     const digest = await crypto.subtle.digest(
       "SHA-256",
       new TextEncoder().encode(
-        receivedAt.slice(0, 10) + JSON.stringify(parsed.data),
+        attemptId ? `attempt:${attemptId}` : receivedAt.slice(0, 10) + JSON.stringify(parsed.data),
       ),
     );
     const submissionId = Array.from(new Uint8Array(digest), (byte) =>
@@ -100,11 +108,11 @@ export async function POST(request: Request) {
         },
         { status: 502 },
       );
-    if (appsScript) {
+    if (appsScript || crm) {
       const receipt = (await response.json().catch(() => null)) as {
         ok?: boolean;
       } | null;
-      if (receipt?.ok !== true)
+      if (crm ? !hasDurableCrmReceipt(receipt, submissionId) : receipt?.ok !== true)
         return Response.json(
           {
             message:

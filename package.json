@@ -17,7 +17,7 @@
     "test:indexnow": "node tests/indexnow-check.mjs",
     "test:browser": "playwright test",
     "test:responsive": "node tests/responsive-contract.mjs",
-    "test:forms": "node tests/adapters-check.mjs && node tests/workspace-receiver-check.mjs",
+    "test:forms": "node tests/adapters-check.mjs && node tests/workspace-receiver-check.mjs && node --experimental-strip-types --test tests/crm-receiver-check.mjs",
     "cms:seed": "node scripts/cms-seed.mjs",
     "postbuild": "node scripts/submit-indexnow.mjs",
     "build:sites": "node scripts/build-sites.mjs"
@@ -52,3 +52,4 @@
   },
   "type": "module"
 }
+
