@@ -88,3 +88,13 @@ Restore the previous verified receiver mode/URL/token on capture/operational fai
 ## Website changes later
 
 Keep public content/services/current CTA. Add authenticated CRM/dashboard entry and customer onboarding only once identity/entitlements are verified. Public enquiries never provision customer tenants or grant payroll/finance access.
+
+## Delivery hardening follow-up
+
+The follow-up branch rejects a CRM acknowledgement unless its status and metadata agree: 201 with `created:true`, or 200 with `created:false`, plus a valid receipt ID and matching submission key. Even a well-shaped receipt with 202 is not a committed-capture acknowledgement.
+
+CRM requests reject redirects and use no-store. Receipt reads are limited to 4,096 bytes and share the ten-second fetch deadline. Request reads have a five-second deadline and the existing 16,000-byte cap; interrupted/slow requests receive 408 with retry guidance. Cancellation cannot stall either limit. Unknown nonempty modes fail closed with 503, and URLs containing userinfo or fragments are rejected. Blank generic mode and Apps Script/legacy behaviour remain supported. Attempt UUIDs are normalized to lowercase before hashing.
+
+The current hosted CRM is `simsiimm/readymargin-crm`. Its companion milestone adds a D1 receipt transaction and an authenticated, synthetic-only rehearsal with a real-validator/D1 transport test. Its public intake endpoint remains disabled. Do not configure this Site as the live receiver until the documented production identity, organization binding, service ingress and operational gates pass.
+
+Validated locally: all existing form/Apps Script tests and 8 CRM tests, lint with zero warnings, typecheck, Next production build and static preview export. The CRM companion suite additionally tests real Zod validation into actual D1 storage, including a lost acknowledgement and retry. Test dispatch identity is emulated; no live delivery is claimed. No production configuration was changed.
