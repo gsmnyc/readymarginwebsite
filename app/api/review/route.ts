@@ -1,6 +1,6 @@
 import { leadSchema } from "@/lib/forms";
 import { hasDurableCrmReceipt } from "@/lib/crm-receipt";
-import { readEnquiryBody, EnquiryBodyTooLarge } from "@/lib/enquiry-body";
+import { readEnquiryBody, EnquiryBodyTooLarge, EnquiryBodyTimeout } from "@/lib/enquiry-body";
 export async function POST(request: Request) {
   if (Number(request.headers.get("content-length") || 0) > 16000)
     return Response.json(
@@ -19,6 +19,8 @@ export async function POST(request: Request) {
     catch (error) {
       if (error instanceof EnquiryBodyTooLarge)
         return Response.json({ message: "Please keep the enquiry concise." }, { status: 413 });
+      if (error instanceof EnquiryBodyTimeout)
+        return Response.json({ message: "The enquiry took too long to arrive. Please retry." }, { status: 408 });
       throw error;
     }
     let input: unknown;
@@ -37,6 +39,9 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     const legacy = !process.env.LEAD_WEBHOOK_URL && Boolean(process.env.GOOGLE_APPS_SCRIPT_URL);
+    const mode = process.env.LEAD_WEBHOOK_MODE;
+    if (!legacy && mode && !["crm", "apps-script"].includes(mode))
+      return Response.json({ message: "Online delivery is temporarily unavailable. Please email contact@readymargin.com." }, { status: 503 });
     const url = process.env.LEAD_WEBHOOK_URL || process.env.GOOGLE_APPS_SCRIPT_URL;
     const token = process.env.LEAD_WEBHOOK_TOKEN;
     if (!url || (!legacy && !token))
@@ -58,6 +63,8 @@ export async function POST(request: Request) {
     const appsScript = legacy || process.env.LEAD_WEBHOOK_MODE === "apps-script";
     const crm = !legacy && process.env.LEAD_WEBHOOK_MODE === "crm";
     const target = new URL(url);
+    if (target.username || target.password || target.hash)
+      return Response.json({ message: "Online delivery is temporarily unavailable. Please email contact@readymargin.com." }, { status: 503 });
     const receivedAt = new Date().toISOString();
     const attemptId = request.headers.get("x-submission-id");
     if (attemptId && !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(attemptId))
@@ -67,12 +74,13 @@ export async function POST(request: Request) {
     const digest = await crypto.subtle.digest(
       "SHA-256",
       new TextEncoder().encode(
-        attemptId ? `attempt:${attemptId}` : receivedAt.slice(0, 10) + JSON.stringify(parsed.data),
+        attemptId ? `attempt:${attemptId.toLowerCase()}` : receivedAt.slice(0, 10) + JSON.stringify(parsed.data),
       ),
     );
     const submissionId = Array.from(new Uint8Array(digest), (byte) =>
       byte.toString(16).padStart(2, "0"),
     ).join("");
+    const deliveryDeadline = AbortSignal.timeout(10000);
     const response = await fetch(target, {
       method: "POST",
       headers: {
@@ -98,9 +106,14 @@ export async function POST(request: Request) {
           meetingRequested: false,
         } : {}),
       }),
-      signal: AbortSignal.timeout(10000),
+      signal: deliveryDeadline,
+      // A CRM redirect could disclose the enquiry or reach a different receiver.
+      // Apps Script retains its documented redirect behaviour.
+      redirect: crm ? "error" : "follow",
+      cache: "no-store",
     });
-    if (!response.ok)
+    if (!response.ok || (crm && ![200, 201].includes(response.status))) {
+      void response.body?.cancel().catch(() => {});
       return Response.json(
         {
           message:
@@ -108,11 +121,12 @@ export async function POST(request: Request) {
         },
         { status: 502 },
       );
+    }
     if (appsScript || crm) {
-      const receipt = (await response.json().catch(() => null)) as {
+      const receipt = JSON.parse(await readEnquiryBody(response, 4096, 10000, deliveryDeadline)) as {
         ok?: boolean;
       } | null;
-      if (crm ? !hasDurableCrmReceipt(receipt, submissionId) : receipt?.ok !== true)
+      if (crm ? !hasDurableCrmReceipt(receipt, submissionId, response.status) : receipt?.ok !== true)
         return Response.json(
           {
             message:
@@ -120,7 +134,7 @@ export async function POST(request: Request) {
           },
           { status: 502 },
         );
-    }
+    } else void response.body?.cancel().catch(() => {});
     return Response.json({ ok: true });
   } catch {
     return Response.json(
