@@ -68,3 +68,9 @@ Review mobile and keyboard interactions, consent choices, enquiry delivery and d
 ## Release history
 
 The review branch is `codex/website-quality-restoration`, tracked by PR #13. It starts from the restored website before the discarded speed rewrite. The tabs, dialogs, animation library and original screenshots are preserved. The shared content template uses aligned card widths without generic hero badges or decorative section numbers; the footer keeps its gold wordmark without stickers. See [CHANGELOG.md](CHANGELOG.md) and [release notes](docs/RELEASE_NOTES.md) for the commit sequence, changes and remaining measurement limits. The user authorized merging this reviewed work after the focused metadata follow-up passes build checks.
+
+
+## Ready Margin CRM integration
+
+The CRM receiver adapter is available with `LEAD_WEBHOOK_MODE=crm`. It requires a durable receipt ID and matching submission key before confirming delivery. Updated enquiry forms retain an attempt ID across failed retries, including UTC midnight; existing receiver modes and email fallback are preserved. No destination is configured by this change. See [docs/CRM_INTEGRATION.md](docs/CRM_INTEGRATION.md) for protected access, durable hosting, notifications, ingress controls, cutover and rollback. Form/receiver transport checks run in CI; the complimentary customer CRM and SBOS dashboard connection are later phases.
+

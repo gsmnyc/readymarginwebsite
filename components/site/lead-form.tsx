@@ -5,6 +5,7 @@ import Link from "@/components/site/link";
 import type { Settings } from "@/lib/content";
 import { track } from "@/lib/analytics";
 import { leadSchema, type Lead } from "@/lib/forms";
+import { nextEnquiryAttempt, type EnquiryAttempt } from "@/lib/enquiry-attempt";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 
@@ -20,6 +21,7 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
   const started = useRef(false);
   const submitted = useRef(false);
   const sending = useRef(false);
+  const attempt = useRef<EnquiryAttempt | null>(null);
   const form = useRef<HTMLFormElement>(null);
   const success = useRef<HTMLElement>(null);
   const draft = useRef<HTMLDivElement>(null);
@@ -70,9 +72,10 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
     sending.current = true;
     track("form_submit");
     try {
+      attempt.current = nextEnquiryAttempt(attempt.current, parsed.data, () => crypto.randomUUID());
       const response = await fetch("/api/review", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "X-Submission-ID": attempt.current.id },
         body: JSON.stringify(parsed.data),
         signal: AbortSignal.timeout(15000),
       });
@@ -83,6 +86,7 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
           data.message ||
             "Your request could not be delivered. Please retry or email us.",
         );
+      attempt.current = null;
       submitted.current = true;
       track("lead_accepted");
       form.current?.reset();
@@ -261,3 +265,4 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
     </form>
   );
 }
+
