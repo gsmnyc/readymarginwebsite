@@ -2714,6 +2714,45 @@
       "keyword": "Accessibility",
       "seoTitle": "Website Accessibility",
       "resources": []
+    },
+    {
+      "path": "/bookkeeping-consultation",
+      "title": "Restaurant Bookkeeping Enquiry",
+      "heading": "Discuss bookkeeping for your New York restaurant.",
+      "description": "Tell Ready Margin about your New York restaurant and the bookkeeping work you want handled. Discuss accounts, systems and a tailored written scope and quote.",
+      "kind": "form",
+      "sections": [
+        {
+          "title": "What we will discuss",
+          "body": "Share the number of restaurant locations, your current accounting and POS systems, and whether you need ongoing reconciliations or help with books that are behind. A short outline is enough for the first conversation.",
+          "items": [
+            "Locations and existing systems",
+            "Recurring work or historical cleanup",
+            "Reporting requirements and proposed next steps"
+          ]
+        },
+        {
+          "title": "What happens after you enquire",
+          "body": "We contact you to discuss the work and assess whether Ready Margin is a fit. Before an engagement begins, we document the responsibilities, deliverables and fees. Please do not include financial or employee records in the initial enquiry form.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": false,
+      "updated": "2026-11-11",
+      "related": [
+        "/restaurant-bookkeeping-services",
+        "/new-york/restaurant-bookkeeping-services",
+        "/pricing"
+      ],
+      "status": "New York restaurant bookkeeping enquiry",
+      "category": "Bookkeeping",
+      "icon": "",
+      "takeaway": "Tell Ready Margin about your restaurant and the accounting, payroll or financial support you need. Send an enquiry or book your free service demo.",
+      "author": "",
+      "keyword": "NYC restaurant bookkeeping quote",
+      "seoTitle": "Request a Restaurant Bookkeeping Quote",
+      "resources": []
     }
   ],
   "tiers": [

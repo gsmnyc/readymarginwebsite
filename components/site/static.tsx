@@ -9,19 +9,23 @@ import { ServiceIcon } from "./service-icon";
 export function CTA({
   settings,
   heading = "Discuss the work your restaurant needs covered.",
+  href = "/book-a-review",
+  label,
 }: {
   settings: Settings;
   heading?: string;
+  href?: string;
+  label?: string;
 }) {
   return (
     <section className="cta-section">
       <div className="container cta-inner">
         <Image src="/brand/logo_symbol_primary_accent.svg" alt="" width={96} height={96} sizes="96px" />
-        <p className="eyebrow">Your first demo is free</p>
+        <p className="eyebrow">{label ? "Bookkeeping enquiry · No obligation" : "Your first demo is free"}</p>
         <h2>{heading}</h2>
-        <p>{settings.reviewOffer}</p>
-        <Link className="button" href="/book-a-review" data-cta>
-          {settings.cta}<span aria-hidden="true">↗</span>
+        <p>{label ? "Share your bookkeeping needs and location count. We will discuss the records, reporting and fees before preparing any service proposal." : settings.reviewOffer}</p>
+        <Link className="button" href={href} data-cta>
+          {label || settings.cta}<span aria-hidden="true">↗</span>
         </Link>
       </div>
     </section>
@@ -35,7 +39,7 @@ export function Footer({ content }: { content: Content }) {
     { title: "Explore", links: [["How it works", "/how-it-works"], ["Pricing", "/pricing"], ["About us", "/about"], ["Insights", "/insights"]] },
   ];
   return <footer className="footer">
-    <div className="footer-topline"><span>Restaurant accounting, payroll and financial review.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></div>
+    <div className="footer-topline"><span>Managed restaurant finance, operations and advisory support.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></div>
     <div className="footer-surface">
       <div className="footer-upper">
         <div className="footer-invitation"><span className="footer-label">See the service</span><h2>Your restaurant.<br />Let’s talk.</h2><Link className="footer-demo" href="/book-a-review" data-cta>Book your free demo <span aria-hidden="true">↗</span></Link></div>

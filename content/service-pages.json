@@ -163,10 +163,10 @@
       "title": "Restaurant Bookkeeping Services",
       "seoTitle": "Restaurant Bookkeeping Services",
       "heading": "Keep your restaurant’s books up to date.",
-      "description": "Restaurant bookkeeping for sales settlements, bank reconciliation, supplier invoices and payroll entries. Keep missing records from delaying the close.",
+      "description": "Managed restaurant bookkeeping for POS settlements, bank and card reconciliation, supplier bills, payroll entries and missing-record follow-up.",
       "eyebrow": "Restaurant bookkeeping / Managed service",
       "serviceType": "Restaurant bookkeeping services",
-      "answer": "Restaurant bookkeeping for sales settlements, bank reconciliation, supplier invoices and payroll entries. Keep missing records from delaying the close.",
+      "answer": "Ready Margin handles agreed recurring restaurant bookkeeping, from organizing transactions and sales settlements to reconciling the bank and card activity and following up on unmatched entries. Monthly reporting, backlog cleanup and specialist tax work are included only when specified in your written scope.",
       "queries": [
         "restaurant bookkeeping services",
         "bookkeeping services for restaurants",
@@ -177,19 +177,40 @@
       ],
       "sections": [
         {
-          "title": "Record the activity behind each trading day",
-          "body": "A POS sales report and a bank deposit often cover different dates and amounts. We organize settlement statements, fees, refunds and deposits so receipts can be traced to the underlying activity.",
-          "items": []
+          "title": "Trace the records behind each sales day",
+          "body": "Your POS totals, card settlements and bank receipts may cover different periods. We record the agreed source activity and trace fees, refunds and delivery-platform receipts to their supporting statements rather than relying only on a bank feed.",
+          "items": [
+            "POS, card and delivery settlement records",
+            "Bank and card entries",
+            "Processing fees and refund evidence"
+          ]
         },
         {
-          "title": "Reconcile accounts and follow up on gaps",
-          "body": "We compare the ledger with bank and card records, check bill entries and obtain explanations for unmatched transactions. A missing receipt stays on the work list with the person who can supply it.",
-          "items": []
+          "title": "Reconcile the accounts, not just the balances",
+          "body": "We compare the ledger with statements, identify unmatched transactions and request the missing source records. Open items have a responsible person and next check instead of being silently cleared.",
+          "items": [
+            "Account reconciliation in the defined scope",
+            "Unexplained amount investigation",
+            "Named follow-up for missing documents"
+          ]
         },
         {
-          "title": "Establish a repeatable collection routine",
-          "body": "We agree how records arrive and when questions are answered. You can add monthly accounting and reporting if you need them; backlog cleanup and tax preparation are separate items in the scope.",
-          "items": []
+          "title": "Organize supplier costs and payroll entries",
+          "body": "Invoices, credits and approved payroll summaries need to reach the right reporting period and location. We agree how the restaurant supplies these records and who resolves discrepancies when the paperwork is incomplete.",
+          "items": [
+            "Supplier invoice and credit records",
+            "Payroll journal inputs where included",
+            "Consistent source-document handoffs"
+          ]
+        },
+        {
+          "title": "Make month-end predictable and defined",
+          "body": "Your proposal specifies reconciliation dates, outstanding-item review and any financial statements or location-level reports we will prepare. Prior-period cleanup is assessed separately; tax returns and specialist work are not automatically part of a bookkeeping engagement.",
+          "items": [
+            "Defined close and review dates",
+            "Report deliverables when agreed",
+            "Clear separation of recurring work and cleanup"
+          ]
         }
       ],
       "related": [
@@ -210,20 +231,28 @@
           "label": "Restaurant Books Are Behind"
         },
         {
-          "path": "/insights/best-restaurant-bookkeeping-services",
-          "label": "How to compare restaurant bookkeeping services"
+          "path": "/insights/restaurant-bookkeeping-services",
+          "label": "What restaurant bookkeeping should cover"
         }
       ],
       "resources": [],
-      "updated": "2026-10-01",
+      "updated": "2026-11-11",
       "faqs": [
         {
           "question": "Can you take over books that are behind?",
-          "answer": "We start by reviewing the last reconciled period, available statements and missing documents. Cleanup work and the start of ongoing bookkeeping are priced separately."
+          "answer": "We assess the last reconciled period, available statements and missing records. Cleanup is scoped separately from ongoing monthly bookkeeping."
         },
         {
-          "question": "Does bookkeeping include taxes?",
-          "answer": "Tax returns, payroll-tax processing and tax advice are included only when the agreement specifically names the responsible provider and work."
+          "question": "Can we keep our existing restaurant software?",
+          "answer": "We review the POS, accounting and payroll providers already in use and verify whether suitable access, exports or integrations are available."
+        },
+        {
+          "question": "Do we receive monthly financial statements?",
+          "answer": "If included, the proposal identifies each statement, reporting period and location view. All bookkeeping packages do not automatically include every financial report."
+        },
+        {
+          "question": "Does restaurant bookkeeping include tax services?",
+          "answer": "Tax returns, payroll-tax processing and specialist tax advice are included only if the written agreement names the tasks and the responsible provider."
         }
       ]
     },
@@ -290,8 +319,8 @@
           "label": "Who handles restaurant payroll taxes?"
         },
         {
-          "path": "/insights/best-restaurant-payroll-services",
-          "label": "How to compare restaurant payroll services"
+          "path": "/insights/restaurant-payroll-services",
+          "label": "What restaurant payroll support should cover"
         }
       ],
       "resources": [

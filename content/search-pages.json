@@ -114,49 +114,105 @@
       "path": "/new-york/restaurant-bookkeeping-services",
       "kind": "local-service",
       "title": "Restaurant Bookkeeping Services in New York",
-      "seoTitle": "New York Restaurant Bookkeeping Services",
-      "heading": "Bookkeeping for New York restaurants.",
-      "description": "Keep New York restaurant books current with settlement records, supplier bills, payroll entries and reconciliation. Agree the collection routine for each site.",
+      "seoTitle": "NYC Restaurant Bookkeeping Services",
+      "heading": "Bookkeeping for independent New York restaurants.",
+      "description": "Managed bookkeeping for New York restaurants with 1–5 locations. Reconcile bank and card activity, POS settlements and supplier bills with a hands-on team.",
       "eyebrow": "New York / Restaurant bookkeeping",
       "serviceType": "Restaurant bookkeeping services",
-      "answer": "Keep New York restaurant books current with settlement records, supplier bills, payroll entries and reconciliation. Agree the collection routine for each site.",
+      "answer": "Ready Margin provides managed restaurant bookkeeping for New York restaurants and small groups, including operators with one to five locations. Our agreed scope can cover sales and settlement checks, bank and card reconciliation, supplier bills and missing-record follow-up. Historic cleanup, financial reporting and tax-adviser handoffs are confirmed separately in a written proposal.",
       "sections": [
         {
-          "title": "Give each location’s documents a route into the books",
-          "body": "Identify the contacts supplying POS and settlement statements, invoices and payroll reports. Preserve site labels and period dates, especially when staff buy for more than one restaurant.",
-          "items": []
+          "title": "Trace sales reports to the actual deposits",
+          "body": "A POS sales report, card settlement statement, delivery platform report and bank deposit may cover different dates and different amounts. We reconcile the agreed sources and investigate the fees, refunds and timing differences that need attention.",
+          "items": [
+            "POS and delivery-platform statements",
+            "Bank and card reconciliation in the agreed scope",
+            "Outstanding settlement questions and source records"
+          ]
         },
         {
-          "title": "Reconcile receipts and supplier activity",
-          "body": "Trace deposits to settlements and review invoice or credit questions. Delivery timing and missing documents are identified so their accounting effect can be checked.",
-          "items": []
+          "title": "Get supplier bills and credits into a steady routine",
+          "body": "Invoices and credit notes can sit in managers' inboxes or arrive with missing details. We agree the collection method, locate missing evidence and record open questions so the accounting period has a defensible supplier-cost picture.",
+          "items": [
+            "Supplier invoices and credits",
+            "Correct restaurant and reporting-period labels",
+            "Named contacts for missing documents"
+          ]
         },
         {
-          "title": "Set the current routine alongside any backlog work",
-          "body": "We assess cleanup separately and agree when new records arrive. Close preparation, reports and handoffs to your tax adviser are included only where named.",
-          "items": []
+          "title": "Keep one to five locations distinguishable",
+          "body": "An independent restaurant and a small multi-site group need different collection and reporting routines. We map the location, responsible contact, systems and expected handoff for each restaurant before defining how shared costs or transfers are reviewed.",
+          "items": [
+            "Location-level record identification",
+            "Consistent collection dates",
+            "An open-item list with owners and next checks"
+          ]
+        },
+        {
+          "title": "Know what the monthly close actually includes",
+          "body": "We confirm the reconciliations, cutoffs and any financial statements included in the engagement. If historical books need catching up, we scope that separately from recurring bookkeeping. Specialist tax filings, payroll processing and advice are not assumed.",
+          "items": [
+            "Agreed monthly reconciliation scope",
+            "Reporting deliverables when included",
+            "Separately scoped backlog cleanup"
+          ]
+        },
+        {
+          "title": "Start with your existing systems",
+          "body": "You do not need to buy a new platform or send sensitive records just to ask about the service. Tell us which POS and accounting systems you use, how many locations you run and which finance work is falling behind. Any available exports or integrations are verified before use.",
+          "items": [
+            "A no-obligation initial conversation",
+            "Scope tailored to records and workload",
+            "Written responsibilities and fee quote before engagement"
+          ]
         }
       ],
       "related": [
         {
-          "path": "/what-we-handle/accounting-close",
-          "label": "Accounting & Close"
+          "path": "/restaurant-bookkeeping-services",
+          "label": "Restaurant bookkeeping services"
         },
         {
           "path": "/new-york/restaurant-accounting-services",
-          "label": "Restaurant Accounting Services in New York"
+          "label": "New York restaurant accounting"
         },
         {
-          "path": "/new-york/restaurant-payroll-services",
-          "label": "Restaurant Payroll Services in New York"
+          "path": "/insights/restaurant-bookkeeping-services",
+          "label": "What restaurant bookkeeping should cover"
         },
         {
-          "path": "/book-a-review",
-          "label": "Book your free demo"
+          "path": "/pricing",
+          "label": "Restaurant finance pricing"
+        },
+        {
+          "path": "/bookkeeping-consultation",
+          "label": "Request a bookkeeping quote"
         }
       ],
       "resources": [],
-      "updated": "2026-10-01"
+      "updated": "2026-11-11",
+      "faqs": [
+        {
+          "question": "Can you support a restaurant group with several locations?",
+          "answer": "We can discuss bookkeeping for an independent restaurant or a small group, including operators with one to five locations. The written proposal identifies the locations, accounts, responsibilities and deliverables covered."
+        },
+        {
+          "question": "Can we continue using our existing POS and accounting software?",
+          "answer": "We review your current systems and verify access, exports or integrations before agreeing the bookkeeping workflow. A replacement is not assumed."
+        },
+        {
+          "question": "What if we need to catch up on overdue books?",
+          "answer": "We first assess the available statements, last reconciled period and missing records. Historical cleanup is assessed and priced separately from recurring bookkeeping."
+        },
+        {
+          "question": "Are tax returns and payroll processing part of bookkeeping?",
+          "answer": "No such tasks are assumed. Tax filings, specialist advice and payroll processing are included only where the written agreement explicitly identifies the work and the responsible provider."
+        },
+        {
+          "question": "How do we get a quote?",
+          "answer": "Tell us your location count, record volumes, current systems and reporting needs. We will discuss the appropriate service and present the responsibilities and fees in a written proposal."
+        }
+      ]
     },
     {
       "path": "/new-york/restaurant-accounting-services",

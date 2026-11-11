@@ -9,7 +9,7 @@ import { nextEnquiryAttempt, type EnquiryAttempt } from "@/lib/enquiry-attempt";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 
-export function LeadForm({ settings, demo = false }: { settings: Settings; demo?: boolean }) {
+export function LeadForm({ settings, demo = false, bookkeeping = false }: { settings: Settings; demo?: boolean; bookkeeping?: boolean }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [state, setState] = useState<"idle" | "sending" | "error" | "success" | "email-ready">(
     "idle",
@@ -42,8 +42,9 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
   }, [state]);
 
   function prepareEmail(details: Lead) {
-    const body = [demo ? "Free demo request" : "Restaurant finance enquiry", "", `Name: ${details.name}`, `Restaurant: ${details.business}`, `Email: ${details.email}`, details.phone && `Phone: ${details.phone}`, details.locations && `Locations: ${details.locations}`, "", demo && "I’d like to book my free demo and discuss a price tailored to my restaurant.", details.concern || "I’d like to discuss finance support for my restaurant."].filter(Boolean).join("\n");
-    setEmailDraft(`mailto:${settings.email}?subject=${encodeURIComponent(`${demo ? "Free demo request" : "Restaurant finance enquiry"} — ${details.business}`)}&body=${encodeURIComponent(body)}`);
+    const intent = bookkeeping ? "Restaurant bookkeeping quote enquiry" : demo ? "Free demo request" : "Restaurant finance enquiry";
+    const body = [intent, "", `Name: ${details.name}`, `Restaurant: ${details.business}`, `Email: ${details.email}`, details.phone && `Phone: ${details.phone}`, details.locations && `Locations: ${details.locations}`, "", demo && "I’d like to book my free demo and discuss a price tailored to my restaurant.", details.concern || (bookkeeping ? "I’d like to discuss restaurant bookkeeping." : "I’d like to discuss finance support for my restaurant.")].filter(Boolean).join("\n");
+    setEmailDraft(`mailto:${settings.email}?subject=${encodeURIComponent(`${intent} — ${details.business}`)}&body=${encodeURIComponent(body)}`);
     setState("email-ready");
   }
 
@@ -51,7 +52,8 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
     event.preventDefault();
     if (sending.current) return;
     const values = Object.fromEntries(new FormData(event.currentTarget));
-    const parsed = leadSchema.safeParse({ ...values, consent });
+    const concern = String(values.concern || "");
+    const parsed = leadSchema.safeParse({ ...values, consent, concern: bookkeeping ? `Bookkeeping enquiry${concern.trim() ? ": " + concern.slice(0, 1950) : ""}` : concern });
     if (!parsed.success) {
       const nextErrors: Record<string, string> = {};
       parsed.error.issues.forEach(
@@ -110,10 +112,10 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
         <span className="eyebrow">Request received</span>
         <h2>Your enquiry has been received.</h2>
         <p>
-          {demo ? "We’ll contact you to arrange your free demo." : "We’ll contact you to agree the next step and a suitable time."}
+          {bookkeeping ? "We’ll contact you to discuss your bookkeeping needs and a written quote." : demo ? "We’ll contact you to arrange your free demo." : "We’ll contact you to agree the next step and a suitable time."}
         </p>
-        <Link className="button" href="/thank-you">
-          Prepare for your free demo
+        <Link className="button" href={bookkeeping ? "/restaurant-bookkeeping-services" : "/thank-you"}>
+          {bookkeeping ? "Explore restaurant bookkeeping" : "Prepare for your free demo"}
         </Link>
         <Link className="text-link" href="/insights/weekly-pnl-review">
           Read the weekly P&amp;L guide
@@ -147,13 +149,13 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
       }}
     >
       <div className="form-heading">
-        <p className="eyebrow">{demo ? "Book your free demo" : "Start the conversation"}</p>
+        <p className="eyebrow">{bookkeeping ? "New York restaurant bookkeeping" : demo ? "Book your free demo" : "Start the conversation"}</p>
         <h2>
-          Introduce
+          {bookkeeping ? "Discuss" : "Introduce"}
           <br />
-          your restaurant.
+          {bookkeeping ? "your books." : "your restaurant."}
         </h2>
-        <p>{demo ? "Share a few details and we’ll arrange your free demo." : "Only your name, business, email and consent are required."}</p>
+        <p>{bookkeeping ? "Share your restaurant and bookkeeping needs. No financial files needed here; we will discuss a scope and quote." : demo ? "Share a few details and we’ll arrange your free demo." : "Only your name, business, email and consent are required."}</p>
       </div>
       <div className="form-grid">
         {settings.formFields.map((field) => (
@@ -239,7 +241,7 @@ export function LeadForm({ settings, demo = false }: { settings: Settings; demo?
         </p>
       )}
       <button disabled={state === "sending"} className="button" type="submit">
-        {state === "sending" ? "Sending your request…" : state === "email-ready" ? "Update email draft" : emailOnly ? (demo ? "Prepare free demo request" : "Prepare enquiry email") : (demo ? "Request your free demo" : "Send enquiry")}
+        {state === "sending" ? "Sending your request…" : state === "email-ready" ? "Update email draft" : emailOnly ? (bookkeeping ? "Prepare bookkeeping enquiry email" : demo ? "Prepare free demo request" : "Prepare enquiry email") : (bookkeeping ? "Request a bookkeeping quote" : demo ? "Request your free demo" : "Send enquiry")}
       </button>
       <p className="caption">
         No commitment to a service package. Please do not include sensitive
