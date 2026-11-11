@@ -10,8 +10,8 @@ import { serviceGroups } from "@/content/service-navigation";
 import "./homepage.css";
 
 export const generateMetadata = () => metadataFor({
-  title: "Restaurant Accounting & Payroll Services",
-  description: "Restaurant bookkeeping, accounting, payroll preparation and CFO support from Ready Margin. Book a free demo to discuss the finance work you need covered.",
+  title: "Managed Restaurant Finance Services",
+  description: "Ready Margin handles restaurant bookkeeping, accounting, payroll preparation, cost reviews and financial guidance. See our managed restaurant finance services.",
   path: "", indexable: true, kind: "home",
 });
 
@@ -23,11 +23,11 @@ export default async function Home() {
       <section id="home-hero" className="home-opening">
         <div className="home-opening-copy">
           <div className="home-opening-heading">
-            <p className="eyebrow">Restaurant accounting, bookkeeping &amp; payroll</p>
-            <h1>The books. The payroll.<br /><span>Handled by Ready Margin.</span></h1>
+            <p className="eyebrow">Managed restaurant financial operations</p>
+            <h1>Your restaurant’s finance work.<br /><span>Handled by Ready Margin.</span></h1>
           </div>
           <div className="home-opening-support">
-            <p className="home-intro">A team to reconcile your accounts, prepare payroll inputs and review the costs behind your results. Choose the jobs you need covered, with reports and approvals agreed before we start.</p>
+            <p className="home-intro">A hands-on team for the finance work behind service: bookkeeping, reconciliation, payroll inputs, supplier bills, cost review, cash reporting and financial guidance. We agree responsibilities, reporting and approvals before work begins.</p>
             <div className="home-actions"><Link className="button" href="/book-a-review" data-cta>Book your free demo</Link><a className="home-quiet-link" href="#workspace-preview">Explore the demo <span aria-hidden="true">↓</span></a></div>
           </div>
         </div>
