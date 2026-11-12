@@ -2,10 +2,10 @@
   "settings": {
     "brand": "Ready Margin",
     "email": "contact@readymargin.com",
-    "cta": "Book your free demo",
-    "hero": "Restaurant accounting and payroll, handled by a team.",
+    "cta": "Request a free service consultation",
+    "hero": "Managed restaurant bookkeeping, payroll, accounting and financial operations.",
     "heroSupport": "We reconcile the books, prepare payroll inputs and review costs and cash with you. Your managers confirm the facts; your nominated people keep the approvals.",
-    "reviewOffer": "Tell us the work you need covered. Your first demo is free; a written proposal confirms the service, responsibilities and fees.",
+    "reviewOffer": "Tell us which finance and back-office work you need handled. The first consultation is free; a written proposal confirms the scope, responsibilities and fees.",
     "workingDay": [
       {
         "phase": "Before service",
@@ -854,11 +854,11 @@
       "path": "/how-it-works",
       "title": "How Ready Margin works",
       "heading": "How we start and manage your service.",
-      "description": "Find out how Ready Margin starts a restaurant finance engagement, from a free demo to the written scope, record collection and recurring review.",
+      "description": "Find out how Ready Margin starts a restaurant finance engagement, from a free consultation to the written scope, record collection and recurring review.",
       "kind": "process",
       "sections": [
         {
-          "title": "1. Walk through the service in a free demo",
+          "title": "1. Discuss the service in a free consultation",
           "body": "Tell us your locations, systems and the jobs you need help with. We show the relevant workflow and answer questions about preparation, reporting and approvals. A short outline is enough for this conversation.",
           "items": []
         },
@@ -889,7 +889,7 @@
       "status": "",
       "category": "",
       "icon": "",
-      "takeaway": "Find out how Ready Margin starts a restaurant finance engagement, from a free demo to the written scope, record collection and recurring review.",
+      "takeaway": "Find out how Ready Margin starts a restaurant finance engagement, from a free consultation to the written scope, record collection and recurring review.",
       "author": "",
       "keyword": "How Ready Margin works",
       "seoTitle": "How Our Restaurant Finance Service Works",
@@ -1207,7 +1207,7 @@
         },
         {
           "title": "Review the fit before committing",
-          "body": "Your free demo lets you examine the relevant service and ask about deliverables. The proposal sets out the support, inputs and approvals on both sides.",
+          "body": "Your free consultation lets you discuss the relevant service and ask about deliverables. The proposal sets out the support, inputs and approvals on both sides.",
           "items": []
         }
       ],
@@ -1228,7 +1228,7 @@
       "path": "/pricing",
       "title": "Restaurant finance pricing",
       "heading": "Pricing for your restaurant finance service.",
-      "description": "Ready Margin prices restaurant finance support around your locations, workload and chosen services. Start with a free demo and receive a written scope and fees.",
+      "description": "Ready Margin prices restaurant finance support around your locations, workload and chosen services. Start with a free consultation and receive a written scope and fees.",
       "kind": "pricing",
       "sections": [
         {
@@ -1244,7 +1244,7 @@
       "status": "",
       "category": "",
       "icon": "",
-      "takeaway": "Ready Margin prices restaurant finance support around your locations, workload and chosen services. Start with a free demo and receive a written scope and fees.",
+      "takeaway": "Ready Margin prices restaurant finance support around your locations, workload and chosen services. Start with a free consultation and receive a written scope and fees.",
       "author": "",
       "keyword": "Ready Margin pricing enquiry",
       "seoTitle": "Restaurant Finance Service Pricing",
@@ -1252,7 +1252,7 @@
       "faqs": [
         {
           "question": "Is there a published monthly package price?",
-          "answer": "No. Ready Margin quotes for the work required by your locations, records and chosen services after the free demo."
+          "answer": "No. Ready Margin quotes for the work required by your locations, records and chosen services after a free consultation."
         },
         {
           "question": "Are cleanup and third-party costs included?",
@@ -1319,7 +1319,7 @@
         },
         {
           "title": "Every engagement has a written scope",
-          "body": "We discuss your systems and priorities in a free demo, then quote for the work required. The agreement identifies deliverables, fees, inputs, approvals and separately appointed specialists.",
+          "body": "We discuss your systems and priorities in a free consultation, then quote for the work required. The agreement identifies deliverables, fees, inputs, approvals and separately appointed specialists.",
           "items": []
         }
       ],
@@ -1575,7 +1575,7 @@
       "path": "/contact",
       "title": "Contact Ready Margin",
       "heading": "Contact Ready Margin.",
-      "description": "Tell Ready Margin about your restaurant and the accounting, payroll or financial support you need. Send an enquiry or book your free service demo.",
+      "description": "Tell Ready Margin about your restaurant and the accounting, payroll or financial support you need. Send an enquiry or request a free service consultation.",
       "kind": "form",
       "sections": [
         {
@@ -1596,7 +1596,7 @@
       "status": "",
       "category": "",
       "icon": "",
-      "takeaway": "Tell Ready Margin about your restaurant and the accounting, payroll or financial support you need. Send an enquiry or book your free service demo.",
+      "takeaway": "Tell Ready Margin about your restaurant and the accounting, payroll or financial support you need. Send an enquiry or request a free service consultation.",
       "author": "",
       "keyword": "Contact Ready Margin",
       "seoTitle": "Contact Our Restaurant Finance Team",
@@ -1604,14 +1604,14 @@
     },
     {
       "path": "/book-a-review",
-      "title": "Book your free demo",
-      "heading": "Book your free Ready Margin demo.",
-      "description": "See Ready Margin’s restaurant finance service in a free demo. Discuss your systems, workload and questions, then request a written scope and quote.",
+      "title": "Request a free restaurant finance consultation",
+      "heading": "Discuss the restaurant finance work you need handled.",
+      "description": "Discuss your restaurant’s finance and back-office work in a free consultation. Share your systems, priorities and locations, then request a written scope and quote.",
       "kind": "form",
       "sections": [
         {
-          "title": "What the demo covers",
-          "body": "We discuss the work your restaurant needs and walk through the relevant process. You can ask who checks the records, what reports you receive and which approvals remain with your team.",
+          "title": "What the consultation covers",
+          "body": "We discuss the work your restaurant needs and explain the relevant service process. You can ask who checks the records, what reports you receive and which approvals remain with your team.",
           "items": [
             "Your locations, systems and current responsibilities",
             "The recurring job or financial decision you want help with",
@@ -1620,7 +1620,7 @@
         },
         {
           "title": "What to share at this stage",
-          "body": "A short outline is sufficient. You do not need to upload accounts or employee records to request the demo. Detailed documents follow only through the agreed sharing process.",
+          "body": "A short outline is sufficient. You do not need to upload accounts or employee records to request a consultation. Detailed documents follow only through the agreed sharing process.",
           "items": []
         }
       ],
@@ -1631,15 +1631,15 @@
       "status": "",
       "category": "",
       "icon": "",
-      "takeaway": "See Ready Margin’s restaurant finance service in a free demo. Discuss your systems, workload and questions, then request a written scope and quote.",
+      "takeaway": "Discuss your restaurant’s finance and back-office work in a free consultation. Share your systems, priorities and locations, then request a written scope and quote.",
       "author": "",
-      "keyword": "Free restaurant finance demo",
-      "seoTitle": "Book a Free Restaurant Finance Demo",
+      "keyword": "free restaurant finance consultation, restaurant accounting consultation, restaurant payroll consultation",
+      "seoTitle": "Free Restaurant Finance Consultation | Ready Margin",
       "resources": []
     },
     {
       "path": "/thank-you",
-      "title": "Demo request received",
+      "title": "Restaurant Finance Enquiry Received",
       "heading": "Your enquiry has been submitted.",
       "description": "Next steps after a submitted Ready Margin enquiry. Prepare your system names and the restaurant finance question you would like to discuss.",
       "kind": "thanks",
@@ -1662,8 +1662,8 @@
       "icon": "",
       "takeaway": "Next steps after a submitted Ready Margin enquiry. Prepare your system names and the restaurant finance question you would like to discuss.",
       "author": "",
-      "keyword": "Demo request received",
-      "seoTitle": "Enquiry Submitted | Ready Margin",
+      "keyword": "restaurant finance enquiry confirmation",
+      "seoTitle": "Restaurant Finance Enquiry Received",
       "resources": []
     },
     {
@@ -2411,7 +2411,7 @@
     },
     {
       "path": "/resources/review-preparation-checklist",
-      "title": "Prepare for your free demo",
+      "title": "Prepare for your service consultation",
       "heading": "Download the Ready Margin demo preparation checklist.",
       "description": "Download a short checklist for your free restaurant finance demo. Prepare system names, current responsibilities and one example of work you need help with.",
       "kind": "download",
@@ -2714,6 +2714,45 @@
       "keyword": "Accessibility",
       "seoTitle": "Website Accessibility",
       "resources": []
+    },
+    {
+      "path": "/bookkeeping-consultation",
+      "title": "Restaurant Bookkeeping Enquiry",
+      "heading": "Discuss bookkeeping for your New York restaurant.",
+      "description": "Tell Ready Margin about your New York restaurant and the bookkeeping work you want handled. Discuss accounts, systems and a tailored written scope and quote.",
+      "kind": "form",
+      "sections": [
+        {
+          "title": "What we will discuss",
+          "body": "Share the number of restaurant locations, your current accounting and POS systems, and whether you need ongoing reconciliations or help with books that are behind. A short outline is enough for the first conversation.",
+          "items": [
+            "Locations and existing systems",
+            "Recurring work or historical cleanup",
+            "Reporting requirements and proposed next steps"
+          ]
+        },
+        {
+          "title": "What happens after you enquire",
+          "body": "We contact you to discuss the work and assess whether Ready Margin is a fit. Before an engagement begins, we document the responsibilities, deliverables and fees. Please do not include financial or employee records in the initial enquiry form.",
+          "items": []
+        }
+      ],
+      "published": true,
+      "indexable": false,
+      "updated": "2026-11-11",
+      "related": [
+        "/restaurant-bookkeeping-services",
+        "/new-york/restaurant-bookkeeping-services",
+        "/pricing"
+      ],
+      "status": "New York restaurant bookkeeping enquiry",
+      "category": "Bookkeeping",
+      "icon": "",
+      "takeaway": "Tell Ready Margin about your restaurant and the accounting, payroll or financial support you need. Send an enquiry or request a free service consultation.",
+      "author": "",
+      "keyword": "NYC restaurant bookkeeping quote",
+      "seoTitle": "Request a Restaurant Bookkeeping Quote",
+      "resources": []
     }
   ],
   "tiers": [
@@ -2728,7 +2767,7 @@
         "Operating workflows: available add-on",
         "Strategic guidance: available add-on"
       ],
-      "note": "Your first demo is free. Your quote is tailored to your restaurant and the agreed scope."
+      "note": "Your first consultation is free. Your quote is tailored to your restaurant and the agreed scope."
     },
     {
       "name": "Core",
@@ -2741,7 +2780,7 @@
         "Operating workflows: scope at review",
         "Strategic guidance: available add-on"
       ],
-      "note": "Your first demo is free. Your quote is tailored to your restaurant and the agreed scope."
+      "note": "Your first consultation is free. Your quote is tailored to your restaurant and the agreed scope."
     },
     {
       "name": "Growth",
@@ -2754,7 +2793,7 @@
         "Operating workflows: scope at review",
         "Strategic guidance: planning scope"
       ],
-      "note": "Your first demo is free. Your quote is tailored to your restaurant and the agreed scope."
+      "note": "Your first consultation is free. Your quote is tailored to your restaurant and the agreed scope."
     },
     {
       "name": "Partner",
@@ -2767,7 +2806,7 @@
         "Operating workflows: scope at review",
         "Strategic guidance: proposed inclusion"
       ],
-      "note": "Your first demo is free. Your quote is tailored to your restaurant and the agreed scope."
+      "note": "Your first consultation is free. Your quote is tailored to your restaurant and the agreed scope."
     }
   ],
   "faqs": [
@@ -2784,7 +2823,7 @@
       "answer": "We review your current setup first. Access, exports and any direct connection must be verified before the service depends on them."
     },
     {
-      "question": "What happens in the free demo?",
+      "question": "What happens in the free consultation?",
       "answer": "We discuss your workload and show the relevant preparation or review process. You can ask about deliverables, approvals and fees before requesting a proposal."
     },
     {

@@ -10,8 +10,8 @@ import { serviceGroups } from "@/content/service-navigation";
 import "./homepage.css";
 
 export const generateMetadata = () => metadataFor({
-  title: "Restaurant Accounting & Payroll Services",
-  description: "Restaurant bookkeeping, accounting, payroll preparation and CFO support from Ready Margin. Book a free demo to discuss the finance work you need covered.",
+  title: "Managed Restaurant Finance Services",
+  description: "Ready Margin handles restaurant bookkeeping, accounting, payroll preparation, cost reviews and financial guidance. See our managed restaurant finance services.",
   path: "", indexable: true, kind: "home",
 });
 
@@ -23,12 +23,12 @@ export default async function Home() {
       <section id="home-hero" className="home-opening">
         <div className="home-opening-copy">
           <div className="home-opening-heading">
-            <p className="eyebrow">Restaurant accounting, bookkeeping &amp; payroll</p>
-            <h1>The books. The payroll.<br /><span>Handled by Ready Margin.</span></h1>
+            <p className="eyebrow">Managed restaurant financial operations</p>
+            <h1>Your restaurant’s finance work.<br /><span>Handled by Ready Margin.</span></h1>
           </div>
           <div className="home-opening-support">
-            <p className="home-intro">A team to reconcile your accounts, prepare payroll inputs and review the costs behind your results. Choose the jobs you need covered, with reports and approvals agreed before we start.</p>
-            <div className="home-actions"><Link className="button" href="/book-a-review" data-cta>Book your free demo</Link><a className="home-quiet-link" href="#workspace-preview">Explore the demo <span aria-hidden="true">↓</span></a></div>
+            <p className="home-intro">A hands-on team for NYC restaurants with one to five locations: bookkeeping, accounting, payroll inputs, supplier bills, tips, cost control, cash reporting and financial guidance. We agree responsibilities, reporting and approvals before work begins.</p>
+            <div className="home-actions"><Link className="button" href="/book-a-review" data-cta>Request a free service consultation</Link><a className="home-quiet-link" href="#workspace-preview">Explore the demo <span aria-hidden="true">↓</span></a></div>
           </div>
         </div>
         <ProductHero />
@@ -56,8 +56,8 @@ export default async function Home() {
         <div className="home-section-heading"><div><p className="eyebrow">Responsibilities</p><h2 id="proof-title">Who prepares.<br />Who approves.</h2></div><p>We handle the agreed preparation and checks. Your managers confirm operating facts, and your nominated people authorize payroll, payments and business decisions.</p></div>
         <ol><li><span>01</span><h3>The written proposal</h3><p>Tasks, deliverables, fees and separate specialist work are identified before the engagement starts.</p><Link href="/pricing">Service pricing <span aria-hidden="true">↗</span></Link></li><li><span>02</span><h3>The review schedule</h3><p>Records have collection dates, reports have delivery dates and exceptions have a contact responsible for the answer.</p><Link href="/how-it-works">How the service starts <span aria-hidden="true">↗</span></Link></li><li><span>03</span><h3>The approval route</h3><p>The scope names which inputs we prepare and which person authorizes the next step.</p><Link href="/security">Record access and handling <span aria-hidden="true">↗</span></Link></li></ol>
       </section>
-      <section className="home-wrap home-panel home-faq" aria-labelledby="faq-title"><div><p className="eyebrow">Before your demo</p><h2 id="faq-title">Questions about<br />the service.</h2></div><Faq items={c.faqs.slice(0,5)} /></section>
-      <section className="home-wrap home-panel home-finish"><div><p className="eyebrow">Your first demo is free</p><h2>Show us the work<br /><span>you need covered.</span></h2></div><div className="home-finish-copy"><p>Bring your system names and one example. We’ll show the relevant process, answer your questions and discuss a proposal for your restaurant.</p><Link className="button" href="/book-a-review" data-cta>Book your free demo</Link></div></section>
+      <section className="home-wrap home-panel home-faq" aria-labelledby="faq-title"><div><p className="eyebrow">Before your consultation</p><h2 id="faq-title">Questions about<br />the service.</h2></div><Faq items={c.faqs.slice(0,5)} /></section>
+      <section className="home-wrap home-panel home-finish"><div><p className="eyebrow">Your first consultation is free</p><h2>Show us the work<br /><span>you need covered.</span></h2></div><div className="home-finish-copy"><p>Bring your system names and one example. We’ll show the relevant process, answer your questions and discuss a proposal for your restaurant.</p><Link className="button" href="/book-a-review" data-cta>Request a free service consultation</Link></div></section>
       <JsonLd data={[
         { "@context": "https://schema.org", "@type": "ItemList", name: "Restaurant finance services", itemListElement: serviceGroups.flatMap(group => group.links).map((link,index) => ({ "@type": "ListItem", position: index + 1, name: link.label, url: origin + link.href })) },
         {
@@ -87,7 +87,7 @@ export default async function Home() {
           publisher: { "@id": origin + "/#organization" },
           inLanguage: "en-US",
         },
-        { "@context": "https://schema.org", "@type": "WebPage", "@id": origin + "/#webpage", url: origin, name: "Restaurant Accounting & Payroll Services", isPartOf: { "@id": origin + "/#website" }, about: { "@id": origin + "/#organization" } },
+        { "@context": "https://schema.org", "@type": "WebPage", "@id": origin + "/#webpage", url: origin, name: "Managed Restaurant Finance Services", isPartOf: { "@id": origin + "/#website" }, about: { "@id": origin + "/#organization" } },
         { "@context": "https://schema.org", "@type": "FAQPage", "@id": origin + "/#faq", mainEntity: c.faqs.slice(0,5).map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
       ]} />
     </main>

@@ -31,9 +31,9 @@ const jakarta = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin()),
   applicationName: "Ready Margin",
-  title: { default: "Restaurant Accounting & Payroll Services | Ready Margin", template: "%s | Ready Margin" },
+  title: { default: "Managed Restaurant Finance Services | Ready Margin", template: "%s | Ready Margin" },
   description:
-    "Ready Margin handles restaurant bookkeeping, accounting and payroll preparation, with financial review for owners and operators.",
+    "Ready Margin handles restaurant bookkeeping, accounting, payroll preparation, cost review and financial guidance for restaurant owners and operators.",
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [

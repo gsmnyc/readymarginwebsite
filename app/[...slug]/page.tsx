@@ -56,6 +56,7 @@ export default async function ContentPage({ params }: Props) {
   const c = await getContent();
   const p = c.pages.find((p) => p.path === "/" + slug.join("/"));
   if (!p) notFound();
+  const bookkeepingPage = ["/restaurant-bookkeeping-services", "/new-york/restaurant-bookkeeping-services"].includes(p.path);
   const palette = /food|inventory|vendor|about/.test(p.path) ? "gold-soft" : /payroll|tip|scheduling|attendance/.test(p.path) ? "gold" : /accounting|bookkeeping|books/.test(p.path) ? "stone" : "paper";
   const list = [
     "articles",
@@ -75,8 +76,8 @@ export default async function ContentPage({ params }: Props) {
           <div className="page-intro">
             <p>{p.description}</p>
             {!["form", "legal", "thanks", "search"].includes(p.kind) && (
-              <Link className="text-link" href="/book-a-review" data-cta>
-                {c.settings.cta}
+              <Link className="text-link" href={bookkeepingPage ? "/bookkeeping-consultation" : "/book-a-review"} data-cta>
+                {bookkeepingPage ? "Request a bookkeeping quote" : c.settings.cta}
               </Link>
             )}
             {p.kind === "article" && (
@@ -97,6 +98,13 @@ export default async function ContentPage({ params }: Props) {
       </section>
       <div className="container page-body">
         <ServiceProduct page={p} />
+        {bookkeepingPage && <section className="fit-note" aria-labelledby="bookkeeping-quote-title">
+          <p className="eyebrow">Restaurant bookkeeping · New York</p>
+          <h2 id="bookkeeping-quote-title">Discuss the bookkeeping your restaurant needs handled.</h2>
+          <p>Tell us about your accounts, POS settlements, invoices and number of locations. We will explain the scope and discuss responsibilities, reports and a written quote.</p>
+          <Link className="button" href="/bookkeeping-consultation" data-cta>Request a bookkeeping quote</Link>
+          <p className="caption">No obligation. No financial documents needed to enquire.</p>
+        </section>}
         {["/what-we-handle", "/restaurant-finance-services", "/platform"].includes(p.path) && <WorkspaceCoverage />}
         {p.kind !== "article" && p.answer && p.answer.trim() !== p.description.trim() && (
           <section className="fit-note" aria-labelledby="answer-title">
@@ -162,7 +170,7 @@ export default async function ContentPage({ params }: Props) {
         {p.kind === "diagnostic" && <ClarityCheck />}
         {p.kind === "form" ? (
           <div className="form-layout">
-            <LeadForm settings={c.settings} demo={p.path === "/book-a-review"} />
+            <LeadForm settings={c.settings} demo={p.path === "/book-a-review"} bookkeeping={p.path === "/bookkeeping-consultation"} />
             <SectionCopy page={p} />
           </div>
         ) : (
@@ -248,6 +256,8 @@ export default async function ContentPage({ params }: Props) {
       ) && (
         <CTA
           settings={c.settings}
+          href={bookkeepingPage ? "/bookkeeping-consultation" : undefined}
+          label={bookkeepingPage ? "Request a bookkeeping quote" : undefined}
           heading={
             p.kind === "capability"
               ? "Discuss the support your restaurant needs."
