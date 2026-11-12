@@ -42,8 +42,8 @@ export function LeadForm({ settings, demo = false, bookkeeping = false }: { sett
   }, [state]);
 
   function prepareEmail(details: Lead) {
-    const intent = bookkeeping ? "Restaurant bookkeeping quote enquiry" : demo ? "Free demo request" : "Restaurant finance enquiry";
-    const body = [intent, "", `Name: ${details.name}`, `Restaurant: ${details.business}`, `Email: ${details.email}`, details.phone && `Phone: ${details.phone}`, details.locations && `Locations: ${details.locations}`, "", demo && "I’d like to book my free demo and discuss a price tailored to my restaurant.", details.concern || (bookkeeping ? "I’d like to discuss restaurant bookkeeping." : "I’d like to discuss finance support for my restaurant.")].filter(Boolean).join("\n");
+    const intent = bookkeeping ? "Restaurant bookkeeping quote enquiry" : demo ? "Free restaurant finance consultation request" : "Restaurant finance enquiry";
+    const body = [intent, "", `Name: ${details.name}`, `Restaurant: ${details.business}`, `Email: ${details.email}`, details.phone && `Phone: ${details.phone}`, details.locations && `Locations: ${details.locations}`, "", demo && "I’d like a free service consultation and a scope tailored to my restaurant.", details.concern || (bookkeeping ? "I’d like to discuss restaurant bookkeeping." : "I’d like to discuss finance support for my restaurant.")].filter(Boolean).join("\n");
     setEmailDraft(`mailto:${settings.email}?subject=${encodeURIComponent(`${intent} — ${details.business}`)}&body=${encodeURIComponent(body)}`);
     setState("email-ready");
   }
@@ -112,10 +112,10 @@ export function LeadForm({ settings, demo = false, bookkeeping = false }: { sett
         <span className="eyebrow">Request received</span>
         <h2>Your enquiry has been received.</h2>
         <p>
-          {bookkeeping ? "We’ll contact you to discuss your bookkeeping needs and a written quote." : demo ? "We’ll contact you to arrange your free demo." : "We’ll contact you to agree the next step and a suitable time."}
+          {bookkeeping ? "We’ll contact you to discuss your bookkeeping needs and a written quote." : demo ? "We’ll contact you to arrange a free service consultation." : "We’ll contact you to agree the next step and a suitable time."}
         </p>
         <Link className="button" href={bookkeeping ? "/restaurant-bookkeeping-services" : "/thank-you"}>
-          {bookkeeping ? "Explore restaurant bookkeeping" : "Prepare for your free demo"}
+          {bookkeeping ? "Explore restaurant bookkeeping" : "Prepare for your consultation"}
         </Link>
         <Link className="text-link" href="/insights/weekly-pnl-review">
           Read the weekly P&amp;L guide
@@ -149,13 +149,13 @@ export function LeadForm({ settings, demo = false, bookkeeping = false }: { sett
       }}
     >
       <div className="form-heading">
-        <p className="eyebrow">{bookkeeping ? "New York restaurant bookkeeping" : demo ? "Book your free demo" : "Start the conversation"}</p>
+        <p className="eyebrow">{bookkeeping ? "New York restaurant bookkeeping" : demo ? "Free service consultation" : "Start the conversation"}</p>
         <h2>
           {bookkeeping ? "Discuss" : "Introduce"}
           <br />
           {bookkeeping ? "your books." : "your restaurant."}
         </h2>
-        <p>{bookkeeping ? "Share your restaurant and bookkeeping needs. No financial files needed here; we will discuss a scope and quote." : demo ? "Share a few details and we’ll arrange your free demo." : "Only your name, business, email and consent are required."}</p>
+        <p>{bookkeeping ? "Share your restaurant and bookkeeping needs. No financial files needed here; we will discuss a scope and quote." : demo ? "Share a few details and we’ll contact you about a free consultation. This form does not book a calendar time." : "Only your name, business, email and consent are required."}</p>
       </div>
       <div className="form-grid">
         {settings.formFields.map((field) => (
@@ -241,13 +241,13 @@ export function LeadForm({ settings, demo = false, bookkeeping = false }: { sett
         </p>
       )}
       <button disabled={state === "sending"} className="button" type="submit">
-        {state === "sending" ? "Sending your request…" : state === "email-ready" ? "Update email draft" : emailOnly ? (bookkeeping ? "Prepare bookkeeping enquiry email" : demo ? "Prepare free demo request" : "Prepare enquiry email") : (bookkeeping ? "Request a bookkeeping quote" : demo ? "Request your free demo" : "Send enquiry")}
+        {state === "sending" ? "Sending your request…" : state === "email-ready" ? "Update email draft" : emailOnly ? (bookkeeping ? "Prepare bookkeeping enquiry email" : demo ? "Prepare consultation request" : "Prepare enquiry email") : (bookkeeping ? "Request a bookkeeping quote" : demo ? "Request a free consultation" : "Send enquiry")}
       </button>
       <p className="caption">
         No commitment to a service package. Please do not include sensitive
         financial or employee information.
       </p>
-      {state === "email-ready" && <div ref={draft} tabIndex={-1} className="email-draft-ready" role="status"><h3>{demo ? "Your free demo request is ready to send." : "Your enquiry is ready to send."}</h3><p>Open the draft in your email app, then send it to {settings.email}. You can adjust the details above before opening it.</p><a className="button" href={emailDraft}>{demo ? "Open demo request email" : "Open enquiry email"}</a><p className="caption">The request is sent when you send the email from your email app.</p></div>}
+      {state === "email-ready" && <div ref={draft} tabIndex={-1} className="email-draft-ready" role="status"><h3>{demo ? "Your consultation request is ready to send." : "Your enquiry is ready to send."}</h3><p>Open the draft in your email app, then send it to {settings.email}. You can adjust the details above before opening it.</p><a className="button" href={emailDraft}>{demo ? "Open consultation request email" : "Open enquiry email"}</a><p className="caption">The request is sent when you send the email from your email app.</p></div>}
       {state === "error" && (
         <div className="form-error" role="alert">
           <strong>Your request has not been sent.</strong>
