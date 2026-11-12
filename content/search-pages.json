@@ -24,7 +24,7 @@
         },
         {
           "title": "Choose a service or start with a problem",
-          "body": "Use the New York service links to compare scope. If the issue is overdue books, payroll exceptions or cash pressure, we can discuss the relevant first assessment in your free demo.",
+          "body": "Use the New York service links to compare scope. If the issue is overdue books, payroll exceptions or cash pressure, we can discuss the relevant first assessment in your free consultation.",
           "items": []
         }
       ],
@@ -95,7 +95,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [
@@ -256,7 +256,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [],
@@ -304,7 +304,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [],
@@ -408,7 +408,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [
