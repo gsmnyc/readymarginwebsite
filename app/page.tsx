@@ -87,7 +87,7 @@ export default async function Home() {
           publisher: { "@id": origin + "/#organization" },
           inLanguage: "en-US",
         },
-        { "@context": "https://schema.org", "@type": "WebPage", "@id": origin + "/#webpage", url: origin, name: "Restaurant Accounting & Payroll Services", isPartOf: { "@id": origin + "/#website" }, about: { "@id": origin + "/#organization" } },
+        { "@context": "https://schema.org", "@type": "WebPage", "@id": origin + "/#webpage", url: origin, name: "Managed Restaurant Finance Services", isPartOf: { "@id": origin + "/#website" }, about: { "@id": origin + "/#organization" } },
         { "@context": "https://schema.org", "@type": "FAQPage", "@id": origin + "/#faq", mainEntity: c.faqs.slice(0,5).map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
       ]} />
     </main>
