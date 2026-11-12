@@ -34,4 +34,11 @@ jobs:
       - run: npm run build
       - run: npm run typecheck
       - run: npm run build:sites -- https://ready-margin-website.gsm-consulta-8479.chatgpt.site --preview
+      - name: Preserve ChatGPT Sites static export for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: ready-margin-sites-preview
+          path: out/
+          if-no-files-found: error
+          retention-days: 7
 
