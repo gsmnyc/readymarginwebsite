@@ -21,7 +21,7 @@ export function CTA({
     <section className="cta-section">
       <div className="container cta-inner">
         <Image src="/brand/logo_symbol_primary_accent.svg" alt="" width={96} height={96} sizes="96px" />
-        <p className="eyebrow">{label ? "Bookkeeping enquiry · No obligation" : "Your first demo is free"}</p>
+        <p className="eyebrow">{label ? "Bookkeeping enquiry · No obligation" : "Your first consultation is free"}</p>
         <h2>{heading}</h2>
         <p>{label ? "Share your bookkeeping needs and location count. We will discuss the records, reporting and fees before preparing any service proposal." : settings.reviewOffer}</p>
         <Link className="button" href={href} data-cta>
@@ -42,7 +42,7 @@ export function Footer({ content }: { content: Content }) {
     <div className="footer-topline"><span>Managed restaurant finance, operations and advisory support.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></div>
     <div className="footer-surface">
       <div className="footer-upper">
-        <div className="footer-invitation"><span className="footer-label">See the service</span><h2>Your restaurant.<br />Let’s talk.</h2><Link className="footer-demo" href="/book-a-review" data-cta>Book your free demo <span aria-hidden="true">↗</span></Link></div>
+        <div className="footer-invitation"><span className="footer-label">Talk about your services</span><h2>Your restaurant.<br />Let’s talk.</h2><Link className="footer-demo" href="/book-a-review" data-cta>{content.settings.cta} <span aria-hidden="true">↗</span></Link></div>
         <div className="footer-navigation">{groups.map(group => <nav key={group.title} aria-label={group.title + " footer links"}><h2 className="footer-label">{group.title}</h2>{group.links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>)}</div>
         <div className="footer-reach"><span className="footer-label">Contact us</span><a className="footer-email" href={"mailto:" + content.settings.email}>{emailName}@<wbr />{emailDomain}</a><p>Tell us about your restaurant.</p><div className="footer-socials">{content.settings.socials.filter(social => social.url).map(social => <a key={social.label} href={social.url} rel="noopener noreferrer">{social.label} <span aria-hidden="true">↗</span></a>)}</div></div>
       </div>
