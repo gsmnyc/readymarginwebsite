@@ -36,7 +36,7 @@
         },
         {
           "title": "Know who approves what",
-          "body": "The proposal identifies the work we prepare, the decisions your restaurant approves and any tax or legal specialist involved. Your first demo is free; paid work starts under a separate agreement.",
+          "body": "The proposal identifies the work we prepare, the decisions your restaurant approves and any tax or legal specialist involved. Your first consultation is free; paid work starts under a separate agreement.",
           "items": []
         }
       ],
@@ -67,7 +67,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [],
@@ -481,7 +481,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [
@@ -1104,7 +1104,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [
@@ -1465,7 +1465,7 @@
         },
         {
           "path": "/book-a-review",
-          "label": "Book your free demo"
+          "label": "Request a free service consultation"
         }
       ],
       "resources": [],
